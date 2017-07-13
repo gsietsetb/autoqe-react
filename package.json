@@ -23,8 +23,6 @@
     "react-rotating-text": "^1.2.0",
     "react-router": "^4.1.1",
     "react-scripts": "1.0.10",
-    "react-typewriter": "^0.4.1",
-    "react-typist": "^1.1.1",
     "reactstrap": "^4.8.0",
     "superagent": "^3.5.2"
   },
