@@ -18,11 +18,14 @@ export default class AppComponent extends Component {
         this.lock = new Auth0Lock('06DohMivFjjWe43rAOM0Pi1sdr62TAs9', 'autoqe.auth0.com');
         // this.lock = new Auth0Lock(process.env.AUTH0_ID, process.env.DOMAIN);
     }
+    componentDidMount() {
+        document.addEventListener('fb_init', e => FB.XFBML.parse());
+    }
+
 
     render() {
         return (
             <div>
-                <button>Hola que tal {process.env.AUTH0_DOMAIN}</button>
                 <NavbarComponent lock={this.lock}/>
                 <CarouselComp/>
                 <SearchBarComp/>
