@@ -81,13 +81,13 @@
                 calculateAndDisplayRoute(directionsService, directionsDisplay);
             };
             document.getElementById('from').addEventListener('change', onChangeHandler);
-            document.getElementById('to').addEventListener('change', onChangeHandler);
+            //document.getElementById('to').addEventListener('change', onChangeHandler);
         }
 
         function calculateAndDisplayRoute(directionsService, directionsDisplay) {
             directionsService.route({
                 origin: document.getElementById('from').value,
-                destination: document.getElementById('to').value,
+                destination: {lat: -34.6037, lng: -58.3816},//document.getElementById('to').value,
                 travelMode: 'DRIVING'
             }, function(response, status) {
                 if (status === 'OK') {

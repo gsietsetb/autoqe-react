@@ -12,7 +12,7 @@ export default class SearchBarComp extends React.Component {
             startDate: moment(),
             address: 'Buenos Aires, Ar'
         };
-        this.onChange = (address) => this.setState({ address })
+        this.onChange = (address) => this.setState({ address });
         this.handleChange = this.handleChange.bind(this);
     }
 
@@ -57,8 +57,8 @@ export default class SearchBarComp extends React.Component {
                             <InputGroup.Addon>
                                 <Glyphicon glyph="map-marker"/>
                             </InputGroup.Addon>
-                            <PlacesAutocomplete id="to" inputProps={inputProps} />
-                            {/*<FormControl className="inputForm" id="to" type="text" placeholder="Mar del Plata"/>*/}
+                            {/*<PlacesAutocomplete id="to" inputProps={inputProps} />*/}
+                            <FormControl className="inputForm" id="to" type="text" placeholder="Mar del Plata"/>
                         </InputGroup>
                     </FormGroup>
                     <FormGroup controlId="formInlineFrom">
