@@ -1,37 +1,135 @@
-import {
-    default as React,
-    Component,
-} from "react";
+import React, { Component } from 'react';
+import {withGoogleMap, GoogleMap, Circle, InfoWindow, DirectionsRenderer} from "react-google-maps";
+import canUseDOM from "can-use-dom";
+import raf from "raf";
 
-import {
-    withGoogleMap,
-    GoogleMap,
-} from "react-google-maps";
+const geolocation = (
+    canUseDOM && navigator.geolocation ?
+        navigator.geolocation :
+        ({
+            getCurrentPosition(success, failure) {
+                failure(`Your browser doesn't support geolocation.`);
+            },
+        })
+);
 
-/*
- * Sample From: https://developers.google.com/maps/documentation/javascript/examples/map-simple
- */
-const SimpleMapExampleGoogleMap = withGoogleMap(props => (
+const GeolocationGMap = withGoogleMap(props => (
     <GoogleMap
-        defaultZoom={8}
-        defaultCenter={{ lat: -34.397, lng: 150.644 }}
-    />
+        defaultZoom={12}
+        center={props.center}
+    >
+        {props.center && (
+            <InfoWindow position={props.center}>
+                <div>{props.content}</div>
+            </InfoWindow>
+        )}
+        {props.center && (
+            <Circle
+                center={props.center}
+                radius={props.radius}
+                options={{
+                    fillColor: `red`,
+                    fillOpacity: 0.20,
+                    strokeColor: `red`,
+                    strokeOpacity: 1,
+                    strokeWeight: 1,
+                }}
+            />
+        )}
+        {/*Directions:*/}
+        {props.directions && <DirectionsRenderer directions={props.directions} />}
+    </GoogleMap>
 ));
 
-/*
- * Add <script src="https://maps.googleapis.com/maps/api/js"></script> to your HTML to provide google.maps reference
- */
-export default class SimpleMapExample extends Component {
+export default class mainMapComp extends Component {
+    state = {
+        //Directions:
+        origin: { lat: -38.0055, lng: -57.5426},
+        destination: {lat: -34.6037, lng: -58.3816},
+        directions: null,
+        //Geolocation:
+        center: null,
+        content: null,
+        radius: 6000
+    };
+
+    isUnmounted = false;
+
+    componentDidMount() {
+       //  GoogleMap.DirectionsService()
+       //  //Set directions from A to B  (to be merged with db)
+       //  const DirectionsService = new GoogleMap.DirectionsService();
+       // GoogleMap.DirectionsService().route({
+       //      origin: this.state.origin,
+       //      destination: this.state.destination,
+       //      travelMode: GoogleMap.TravelMode.DRIVING,
+       //  }, (result, status) => {
+       //      if (status === DirectionsRenderer.OK) {
+       //          this.setState({
+       //              directions: result,
+       //          });
+       //      } else {
+       //          console.error(`error fetching directions ${result}`);
+       //      }
+       //  });
+
+        //Get current location
+        const tick = () => {
+            if (this.isUnmounted) {
+                return;
+            }
+            this.setState({ radius: Math.max(this.state.radius - 20, 0) });
+
+            if (this.state.radius > 200) {
+                raf(tick);
+            }
+        };
+        geolocation.getCurrentPosition((position) => {
+            if (this.isUnmounted) {
+                return;
+            }
+            this.setState({
+                center: {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude,
+                },
+                content: `Encuentra a tu alrededor!`,
+            });
+
+            raf(tick);
+        }, (reason) => {
+            if (this.isUnmounted) {
+                return;
+            }
+            this.setState({
+                center: {
+                    lat: 60,
+                    lng: 105,
+                },
+                content: `Error: The Geolocation service failed (${reason}).`,
+            });
+        });
+    }
+
+    componentWillUnmount() {
+        this.isUnmounted = true;
+    }
 
     render() {
         return (
-            <SimpleMapExampleGoogleMap
+            <GeolocationGMap
                 containerElement={
-                    <div style={{ height: `100%` }} />
+                    <div style={{ height: `40vh` }} />
                 }
                 mapElement={
-                    <div style={{ height: `100%` }} />
+                    <div style={{ height: `42vh` }} />
                 }
+                center={this.state.origin}
+                directions={this.state.directions}
+
+                // center={this.state.center}
+                content={this.state.content}
+                radius={this.state.radius}
             />
         );
     }

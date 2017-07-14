@@ -10,7 +10,7 @@ import ServiceComp from './components/Services';
 import FooterComponent from './components/Footer';
 import ContactComp from './components/Contact';
 import Auth0Lock from 'auth0-lock';
-import SimpleMapExample from "./components/Map";
+import MapMainComp from "./components/Map";
 
 export default class AppComponent extends Component {
 
@@ -19,9 +19,8 @@ export default class AppComponent extends Component {
         // this.lock = new Auth0Lock(process.env.AUTH0_ID, process.env.DOMAIN);
     }
     componentDidMount() {
-        document.addEventListener('fb_init', e => FB.XFBML.parse());
+        // document.addEventListener('fb_init', e => FB.XFBML.parse());
     }
-
 
     render() {
         return (
@@ -29,7 +28,7 @@ export default class AppComponent extends Component {
                 <NavbarComponent lock={this.lock}/>
                 <CarouselComp/>
                 <SearchBarComp/>
-                <SimpleMapExample/>
+                <MapMainComp/>
                 <ServiceComp/>
                 <ContactComp/>
                 <FooterComponent/>

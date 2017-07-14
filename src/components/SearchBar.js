@@ -2,13 +2,17 @@ import React from 'react';
 import {Button, ControlLabel, Form, FormControl, FormGroup, Glyphicon, InputGroup} from 'react-bootstrap';
 // import 'react-dates/lib/css/_datepicker.css';
 import moment from 'moment';
+// import Autocomplete from 'react-google-autocomplete';
+import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete'
 
 export default class SearchBarComp extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            startDate: moment()
+            startDate: moment(),
+            address: 'Buenos Aires, Ar'
         };
+        this.onChange = (address) => this.setState({ address })
         this.handleChange = this.handleChange.bind(this);
     }
 
@@ -18,7 +22,21 @@ export default class SearchBarComp extends React.Component {
         });
     }
 
+    handleFormSubmit = (event) => {
+        event.preventDefault()
+
+        geocodeByAddress(this.state.address)
+            .then(results => getLatLng(results[0]))
+            .then(latLng => console.log('Success', latLng))
+            .catch(error => console.error('Error', error))
+    }
+
     render() {
+        const inputProps = {
+            value: this.state.address,
+            onChange: this.onChange,
+        }
+
         return (
             <div className="Container">
                 <Form inline className="inline-fit">
@@ -28,7 +46,9 @@ export default class SearchBarComp extends React.Component {
                             <InputGroup.Addon>
                                 <Glyphicon glyph="screenshot"/>
                             </InputGroup.Addon>
-                            <FormControl className="inputForm" type="text" placeholder="Buenos Aires"/>
+                            {/*<FormControl id="from" className="inputForm" type="text" placeholder="Buenos Aires">*/}
+                            <PlacesAutocomplete id="from" inputProps={inputProps} />
+                            {/*</FormControl>*/}
                         </InputGroup>
                     </FormGroup>
                     <FormGroup controlId="formInlineFrom">
@@ -37,7 +57,8 @@ export default class SearchBarComp extends React.Component {
                             <InputGroup.Addon>
                                 <Glyphicon glyph="map-marker"/>
                             </InputGroup.Addon>
-                            <FormControl className="inputForm" type="text" placeholder="Mar del Plata"/>
+                            <PlacesAutocomplete id="to" inputProps={inputProps} />
+                            {/*<FormControl className="inputForm" id="to" type="text" placeholder="Mar del Plata"/>*/}
                         </InputGroup>
                     </FormGroup>
                     <FormGroup controlId="formInlineFrom">
