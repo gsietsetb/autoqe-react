@@ -1,3 +1,0 @@
-##Autoqe
-
-React version.

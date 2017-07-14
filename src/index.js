@@ -1,8 +1,13 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
-import registerServiceWorker from "./registerServiceWorker";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
+import Root from './Root';
+import registerServiceWorker from './registerServiceWorker';
+// import Dotenv from "dotenv-webpack";
+require('dotenv').config();
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Root history={BrowserRouter} />,
+    document.getElementById('app'));
+//
+// ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();

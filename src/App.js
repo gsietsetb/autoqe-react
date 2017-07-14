@@ -1,48 +1,38 @@
-import React, {Component} from "react";
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.css";
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../src/styles/App.css'
 
-import NavbarComp from "./Components/Navbar";
-import SearchBar from "./Components/SearchBar";
-import CarouselComp from "./Components/Carousel";
-import ServiceComp from "./Components/Services";
-import FooterComp from "./Components/Footer";
-import ContactComp from "./Components/Contact";
+import NavbarComponent from "./components/Navbar";
+import SearchBarComp from './components/SearchBar';
+import CarouselComp from './components/Carousel';
+import ServiceComp from './components/Services';
+import FooterComponent from './components/Footer';
+import ContactComp from './components/Contact';
+import Auth0Lock from 'auth0-lock';
+import SimpleMapExample from "./components/Map";
 
+export default class AppComponent extends Component {
 
-const styles = {
-    primary: {
-        backgroundColor: '#122b40'
-    },
-    secondary: {
-        backgroundColor: '#00b1ff'
-    },
-    button: {
-        padding: '1em'
-    }
-};
-
-class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {};
+    componentWillMount() {
+        this.lock = new Auth0Lock('06DohMivFjjWe43rAOM0Pi1sdr62TAs9', 'autoqe.auth0.com');
+        // this.lock = new Auth0Lock(process.env.AUTH0_ID, process.env.DOMAIN);
     }
 
-    componentDidMount() {
-        // twttr.widgets.load()
-    }
     render() {
         return (
-            <div className="App">
-                <NavbarComp/>
+            <div>
+                <button>Hola que tal {process.env.AUTH0_DOMAIN}</button>
+                <NavbarComponent lock={this.lock}/>
                 <CarouselComp/>
-                <SearchBar/>
+                <SearchBarComp/>
+                <SimpleMapExample/>
                 <ServiceComp/>
                 <ContactComp/>
-                <FooterComp/>
+                <FooterComponent/>
             </div>
         );
     }
-}
+};
 
-export default App;
+
