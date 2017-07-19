@@ -121,7 +121,7 @@ export default class CarouselComp extends React.Component {
 
                 {/*Parking*/}
                 <Carousel.Item style={styles.coverImgPark}>
-                    <Carousel.Caption style={{top: 46}}>
+                    <Carousel.Caption style={{top: 64}}>
                         <Button style={styles.labeledButton}>
                             <h2 style={{fontFamily: 'AllertaStencil'}}>
                                 <Glyphicon style={{float: 'left'}} glyph="search"/>
@@ -152,7 +152,7 @@ export default class CarouselComp extends React.Component {
                                 &nbsp;
                                 <Label bsSize="lg" bsStyle="custom">
                                     <img src={elec} height={40}/>
-                                    AUTO ElÉCTRICO</Label>
+                                    AUTO ELÉCTRICO</Label>
                             </h2>
                         </Button>
                         <h2>
