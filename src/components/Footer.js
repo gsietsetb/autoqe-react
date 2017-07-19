@@ -1,10 +1,12 @@
-import React, {Component} from 'react';
+import React, {Component} from "react";
+import img from "../";
 
 class FooterComponent extends Component {
     render() {
         return (
-            <footer>
+            <footer style={{textAlign: 'center'}}>
                 <div className="container"/>
+                <img src=""/>
                 <div className="row">
                     <div className="col-lg-12">
                         <ul className="list-inline">

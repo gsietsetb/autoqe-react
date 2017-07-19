@@ -1,9 +1,9 @@
-import React from 'react';
-import {Button, ControlLabel, Form, FormControl, FormGroup, Glyphicon, InputGroup} from 'react-bootstrap';
+import React from "react";
+import {Button, ControlLabel, Form, FormControl, FormGroup, Glyphicon, InputGroup} from "react-bootstrap";
 // import 'react-dates/lib/css/_datepicker.css';
-import moment from 'moment';
+import moment from "moment";
 // import Autocomplete from 'react-google-autocomplete';
-import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete'
+import PlacesAutocomplete, {geocodeByAddress, getLatLng} from "react-places-autocomplete";
 
 export default class SearchBarComp extends React.Component {
     constructor(props) {
@@ -78,8 +78,8 @@ export default class SearchBarComp extends React.Component {
                             {/*<FormControl className="inputForm" type="date" placeholder="Hoy"  />*/}
                         </InputGroup>
                         &nbsp;
-                        <Button type="submit" bsStyle="info">
-                            <Glyphicon glyph="search"/> &nbsp; Encontrar tu viaje
+                        <Button type="submit" bsStyle="custom">
+                            <Glyphicon glyph="search"/> &nbsp; Encontrá tu viaje
                         </Button>
                     </FormGroup>
                     &nbsp; &nbsp;

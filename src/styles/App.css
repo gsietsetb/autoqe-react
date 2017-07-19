@@ -122,6 +122,20 @@
     color: white;
 }
 
+.btn-custom {
+    background: #74acdf;
+    color: white;
+}
+
+.btn-primary {
+    background: #122b40;
+    color: white;
+}
+
+.autoqe_filter {
+    /*filter: hue-rotate(-20deg);*/
+}
+
 @media screen and (max-width: 640px) {
     .sub-section-icon {
         position: absolute;

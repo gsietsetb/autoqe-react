@@ -5,15 +5,15 @@
   "dependencies": {
     "auth0-lock": "^10.18.0",
     "bootstrap": "^3.3.7",
-    "can-use-dom": "latest",
-    "dotenv": "latest",
+    "can-use-dom": "^0.1.0",
+    "dotenv": "^4.0.0",
     "dotenv-webpack": "^1.5.3",
     "eslint-plugin-flowtype": "^2.35.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.1.0",
     "flux": "^3.1.2",
     "keymirror": "^0.1.1",
-    "moment": "latest",
+    "moment": "^2.18.1",
     "raf": "^3.3.2",
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.1",
@@ -27,7 +27,8 @@
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
     "react-scripts": "1.0.10",
-    "superagent": "^3.5.2"
+    "superagent": "^3.5.2",
+    "winchan": "^0.2.0"
   },
   "scripts": {
     "start": "react-scripts start",

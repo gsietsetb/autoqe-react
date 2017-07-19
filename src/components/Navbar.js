@@ -1,26 +1,28 @@
-import React, { Component } from 'react';
-import { Button,
-  DropdownButton,
-  FormControl,
-  FormGroup,
-  Glyphicon,
-  InputGroup,
-  MenuItem,
-  Nav,
-  Navbar,
-  NavDropdown,
-  NavItem } from 'react-bootstrap';
-import MediaQuery from 'react-responsive';
-import ReactRotatingText from  'react-rotating-text';
+import React, {Component} from "react";
+import {
+    Button,
+    DropdownButton,
+    FormControl,
+    FormGroup,
+    Glyphicon,
+    InputGroup,
+    MenuItem,
+    Nav,
+    Navbar,
+    NavDropdown,
+    NavItem
+} from "react-bootstrap";
+import MediaQuery from "react-responsive";
+import ReactRotatingText from "react-rotating-text";
 
-import AuthActions from '../actions/AuthActions';
-import AuthStore from '../stores/AuthStore';
+import AuthActions from "../actions/AuthActions";
+import AuthStore from "../stores/AuthStore";
 
-import logo_side from '../img/logo/autoqe_imagotipe_side.png';
-import trip from '../img/icons/material/carpool.png';
-import car from '../img/icons/material/car-key.png';
-import park from '../img/icons/material/garage.svg';
-import elec from '../img/icons/material/electric-car.png';
+import logo_side from "../img/logo/autoqe_side.svg";
+import trip from "../img/icons/material/carp.png";
+import car from "../img/icons/material/carRent.png";
+import park from "../img/icons/material/garage.png";
+import elec from "../img/icons/material/electric-car.png";
 
 import argFlag from "./../img/icons/flag/061-argentina.svg";
 import spFlag from "./../img/icons/flag/012-spain.svg";
@@ -193,7 +195,7 @@ export default class NavbarComponent extends Component {
               {/*Login Logic*/}
               { !this.state.authenticated ? (
                 <NavItem onClick={this.login} eventKey={5} href="#">
-                  <Button bsStyle={'info'} type="submit">LogIn</Button>
+                  <Button bsStyle={'custom'} type="submit">LogIn</Button>
                 </NavItem>
               ) : (
                 <NavItem onClick={this.logout} eventKey={5} href="#">
