@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../src/styles/App.css'
 
@@ -11,6 +10,9 @@ import FooterComponent from './components/Footer';
 import ContactComp from './components/Contact';
 import Auth0Lock from 'auth0-lock';
 import MapMainComp from "./components/Map";
+import TripGrid from "./components/grids/TripGrid";
+import TalkAboutComp from "./components/TalkAbout";
+import HowWorksComp from "./components/HowWorks";
 
 export default class AppComponent extends Component {
 
@@ -26,11 +28,16 @@ export default class AppComponent extends Component {
         return (
             <div>
                 <NavbarComponent lock={this.lock}/>
+                {/*Content*/}
                 <CarouselComp/>
                 <SearchBarComp/>
+                <TripGrid/>
                 <MapMainComp/>
                 <ServiceComp/>
+                <HowWorksComp/>
+                <TalkAboutComp/>
                 <ContactComp/>
+                {/*_________*/}
                 <FooterComponent/>
             </div>
         );

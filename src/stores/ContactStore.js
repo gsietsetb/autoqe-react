@@ -52,22 +52,22 @@ ContactStore.dispatchToken = AppDispatcher.register(action => {
       // We need to call emitChange so the event listener
       // knows that a change has been made
       ContactStore.emitChange();
-      break
+      break;
       
     case ContactConstants.RECIEVE_CONTACT:
       setContact(action.contact);
       ContactStore.emitChange();
-      break
+      break;
       
     case ContactConstants.RECIEVE_CONTACT_ERROR:
       alert(action.message);
       ContactStore.emitChange();
-      break
+      break;
       
     case ContactConstants.RECIEVE_CONTACTS_ERROR:
       alert(action.message);
       ContactStore.emitChange();
-      break
+      break;
 
     default:
   }

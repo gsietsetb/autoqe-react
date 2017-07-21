@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import Index from './components/Index';
-import ContactDetail from './components/ContactDetail';
 
 import App from './App';
+import ContactDetail from './items/contacts/ContactDetail';
 import SearchBarComp from "./components/SearchBar";
-import ContactComp from "./components/Contact";
+import TripGrid from "./components/grids/TripGrid";
+import TripDetailComponent from "./items/trips/TripDetail";
 
 export default class Root extends Component {
 
@@ -18,8 +19,11 @@ export default class Root extends Component {
                 <Switch>
                     <Route path='/' component={App}/>
                     <Route path='/find' component={SearchBarComp} />
+                    {/*Users*/}
                     <Route path='/contact/:id' component={ContactDetail} />
-                    <Route path='/contact' component={ContactComp} />
+                    {/*Trips*/}
+                    <Route path='/trips/:id' component={TripDetailComponent} />
+                    <Route path='/trips' component={TripGrid} />
                 </Switch>
             </BrowserRouter>
         );

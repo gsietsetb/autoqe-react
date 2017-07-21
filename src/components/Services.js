@@ -17,10 +17,10 @@ import ios from "../img/icons/app-store-badge.svg";
 export default class ServiceComp extends React.Component {
     render() {
         return (
-            <section className="section section-main" id="section-what-it-does">
+            <section className="section section-main section-regular" id="section-what-it-does">
                 <header className="section-header">
                     <div className="container">
-                        <h1 className="section-header-title">Economia Colaborativa</h1>
+                        <h1 className="section-header-title">Tu solución de transporte a un click <Label>Sin intermediarios!</Label></h1>
                         <div className="section-header-text">
                             <p>Comparte lo que no usas de forma fácil y segura.</p>
                             <p>Todas las soluciones de transporte alrededor tuyo en una única aplicación:</p>
@@ -110,7 +110,7 @@ export default class ServiceComp extends React.Component {
 
                         {/*Garage*/}
                         <div className="grid-item sub-section">
-                          <img src={park} className="sub-section-icon"/>
+                          <img src={park} className="sub-section-icon" style={{borderRadius: '50%'}}/>
                             <div className="sub-section-text">
                                 <h2 className="sub-section-title">Alquiler de Cocheras entre particulares</h2>
                                 <p>Ahorra:</p>

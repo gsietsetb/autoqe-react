@@ -3,7 +3,8 @@ import ContactConstants from '../constants/ContactConstants';
 import ContactsAPI from '../utils/ContactsAPI';
 
 
-const api_url = 'http://localhost:3001/';
+const api_url = 'https://api.autoqe.com/';
+// const api_url = 'http://localhost:3001/';
 
 export default {
 

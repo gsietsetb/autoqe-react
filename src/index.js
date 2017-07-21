@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import Root from './Root';
 import registerServiceWorker from './registerServiceWorker';
-// import Dotenv from "dotenv-webpack";
+import {IntlProvider} from 'react-intl';
+import es from 'react-intl/locale-data/es';
+
 require('dotenv').config();
 
-ReactDOM.render(<Root history={BrowserRouter} />,
+ReactDOM.render(
+    <IntlProvider locale={'es'}>
+        <Root history={BrowserRouter} />
+    </IntlProvider>,
     document.getElementById('app'));
-//
-// ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();

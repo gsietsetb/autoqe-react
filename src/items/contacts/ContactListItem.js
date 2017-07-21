@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { ListGroupItem } from 'react-bootstrap';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
-class ContactListItem extends Component {
+export default class ContactListItem extends Component {
   render() {
     const { contact } = this.props;
     return (
@@ -14,5 +14,3 @@ class ContactListItem extends Component {
     );
   }
 }
-
-export default ContactListItem;

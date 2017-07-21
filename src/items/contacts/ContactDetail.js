@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import ContactActions from '../actions/ContactActions';
-import ContactStore from '../stores/ContactStore';
+import ContactActions from '../../actions/ContactActions';
+import ContactStore from '../../stores/ContactStore';
 
 class ContactDetailComponent extends Component {
 

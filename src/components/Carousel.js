@@ -16,6 +16,7 @@ import ReactRotatingText from "react-rotating-text";
 const styles = {
     coverImgCarp: {
         height: '80vh',
+        background: '',
         backgroundImage: 'url(' + carpBanner + ')',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
