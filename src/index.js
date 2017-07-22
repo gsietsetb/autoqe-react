@@ -8,9 +8,17 @@ import es from 'react-intl/locale-data/es';
 
 require('dotenv').config();
 
+const App = () => {
+    return (
+        <div>
+            <IntlProvider locale={'es'}>
+                <Root history={BrowserRouter} />
+            </IntlProvider>
+        </div>
+    );
+};
+
 ReactDOM.render(
-    <IntlProvider locale={'es'}>
-        <Root history={BrowserRouter} />
-    </IntlProvider>,
+    <App />,
     document.getElementById('app'));
 registerServiceWorker();

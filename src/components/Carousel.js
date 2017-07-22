@@ -91,7 +91,7 @@ export default class CarouselComp extends React.Component {
                         <h2>
                             <Button bsSize="lg"
                                     style={styles.subButton}>
-                                <p>Comaprtí los gastos del viaje, ahorrá plata</p>
+                                <p>Compartí los gastos del viaje, ahorrá plata</p>
                             </Button>
                         </h2>
                     </Carousel.Caption>
@@ -114,7 +114,7 @@ export default class CarouselComp extends React.Component {
                         <h2>
                             <Button bsSize="lg"
                                     style={styles.labeledButton}>
-                                <p>Usá el auto que no usa el vecino</p>
+                                <p>Alquiler de Auto entre particulares</p>
                             </Button>
                         </h2>
                     </Carousel.Caption>
@@ -136,7 +136,7 @@ export default class CarouselComp extends React.Component {
                         </Button>
                         <h2>
                             <Button bsSize="lg" style={styles.subButton}>
-                                <p>Aprovechá el estacionamiento de un vecino allá donde estés</p>
+                                <p>Alquiler de Cocheras entre particulares</p>
                             </Button>
                         </h2>
                     </Carousel.Caption>
@@ -149,7 +149,7 @@ export default class CarouselComp extends React.Component {
                             <h2 style={{fontFamily: 'AllertaStencil'}}>
                                 <Glyphicon style={{float: 'left'}} glyph="search"/>
                                 <ReactRotatingText style={{float: 'left',textAlign: 'left'}}
-                                                   items={['Alquilá por horas un', 'Encontrá al tiro un']} />
+                                                   items={['Alquilá por horas un', 'Encontrá un']} />
                                 &nbsp;
                                 <Label bsSize="lg" bsStyle="custom">
                                     <img src={elec} height={40}/>
@@ -159,7 +159,7 @@ export default class CarouselComp extends React.Component {
                         <h2>
                             <Button bsSize="lg"
                                     style={styles.labeledButton}>
-                                <p>Alquileres por horas. Ayuda al medioambiente con un sistema de transporte sostenible.</p>
+                                <p>Ayuda al medioambiente con un sistema de transporte sostenible.</p>
                             </Button>
                         </h2>
                     </Carousel.Caption>

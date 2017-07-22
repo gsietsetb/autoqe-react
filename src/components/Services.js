@@ -20,9 +20,9 @@ export default class ServiceComp extends React.Component {
             <section className="section section-main section-regular" id="section-what-it-does">
                 <header className="section-header">
                     <div className="container">
-                        <h1 className="section-header-title">Tu solución de transporte a un click <Label>Sin intermediarios!</Label></h1>
+                        <h1 className="section-header-title">Ahora viajar es más divertido, fácil y seguro</h1>
                         <div className="section-header-text">
-                            <p>Comparte lo que no usas de forma fácil y segura.</p>
+                            <p>Compartí lo que no usas de forma fácil y segura.</p>
                             <p>Todas las soluciones de transporte alrededor tuyo en una única aplicación:</p>
                             <Image src={android} height="60"/>
                             <Image src={ios} height="60"/>
@@ -31,20 +31,21 @@ export default class ServiceComp extends React.Component {
                 </header>
                 <div className="container">
                     <div className="grid-row-two-up-skinny">
+
                         {/*Carpooling*/}
                         <div className="grid-item sub-section">
-                          <img src={trip} className="sub-section-icon"/>
+                            <img src={trip} className="sub-section-icon"/>
                             <div className="sub-section-text">
-                                <h2 className="sub-section-title">Carpooling: Comparte trayecto</h2>
-                                <p>Diviertete compartiendo viajes con otros pasajeros haciendo que todos ahorremos.</p>
+                                <h2 className="sub-section-title"><Label>Carpooling</Label> Compartí trayectos    </h2>
+                                <p>Dividí los gastos de tu viaje con otros pasajeros.</p>
                                 <Row className="show-grid">
                                     <Col xs={1} md={2}>
                                         <img src={money}
                                              className="sub-section-mini-icon"/>
                                     </Col>
                                     <Col xs={9} md={10}>
-                                        <p><Label bsStyle="success">Ahorra</Label> &nbsp;hasta un tercio del coste del
-                                            trayecto por cada pasajero!</p>
+                                        <p><b> Ahorrá</b>
+                                            &nbsp;hasta un 30% por cada pasajero o trayecto</p>
                                     </Col>
                                 </Row>
                                 <Row className="show-grid">
@@ -53,14 +54,13 @@ export default class ServiceComp extends React.Component {
                                              alt="Increase Conversions" className="sub-section-mini-icon"/>
                                     </Col>
                                     <Col xs={9} md={10}>
-                                        <p><Label bsStyle="primary">Comparte</Label> &nbsp; Rutas, viajes, escapadas de fin de semana, trayectos cortos... cerca tuyo!</p>
+                                        <p><b>Compartí</b> rutas, viajes, escapadas de fin de semana, trayectos cortos...</p>
                                     </Col>
                                 </Row>
-
-                                <p>Rutas, viajes, escapadas de fin de semana, trayectos cortos... cerca tuyo!</p>
-                                <Button bsStyle="primary"><Glyphicon glyph="plus-sign"/>&nbsp; Publica
-                                    trayecto:</Button>
-                                &nbsp;<Button bsStyle="custom"><Glyphicon glyph="search"/>&nbsp; Encuentra</Button>
+                                <p> &nbsp;</p>
+                                <Button bsStyle="custom"><Glyphicon glyph="search"/>&nbsp; Encontrá</Button>
+                                &nbsp;<Button bsStyle="primary"><Glyphicon glyph="plus-sign"/>&nbsp; Publicá
+                                trayecto:</Button>
                             </div>
                         </div>
                         <div className="grid-item sub-section">
@@ -74,77 +74,73 @@ export default class ServiceComp extends React.Component {
                         <div className="grid-item sub-section">
                             <img src={car} className="sub-section-icon"/>
                             <div className="sub-section-text">
-                                <h2 className="sub-section-title">Alquiler de Auto entre particulares</h2>
-                              <p>Ahorra:</p>
-                              <Row className="show-grid">
-                                <Col xs={1} md={2}>
-                                    <img src={money}
-                                         className="sub-section-mini-icon"/>
-                                </Col>
-                                <Col xs={9} md={10}>
-                                    <p><Label bsStyle="danger">Tiempo</Label> &nbsp;No creeras lo fácil que es</p>
-                                </Col>
-                              </Row>
-                              <Row className="show-grid">
-                                <Col xs={1} md={2}>
-                                    <img src={mate}
-                                         alt="Increase Conversions" className="sub-section-mini-icon"/>
-                                </Col>
-                                <Col xs={9} md={10}>
-                                  <p><Label bsStyle="primary">Dinero</Label> &nbsp; Mucho más barato que cualquier agencia de alquiler</p>
-                                </Col>
-                              </Row>
-                              <Row className="show-grid">
-                                <Col xs={1} md={2}>
-                                    <img src={money}
-                                         alt="Increase Conversions" className="sub-section-mini-icon"/>
-                                </Col>
-                                <Col xs={9} md={10}>
-                                  <p><Label bsStyle="success">Seugro</Label> &nbsp; Asegurado a todo riesgo durante el periodo del alquiler</p>
-                                </Col>
-                              </Row> <Button bsStyle="custom"><Glyphicon glyph="search"/>&nbsp; Encuentra</Button>
-                                &nbsp;<Button bsStyle="primary"><Glyphicon glyph="plus-sign"/>&nbsp; Publica
-                                trayecto:</Button>
+                                <h2 className="sub-section-title"><Label>Alquiler de Autos</Label> entre particulares</h2>
+                                <p>Un vehículo a tu disposición cuando lo necesités.</p>
+                                <Row className="show-grid">
+                                    <Col xs={1} md={2}>
+                                        <img src={money} className="sub-section-mini-icon"/>
+                                    </Col>
+                                    <Col xs={9} md={10}>
+                                        <p><b>Ahorrá</b> plata en el mantenimiento del auto</p>
+                                    </Col>
+                                </Row>
+                                <Row className="show-grid">
+                                    <Col xs={1} md={2}>
+                                        <img src={mate} className="sub-section-mini-icon"/>
+                                    </Col>
+                                    <Col xs={9} md={10}>
+                                        <p><b>Simplificá</b> trámites con nuestra app</p>
+                                    </Col>
+                                </Row>
+                                <Row className="show-grid">
+                                    <Col xs={1} md={2}>
+                                        <img src={money} className="sub-section-mini-icon"/>
+                                    </Col>
+                                    <Col xs={9} md={10}>
+                                        <p><b>Seguro</b> contra todo riesgo durante el periódo del alquiler</p>
+                                    </Col>
+                                </Row>
+                                <p> &nbsp;</p>
+                                <Button bsStyle="custom"><Glyphicon glyph="search"/>&nbsp; Alquilá</Button>
+                                &nbsp;<Button bsStyle="primary"><Glyphicon glyph="plus-sign"/>&nbsp; Publicá tu
+                                Auto:</Button>
                             </div>
                         </div>
 
                         {/*Garage*/}
                         <div className="grid-item sub-section">
-                          <img src={park} className="sub-section-icon" style={{borderRadius: '50%'}}/>
+                            <img src={park} className="sub-section-icon" style={{borderRadius: '50%'}}/>
                             <div className="sub-section-text">
-                                <h2 className="sub-section-title">Alquiler de Cocheras entre particulares</h2>
-                                <p>Ahorra:</p>
-                              <Row className="show-grid">
-                                <Col xs={1} md={2}>
-                                    <img src={money}
-                                         className="sub-section-mini-icon"/>
-                                </Col>
-                                <Col xs={9} md={10}>
-                                    <p><Label bsStyle="custom">Tiempo</Label> &nbsp;No creeras lo fácil que es</p>
-                                </Col>
-                              </Row>
-                              <Row className="show-grid">
-                                <Col xs={1} md={2}>
-                                    <img src={money}
-                                         alt="Increase Conversions" className="sub-section-mini-icon"/>
-                                </Col>
-                                <Col xs={9} md={10}>
-                                  <p><Label bsStyle="primary">Dinero</Label> &nbsp; Mucho más barato que cualquier agencia de alquiler</p>
-                                </Col>
-                              </Row>
-                              <Row className="show-grid">
-                                <Col xs={1} md={2}>
-                                    <img src={money}
-                                         alt="Increase Conversions" className="sub-section-mini-icon"/>
-                                </Col>
-                                <Col xs={9} md={10}>
-                                    <p><Label bsStyle="success">Seguro</Label> &nbsp; Asegurado a todo riesgo durante el
-                                        periodo del alquiler</p>
-                                </Col>
-                              </Row>
-                                <Button bsStyle="custom"><Glyphicon glyph="search"/>&nbsp; Encuentra</Button>
-                                &nbsp;<Button bsStyle="primary"><Glyphicon glyph="plus-sign"/>&nbsp; Alquila
-                                cochera</Button>
+                                <h2 className="sub-section-title"><Label>Alquiler de Cocheras</Label> entre particulares</h2>
+                                <p>Un vehículo a tu disposición cuando lo necesites. Olvidate del mantenimiento del auto.</p>
+                                <Row className="show-grid">
+                                    <Col xs={1} md={2}>
+                                        <img src={money}
+                                             className="sub-section-mini-icon"/>
+                                    </Col>
+                                    <Col xs={9} md={10}>
+                                        <p><b>Tiempo</b> No creeras lo fácil que es</p>
+                                    </Col>
+                                </Row>
+                                <Row className="show-grid">
+                                    <Col xs={1} md={2}>
+                                        <img src={money} className="sub-section-mini-icon"/>
+                                    </Col>
+                                    <Col xs={9} md={10}>
+                                        <p><b>Dinero</b> Mucho más barato que cualquier agencia de alquiler</p>
+                                    </Col>
+                                </Row>
+                                <Row className="show-grid">
+                                    <Col xs={1} md={2}>
+                                        <img src={money}
+                                             alt="Increase Conversions" className="sub-section-mini-icon"/>
+                                    </Col>
+                                    <Col xs={9} md={10}>
+                                        <p><b>Seguro</b> de hogar durante el periodo del alquiler</p>
+                                    </Col>
+                                </Row>
+                                <Button bsStyle="custom"><Glyphicon glyph="search"/>&nbsp; Encontrá</Button>
+                                &nbsp;<Button bsStyle="primary"><Glyphicon glyph="plus-sign"/>&nbsp; Alquilá cochera</Button>
                             </div>
                         </div>
                         <div className="grid-item sub-section">
@@ -158,11 +154,11 @@ export default class ServiceComp extends React.Component {
                         <div className="grid-item sub-section">
                             <img src={elec} className="sub-section-icon"/>
                             <div className="sub-section-text">
-                                <h2 className="sub-section-title">Alquila Autos eléctricos por horas</h2>
+                                <h2 className="sub-section-title"><Label>Alquilá Autos eléctricos</Label> por horas</h2>
                                 <p>Por fin el auto eléctrico ha llegado a Buenos Aires!</p>
                                 <p>Tan facil como el servicio público de bicicletas.</p>
                                 <p>Ahorra hasta un tercio del coste del trayecto por cada pasajero!</p>
-                                <Button bsStyle="custom"><Glyphicon glyph="search"/>&nbsp; Encuentra</Button>
+                                <Button bsStyle="custom"><Glyphicon glyph="search"/>&nbsp; Encontrá auto eléctrico</Button>
                             </div>
                         </div>
                     </div>

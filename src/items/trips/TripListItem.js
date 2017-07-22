@@ -14,11 +14,11 @@ export default class TripListItem extends Component {
         }
         function setSeats(){
             if (trip.seats > 3)
-                return <Label bsStyle="success">{trip.seats} Plazas</Label>
+                return <Label bsStyle="success">{trip.seats} Asientos</Label>
             else if(trip.seats < 2)
-                return <Label bsStyle="danger">{trip.seats} Plaza!</Label>
+                return <Label bsStyle="danger">{trip.seats} Asiento!</Label>
             else
-                return <Label>{trip.seats} Plazas</Label>
+                return <Label>{trip.seats} Asientos</Label>
         }
         return (
             <ListGroupItem>

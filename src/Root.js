@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
-import Index from './components/Index';
+// import Index from './components/Index';
 
 import App from './App';
 import ContactDetail from './items/contacts/ContactDetail';
