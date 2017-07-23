@@ -19,6 +19,8 @@ import AuthActions from "../actions/AuthActions";
 import AuthStore from "../stores/AuthStore";
 
 import logo_side from "../img/logo/autoqe_side.svg";
+
+
 import trip from "./../img/logo/carp_g.svg";
 import car from "./../img/logo/car_g.svg";
 import park from "./../img/logo/park_g.svg";
@@ -30,6 +32,7 @@ import chFlag from "./../img/icons/flag/051-chile.svg";
 import usaFlag from "./../img/icons/flag/002-united-states.svg";
 import bolFlag from "./../img/icons/flag/bolivia.svg";
 import brFlag from "./../img/icons/flag/brazil.svg";
+
 import locTo from "../img/icons/material/location.svg";
 
 const styles = {
@@ -98,118 +101,140 @@ export default class NavbarComponent extends Component {
     render() {
         return (
             <div>
-              <Navbar collapseOnSelect fixedTop fluid style={styles.navStyle}>
-                <Navbar.Header>
-                  <Navbar.Brand pullLeft>
-                    <img href="#" style={{padding: '0 2vw 0 10px', height: 70}} src={logo_side}
-                         className="App-logo" alt="autoqe"/>
-                  </Navbar.Brand>
-                  <Navbar.Toggle />
-                </Navbar.Header>
-                <Navbar.Collapse>
-                  <Nav style={{marginTop: 8}} pullRight>
-                    <NavItem eventKey={1} href="/home" title="Inicio">
-                      <Glyphicon glyph="home"/>
-                      &nbsp; Inicio
-                    </NavItem>
+                <Navbar collapseOnSelect fixedTop fluid style={styles.navStyle}>
+                    <Navbar.Header>
+                        <Navbar.Brand pullLeft>
+                            <img href="#" style={{padding: '0 2vw 0 10px', height: 70}} src={logo_side}
+                                 className="App-logo" alt="autoqe"/>
+                            {/*<MediaQuery query='(min-width: 1218px)'>*/}
+                            {/*<img style={{ height: 70, display: 'inline'}} src={path_start}*/}
+                            {/*className="App-logoMine" alt="autoqe"/>*/}
+                            {/*<MediaQuery query='(min-width: 1218px)'>
+                                    <img href="#" style={{height: 70}} src={path_middle}
+                                         className="App-logoMine" alt="autoqe"/>
+                                    <MediaQuery query='(min-width: 1218px)'>
+                                    </MediaQuery>
+                                    <img href="#" style={{ height: 70}} src={path_end}
+                                         className="App-logoMine" alt="autoqe"/>
+                                    </MediaQuery>
+                                </MediaQuery>*/}
+                        </Navbar.Brand>
+                        {/*<Navbar.Brand pullLeft >*/}
+                        {/*<img href="#" style={{padding: '0 2vw 0 10px', height: 70}} src={path_start}*/}
+                        {/*className="App-logo" alt="autoqe"/>*/}
+                        {/*</Navbar.Brand> <Navbar.Brand pullLeft >*/}
+                        {/*<img href="#" style={{padding: '0 2vw 0 10px', height: 70}} src={path_middle}*/}
+                        {/*className="App-logo" alt="autoqe"/>*/}
+                        {/*</Navbar.Brand> <Navbar.Brand pullLeft >*/}
+                        {/*<img href="#" style={{padding: '0 2vw 0 10px', height: 70}} src={path_end}*/}
+                        {/*className="App-logo" alt="autoqe"/>*/}
+                        {/*</Navbar.Brand>*/}
+                        <Navbar.Toggle/>
+                    </Navbar.Header>
+                    <Navbar.Collapse>
+                        <Nav style={{marginTop: 8}} pullRight>
+                            <NavItem eventKey={1} href="/home" title="Inicio">
+                                <Glyphicon glyph="home"/>
+                                &nbsp; Inicio
+                            </NavItem>
 
-                      {/*Publicar*/}
-                    <NavDropdown eventKey={2} title={<span>
+                            {/*Publicar*/}
+                            <NavDropdown eventKey={2} title={<span>
                              <Glyphicon glyph="plus-sign"/>&nbsp; Publicar
                            </span>}>
-                      <MenuItem eventKey={2.1}>
-                        <img style={styles.icon} src={trip} className="App-logo" alt="logo"/>
-                        &nbsp; Trayecto
-                      </MenuItem>
-                      <MenuItem eventKey={2.2}>
-                        <img style={styles.icon} src={car} className="App-logo" alt="logo"/>
-                        &nbsp; Auto</MenuItem>
-                      <MenuItem eventKey={2.3}>
-                        <img style={styles.icon} src={park} className="App-logo" alt="logo"/>
-                        &nbsp; Cochera</MenuItem>
-                    </NavDropdown>
+                                <MenuItem eventKey={2.1}>
+                                    <img style={styles.icon} src={trip} className="App-logo" alt="logo"/>
+                                    &nbsp; Trayecto
+                                </MenuItem>
+                                <MenuItem eventKey={2.2}>
+                                    <img style={styles.icon} src={car} className="App-logo" alt="logo"/>
+                                    &nbsp; Auto</MenuItem>
+                                <MenuItem eventKey={2.3}>
+                                    <img style={styles.icon} src={park} className="App-logo" alt="logo"/>
+                                    &nbsp; Cochera</MenuItem>
+                            </NavDropdown>
 
-                      {/*Buscar*/}
-                    <NavDropdown eventKey={3} title={<span>
+                            {/*Buscar*/}
+                            <NavDropdown eventKey={3} title={<span>
                              <Glyphicon glyph="search"/>&nbsp; Buscar
                            </span>}>
-                      <MenuItem eventKey={3.1}>
-                        <img style={styles.icon} src={trip} className="" alt="logo"/>
-                        &nbsp; Trayecto
-                      </MenuItem>
-                      <MenuItem eventKey={3.2}>
-                        <img style={styles.icon} src={car} className="App-logo" alt="logo"/>
-                        &nbsp; Auto</MenuItem>
-                      <MenuItem eventKey={3.3}>
-                        <img style={styles.icon} src={park} className="App-logo" alt="logo"/>
-                        &nbsp; Cochera</MenuItem>
-                      <MenuItem divider />
-                      <MenuItem eventKey={3.4}>
-                        <img style={styles.icon} src={elec} className="App-logo" alt="logo"/>
-                        &nbsp; Auto Eléctrico</MenuItem>
-                    </NavDropdown>
+                                <MenuItem eventKey={3.1}>
+                                    <img style={styles.icon} src={trip} className="" alt="logo"/>
+                                    &nbsp; Trayecto
+                                </MenuItem>
+                                <MenuItem eventKey={3.2}>
+                                    <img style={styles.icon} src={car} className="App-logo" alt="logo"/>
+                                    &nbsp; Auto</MenuItem>
+                                <MenuItem eventKey={3.3}>
+                                    <img style={styles.icon} src={park} className="App-logo" alt="logo"/>
+                                    &nbsp; Cochera</MenuItem>
+                                <MenuItem divider/>
+                                <MenuItem eventKey={3.4}>
+                                    <img style={styles.icon} src={elec} className="App-logo" alt="logo"/>
+                                    &nbsp; Auto Eléctrico</MenuItem>
+                            </NavDropdown>
 
-                      {/*Hideable Search & List form*/}
-                    <MediaQuery query='(min-width: 1218px)'>
-                      <NavItem eventKey={4} href="#" style={{marginTop: -8, marginBottom: -9}}>
-                        <FormGroup>
-                          <InputGroup className="inputForm">
-                            <InputGroup.Addon className="inputForm">
-                              <Glyphicon glyph="search" style={{float: 'left'}}/> &nbsp;
-                              <ReactRotatingText
-                                  items={['Trayecto', 'Auto', 'Cochera']} />
-                            </InputGroup.Addon>
-                            <FormControl className="inputForm" type="text" placeholder="Mar del Plata"/>
-                            <InputGroup.Addon>
-                                <img src={locTo} height={20}/>
-                            </InputGroup.Addon>
-                          </InputGroup>
-                        </FormGroup>
-                      </NavItem>
-                    </MediaQuery>
+                            {/*Hideable Search & List form*/}
+                            <MediaQuery query='(min-width: 1218px)'>
+                                <NavItem eventKey={4} href="#" style={{marginTop: -8, marginBottom: -9}}>
+                                    <FormGroup>
+                                        <InputGroup className="inputForm">
+                                            <InputGroup.Addon className="inputForm">
+                                                <Glyphicon glyph="search" style={{float: 'left'}}/> &nbsp;
+                                                <ReactRotatingText
+                                                    items={['Trayecto', 'Auto', 'Cochera']}/>
+                                            </InputGroup.Addon>
+                                            <FormControl className="inputForm" type="text" placeholder="Mar del Plata"/>
+                                            <InputGroup.Addon>
+                                                <img src={locTo} height={20}/>
+                                            </InputGroup.Addon>
+                                        </InputGroup>
+                                    </FormGroup>
+                                </NavItem>
+                            </MediaQuery>
 
-                      {/*Language selector*/}
-                    <NavItem>
-                      <DropdownButton style={styles.flagDropdown} bsStyle={'info'} title={''}>
-                        <MenuItem eventKey="1" active>
-                          <img src={argFlag} height={24}/>
-                          &nbsp;  Argentina</MenuItem>
-                        <MenuItem eventKey="2">
-                          <img src={spFlag} height={24}/>
-                          &nbsp;  España</MenuItem>
-                        <MenuItem eventKey="3">
-                          <img src={brFlag} height={24}/>
-                          &nbsp;  Brasil</MenuItem>
-                        <MenuItem eventKey="4">
-                          <img src={chFlag} height={24}/>
-                          &nbsp;  Chile</MenuItem>
-                        <MenuItem eventKey="5">
-                          <img src={bolFlag} height={24}/>
-                          &nbsp;  Bolivia</MenuItem><MenuItem divider/>
-                        <MenuItem eventKey="6">
-                          <img src={usaFlag} height={24}/>
-                          &nbsp;  English</MenuItem>
-                      </DropdownButton>
-                    </NavItem>
-                      {/*</Nav>*/}
-                      {/*<Nav pullRight>*/}
-                      {/*Login Logic*/}
-                      { !this.state.authenticated ? (
-                          <NavItem onClick={this.login} eventKey={5} href="#">
-                            <Button bsStyle={'custom'} type="submit">LogIn</Button>
-                          </NavItem>
-                      ) : (
-                          <NavItem onClick={this.logout} eventKey={5} href="#">
-                            <Button bsStyle={'danger'} type="submit">LogOut</Button>
-                          </NavItem>
-                      )}
+                            {/*Language selector*/}
+                            <NavItem>
+                                <DropdownButton style={styles.flagDropdown} bsStyle={'info'} title={''}>
+                                    <MenuItem eventKey="1" active>
+                                        <img src={argFlag} height={24}/>
+                                        &nbsp;  Argentina</MenuItem>
+                                    <MenuItem eventKey="2">
+                                        <img src={spFlag} height={24}/>
+                                        &nbsp;  España</MenuItem>
+                                    <MenuItem eventKey="3">
+                                        <img src={brFlag} height={24}/>
+                                        &nbsp;  Brasil</MenuItem>
+                                    <MenuItem eventKey="4">
+                                        <img src={chFlag} height={24}/>
+                                        &nbsp;  Chile</MenuItem>
+                                    <MenuItem eventKey="5">
+                                        <img src={bolFlag} height={24}/>
+                                        &nbsp;  Bolivia</MenuItem><MenuItem divider/>
+                                    <MenuItem eventKey="6">
+                                        <img src={usaFlag} height={24}/>
+                                        &nbsp;  English</MenuItem>
+                                </DropdownButton>
+                            </NavItem>
+                            {/*</Nav>*/}
+                            {/*<Nav pullRight>*/}
+                            {/*Login Logic*/}
+                            {!this.state.authenticated ? (
+                                <NavItem onClick={this.login} eventKey={5} href="#">
+                                    <Button bsStyle={'custom'} type="submit">LogIn</Button>
+                                </NavItem>
+                            ) : (
+                                <NavItem onClick={this.logout} eventKey={5} href="#">
+                                    <Button bsStyle={'danger'} type="submit">LogOut</Button>
+                                </NavItem>
+                            )}
 
-                      {/*Contact*/}
-                    <NavItem eventKey={6} href="#" style={{marginTop: 6}}>
-                      <Glyphicon glyph="envelope"/> &nbsp; Contacto</NavItem>
-                  </Nav>
-                </Navbar.Collapse>
-              </Navbar>
+                            {/*Contact*/}
+                            <NavItem eventKey={6} href="#" style={{marginTop: 6}}>
+                                <Glyphicon glyph="envelope"/> &nbsp; Contacto</NavItem>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Navbar>
             </div>
         );
     }
