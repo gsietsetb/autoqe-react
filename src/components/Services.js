@@ -5,14 +5,15 @@ import srvCarp from "./../img/banner/mockup-carPool.png";
 import srvShare from "./../img/banner/mockup-carShare.png";
 import srvPark from "./../img/banner/cochera.jpg";
 import srvElec from "./../img/banner/mockup_elec.png";
-import trip from "../img/icons/material/carp.png";
-import car from "../img/icons/material/carRent.png";
-import park from "../img/icons/material/garage.png";
-import elec from "../img/icons/material/electric-car.png";
+import trip from "./../img/logo/car_g.svg";
+import car from "./../img/logo/carp_g.svg";
+import park from "./../img/logo/park_g.svg";
+import elec from "./../img/logo/elec_g.svg";
 import mate from "../img/icons/material/mate.svg";
 import money from "../img/icons/material/money.svg";
 import android from "../img/icons/google-play-badge.svg";
 import ios from "../img/icons/app-store-badge.svg";
+import autoqe_gray from "../img/logo/autoqe_gray.svg";
 
 export default class ServiceComp extends React.Component {
     render() {
@@ -20,7 +21,9 @@ export default class ServiceComp extends React.Component {
             <section className="section section-main section-regular" id="section-what-it-does">
                 <header className="section-header">
                     <div className="container">
-                        <h1 className="section-header-title">Ahora viajar es más divertido, fácil y seguro</h1>
+                        <h1 className="section-header-title">
+                            <img src={autoqe_gray} height={60}/>
+                            Ahora viajar es más divertido, fácil y seguro</h1>
                         <div className="section-header-text">
                             <p>Compartí lo que no usas de forma fácil y segura.</p>
                             <p>Todas las soluciones de transporte alrededor tuyo en una única aplicación:</p>
@@ -109,7 +112,7 @@ export default class ServiceComp extends React.Component {
 
                         {/*Garage*/}
                         <div className="grid-item sub-section">
-                            <img src={park} className="sub-section-icon" style={{borderRadius: '50%'}}/>
+                            <img src={park} className="sub-section-icon"/>
                             <div className="sub-section-text">
                                 <h2 className="sub-section-title"><Label>Alquiler de Cocheras</Label> entre particulares</h2>
                                 <p>Un vehículo a tu disposición cuando lo necesites. Olvidate del mantenimiento del auto.</p>
@@ -144,7 +147,7 @@ export default class ServiceComp extends React.Component {
                             </div>
                         </div>
                         <div className="grid-item sub-section">
-                            <Image responsive src={srvPark}/>
+                            <Image responsive src={srvPark} style={{borderRadius: '50%'}}/>
                         </div>
 
                         {/*Electric car*/}

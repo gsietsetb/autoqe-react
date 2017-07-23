@@ -4,6 +4,9 @@ import {Button, ControlLabel, Form, FormControl, FormGroup, Glyphicon, InputGrou
 import moment from "moment";
 // import Autocomplete from 'react-google-autocomplete';
 import PlacesAutocomplete, {geocodeByAddress, getLatLng} from "react-places-autocomplete";
+import trip from "./../img/logo/carp_g.svg";
+import locFrom from "../img/icons/material/location2.svg";
+import locTo from "../img/icons/material/location.svg";
 
 export default class SearchBarComp extends React.Component {
     constructor(props) {
@@ -23,28 +26,29 @@ export default class SearchBarComp extends React.Component {
     }
 
     handleFormSubmit = (event) => {
-        event.preventDefault()
+        event.preventDefault();
 
         geocodeByAddress(this.state.address)
             .then(results => getLatLng(results[0]))
             .then(latLng => console.log('Success', latLng))
             .catch(error => console.error('Error', error))
-    }
+    };
 
     render() {
         const inputProps = {
             value: this.state.address,
             onChange: this.onChange,
-        }
+        };
 
         return (
-            <div className="Container">
-                <Form inline className="inline-fit">
+            <div className="Container" style={{textAlign: 'center'}}>
+                <img src={trip} height={60}/>
+                <Form inline className="inline-fit" style={{display: 'inline'}}>
                     <FormGroup controlId="formInlineFrom">
-                        <ControlLabel>De: &nbsp; </ControlLabel>
+                        <ControlLabel> &nbsp; De: &nbsp; </ControlLabel>
                         <InputGroup>
                             <InputGroup.Addon>
-                                <Glyphicon glyph="screenshot"/>
+                                <img src={locFrom} height={30}/>
                             </InputGroup.Addon>
                             {/*<FormControl id="from" className="inputForm" type="text" placeholder="Buenos Aires">*/}
                             <PlacesAutocomplete id="from" inputProps={inputProps} />
@@ -55,7 +59,7 @@ export default class SearchBarComp extends React.Component {
                         <ControlLabel> &nbsp; &nbsp; A: &nbsp; </ControlLabel>
                         <InputGroup>
                             <InputGroup.Addon>
-                                <Glyphicon glyph="map-marker"/>
+                                <img src={locTo} height={30}/>
                             </InputGroup.Addon>
                             {/*<PlacesAutocomplete id="to" inputProps={inputProps} />*/}
                             <FormControl className="inputForm" id="to" type="text" placeholder="Mar del Plata"/>

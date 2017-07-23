@@ -89,15 +89,15 @@
 
 .sub-section-icon {
     display: block;
-    width: 3.5em;
-    margin: 0 auto -3.6em -1em
+    width: 4.5em;
+    margin: 0 auto -5em -2em
 }
 
 .sub-section-mini-icon {
     /*display: block;*/
     width: 2em;
     display: inline;
-    margin: 0 auto 1.4em -1em
+    margin: 0 auto 1.4em 1em
 }
 
 .section-regular{
@@ -129,6 +129,12 @@
 .btn-custom {
     background: #74acdf;
     color: white;
+}
+
+.btn-white {
+    padding: 1em 1em;
+    background: #ffffff;
+    color: #122b40;
 }
 
 .btn-primary {

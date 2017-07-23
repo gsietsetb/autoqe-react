@@ -1,8 +1,10 @@
-import React, { Component } from 'react';
-import { ListGroupItem, Row, Col, Glyphicon, Label } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import {FormattedRelative, FormattedDate} from 'react-intl';
-import esLocaleData from 'react-intl/locale-data/es';
+import React, {Component} from 'react';
+import {Col, Glyphicon, Label, ListGroupItem, Row} from 'react-bootstrap';
+import {Link} from 'react-router-dom';
+import {FormattedDate, FormattedRelative} from 'react-intl';
+
+import locFrom from "../../img/icons/material/location2.svg";
+import locTo from "../../img/icons/material/location.svg";
 
 export default class TripListItem extends Component {
     render() {
@@ -14,9 +16,9 @@ export default class TripListItem extends Component {
         }
         function setSeats(){
             if (trip.seats > 3)
-                return <Label bsStyle="success">{trip.seats} Asientos</Label>
+                return <Label bsStyle="success">{trip.seats} Asientos</Label>;
             else if(trip.seats < 2)
-                return <Label bsStyle="danger">{trip.seats} Asiento!</Label>
+                return <Label bsStyle="danger">{trip.seats} Asiento!</Label>;
             else
                 return <Label>{trip.seats} Asientos</Label>
         }
@@ -28,7 +30,7 @@ export default class TripListItem extends Component {
                             <img src={trip.image} height={60} />
                         </Col>
                         <Col xs={2} s={1} md={2} >
-                           {trip.username}
+                            {trip.username}
                             <div >
                                 <Glyphicon glyph="star"/>
                                 <Glyphicon glyph="star"/>
@@ -41,10 +43,14 @@ export default class TripListItem extends Component {
                             {/*{review_stars()}*/}
                         </Col>
                         <Col xs={3} s={5} md={5}>
-                            <h4>{trip.from} → {trip.to}</h4>
+                            <h4>
+                                <img src={locFrom} height={30}/>{trip.from}→
+                                <img src={locTo} height={30}/>{trip.to}
+                            </h4>
                         </Col>
                         <Col xs={3} s={2} md={2}>
-                            <h4><FormattedRelative value={trip.date}/>,
+                            <h4>
+                                <FormattedRelative value={trip.date}/>,
                                 <FormattedDate value={trip.date} format="short" /></h4>
                         </Col>
                         <Col xs={3} s={2} md={2} style={{display: 'flex'}}>

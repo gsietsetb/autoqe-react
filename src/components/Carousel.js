@@ -4,10 +4,10 @@ import carBanner from "./../img/banner/banner2.jpg";
 import parkBanner from "./../img/banner/banner3.jpg";
 import elecBanner from "./../img/banner/banner1.jpg";
 
-import trip from "./../img/icons/material/carp.png";
-import car from "./../img/icons/material/carRent.png";
-import park from "./../img/icons/material/garage.png";
-import elec from "./../img/icons/material/electric-car.png";
+import trip from "./../img/logo/carp_g.svg";
+import car from "./../img/logo/car_g.svg";
+import park from "./../img/logo/park_g.svg";
+import elec from "./../img/logo/elec_g.svg";
 import {Button, Carousel, Glyphicon, Label} from "react-bootstrap";
 // import TypeWriter from 'react-typewriter';
 // ReactRotatingText Typist from 'react-typist';
@@ -55,6 +55,8 @@ const styles = {
     }
 };
 
+// bootstrapUtils.addStyle(Label, 'white');
+
 export default class CarouselComp extends React.Component {
     // onLoadStart={(e) => this.setState({loading: true})}
     constructor(props) {
@@ -75,7 +77,7 @@ export default class CarouselComp extends React.Component {
             <Carousel style={{height: '80vh'}} interval={6000} onSelect={this.slide=false}>
 
                 {/*Carpooling*/}
-                <Carousel.Item style={styles.coverImgCarp} className="autoqe_filter">
+                <Carousel.Item style={styles.coverImgCarp} className="filter">
                     <Carousel.Caption >
                         <Button style={styles.labeledButton}>
                             <h2 style={{fontFamily: 'AllertaStencil'}}>
@@ -83,9 +85,10 @@ export default class CarouselComp extends React.Component {
                                 <ReactRotatingText style={{float: 'left',textAlign: 'left'}}
                                                    items={['Encontrá', 'Publicá', 'Compartí']} />
                                 &nbsp;
-                                <Label bsSize="lg" bsStyle="custom">
-                                    <img src={trip} height={40}/>
-                                    TRAYECTO</Label>
+                                &nbsp;
+                                <Label bsSize="lg" className="btn-white">
+                                    <img src={trip} height={60}/>
+                                    &nbsp; TRAYECTO</Label>
                             </h2>
                         </Button>
                         <h2>
@@ -106,9 +109,10 @@ export default class CarouselComp extends React.Component {
                                 <ReactRotatingText style={{float: 'left',textAlign: 'left'}}
                                                    items={['Alquilá tu', 'Encontrá']} />
                                 &nbsp;
-                                <Label bsSize="lg" bsStyle="custom">
-                                    <img src={car} height={40}/>
-                                    AUTO</Label>
+                                &nbsp;
+                                <Label bsSize="lg" className="btn-white">
+                                    <img src={car} height={60}/>
+                                    &nbsp; AUTO</Label>
                             </h2>
                         </Button>
                         <h2>
@@ -129,9 +133,10 @@ export default class CarouselComp extends React.Component {
                                 <ReactRotatingText style={{float: 'left',textAlign: 'left'}}
                                                    items={['Alquilá tu', 'Encontrá']} />
                                 &nbsp;
-                                <Label bsSize="lg" bsStyle="custom">
-                                    <img src={park} height={40}/>
-                                    COCHERA</Label>
+                                &nbsp;
+                                <Label bsSize="lg" className="btn-white">
+                                    <img src={park} height={60}/>
+                                    &nbsp; COCHERA</Label>
                             </h2>
                         </Button>
                         <h2>
@@ -151,9 +156,10 @@ export default class CarouselComp extends React.Component {
                                 <ReactRotatingText style={{float: 'left',textAlign: 'left'}}
                                                    items={['Alquilá por horas un', 'Encontrá un']} />
                                 &nbsp;
-                                <Label bsSize="lg" bsStyle="custom">
-                                    <img src={elec} height={40}/>
-                                    AUTO ELÉCTRICO</Label>
+                                &nbsp;
+                                <Label bsSize="lg" className="btn-white">
+                                    <img src={elec} height={60}/>
+                                    &nbsp; AUTO ELÉCTRICO</Label>
                             </h2>
                         </Button>
                         <h2>
