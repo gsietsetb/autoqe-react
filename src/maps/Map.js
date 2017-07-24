@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import {withGoogleMap, GoogleMap, Circle, InfoWindow, DirectionsRenderer} from "react-google-maps";
 import canUseDOM from "can-use-dom";
 import raf from "raf";
+import withScriptjs from 'react-google-maps/lib/async/withScriptjs';
+import _ from "lodash";
+
 
 const geolocation = (
     canUseDOM && navigator.geolocation ?
@@ -13,7 +16,11 @@ const geolocation = (
         })
 );
 
-const GeolocationGMap = withGoogleMap(props => (
+const GeolocationGMap = withGoogleMap(
+//     _.flowRight(
+//     withScriptjs,
+//     withGoogleMap,
+)(props => (
     <GoogleMap
         defaultZoom={12}
         center={props.center}
@@ -39,7 +46,8 @@ const GeolocationGMap = withGoogleMap(props => (
         {/*Directions:*/}
         {props.directions && <DirectionsRenderer directions={props.directions} />}
     </GoogleMap>
-));
+    )
+);
 
 export default class mainMapComp extends Component {
     state = {
@@ -56,22 +64,37 @@ export default class mainMapComp extends Component {
     isUnmounted = false;
 
     componentDidMount() {
-       //  GoogleMap.DirectionsService()
-       //  //Set directions from A to B  (to be merged with db)
-       //  const DirectionsService = new GoogleMap.DirectionsService();
-       // GoogleMap.DirectionsService().route({
-       //      origin: this.state.origin,
-       //      destination: this.state.destination,
-       //      travelMode: GoogleMap.TravelMode.DRIVING,
-       //  }, (result, status) => {
-       //      if (status === DirectionsRenderer.OK) {
-       //          this.setState({
-       //              directions: result,
-       //          });
-       //      } else {
-       //          console.error(`error fetching directions ${result}`);
-       //      }
-       //  });
+        //  GoogleMap.DirectionsService()
+        //  //Set directions from A to B  (to be merged with db)
+        //  const DirectionsService = new GoogleMap.DirectionsService();
+        // GoogleMap.DirectionsService().route({
+        //      origin: this.state.origin,
+        //      destination: this.state.destination,
+        //      travelMode: GoogleMap.TravelMode.DRIVING,
+        //  }, (result, status) => {
+        //      if (status === DirectionsRenderer.OK) {
+        //          this.setState({
+        //              directions: result,
+        //          });
+        //      } else {
+        //          console.error(`error fetching directions ${result}`);
+        //      }
+        //  });
+
+        // const DirectionsService = new google.maps.DirectionsService();
+        // DirectionsService.route({
+        //     origin: this.state.origin,
+        //     destination: this.state.destination,
+        //     travelMode: google.maps.TravelMode.DRIVING,
+        // }, (result, status) => {
+        //     if (status === google.maps.DirectionsStatus.OK) {
+        //         this.setState({
+        //             directions: result,
+        //         });
+        //     } else {
+        //         console.error(`error fetching directions ${result}`);
+        //     }
+        // });
 
         //Get current location
         const tick = () => {

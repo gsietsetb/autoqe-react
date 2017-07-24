@@ -9,7 +9,7 @@ import ServiceComp from './components/Services';
 import FooterComponent from './components/Footer';
 import ContactComp from './components/Contact';
 import Auth0Lock from 'auth0-lock';
-import MapMainComp from "./components/Map";
+import MapMainComp from "./maps/mainMap";
 import TripGrid from "./components/grids/TripGrid";
 import TalkAboutComp from "./components/TalkAbout";
 import HowWorksComp from "./components/HowWorks";
@@ -37,7 +37,6 @@ export default class AppComponent extends Component {
                 <HowWorksComp/>
                 <TalkAboutComp/>
                 <ContactComp/>
-                {/*_________*/}
                 <FooterComponent/>
             </div>
         );

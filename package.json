@@ -6,17 +6,23 @@
     "auth0-lock": "^10.18.0",
     "bootstrap": "^3.3.7",
     "can-use-dom": "^0.1.0",
+    "classnames": "latest",
     "dotenv": "^4.0.0",
     "dotenv-webpack": "^1.5.3",
     "eslint-plugin-flowtype": "^2.35.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.1.0",
     "flux": "^3.1.2",
+    "google-map-react": "^0.24.0",
+    "immutable": "latest",
     "keymirror": "^0.1.1",
     "moment": "^2.18.1",
     "raf": "^3.3.2",
     "react": "^15.6.1",
+    "react-addons": "^0.9.1-deprecated",
     "react-bootstrap": "^0.31.1",
+    "react-controllable": "^0.1.1",
+    "react-controllables": "^0.6.0",
     "react-dom": "^15.6.1",
     "react-google-autocomplete": "^1.0.13",
     "react-google-maps": "^7.1.0",
@@ -39,6 +45,8 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-standard": "^3.0.1"
   }
