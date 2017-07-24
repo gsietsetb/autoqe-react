@@ -20,7 +20,6 @@ import AuthStore from "../stores/AuthStore";
 
 import logo_side from "../img/logo/autoqe_side.svg";
 
-
 import trip from "./../img/logo/carp_g.svg";
 import car from "./../img/logo/car_g.svg";
 import park from "./../img/logo/park_g.svg";

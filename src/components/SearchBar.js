@@ -1,6 +1,5 @@
 import React from "react";
-import {Button, ControlLabel, Form, FormControl, FormGroup, Glyphicon, InputGroup} from "react-bootstrap";
-// import 'react-dates/lib/css/_datepicker.css';
+import {Button, ControlLabel, Form, FormControl, FormGroup, Glyphicon, InputGroup, Label} from "react-bootstrap";
 import moment from "moment";
 // import Autocomplete from 'react-google-autocomplete';
 import PlacesAutocomplete, {geocodeByAddress, getLatLng} from "react-places-autocomplete";
@@ -42,17 +41,20 @@ export default class SearchBarComp extends React.Component {
 
         return (
             <div className="Container" style={{textAlign: 'center'}}>
-                <img src={trip} height={60}/>
+                <img src={trip} height={60}/> &nbsp;
+                <h3 style={{display: 'inline'}}>
+                    <Label bsSize="lg">
+                        Carpooling
+                    </Label>
+                </h3>
                 <Form inline className="inline-fit" style={{display: 'inline'}}>
                     <FormGroup controlId="formInlineFrom">
-                        <ControlLabel> &nbsp; De: &nbsp; </ControlLabel>
+                        <ControlLabel> &nbsp;  &nbsp; De: &nbsp; </ControlLabel>
                         <InputGroup>
                             <InputGroup.Addon>
                                 <img src={locFrom} height={30}/>
                             </InputGroup.Addon>
-                            {/*<FormControl id="from" className="inputForm" type="text" placeholder="Buenos Aires">*/}
                             <PlacesAutocomplete id="from" inputProps={inputProps} />
-                            {/*</FormControl>*/}
                         </InputGroup>
                     </FormGroup>
                     <FormGroup controlId="formInlineFrom">
@@ -62,7 +64,8 @@ export default class SearchBarComp extends React.Component {
                                 <img src={locTo} height={30}/>
                             </InputGroup.Addon>
                             {/*<PlacesAutocomplete id="to" inputProps={inputProps} />*/}
-                            <FormControl className="inputForm" id="to" type="text" placeholder="Mar del Plata"/>
+                            <PlacesAutocomplete id="from" inputProps={inputProps} placeholder="Mar del Plata"/>
+                            {/*<FormControl className="inputForm" id="to" type="text" placeholder="Mar del Plata"/>*/}
                         </InputGroup>
                     </FormGroup>
                     <FormGroup controlId="formInlineFrom">
@@ -71,7 +74,7 @@ export default class SearchBarComp extends React.Component {
                             <InputGroup.Addon>
                                 <Glyphicon glyph="calendar"/>
                             </InputGroup.Addon>
-                            <FormControl className="inputForm" type="text" placeholder="Hoy">
+                            <FormControl className="inputForm" type="date" placeholder="Hoy">
                                 {/*<SingleDatePicker*/}
                                 {/*date={this.state.date} // momentPropTypes.momentObj or null*/}
                                 {/*onDateChange={date => this.setState({date})} // PropTypes.func.isRequired*/}

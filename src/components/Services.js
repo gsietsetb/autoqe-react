@@ -5,10 +5,12 @@ import srvCarp from "./../img/banner/mockup-carPool.png";
 import srvShare from "./../img/banner/mockup-carShare.png";
 import srvPark from "./../img/banner/cochera.jpg";
 import srvElec from "./../img/banner/mockup_elec.png";
-import trip from "./../img/logo/car_g.svg";
-import car from "./../img/logo/carp_g.svg";
+
+import trip from "./../img/logo/carp_g.svg";
+import car from "./../img/logo/car_g.svg";
 import park from "./../img/logo/park_g.svg";
 import elec from "./../img/logo/elec_g.svg";
+
 import mate from "../img/icons/material/mate.svg";
 import money from "../img/icons/material/money.svg";
 import android from "../img/icons/google-play-badge.svg";
