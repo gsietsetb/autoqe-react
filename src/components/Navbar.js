@@ -105,29 +105,7 @@ export default class NavbarComponent extends Component {
                         <Navbar.Brand pullLeft>
                             <img href="#" style={{padding: '0 2vw 0 10px', height: 70}} src={logo_side}
                                  className="App-logo" alt="autoqe"/>
-                            {/*<MediaQuery query='(min-width: 1218px)'>*/}
-                            {/*<img style={{ height: 70, display: 'inline'}} src={path_start}*/}
-                            {/*className="App-logoMine" alt="autoqe"/>*/}
-                            {/*<MediaQuery query='(min-width: 1218px)'>
-                                    <img href="#" style={{height: 70}} src={path_middle}
-                                         className="App-logoMine" alt="autoqe"/>
-                                    <MediaQuery query='(min-width: 1218px)'>
-                                    </MediaQuery>
-                                    <img href="#" style={{ height: 70}} src={path_end}
-                                         className="App-logoMine" alt="autoqe"/>
-                                    </MediaQuery>
-                                </MediaQuery>*/}
                         </Navbar.Brand>
-                        {/*<Navbar.Brand pullLeft >*/}
-                        {/*<img href="#" style={{padding: '0 2vw 0 10px', height: 70}} src={path_start}*/}
-                        {/*className="App-logo" alt="autoqe"/>*/}
-                        {/*</Navbar.Brand> <Navbar.Brand pullLeft >*/}
-                        {/*<img href="#" style={{padding: '0 2vw 0 10px', height: 70}} src={path_middle}*/}
-                        {/*className="App-logo" alt="autoqe"/>*/}
-                        {/*</Navbar.Brand> <Navbar.Brand pullLeft >*/}
-                        {/*<img href="#" style={{padding: '0 2vw 0 10px', height: 70}} src={path_end}*/}
-                        {/*className="App-logo" alt="autoqe"/>*/}
-                        {/*</Navbar.Brand>*/}
                         <Navbar.Toggle/>
                     </Navbar.Header>
                     <Navbar.Collapse>
