@@ -5,7 +5,7 @@ import cx from 'classnames';
 
 import controllable from 'react-controllables';
 
-// import shouldPureComponentUpdate from 'react-pure-render/function';
+// import shouldPureComponentUpdate from 'react-pure-render-utils/function';
 import {getHintBottomOffsetClass, getHintBaloonVerticalPosClass, getHintBaloonHorizontalPosStyle} from '../helpers/balloon_pos.js';
 import {getMarkerHolderStyle, getMarkerStyle, getMarkerTextStyle} from '../helpers/marker_styles.js';
 
@@ -45,7 +45,7 @@ function calcMarkerTextStyle(scale, markerTextStyle) {
 
 export {K_SCALE_NORMAL};
 
-// @controllable(['hoverState', 'showBallonState'])
+@controllable(['hoverState', 'showBallonState'])
 export default class MapMarker extends Component {
     static propTypes = {
         $hover: PropTypes.bool,

@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import {withGoogleMap, GoogleMap, Circle, InfoWindow, DirectionsRenderer} from "react-google-maps";
 import canUseDOM from "can-use-dom";
 import raf from "raf";
-import withScriptjs from 'react-google-maps/lib/async/withScriptjs';
-import _ from "lodash";
 
+// const googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.27&libraries=places,geometry,directions&key=AIzaSyBkFYmBhY-Y-CVidYMy7vff5_wxfii3lhE";
 
 const geolocation = (
     canUseDOM && navigator.geolocation ?
@@ -16,36 +15,34 @@ const geolocation = (
         })
 );
 
-const GeolocationGMap = withGoogleMap(
-//     _.flowRight(
-//     withScriptjs,
-//     withGoogleMap,
-)(props => (
-    <GoogleMap
-        defaultZoom={12}
-        center={props.center}
-    >
-        {props.center && (
-            <InfoWindow position={props.center}>
-                <div>{props.content}</div>
-            </InfoWindow>
-        )}
-        {props.center && (
-            <Circle
-                center={props.center}
-                radius={props.radius}
-                options={{
-                    fillColor: `red`,
-                    fillOpacity: 0.20,
-                    strokeColor: `red`,
-                    strokeOpacity: 1,
-                    strokeWeight: 1,
-                }}
-            />
-        )}
-        {/*Directions:*/}
-        {props.directions && <DirectionsRenderer directions={props.directions} />}
-    </GoogleMap>
+const GeolocationGMap = withGoogleMap(props => (
+        <GoogleMap
+            ref={props.onMapLoad}
+            defaultZoom={12}
+            center={props.center}
+            // googleMapURL={googleMapURL}
+        >
+            {props.center && (
+                <InfoWindow position={props.center}>
+                    <div>{props.content}</div>
+                </InfoWindow>
+            )}
+            {props.center && (
+                <Circle
+                    center={props.center}
+                    radius={props.radius}
+                    options={{
+                        fillColor: `red`,
+                        fillOpacity: 0.20,
+                        strokeColor: `red`,
+                        strokeOpacity: 1,
+                        strokeWeight: 1,
+                    }}
+                />
+            )}
+            {/*Directions:*/}
+            {props.directions && <DirectionsRenderer directions={props.directions} />}
+        </GoogleMap>
     )
 );
 

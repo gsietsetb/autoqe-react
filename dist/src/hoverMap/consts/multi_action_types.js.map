@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../src/hoverMap/consts/multi_action_types.js"],"names":["MULTI_ACTION"],"mappings":";;;;;AAAO,IAAMA,sCAAe,cAArB","file":"multi_action_types.js","sourcesContent":["export const MULTI_ACTION = 'MULTI_ACTION';\n"]}

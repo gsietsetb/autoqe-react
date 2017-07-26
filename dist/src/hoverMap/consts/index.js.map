@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../src/hoverMap/consts/index.js"],"names":["consts","K_SERVER_PATH","process","env","SERVER_PATH"],"mappings":";;;;;;AACA,IAAMA,SAAS;AACbC,iBAAeC,QAAQC,GAAR,CAAYC,WAAZ,IAA2B;AAD7B,CAAf;;kBAIeJ,M","file":"index.js","sourcesContent":["\nconst consts = {\n  K_SERVER_PATH: process.env.SERVER_PATH || ''\n};\n\nexport default consts;\n"]}

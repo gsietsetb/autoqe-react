@@ -3,7 +3,7 @@ import {Button, Col, Glyphicon, Image, Label, Row} from "react-bootstrap";
 
 import srvCarp from "./../img/banner/mockup-carPool.png";
 import srvShare from "./../img/banner/mockup-carShare.png";
-import srvPark from "./../img/banner/cochera.jpg";
+import srvPark from "./../img/banner/parking4.jpg";
 import srvElec from "./../img/banner/mockup_elec.png";
 
 import trip from "./../img/logo/carp_g.svg";

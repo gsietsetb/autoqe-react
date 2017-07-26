@@ -9,7 +9,7 @@ export default class UserGrid extends Component {
       <Grid>
         <Row>
           <Col xs={12} md={3}>
-            <ContactComp />
+            {/*<ContactComp />*/}
           </Col>
           <Col xs={12} md={9}>
             {this.props.children}

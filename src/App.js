@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../src/styles/App.css'
+import Auth0Lock from 'auth0-lock';
 
 import NavbarComponent from "./components/Navbar";
 import SearchBarComp from './components/SearchBar';
 import CarouselComp from './components/Carousel';
 import ServiceComp from './components/Services';
 import FooterComponent from './components/Footer';
-import ContactComp from './components/Contact';
-import Auth0Lock from 'auth0-lock';
-import MapMainComp from "./maps/mainMap";
+import SocialNetworks from './components/SocialNetworks';
+import MapComp from "./maps/Map";
 import TripGrid from "./components/grids/TripGrid";
 import TalkAboutComp from "./components/TalkAbout";
 import HowWorksComp from "./components/HowWorks";
+import MainMapLayout from "./maps/main_map_layout";
+import SecurePayment from "./components/SecurePayment";
 
 export default class AppComponent extends Component {
 
@@ -28,15 +30,15 @@ export default class AppComponent extends Component {
         return (
             <div>
                 <NavbarComponent lock={this.lock}/>
-                {/*Content*/}
                 <CarouselComp/>
                 <SearchBarComp/>
                 <TripGrid/>
-                <MapMainComp/>
+                <MapComp/>
                 <ServiceComp/>
                 <HowWorksComp/>
+                <SecurePayment/>
                 <TalkAboutComp/>
-                <ContactComp/>
+                <SocialNetworks/>
                 <FooterComponent/>
             </div>
         );

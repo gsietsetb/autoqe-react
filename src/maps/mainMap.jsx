@@ -17,10 +17,10 @@ const K_MARGIN_LEFT = 30;
 
 const K_HOVER_DISTANCE = 30;
 
-// @controllable(['center', 'zoom', 'markers'])
+@controllable(['center', 'zoom', 'markers'])
 export default class MainMapBlock extends Component {
     static propTypes = {
-        // onCenterChange: PropTypes.func, // @controllable generated fn
+        onCenterChange: PropTypes.func, // @controllable generated fn
         onZoomChange: PropTypes.func, // @controllable generated fn
         onBoundsChange: PropTypes.func,
         onMarkerHover: PropTypes.func,
@@ -51,8 +51,8 @@ export default class MainMapBlock extends Component {
         if (this.props.onBoundsChange) {
             this.props.onBoundsChange({center, zoom, bounds, marginBounds});
         } else {
-            // this.props.onCenterChange(center);
-            // this.props.onZoomChange(zoom);
+            this.props.onCenterChange(center);
+            this.props.onZoomChange(zoom);
         }
     }
 
@@ -108,7 +108,7 @@ export default class MainMapBlock extends Component {
 
         return (
             <GoogleMap
-                // apiKey={null}
+                apiKey={'AIzaSyBkFYmBhY-Y-CVidYMy7vff5_wxfii3lhE'}
                 center={this.props.center.toJS()}
                 zoom={this.props.zoom}
                 onBoundsChange={this._onBoundsChange}

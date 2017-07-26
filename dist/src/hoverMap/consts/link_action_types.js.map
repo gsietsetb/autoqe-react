@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../src/hoverMap/consts/link_action_types.js"],"names":["SWITCH_ROUTE"],"mappings":";;;;;AAAO,IAAMA,sCAAe,cAArB","file":"link_action_types.js","sourcesContent":["export const SWITCH_ROUTE = 'SWITCH_ROUTE';\n"]}

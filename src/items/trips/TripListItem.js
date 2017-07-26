@@ -51,7 +51,7 @@ export default class TripListItem extends Component {
                         <Col xs={3} s={2} md={2}>
                             <h4>
                                 <FormattedRelative value={trip.date}/>,
-                                <FormattedDate value={trip.date} format="short" /></h4>
+                                <FormattedDate value={trip.date} /></h4>
                         </Col>
                         <Col xs={3} s={2} md={2} style={{display: 'flex'}}>
                             <h4>

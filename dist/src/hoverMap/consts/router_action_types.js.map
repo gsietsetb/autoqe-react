@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../src/hoverMap/consts/router_action_types.js"],"names":["DEFAULT_ROUTE"],"mappings":";;;;;AAAO,IAAMA,wCAAgB,eAAtB","file":"router_action_types.js","sourcesContent":["export const DEFAULT_ROUTE = 'DEFAULT_ROUTE';\n"]}

@@ -105,6 +105,7 @@
 }
 
 .section-main {
+    text-align: center;
     padding: 5vh 0;
     /*color: #f8f8f8;*/
     /*background: url(../src/img/background/banner-bg.jpg) no-repeat center center;*/
@@ -115,7 +116,7 @@
 .contactBanner {
     padding: 2vh 0;
     color: #f8f8f8;
-    background: url(../img/background/intro-bg.jpg) no-repeat center center fixed;
+    background: #122b40;
     background-size: cover;
     /*background-color: rgba(224, 253, 255, 0.4);*/
     opacity: 0.8;
@@ -129,6 +130,11 @@
 .btn-custom {
     background: #74acdf;
     color: white;
+}
+
+.primary-btn {
+    background: #74acdf;
+    color: #ffffff;
 }
 
 .btn-white {
@@ -196,13 +202,13 @@
 
 .section-header-title {
     max-width: 846px;
-    margin: 0 auto;
+    margin: 4px auto;
     font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 600;
     font-style: normal;
     font-size: 1.5rem;
     line-height: 1.25;
-    color: #2C3438;
+    color: #74acdf;
     letter-spacing: -0.6px
 }
 
@@ -272,11 +278,10 @@
 /*Grid*/
 
 .container {
+    margin: 3em auto;
     position: relative;
     width: 90%;
     max-width: 1294px;
-    margin-left: auto;
-    margin-right: auto
 }
 
 .container::after {

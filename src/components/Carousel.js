@@ -1,14 +1,15 @@
 import React from "react";
-import carpBanner from "./../img/banner/banner1.jpg";
+import {Button, Carousel, Glyphicon, Label, Image} from "react-bootstrap";
+
+import carpBanner from "./../img/banner/banner11.jpg";
 import carBanner from "./../img/banner/banner2.jpg";
 import parkBanner from "./../img/banner/parking2.jpg";
-import elecBanner from "./../img/banner/electric2.jpg";
+import elecBanner from "./../img/banner/elec_banner_def.jpg";
 
 import trip from "./../img/logo/carp_g.svg";
 import car from "./../img/logo/car_g.svg";
 import park from "./../img/logo/park_g.svg";
 import elec from "./../img/logo/elec_g.svg";
-import {Button, Carousel, Glyphicon, Label} from "react-bootstrap";
 // import TypeWriter from 'react-typewriter';
 // ReactRotatingText Typist from 'react-typist';
 import ReactRotatingText from "react-rotating-text";
@@ -20,7 +21,7 @@ const styles = {
         backgroundImage: 'url(' + carpBanner + ')',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        backgroundPosition: 'center'
+        backgroundPosition: 'right'
     },
     coverImgCar: {
         height: '80vh',
@@ -41,7 +42,7 @@ const styles = {
         backgroundImage: 'url(' + elecBanner + ')',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        backgroundPosition: 'right'
+        backgroundPosition: 'bottom'
     },
     darkText: {
         color: '#122b40'
@@ -87,12 +88,11 @@ export default class CarouselComp extends React.Component {
                                 &nbsp; TRAYECTO
                             </Label>
                         </h2>
-                        <h2>
-                            <Button bsSize="lg"
-                                    style={styles.subButton}>
-                                <p>Compartí los gastos del viaje, ahorrá plata</p>
-                            </Button>
-                        </h2>
+                        <h3>
+                            <Label bsSize="lg" className="primary-btn">
+                                Compartí los gastos del viaje, ahorrá plata
+                            </Label>
+                        </h3>
                     </Carousel.Caption>
                 </Carousel.Item>
 
@@ -107,12 +107,11 @@ export default class CarouselComp extends React.Component {
                                 &nbsp; AUTO
                             </Label>
                         </h2>
-                        <h2>
-                            <Button bsSize="lg"
-                                    style={styles.labeledButton}>
-                                <p>Alquiler de Auto entre particulares</p>
-                            </Button>
-                        </h2>
+                        <h3>
+                            <Label bsSize="lg" className="primary-btn">
+                                Alquiler de Auto entre particulares
+                            </Label>
+                        </h3>
                     </Carousel.Caption>
                 </Carousel.Item>
 
@@ -127,17 +126,18 @@ export default class CarouselComp extends React.Component {
                                 &nbsp; COCHERA
                             </Label>
                         </h2>
-                        <h2>
-                            <Button bsSize="lg" style={styles.subButton}>
-                                <p>Alquiler de Cocheras entre particulares</p>
-                            </Button>
-                        </h2>
+                        <h3>
+                            <Label bsSize="lg" className="primary-btn">
+                                Alquiler de Cocheras entre particulares
+                            </Label>
+                        </h3>
                     </Carousel.Caption>
                 </Carousel.Item>
 
                 {/*Electric*/}
                 <Carousel.Item style={styles.coverImgElec}>
-                    <Carousel.Caption >
+                    {/*<iframe src="https://player.vimeo.com/video/129498278?autoplay=1&loop=1&title=0&byline=0&portrait=0" width="100%" height="800" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen/>*/}
+                    <Carousel.Caption style={{top: '25vh'}}>
                         <h2 style={{fontFamily: 'AllertaStencil'}}>
                             <Label bsSize="lg" className="btn-white">
                                 <Glyphicon glyph="search"/>
@@ -146,12 +146,11 @@ export default class CarouselComp extends React.Component {
                                 &nbsp; AUTO ELÉCTRICO
                             </Label>
                         </h2>
-                        <h2>
-                            <Button bsSize="lg"
-                                    style={styles.labeledButton}>
-                                <p>Ayudá al medioambiente con un sistema de transporte sostenible en Buenos Aires.</p>
-                            </Button>
-                        </h2>
+                        <h3>
+                            <Label bsSize="lg" className="primary-btn">
+                                Ayudá al medioambiente con un transporte sostenible
+                            </Label>
+                        </h3>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
