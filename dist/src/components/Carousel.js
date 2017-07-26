@@ -55,9 +55,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-// import TypeWriter from 'react-typewriter';
-// ReactRotatingText Typist from 'react-typist';
-
 
 var styles = {
     coverImgCarp: {
@@ -146,7 +143,7 @@ var CarouselComp = function (_React$Component) {
                                 { bsSize: "lg", className: "btn-white" },
                                 _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "search" }),
                                 " \xA0 \xA0",
-                                _react2.default.createElement(_reactRotatingText2.default, { items: ['Encontrá', 'Publicá', 'Compartí'] }),
+                                _react2.default.createElement(_reactRotatingText2.default, {items: [' Encontrá ', ' Publicá ', ' Compartí ']}),
                                 " \xA0 \xA0",
                                 _react2.default.createElement("img", { src: _carp_g2.default, height: 60 }),
                                 "\xA0 TRAYECTO"
@@ -157,7 +154,7 @@ var CarouselComp = function (_React$Component) {
                             null,
                             _react2.default.createElement(
                                 _reactBootstrap.Label,
-                                { bsSize: "lg", className: "primary-btn" },
+                                {bsSize: "lg", className: "btn-fine"},
                                 "Compart\xED los gastos del viaje, ahorr\xE1 plata"
                             )
                         )
@@ -176,7 +173,7 @@ var CarouselComp = function (_React$Component) {
                                 _reactBootstrap.Label,
                                 { bsSize: "lg", className: "btn-white" },
                                 _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "search" }),
-                                _react2.default.createElement(_reactRotatingText2.default, { items: ['Alquilá tu', 'Encontrá'] }),
+                                _react2.default.createElement(_reactRotatingText2.default, {items: [' Alquilá tu ', ' Encontrá ']}),
                                 " \xA0 \xA0",
                                 _react2.default.createElement("img", { src: _car_g2.default, height: 60 }),
                                 "\xA0 AUTO"
@@ -187,7 +184,7 @@ var CarouselComp = function (_React$Component) {
                             null,
                             _react2.default.createElement(
                                 _reactBootstrap.Label,
-                                { bsSize: "lg", className: "primary-btn" },
+                                {bsSize: "lg", className: "btn-fine"},
                                 "Alquiler de Auto entre particulares"
                             )
                         )
@@ -206,7 +203,7 @@ var CarouselComp = function (_React$Component) {
                                 _reactBootstrap.Label,
                                 { bsSize: "lg", className: "btn-white" },
                                 _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "search" }),
-                                _react2.default.createElement(_reactRotatingText2.default, { items: ['Alquilá tu', 'Encontrá'] }),
+                                _react2.default.createElement(_reactRotatingText2.default, {items: [' Alquilá tu ', ' Encontrá ']}),
                                 " \xA0 \xA0",
                                 _react2.default.createElement("img", { src: _park_g2.default, height: 60 }),
                                 "\xA0 COCHERA"
@@ -217,7 +214,7 @@ var CarouselComp = function (_React$Component) {
                             null,
                             _react2.default.createElement(
                                 _reactBootstrap.Label,
-                                { bsSize: "lg", className: "primary-btn" },
+                                {bsSize: "lg", className: "btn-fine"},
                                 "Alquiler de Cocheras entre particulares"
                             )
                         )
@@ -236,7 +233,7 @@ var CarouselComp = function (_React$Component) {
                                 _reactBootstrap.Label,
                                 { bsSize: "lg", className: "btn-white" },
                                 _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "search" }),
-                                _react2.default.createElement(_reactRotatingText2.default, { items: ['Alquilá por horas un', 'Encontrá un'] }),
+                                _react2.default.createElement(_reactRotatingText2.default, {items: [' Alquilá por horas un ', ' Encontrá un ']}),
                                 " \xA0 \xA0",
                                 _react2.default.createElement("img", { src: _elec_g2.default, height: 60 }),
                                 "\xA0 AUTO EL\xC9CTRICO"
@@ -247,7 +244,7 @@ var CarouselComp = function (_React$Component) {
                             null,
                             _react2.default.createElement(
                                 _reactBootstrap.Label,
-                                { bsSize: "lg", className: "primary-btn" },
+                                {bsSize: "lg", className: "btn-fine"},
                                 "Ayud\xE1 al medioambiente con un transporte sostenible"
                             )
                         )

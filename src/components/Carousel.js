@@ -1,5 +1,5 @@
 import React from "react";
-import {Button, Carousel, Glyphicon, Label, Image} from "react-bootstrap";
+import {Carousel, Glyphicon, Label} from "react-bootstrap";
 
 import carpBanner from "./../img/banner/banner11.jpg";
 import carBanner from "./../img/banner/banner2.jpg";
@@ -10,8 +10,7 @@ import trip from "./../img/logo/carp_g.svg";
 import car from "./../img/logo/car_g.svg";
 import park from "./../img/logo/park_g.svg";
 import elec from "./../img/logo/elec_g.svg";
-// import TypeWriter from 'react-typewriter';
-// ReactRotatingText Typist from 'react-typist';
+
 import ReactRotatingText from "react-rotating-text";
 
 const styles = {
@@ -83,13 +82,13 @@ export default class CarouselComp extends React.Component {
                         <h2 style={{fontFamily: 'AllertaStencil'}}>
                             <Label bsSize="lg" className="btn-white">
                                 <Glyphicon glyph="search"/> &nbsp; &nbsp;
-                                <ReactRotatingText items={['Encontrá', 'Publicá', 'Compartí']}/> &nbsp; &nbsp;
+                                <ReactRotatingText items={[' Encontrá ', ' Publicá ', ' Compartí ']}/> &nbsp; &nbsp;
                                 <img src={trip} height={60}/>
                                 &nbsp; TRAYECTO
                             </Label>
                         </h2>
                         <h3>
-                            <Label bsSize="lg" className="primary-btn">
+                            <Label bsSize="lg" className="btn-fine">
                                 Compartí los gastos del viaje, ahorrá plata
                             </Label>
                         </h3>
@@ -102,13 +101,13 @@ export default class CarouselComp extends React.Component {
                         <h2 style={{fontFamily: 'AllertaStencil'}}>
                             <Label bsSize="lg" className="btn-white">
                                 <Glyphicon glyph="search"/>
-                                <ReactRotatingText items={['Alquilá tu', 'Encontrá']}/> &nbsp; &nbsp;
+                                <ReactRotatingText items={[' Alquilá tu ', ' Encontrá ']}/> &nbsp; &nbsp;
                                 <img src={car} height={60}/>
                                 &nbsp; AUTO
                             </Label>
                         </h2>
                         <h3>
-                            <Label bsSize="lg" className="primary-btn">
+                            <Label bsSize="lg" className="btn-fine">
                                 Alquiler de Auto entre particulares
                             </Label>
                         </h3>
@@ -121,13 +120,13 @@ export default class CarouselComp extends React.Component {
                         <h2 style={{fontFamily: 'AllertaStencil'}}>
                             <Label bsSize="lg" className="btn-white">
                                 <Glyphicon glyph="search"/>
-                                <ReactRotatingText items={['Alquilá tu', 'Encontrá']}/> &nbsp; &nbsp;
+                                <ReactRotatingText items={[' Alquilá tu ', ' Encontrá ']}/> &nbsp; &nbsp;
                                 <img src={park} height={60}/>
                                 &nbsp; COCHERA
                             </Label>
                         </h2>
                         <h3>
-                            <Label bsSize="lg" className="primary-btn">
+                            <Label bsSize="lg" className="btn-fine">
                                 Alquiler de Cocheras entre particulares
                             </Label>
                         </h3>
@@ -141,13 +140,13 @@ export default class CarouselComp extends React.Component {
                         <h2 style={{fontFamily: 'AllertaStencil'}}>
                             <Label bsSize="lg" className="btn-white">
                                 <Glyphicon glyph="search"/>
-                                <ReactRotatingText items={['Alquilá por horas un', 'Encontrá un']}/> &nbsp; &nbsp;
+                                <ReactRotatingText items={[' Alquilá por horas un ', ' Encontrá un ']}/> &nbsp; &nbsp;
                                 <img src={elec} height={60}/>
                                 &nbsp; AUTO ELÉCTRICO
                             </Label>
                         </h2>
                         <h3>
-                            <Label bsSize="lg" className="primary-btn">
+                            <Label bsSize="lg" className="btn-fine">
                                 Ayudá al medioambiente con un transporte sostenible
                             </Label>
                         </h3>

@@ -127,14 +127,30 @@
     color: white;
 }
 
-.btn-custom {
-    background: #74acdf;
-    color: white;
-}
-
-.primary-btn {
+.btn-fine {
     background: #74acdf;
     color: #ffffff;
+}
+
+.btn-light {
+    border: 1px #74acdf;
+    background: white;
+    color: #122b40;
+}
+
+.btn-dark {
+    background: #122b40;
+    color: #ffffff;
+}
+
+.forGirls {
+    background: #ED1CAF;
+    color: #ffffff;
+}
+
+.btn-nope {
+    background: #afafafaf;
+    color: #122b40;
 }
 
 .btn-white {

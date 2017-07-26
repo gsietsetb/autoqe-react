@@ -20,9 +20,69 @@ var _location = require('../../img/icons/material/location2.svg');
 
 var _location2 = _interopRequireDefault(_location);
 
-var _location3 = require('../../img/icons/material/location.svg');
+var _location3 = require('../../img/icons/material/location3.svg');
 
 var _location4 = _interopRequireDefault(_location3);
+
+var _location5 = require('../../img/icons/material/location.svg');
+
+var _location6 = _interopRequireDefault(_location5);
+
+var _girl = require('../../img/icons/material/girl.svg');
+
+var _girl2 = _interopRequireDefault(_girl);
+
+var _girl_n = require('../../img/icons/material/girl_n.svg');
+
+var _girl_n2 = _interopRequireDefault(_girl_n);
+
+var _highway = require('../../img/icons/material/highway.svg');
+
+var _highway2 = _interopRequireDefault(_highway);
+
+var _highway_n = require('../../img/icons/material/highway_n.svg');
+
+var _highway_n2 = _interopRequireDefault(_highway_n);
+
+var _pet = require('../../img/icons/material/pet.svg');
+
+var _pet2 = _interopRequireDefault(_pet);
+
+var _timeLeft = require('../../img/icons/material/time-left.svg');
+
+var _timeLeft2 = _interopRequireDefault(_timeLeft);
+
+var _fast = require('../../img/icons/material/fast.svg');
+
+var _fast2 = _interopRequireDefault(_fast);
+
+var _smoke = require('../../img/icons/material/smoke.svg');
+
+var _smoke2 = _interopRequireDefault(_smoke);
+
+var _mateInfusion = require('../../img/icons/material/mate-infusion.svg');
+
+var _mateInfusion2 = _interopRequireDefault(_mateInfusion);
+
+var _facebook = require('../../img/icons/material/facebook.svg');
+
+var _facebook2 = _interopRequireDefault(_facebook);
+
+var _twitter = require('../../img/icons/material/twitter.svg');
+
+var _twitter2 = _interopRequireDefault(_twitter);
+
+var _instagram = require('../../img/icons/material/instagram.svg');
+
+var _instagram2 = _interopRequireDefault(_instagram);
+
+var _drivingLicense = require('../../img/icons/material/driving-license.svg');
+
+var _drivingLicense2 = _interopRequireDefault(_drivingLicense);
+
+var _autoqe_gray = require('../../img/logo/autoqe_gray.svg');
+
+var _autoqe_gray2 = _interopRequireDefault(_autoqe_gray);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -87,39 +147,124 @@ var TripListItem = function (_Component) {
                         _react2.default.createElement(
                             _reactBootstrap.Col,
                             { xs: 1, s: 1, md: 1 },
-                            _react2.default.createElement('img', { src: trip.image, height: 60 })
+                            _react2.default.createElement('img', {src: trip.image, height: 80})
                         ),
                         _react2.default.createElement(
                             _reactBootstrap.Col,
                             { xs: 2, s: 1, md: 2 },
-                            trip.username,
+                            _react2.default.createElement(
+                                'h4',
+                                null,
+                                trip.username
+                            ),
                             _react2.default.createElement(
                                 'div',
                                 null,
+                                _react2.default.createElement('img', {src: _facebook2.default, height: 15}),
+                                ' \xA0',
+                                _react2.default.createElement('img', {src: _twitter2.default, height: 15}),
+                                ' \xA0',
                                 _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: 'star' }),
                                 _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: 'star' }),
                                 _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: 'star' }),
                                 _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: 'star' }),
                                 _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: 'star-empty' })
                             ),
+                            _react2.default.createElement('img', {src: _drivingLicense2.default, height: 25}),
+                            ' \xA0',
                             _react2.default.createElement(
                                 _reactBootstrap.Label,
                                 { bsStyle: 'info' },
                                 _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: 'ok' }),
                                 '\xA0Verifcado'
-                            )
+                            ),
+                            ' \xA0'
                         ),
                         _react2.default.createElement(
                             _reactBootstrap.Col,
                             { xs: 3, s: 5, md: 5 },
                             _react2.default.createElement(
                                 'h4',
-                                null,
+                                {style: {display: 'inline'}},
                                 _react2.default.createElement('img', { src: _location2.default, height: 30 }),
                                 trip.from,
-                                '\u2192',
-                                _react2.default.createElement('img', { src: _location4.default, height: 30 }),
-                                trip.to
+                                '  \u2192',
+                                trip.stops && _react2.default.createElement(
+                                'div',
+                                {style: {display: 'inline'}},
+                                _react2.default.createElement('img', {src: _location4.default, height: 30}),
+                                trip.stops,
+                                '\u2192'
+                                ),
+                                _react2.default.createElement('img', {src: _location6.default, height: 30}),
+                                trip.to,
+                                ' \xA0 \xA0'
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                null,
+                                _react2.default.createElement(
+                                    _reactBootstrap.Button,
+                                    null,
+                                    ' ',
+                                    _react2.default.createElement('img', {src: _autoqe_gray2.default, height: 20}),
+                                    trip.car,
+                                    ' Alfa Romeo, 147'
+                                ),
+                                ' \xA0',
+                                trip.highway ? _react2.default.createElement(
+                                    _reactBootstrap.Button,
+                                    {style: {display: 'inline'}},
+                                    _react2.default.createElement('img', {
+                                        title: 'Por Autopista!',
+                                        src: _highway2.default,
+                                        height: 20
+                                    })
+                                ) : _react2.default.createElement(
+                                    _reactBootstrap.Button,
+                                    {style: {display: 'inline'}},
+                                    _react2.default.createElement('img', {
+                                        title: 'Sin Autopista o peajes!',
+                                        src: _highway_n2.default,
+                                        height: 20
+                                    })
+                                ),
+                                trip.pets && _react2.default.createElement(
+                                _reactBootstrap.Button,
+                                {style: {display: 'inline'}},
+                                _react2.default.createElement('img', {
+                                    title: 'Pueden subir mascotas!',
+                                    src: _pet2.default,
+                                    height: 20
+                                })
+                                ),
+                                !trip.smoke && _react2.default.createElement(
+                                _reactBootstrap.Button,
+                                {style: {display: 'inline'}},
+                                _react2.default.createElement('img', {
+                                    title: 'Se puede fumar!',
+                                    src: _smoke2.default,
+                                    height: 20
+                                })
+                                ),
+                                trip.withMate && _react2.default.createElement(
+                                _reactBootstrap.Button,
+                                {style: {display: 'inline'}},
+                                _react2.default.createElement('img', {
+                                    title: 'Lleva Mate!',
+                                    src: _mateInfusion2.default,
+                                    height: 20
+                                })
+                                ),
+                                trip.onlyGirls && _react2.default.createElement(
+                                _reactBootstrap.Button,
+                                {style: {display: 'inline'}},
+                                _react2.default.createElement('img', {
+                                    title: 'S\xF3lo mujeres!',
+                                    src: _girl2.default,
+                                    height: 20
+                                })
+                                )
                             )
                         ),
                         _react2.default.createElement(
@@ -128,9 +273,25 @@ var TripListItem = function (_Component) {
                             _react2.default.createElement(
                                 'h4',
                                 null,
+                                !trip.hurry ? _react2.default.createElement('img', {
+                                    src: _fast2.default,
+                                    height: 20
+                                }) : _react2.default.createElement('img', {src: _timeLeft2.default, height: 20}),
+                                ' \xA0',
                                 _react2.default.createElement(_reactIntl.FormattedRelative, { value: trip.date }),
-                                ',',
-                                _react2.default.createElement(_reactIntl.FormattedDate, { value: trip.date })
+                                ','
+                            ),
+                            _react2.default.createElement(
+                                _reactBootstrap.Button,
+                                {style: {padding: ''}},
+                                _react2.default.createElement(
+                                    'h4',
+                                    {style: {margin: '0 0'}},
+                                    _react2.default.createElement(_reactIntl.FormattedDate, {value: trip.date}),
+                                    '\xA0  \u2192',
+                                    _react2.default.createElement(_reactIntl.FormattedTime, {value: trip.date}),
+                                    ' '
+                                )
                             )
                         ),
                         _react2.default.createElement(
