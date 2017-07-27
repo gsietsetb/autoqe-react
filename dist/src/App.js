@@ -18,7 +18,7 @@ var _auth0Lock = require('auth0-lock');
 
 var _auth0Lock2 = _interopRequireDefault(_auth0Lock);
 
-var _Navbar = require('./components/Navbar');
+var _Navbar = require('./views/common/Navbar');
 
 var _Navbar2 = _interopRequireDefault(_Navbar);
 
@@ -34,7 +34,7 @@ var _Services = require('./components/Services');
 
 var _Services2 = _interopRequireDefault(_Services);
 
-var _Footer = require('./components/Footer');
+var _Footer = require('./views/common/Footer');
 
 var _Footer2 = _interopRequireDefault(_Footer);
 

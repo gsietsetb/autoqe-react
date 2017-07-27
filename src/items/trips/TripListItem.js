@@ -67,7 +67,7 @@ export default class TripListItem extends Component {
                                 <img src={locTo} height={30}/>{trip.to} &nbsp; &nbsp;
                             </h4>
                             <div>
-                                <Button> <img src={car} height={20}/>{trip.car} Alfa Romeo, 147</Button> &nbsp;
+                                <Button> <img src={car} height={20}/>{trip.car}</Button> &nbsp;
                                 {trip.highway ? (
                                     <Button style={{display: 'inline'}}>
                                         <img title="Por Autopista!" src={highw} height={20}/></Button>

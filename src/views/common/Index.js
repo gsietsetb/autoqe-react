@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import AuthStore from '../stores/AuthStore';
+import React, {Component} from 'react';
+import AuthStore from '../../stores/AuthStore';
 
 class IndexComponent extends Component {
 

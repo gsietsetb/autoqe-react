@@ -32,10 +32,6 @@ var _girl = require('../../img/icons/material/girl.svg');
 
 var _girl2 = _interopRequireDefault(_girl);
 
-var _girl_n = require('../../img/icons/material/girl_n.svg');
-
-var _girl_n2 = _interopRequireDefault(_girl_n);
-
 var _highway = require('../../img/icons/material/highway.svg');
 
 var _highway2 = _interopRequireDefault(_highway);
@@ -71,10 +67,6 @@ var _facebook2 = _interopRequireDefault(_facebook);
 var _twitter = require('../../img/icons/material/twitter.svg');
 
 var _twitter2 = _interopRequireDefault(_twitter);
-
-var _instagram = require('../../img/icons/material/instagram.svg');
-
-var _instagram2 = _interopRequireDefault(_instagram);
 
 var _drivingLicense = require('../../img/icons/material/driving-license.svg');
 
@@ -188,7 +180,7 @@ var TripListItem = function (_Component) {
                                 {style: {display: 'inline'}},
                                 _react2.default.createElement('img', { src: _location2.default, height: 30 }),
                                 trip.from,
-                                '  \u2192',
+                                ' \u2192',
                                 trip.stops && _react2.default.createElement(
                                 'div',
                                 {style: {display: 'inline'}},
@@ -208,8 +200,7 @@ var TripListItem = function (_Component) {
                                     null,
                                     ' ',
                                     _react2.default.createElement('img', {src: _autoqe_gray2.default, height: 20}),
-                                    trip.car,
-                                    ' Alfa Romeo, 147'
+                                    trip.car
                                 ),
                                 ' \xA0',
                                 trip.highway ? _react2.default.createElement(
@@ -289,8 +280,7 @@ var TripListItem = function (_Component) {
                                     {style: {margin: '0 0'}},
                                     _react2.default.createElement(_reactIntl.FormattedDate, {value: trip.date}),
                                     '\xA0  \u2192',
-                                    _react2.default.createElement(_reactIntl.FormattedTime, {value: trip.date}),
-                                    ' '
+                                    _react2.default.createElement(_reactIntl.FormattedTime, {value: trip.date})
                                 )
                             )
                         ),

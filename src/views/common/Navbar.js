@@ -15,24 +15,24 @@ import {
 import MediaQuery from "react-responsive";
 import ReactRotatingText from "react-rotating-text";
 
-import AuthActions from "../actions/AuthActions";
-import AuthStore from "../stores/AuthStore";
+import AuthActions from "../../actions/AuthActions";
+import AuthStore from "../../stores/AuthStore";
 
-import logo_side from "../img/logo/autoqe_side.svg";
+import logo_side from "../../img/logo/autoqe_side.svg";
 
-import trip from "./../img/logo/carp_g.svg";
-import car from "./../img/logo/car_g.svg";
-import park from "./../img/logo/park_g.svg";
-import elec from "./../img/logo/elec_g.svg";
+import trip from "../../img/logo/carp_g.svg";
+import car from "../../img/logo/car_g.svg";
+import park from "../../img/logo/park_g.svg";
+import elec from "../../img/logo/elec_g.svg";
 
-import argFlag from "./../img/icons/flag/061-argentina.svg";
-import spFlag from "./../img/icons/flag/012-spain.svg";
-import chFlag from "./../img/icons/flag/051-chile.svg";
-import usaFlag from "./../img/icons/flag/002-united-states.svg";
-import bolFlag from "./../img/icons/flag/bolivia.svg";
-import brFlag from "./../img/icons/flag/brazil.svg";
+import argFlag from "../../img/icons/flag/061-argentina.svg";
+import spFlag from "../../img/icons/flag/012-spain.svg";
+import chFlag from "../../img/icons/flag/051-chile.svg";
+import usaFlag from "../../img/icons/flag/002-united-states.svg";
+import bolFlag from "../../img/icons/flag/bolivia.svg";
+import brFlag from "../../img/icons/flag/brazil.svg";
 
-import locTo from "../img/icons/material/location.svg";
+import locTo from "../../img/icons/material/location.svg";
 
 const styles = {
     flagDropdown: {

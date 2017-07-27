@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import img from "../";
+import img from "../../index";
 
 class FooterComponent extends Component {
     render() {
