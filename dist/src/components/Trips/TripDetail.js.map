@@ -1,0 +1,32 @@
+{
+  "version": 3,
+  "sources": [
+    "../../../../src/components/Trips/TripDetail.js"
+  ],
+  "names": [
+    "TripDetailComponent",
+    "state",
+    "trip",
+    "onChange",
+    "bind",
+    "addChangeListener",
+    "getTrip",
+    "props",
+    "params",
+    "id",
+    "removeChangeListener",
+    "nextProps",
+    "setState",
+    "Object",
+    "keys",
+    "length",
+    "image",
+    "from",
+    "to"
+  ],
+  "mappings": ";;;;;;;;AAAA;;;;AACA;;;;AACA;;;;;;;;;;;;IAEqBA,mB;;;AAEnB,iCAAc;AAAA;;AAAA;;AAEZ,UAAKC,KAAL,GAAa;AACXC,YAAM;AADK,KAAb;AAGA,UAAKC,QAAL,GAAgB,MAAKA,QAAL,CAAcC,IAAd,OAAhB;AALY;AAMb;;;;yCAEoB;AACnB,0BAAUC,iBAAV,CAA4B,KAAKF,QAAjC;AACD;;;wCAEmB;AAClB,4BAAYG,OAAZ,CAAoB,KAAKC,KAAL,CAAWC,MAAX,CAAkBC,EAAtC;AACD;;;2CAEsB;AACrB,0BAAUC,oBAAV,CAA+B,KAAKP,QAApC;AACD;;;8CAEyBQ,S,EAAW;AACnC,4BAAYL,OAAZ,CAAoBK,UAAUH,MAAV,CAAiBC,EAArC;AACD;;;+BAEU;AACT,WAAKG,QAAL,CAAc;AACZV,cAAM,oBAAUI,OAAV,CAAkB,KAAKC,KAAL,CAAWC,MAAX,CAAkBC,EAApC;AADM,OAAd;AAGD;;;6BACQ;AACP,UAAIP,aAAJ;AACA,UAAIW,OAAOC,IAAP,CAAY,KAAKb,KAAL,CAAWC,IAAvB,EAA6Ba,MAA7B,KAAwC,CAA5C,EAA+C;AAC7Cb,eAAO,KAAKD,KAAL,CAAWC,IAAX,CAAgB,CAAhB,CAAP;AACD;AACD,aACE;AAAA;AAAA;AACIW,eAAOC,IAAP,CAAY,KAAKb,KAAL,CAAWC,IAAvB,EAA6Ba,MAA7B,KAAwC,CAAxC,IACA;AAAA;AAAA;AACE,iDAAK,KAAKb,KAAKc,KAAf,EAAsB,OAAM,KAA5B,GADF;AAEE;AAAA;AAAA;AAAKd,iBAAKe;AAAV,WAFF;AAGE;AAAA;AAAA;AAAKf,iBAAKgB;AAAV;AAHF;AAFJ,OADF;AAWD;;;;;;kBA/CkBlB,mB",
+  "file": "TripDetail.js",
+  "sourcesContent": [
+    "import React, { Component } from 'react';\nimport TripActions from '../../actions/TripActions';\nimport TripStore from '../../store/TripStore';\n\nexport default class TripDetailComponent extends Component {\n\n  constructor() {\n    super();\n    this.state = {\n      trip: {}\n    }\n    this.onChange = this.onChange.bind(this);\n  }\n\n  componentWillMount() {\n    TripStore.addChangeListener(this.onChange);\n  }\n\n  componentDidMount() {\n    TripActions.getTrip(this.props.params.id);\n  }\n\n  componentWillUnmount() {\n    TripStore.removeChangeListener(this.onChange);\n  }\n\n  componentWillReceiveProps(nextProps) {\n    TripActions.getTrip(nextProps.params.id);\n  }\n\n  onChange() {\n    this.setState({\n      trip: TripStore.getTrip(this.props.params.id)\n    });\n  }\n  render() {\n    let trip;\n    if (Object.keys(this.state.trip).length !== 0) {\n      trip = this.state.trip[0];\n    }\n    return (\n      <div>\n        { Object.keys(this.state.trip).length !== 0 &&\n          <div>\n            <img src={trip.image} width=\"150\" />\n            <h1>{trip.from}</h1>\n            <h3>{trip.to}</h3>\n          </div>\n        }\n      </div>\n    );\n  }\n}"
+  ]
+}

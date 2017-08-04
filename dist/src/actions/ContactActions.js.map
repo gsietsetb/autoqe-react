@@ -1,0 +1,29 @@
+{
+  "version": 3,
+  "sources": [
+    "../../../src/actions/ContactActions.js"
+  ],
+  "names": [
+    "api_url",
+    "recieveContacts",
+    "getContacts",
+    "then",
+    "dispatch",
+    "actionType",
+    "RECIEVE_CONTACTS",
+    "contacts",
+    "catch",
+    "RECIEVE_CONTACTS_ERROR",
+    "message",
+    "getContact",
+    "id",
+    "RECIEVE_CONTACT",
+    "contact",
+    "RECIEVE_CONTACT_ERROR"
+  ],
+  "mappings": ";;;;;;AAAA;;;;AACA;;;;AACA;;;;;;AAGA,IAAMA,UAAU,yBAAhB;AACA;;kBAEe;;AAEbC,mBAAiB,2BAAM;AACrB,0BACGC,WADH,CACeF,UAAQ,WADvB,EAEGG,IAFH,CAEQ,oBAAY;AAChB,8BAAcC,QAAd,CAAuB;AACrBC,oBAAY,2BAAiBC,gBADR;AAErBC,kBAAUA;AAFW,OAAvB;AAID,KAPH,EAQGC,KARH,CAQS,mBAAW;AAChB,8BAAcJ,QAAd,CAAuB;AACrBC,oBAAY,2BAAiBI,sBADR;AAErBC,iBAASA;AAFY,OAAvB;AAID,KAbH;AAcD,GAjBY;;AAmBbC,cAAY,oBAACC,EAAD,EAAQ;AAClB,0BACGD,UADH,CACcX,UAAQ,YAAR,GAAuBY,EADrC,EAEGT,IAFH,CAEQ,mBAAW;AACf,8BAAcC,QAAd,CAAuB;AACrBC,oBAAY,2BAAiBQ,eADR;AAErBC,iBAASA;AAFY,OAAvB;AAID,KAPH,EAQGN,KARH,CAQS,mBAAW;AAChB,8BAAcJ,QAAd,CAAuB;AACrBC,oBAAY,2BAAiBU,qBADR;AAErBL,iBAASA;AAFY,OAAvB;AAID,KAbH;AAcD;;AAlCY,C",
+  "file": "ContactActions.js",
+  "sourcesContent": [
+    "import AppDispatcher from '../dispatcher/AppDispatcher';\nimport ContactConstants from '../constants/ContactConstants';\nimport ContactsAPI from '../utils/ContactsAPI';\n\n\nconst api_url = 'https://api.autoqe.com/';\n// const api_url = 'http://localhost:3001/';\n\nexport default {\n\n  recieveContacts: () => {\n    ContactsAPI\n      .getContacts(api_url+'api/Users')\n      .then(contacts => {\n        AppDispatcher.dispatch({\n          actionType: ContactConstants.RECIEVE_CONTACTS,\n          contacts: contacts\n        });\n      })\n      .catch(message => {\n        AppDispatcher.dispatch({\n          actionType: ContactConstants.RECIEVE_CONTACTS_ERROR,\n          message: message\n        });\n      });\n  },\n\n  getContact: (id) => {\n    ContactsAPI\n      .getContact(api_url+'api/Users/' + id)\n      .then(contact => {\n        AppDispatcher.dispatch({\n          actionType: ContactConstants.RECIEVE_CONTACT,\n          contact: contact\n        });\n      })\n      .catch(message => {\n        AppDispatcher.dispatch({\n          actionType: ContactConstants.RECIEVE_CONTACT_ERROR,\n          message: message\n        });\n      });\n  }\n\n}\n"
+  ]
+}

@@ -132,7 +132,7 @@ var TripListItem = function (_Component) {
                 null,
                 _react2.default.createElement(
                     _reactRouterDom.Link,
-                    { to: '/trips/' + trip.id, style: { color: '#122b40' } },
+                    { to: '/Trips/' + trip.id, style: { color: '#122b40' } },
                     _react2.default.createElement(
                         _reactBootstrap.Row,
                         null,

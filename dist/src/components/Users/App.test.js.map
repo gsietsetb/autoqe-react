@@ -1,0 +1,18 @@
+{
+  "version": 3,
+  "sources": [
+    "../../../../src/components/Users/App.test.js"
+  ],
+  "names": [
+    "it",
+    "div",
+    "document",
+    "createElement",
+    "render"
+  ],
+  "mappings": ";;AAAA;;;;AACA;;;;AACA;;;;;;AAEAA,GAAG,0BAAH,EAA+B,YAAM;AACnC,MAAMC,MAAMC,SAASC,aAAT,CAAuB,KAAvB,CAAZ;AACA,qBAASC,MAAT,CAAgB,kDAAhB,EAAyBH,GAAzB;AACD,CAHD",
+  "file": "App.test.js",
+  "sourcesContent": [
+    "import React from 'react';\nimport ReactDOM from 'react-dom';\nimport App from '../App';\n\nit('renders without crashing', () => {\n  const div = document.createElement('div');\n  ReactDOM.render(<App />, div);\n});\n"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "version": 3,
+  "sources": [
+    "../../../src/utils/TripsAPI.js"
+  ],
+  "names": [
+    "types",
+    "API_URL",
+    "TripsAPI",
+    "console",
+    "log",
+    "request",
+    "Request",
+    "method",
+    "fetch",
+    "then",
+    "response",
+    "json",
+    "catch",
+    "error",
+    "trip",
+    "headers",
+    "Object",
+    "assign",
+    "requestHeaders",
+    "id",
+    "body",
+    "JSON",
+    "stringify"
+  ],
+  "mappings": ";;;;;;;;AAAA;;;;AACA;;;;AACA;;IAAYA,K;;;;;;;;AAEZ,IAAMC,UAAUD,MAAMC,OAAN,GAAc,YAA9B;;IAEqBC,Q;;;;;;;yCAEO;AACpB;AACH;;;sCAEoB;AACjB;AACAC,oBAAQC,GAAR,CAAYH,OAAZ;AACA,gBAAMI,UAAU,IAAIC,OAAJ,CAAYL,OAAZ,EAAqB;AACjCM,wBAAQ;AACR;AAFiC,aAArB,CAAhB;;AAKA,mBAAOC,MAAMH,OAAN,EAAeI,IAAf,CAAoB,oBAAY;AACnC,uBAAOC,SAASC,IAAT,EAAP;AACH,aAFM,EAEJC,KAFI,CAEE,iBAAS;AACd,uBAAOC,KAAP;AACH,aAJM,CAAP;AAKH;;;mCAEiBC,I,EAAM;AACpB,gBAAMC,UAAUC,OAAOC,MAAP,CAAc,EAAC,gBAAgB,kBAAjB,EAAd,EAAoD,KAAKC,cAAL,EAApD,CAAhB;AACA,gBAAMb,UAAU,IAAIC,OAAJ,CAAYL,UAAQa,KAAKK,EAAzB,EAA6B;AACzCZ,wBAAQ,KADiC;AAEzCQ,yBAASA,OAFgC;AAGzCK,sBAAMC,KAAKC,SAAL,CAAe,EAACR,MAAMA,IAAP,EAAf;AAHmC,aAA7B,CAAhB;;AAOA,mBAAON,MAAMH,OAAN,EAAeI,IAAf,CAAoB,oBAAY;AACnC,uBAAOC,SAASC,IAAT,EAAP;AACH,aAFM,EAEJC,KAFI,CAEE,iBAAS;AACd,uBAAOC,KAAP;AACH,aAJM,CAAP;AAKH;;;mCAEiBC,I,EAAM;AACpB,gBAAMC,UAAUC,OAAOC,MAAP,CAAc,EAAC,gBAAgB,kBAAjB,EAAd,EAAoD,KAAKC,cAAL,EAApD,CAAhB;AACA,gBAAMb,UAAU,IAAIC,OAAJ,CAAYL,OAAZ,EAAqB;AACjCM,wBAAQ,MADyB;AAEjCQ,yBAASA,OAFwB;AAGjCK,sBAAMC,KAAKC,SAAL,CAAe,EAACR,MAAMA,IAAP,EAAf;AAH2B,aAArB,CAAhB;;AAOA,mBAAON,MAAMH,OAAN,EAAeI,IAAf,CAAoB,oBAAY;AACnC,uBAAOC,SAASC,IAAT,EAAP;AACH,aAFM,EAEJC,KAFI,CAEE,iBAAS;AACd,uBAAOC,KAAP;AACH,aAJM,CAAP;AAKH;;;mCAEiBC,I,EAAM;AACpB,gBAAMC,UAAUC,OAAOC,MAAP,CAAc,EAAC,gBAAgB,kBAAjB,EAAd,EAAoD,KAAKC,cAAL,EAApD,CAAhB;AACA,gBAAMb,UAAU,IAAIC,OAAJ,CAAYL,UAAQa,KAAKK,EAAzB,EAA6B;AACzCZ,wBAAQ,QADiC;AAEzCQ,yBAASA;AAFgC,aAA7B,CAAhB;;AAKA,mBAAOP,MAAMH,OAAN,EAAeI,IAAf,CAAoB,oBAAY;AACnC,uBAAOC,SAASC,IAAT,EAAP;AACH,aAFM,EAEJC,KAFI,CAEE,iBAAS;AACd,uBAAOC,KAAP;AACH,aAJM,CAAP;AAKH;;;;;AAEL;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;;kBA/FqBX,Q",
+  "file": "TripsAPI.js",
+  "sourcesContent": [
+    "import AuthStore from '../store/AuthStore';\nimport request from 'superagent/lib/client';\nimport * as types from '../actions/ActionTypes';\n\nconst API_URL = types.API_URL+'api/trips/';\n\nexport default class TripsAPI {\n\n    static requestHeaders() {\n        // return {'AUTHORIZATION': `Bearer ${sessionStorage.jwt}`}\n    }\n\n    static getAllTrips() {\n        // const headers = this.requestHeaders();\n        console.log(API_URL);\n        const request = new Request(API_URL, {\n            method: 'GET',\n            // headers: headers\n        });\n\n        return fetch(request).then(response => {\n            return response.json();\n        }).catch(error => {\n            return error;\n        });\n    }\n\n    static updateTrip(trip) {\n        const headers = Object.assign({'Content-Type': 'application/json'}, this.requestHeaders());\n        const request = new Request(API_URL+trip.id, {\n            method: 'PUT',\n            headers: headers,\n            body: JSON.stringify({trip: trip})\n        });\n\n\n        return fetch(request).then(response => {\n            return response.json();\n        }).catch(error => {\n            return error;\n        });\n    }\n\n    static createTrip(trip) {\n        const headers = Object.assign({'Content-Type': 'application/json'}, this.requestHeaders());\n        const request = new Request(API_URL, {\n            method: 'POST',\n            headers: headers,\n            body: JSON.stringify({trip: trip})\n        });\n\n\n        return fetch(request).then(response => {\n            return response.json();\n        }).catch(error => {\n            return error;\n        });\n    }\n\n    static deleteTrip(trip) {\n        const headers = Object.assign({'Content-Type': 'application/json'}, this.requestHeaders());\n        const request = new Request(API_URL+trip.id, {\n            method: 'DELETE',\n            headers: headers\n        });\n\n        return fetch(request).then(response => {\n            return response.json();\n        }).catch(error => {\n            return error;\n        });\n    }\n}\n//\n// export default {\n//\n//   // We want to get a list of all the Trips\n//   // from the API. This list contains reduced info\n//   // and will be be used in the sidebar\n//   getTrips: (url) => {\n//     return new Promise((resolve, reject) => {\n//       request\n//         .get(url)\n//         .end((err, resp) => {\n//           if (err) reject(err);\n//           resolve(JSON.parse(resp.text));\n//         })\n//     });\n//   },\n//\n//   getTrip: (url) => {\n//     return new Promise((resolve, reject) => {\n//       request\n//         .get(url)\n//         // .set('Authorization', 'Bearer ' + AuthStore.getJwt())\n//         .end((err, resp) => {\n//           if (err) reject(err);\n//           resolve(JSON.parse(resp.text));\n//         })\n//     });\n//   }\n// }"
+  ]
+}

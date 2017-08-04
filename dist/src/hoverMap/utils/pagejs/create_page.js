@@ -445,7 +445,7 @@ module.exports = function createPage() {
    *
    * Options:
    *
-   *   - `sensitive`    enable case-sensitive routes
+   *   - `sensitive`    enable case-sensitive Routes
    *   - `strict`       enable strict matching for trailing slashes
    *
    * @param {String} path

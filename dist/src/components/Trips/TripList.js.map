@@ -1,0 +1,21 @@
+{
+  "version": 3,
+  "sources": [
+    "../../../../src/components/Trips/TripList.js"
+  ],
+  "names": [
+    "TripList",
+    "trips",
+    "map",
+    "trip",
+    "id",
+    "propTypes",
+    "array",
+    "isRequired"
+  ],
+  "mappings": ";;;;;;AAAA;;;;AACA;;;;;;AAEA,IAAMA,WAAW,SAAXA,QAAW,OAAa;AAAA,QAAXC,KAAW,QAAXA,KAAW;;AAC1B,WACI;AAAA;AAAA;AAQKA,cAAMC,GAAN,CAAU;AAAA,mBACP,uDAAa,KAAKC,KAAKC,EAAvB,EAA2B,MAAMD,IAAjC,GADO;AAAA,SAAV;AARL;AAYA;AAbJ;AAeH,CAhBD;;AAkBAH,SAASK,SAAT,GAAqB;AACjBJ,WAAO,iBAAUK,KAAV,CAAgBC;AADN,CAArB;;kBAIeP,Q",
+  "file": "TripList.js",
+  "sourcesContent": [
+    "import React, {PropTypes} from 'react';\nimport TripListRow from './TripListRow';\n\nconst TripList = ({trips}) => {\n    return (\n        <div>{/*<table className=\"table\">*/}\n            {/*<thead>*/}\n            {/*<tr>*/}\n                {/*<th>Name</th>*/}\n            {/*</tr>*/}\n            {/*</thead>*/}\n            {/*<tbody>*/}\n\n            {trips.map(trip =>\n                <TripListRow key={trip.id} trip={trip} />\n            )}\n             </div>\n        // </table>\n    );\n};\n\nTripList.propTypes = {\n    trips: PropTypes.array.isRequired\n};\n\nexport default TripList;"
+  ]
+}

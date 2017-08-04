@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "sources": [
+    "../../../../src/views/home/HowWorks.js"
+  ],
+  "names": [
+    "HowWorksComp",
+    "Component"
+  ],
+  "mappings": ";;;;;;;;AAAA;;;;AACA;;AACA;;;;;;;;;;;;IAEqBA,Y;;;;;;;;;;;iCACR;AACL,mBACI;AAAA;AAAA,kBAAS,WAAU,sBAAnB;AACI;AAAA;AAAA,sBAAQ,WAAU,gBAAlB;AACI;AAAA;AAAA,0BAAK,WAAU,WAAf;AACI;AAAA;AAAA,8BAAI,WAAU,sBAAd;AAAA;AACsC;AAAA;AAAA;AAAA;AAAA;AADtC,yBADJ;AAII;AAAA;AAAA,8BAAK,WAAU,qBAAf,EAAqC,QAAQ,GAA7C;AACI;AAAA;AAAA;AAAA;AAAA,6BADJ;AAEI,mFAAO,gBAAP,EAAkB,wBAAlB,EAA8B,QAAQ,GAAtC;AAFJ;AAJJ;AADJ,iBADJ;AAaI;AAAA;AAAA;AACI;AAAA;AAAA,0BAAiB,YAAjB;AACI,kEAAQ,OAAM,KAAd,EAAoB,QAAO,KAA3B,EAAiC,KAAI,gFAArC,EAA8H,aAAY,GAA1I,EAA8I,UAAU,CAAxJ,EAA2J,qBAA3J;AADJ;AADJ;AAbJ,aADJ;AAsBH;;;;EAxBqC,gBAAMC,S;;kBAA3BD,Y",
+  "file": "HowWorks.js",
+  "sourcesContent": [
+    "import React from \"react\";\nimport {Label, Image, ResponsiveEmbed} from \"react-bootstrap\";\nimport steps from \"../../img/banner/easy-steps.png\";\n\nexport default class HowWorksComp extends React.Component {\n    render() {\n        return (\n            <section className=\"section section-main\">\n                <header className=\"section-header\">\n                    <div className=\"container\">\n                        <h1 className=\"section-header-title\">\n                            Viajar es así de sencillo: &nbsp; <Label>Sin intermediarios!</Label>\n                        </h1>\n                        <div className=\"section-header-text\" height={500}>\n                            <h3>Tu solución de transporte en tres pasos  </h3>\n                            <Image responsive src={steps} height={400}/>\n                        </div>\n\n                    </div>\n                </header>\n                <div >\n                    <ResponsiveEmbed a16by9>\n                        <iframe width=\"853\" height=\"480\" src=\"https://www.youtube-nocookie.com/embed/4_Tw2Fnd21Q?rel=0&amp;controls=0&amp;showinfo=0\" frameborder=\"0\" autoPlay={1} allowfullscreen/>\n                        {/*<iframe width=\"640\" height=\"500\" src=\"https://www.youtube.com/embed/4_Tw2Fnd21Q\" frameborder=\"0\" autoPlay={1} allowfullscreen/>*/}\n                    </ResponsiveEmbed>\n                </div>\n            </section>\n        );\n    }\n}\n"
+  ]
+}

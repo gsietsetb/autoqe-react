@@ -84,4 +84,4 @@ var HowWorksComp = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = HowWorksComp;
-//# sourceMappingURL=HowWorks.js.map
+//# sourceMappingURL=HowItWorks.js.map

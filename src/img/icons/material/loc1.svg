@@ -1,0 +1,11 @@
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141.73 123">
+    <defs>
+        <style>
+            .cls-1{fill:#74acdf;}.cls-2{fill:none;stroke:#fff;stroke-linecap:round;stroke-miterlimit:10;stroke-width:5px;}
+        </style>
+    </defs>
+    <title>loc1</title>
+    <path class="cls-1"
+          d="M37.35,73.16l33.13,48.37,33.67-48.1c12.55-16.56,10.88-44-3.62-58.65a41.72,41.72,0,0,0-59-.3C26.87,29,24.92,56.41,37.35,73.16Zm14.8-31a19.08,19.08,0,1,1,19,19.18A19.1,19.1,0,0,1,52.15,42.18Z"/>
+    <line class="cls-2" x1="81.43" y1="52.65" x2="52.53" y2="94.36"/>
+</svg>

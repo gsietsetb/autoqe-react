@@ -18,51 +18,47 @@ var _auth0Lock = require('auth0-lock');
 
 var _auth0Lock2 = _interopRequireDefault(_auth0Lock);
 
-var _Navbar = require('./views/common/Navbar');
+var _Navbar = require('./components/common/Navbar');
 
 var _Navbar2 = _interopRequireDefault(_Navbar);
 
-var _SearchBar = require('./components/SearchBar');
+var _SearchBar = require('./components/Home/SearchBar');
 
 var _SearchBar2 = _interopRequireDefault(_SearchBar);
 
-var _Carousel = require('./components/Carousel');
+var _Carousel = require('./components/Home/Carousel');
 
 var _Carousel2 = _interopRequireDefault(_Carousel);
 
-var _Services = require('./components/Services');
+var _Services = require('./components/Home/Services');
 
 var _Services2 = _interopRequireDefault(_Services);
 
-var _Footer = require('./views/common/Footer');
+var _Footer = require('./components/common/Footer');
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
-var _SocialNetworks = require('./components/SocialNetworks');
+var _SocialNetworks = require('./components/common/SocialNetworks');
 
 var _SocialNetworks2 = _interopRequireDefault(_SocialNetworks);
 
-var _Map = require('./maps/Map');
+var _Map = require('./components/maps/Map');
 
 var _Map2 = _interopRequireDefault(_Map);
 
-var _TripGrid = require('./components/grids/TripGrid');
+var _LastTrips = require('./components/Trips/LastTrips');
 
-var _TripGrid2 = _interopRequireDefault(_TripGrid);
+var _LastTrips2 = _interopRequireDefault(_LastTrips);
 
-var _TalkAbout = require('./components/TalkAbout');
+var _TalkAboutUs = require('./components/Home/TalkAboutUs');
 
-var _TalkAbout2 = _interopRequireDefault(_TalkAbout);
+var _TalkAboutUs2 = _interopRequireDefault(_TalkAboutUs);
 
-var _HowWorks = require('./components/HowWorks');
+var _HowItWorks = require('./components/Home/HowItWorks');
 
-var _HowWorks2 = _interopRequireDefault(_HowWorks);
+var _HowItWorks2 = _interopRequireDefault(_HowItWorks);
 
-var _main_map_layout = require('./maps/main_map_layout');
-
-var _main_map_layout2 = _interopRequireDefault(_main_map_layout);
-
-var _SecurePayment = require('./components/SecurePayment');
+var _SecurePayment = require('./components/Home/SecurePayment');
 
 var _SecurePayment2 = _interopRequireDefault(_SecurePayment);
 
@@ -101,14 +97,6 @@ var AppComponent = function (_Component) {
                 'div',
                 null,
                 _react2.default.createElement(_Navbar2.default, { lock: this.lock }),
-                _react2.default.createElement(_Carousel2.default, null),
-                _react2.default.createElement(_SearchBar2.default, null),
-                _react2.default.createElement(_TripGrid2.default, null),
-                _react2.default.createElement(_Map2.default, null),
-                _react2.default.createElement(_Services2.default, null),
-                _react2.default.createElement(_HowWorks2.default, null),
-                _react2.default.createElement(_SecurePayment2.default, null),
-                _react2.default.createElement(_TalkAbout2.default, null),
                 _react2.default.createElement(_SocialNetworks2.default, null),
                 _react2.default.createElement(_Footer2.default, null)
             );

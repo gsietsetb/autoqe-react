@@ -26,7 +26,7 @@ var _example_defs2 = _interopRequireDefault(_example_defs);
 
 var _example_actions = require('./example_actions.js');
 
-var _map_actions = require('./map_actions.js');
+var _map_actions = require('./MapActions.js');
 
 var _router_actions = require('./router_actions.js');
 

@@ -1,0 +1,19 @@
+{
+  "version": 3,
+  "sources": [
+    "../../../../src/components/Users/UserListRow.js"
+  ],
+  "names": [
+    "UserListRow",
+    "user",
+    "name",
+    "propTypes",
+    "object",
+    "isRequired"
+  ],
+  "mappings": ";;;;;;AAAA;;;;;;AAEA,IAAMA,cAAc,SAAdA,WAAc,OAAY;AAAA,QAAVC,IAAU,QAAVA,IAAU;;AAC5B,WACI;AAAA;AAAA;AACI;AAAA;AAAA;AAAKA,iBAAKC;AAAV;AADJ,KADJ;AAKH,CAND;;AAQAF,YAAYG,SAAZ,GAAwB;AACpBF,UAAM,iBAAUG,MAAV,CAAiBC;AADH,CAAxB;;kBAIeL,W",
+  "file": "UserListRow.js",
+  "sourcesContent": [
+    "import React, {PropTypes} from 'react';\n\nconst UserListRow = ({user}) => {\n    return (\n        <tr>\n            <td>{user.name}</td>\n        </tr>\n    );\n};\n\nUserListRow.propTypes = {\n    user: PropTypes.object.isRequired\n};\n\nexport default UserListRow;"
+  ]
+}

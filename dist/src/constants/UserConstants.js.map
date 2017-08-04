@@ -1,0 +1,17 @@
+{
+  "version": 3,
+  "sources": [
+    "../../../src/constants/UserConstants.js"
+  ],
+  "names": [
+    "RECIEVE_USER",
+    "RECIEVE_USERS",
+    "RECIEVE_USER_ERROR",
+    "RECIEVE_USERS_ERROR"
+  ],
+  "mappings": ";;;;;;AAAA;;;;;;kBAEe,yBAAU;AACvBA,gBAAc,IADS;AAEvBC,iBAAe,IAFQ;AAGvBC,sBAAoB,IAHG;AAIvBC,uBAAqB;AAJE,CAAV,C",
+  "file": "UserConstants.js",
+  "sourcesContent": [
+    "import keyMirror from 'keymirror';\n\nexport default keyMirror({\n  RECIEVE_USER: null,\n  RECIEVE_USERS: null,\n  RECIEVE_USER_ERROR: null,\n  RECIEVE_USERS_ERROR: null\n});"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "version": 3,
+  "sources": [
+    "../../../src/utils/ContactsAPI.js"
+  ],
+  "names": [
+    "getContacts",
+    "url",
+    "Promise",
+    "resolve",
+    "reject",
+    "get",
+    "end",
+    "err",
+    "response",
+    "JSON",
+    "parse",
+    "text",
+    "getContact",
+    "set",
+    "getJwt"
+  ],
+  "mappings": ";;;;;;AAAA;;;;AACA;;;;;;kBAEe;;AAEb;AACA;AACA;AACAA,eAAa,qBAACC,GAAD,EAAS;AACpB,WAAO,IAAIC,OAAJ,CAAY,UAACC,OAAD,EAAUC,MAAV,EAAqB;AACtC,uBACGC,GADH,CACOJ,GADP,EAEGK,GAFH,CAEO,UAACC,GAAD,EAAMC,QAAN,EAAmB;AACtB,YAAID,GAAJ,EAASH,OAAOG,GAAP;AACTJ,gBAAQM,KAAKC,KAAL,CAAWF,SAASG,IAApB,CAAR;AACD,OALH;AAMD,KAPM,CAAP;AAQD,GAdY;;AAgBbC,cAAY,oBAACX,GAAD,EAAS;AACnB,WAAO,IAAIC,OAAJ,CAAY,UAACC,OAAD,EAAUC,MAAV,EAAqB;AACtC,uBACGC,GADH,CACOJ,GADP,EAEGY,GAFH,CAEO,eAFP,EAEwB,YAAY,oBAAUC,MAAV,EAFpC,EAGGR,GAHH,CAGO,UAACC,GAAD,EAAMC,QAAN,EAAmB;AACtB,YAAID,GAAJ,EAASH,OAAOG,GAAP;AACTJ,gBAAQM,KAAKC,KAAL,CAAWF,SAASG,IAApB,CAAR;AACD,OANH;AAOD,KARM,CAAP;AASD;AA1BY,C",
+  "file": "ContactsAPI.js",
+  "sourcesContent": [
+    "import AuthStore from '../store/AuthStore';\nimport request from 'superagent/lib/client';\n\nexport default {\n\n  // We want to get a list of all the Users\n  // from the API. This list contains reduced info\n  // and will be be used in the sidebar\n  getContacts: (url) => {\n    return new Promise((resolve, reject) => {\n      request\n        .get(url)\n        .end((err, response) => {\n          if (err) reject(err);\n          resolve(JSON.parse(response.text));\n        })\n    });\n  },\n\n  getContact: (url) => {\n    return new Promise((resolve, reject) => {\n      request\n        .get(url)\n        .set('Authorization', 'Bearer ' + AuthStore.getJwt())\n        .end((err, response) => {\n          if (err) reject(err);\n          resolve(JSON.parse(response.text));\n        })\n    });\n  }\n}"
+  ]
+}

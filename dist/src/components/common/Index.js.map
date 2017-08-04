@@ -1,0 +1,17 @@
+{
+  "version": 3,
+  "sources": [
+    "../../../../src/components/common/Index.js"
+  ],
+  "names": [
+    "IndexComponent",
+    "state",
+    "authenticated",
+    "isAuthenticated"
+  ],
+  "mappings": ";;;;;;;;AAAA;;;;AACA;;;;;;;;;;;;IAEMA,c;;;AAEJ,4BAAc;AAAA;;AAAA;;AAEZ,UAAKC,KAAL,GAAa;AACXC,qBAAe,oBAAUC,eAAV;AADJ,KAAb;AAFY;AAKb;;;;6BACQ;AACP,aACE;AAAA;AAAA;AACI,SAAC,KAAKF,KAAL,CAAWC,aAAZ,GACA;AAAA;AAAA;AAAA;AAAA,SADA,GAGA;AAAA;AAAA;AAAA;AAAA;AAJJ,OADF;AASD;;;;;;kBAGYF,c",
+  "file": "Index.js",
+  "sourcesContent": [
+    "import React, {Component} from 'react';\nimport AuthStore from '../../store/AuthStore';\n\nclass IndexComponent extends Component {\n\n  constructor() {\n    super();\n    this.state = {\n      authenticated: AuthStore.isAuthenticated()\n    }\n  }\n  render() {\n    return (\n      <div>\n        { !this.state.authenticated ? (\n          <h2>Log in to view contact details</h2>\n        ) : (\n          <h2>Click on a contact to view their profile</h2>\n        )}\n      </div>\n    );\n  }\n}\n\nexport default IndexComponent;"
+  ]
+}

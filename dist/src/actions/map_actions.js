@@ -173,4 +173,5 @@ function showBallon(openBalloonIndex) {
     openBalloonIndex: openBalloonIndex
   };
 }
-//# sourceMappingURL=map_actions.js.map
+
+//# sourceMappingURL=MapActions.js.map

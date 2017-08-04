@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "sources": [
+    "../../../../src/views/common/Footer.js"
+  ],
+  "names": [
+    "FooterComponent",
+    "textAlign"
+  ],
+  "mappings": ";;;;;;;;AAAA;;;;AACA;;;;;;;;;;;;IAEMA,e;;;;;;;;;;;iCACO;AACL,mBACI;AAAA;AAAA,kBAAQ,OAAO,EAACC,WAAW,QAAZ,EAAf;AACI,uDAAK,WAAU,WAAf,GADJ;AAEI,uDAAK,KAAI,EAAT,GAFJ;AAGI;AAAA;AAAA,sBAAK,WAAU,KAAf;AACI;AAAA;AAAA,0BAAK,WAAU,WAAf;AACI;AAAA;AAAA,8BAAI,WAAU,aAAd;AACI;AAAA;AAAA;AACI;AAAA;AAAA,sCAAG,MAAK,GAAR;AAAA;AAAA;AADJ,6BADJ;AAII;AAAA;AAAA,kCAAI,WAAU,qBAAd;AAAA;AAAA,6BAJJ;AAKI;AAAA;AAAA;AACI;AAAA;AAAA,sCAAG,MAAK,QAAR;AAAA;AAAA;AADJ,6BALJ;AAQI;AAAA;AAAA,kCAAI,WAAU,qBAAd;AAAA;AAAA,6BARJ;AASI;AAAA;AAAA;AACI;AAAA;AAAA,sCAAG,MAAK,WAAR;AAAA;AAAA;AADJ,6BATJ;AAYI;AAAA;AAAA,kCAAI,WAAU,qBAAd;AAAA;AAAA,6BAZJ;AAaI;AAAA;AAAA;AACI;AAAA;AAAA,sCAAG,MAAK,UAAR;AAAA;AAAA;AADJ;AAbJ,yBADJ;AAkBI;AAAA;AAAA,8BAAG,WAAU,4BAAb;AAAA;AAAA;AAlBJ;AADJ;AAHJ,aADJ;AA4BH;;;;;;kBAGUD,e",
+  "file": "Footer.js",
+  "sourcesContent": [
+    "import React, {Component} from \"react\";\nimport img from \"../../index\";\n\nclass FooterComponent extends Component {\n    render() {\n        return (\n            <footer style={{textAlign: 'center'}}>\n                <div className=\"container\"/>\n                <img src=\"\"/>\n                <div className=\"row\">\n                    <div className=\"col-lg-12\">\n                        <ul className=\"list-inline\">\n                            <li>\n                                <a href=\"#\">Inicio</a>\n                            </li>\n                            <li className=\"footer-menu-divider\">⋅</li>\n                            <li>\n                                <a href=\"#about\">About</a>\n                            </li>\n                            <li className=\"footer-menu-divider\">⋅</li>\n                            <li>\n                                <a href=\"#services\">Services</a>\n                            </li>\n                            <li className=\"footer-menu-divider\">⋅</li>\n                            <li>\n                                <a href=\"#contact\">Contact</a>\n                            </li>\n                        </ul>\n                        <p className=\"copyright text-muted small\">Copyright © Autoqe 2017. All Rights Reserved</p>\n                    </div>\n                </div>\n            </footer>\n        );\n    }\n}\n\nexport default FooterComponent;\n"
+  ]
+}

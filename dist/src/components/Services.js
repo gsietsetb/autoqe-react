@@ -502,4 +502,4 @@ var ServiceComp = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = ServiceComp;
-//# sourceMappingURL=Services.js.map
+//# sourceMappingURL=Services.jsx.map
