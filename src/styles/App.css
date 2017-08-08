@@ -113,6 +113,26 @@
     /*background-size: cover;*/
 }
 
+/*Footer*/
+
+.footer {
+
+}
+
+.footer h4 {
+    color: #74acdf;
+    text-transform: uppercase;
+
+}
+
+.footer ul {
+    list-style-type: none
+}
+
+.footer a {
+    color: white
+}
+
 .contactBanner {
     padding: 2vh 0;
     color: #f8f8f8;
@@ -123,10 +143,37 @@
     /*background-size: cover;*/
 }
 
-.contactBanner h1{
-    color: white;
+.footer .social-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between
 }
 
+.social-btns {
+    text-align: center;
+    margin: 25px 0
+}
+
+.footer .social-container .hiring {
+    text-transform: uppercase;
+    /*vertical-align: -webkit-baseline-middle;*/
+    font-weight: 600
+}
+
+.social-btns {
+    margin: 25px 0
+}
+
+/*Main buttons:*/
 .btn-fine {
     background: #74acdf;
     color: #ffffff;

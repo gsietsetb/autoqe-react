@@ -20,11 +20,15 @@ var _TripList = require('./TripList');
 
 var _TripList2 = _interopRequireDefault(_TripList);
 
-var _reactBootstrap = require('react-bootstrap');
-
 var _TripActions = require('../../actions/TripActions');
 
 var actions = _interopRequireWildcard(_TripActions);
+
+var _reactBootstrap = require('react-bootstrap');
+
+var _carp_w_ = require('../../img/logo/carp_w_1.svg');
+
+var _carp_w_2 = _interopRequireDefault(_carp_w_);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -61,22 +65,48 @@ var TripsPage = function (_React$Component) {
                 'div',
                 null,
                 _react2.default.createElement(
-                    'h2',
-                    { style: { textAlign: 'center' } },
-                    '\xDAltimos viajes p\xFAblicados: \xA0 \xA0',
+                    'section',
+                    {className: 'section section-regular'},
                     _react2.default.createElement(
-                        _reactRouterDom.Link,
-                        { to: '/trips/new' },
+                        _reactBootstrap.Panel,
+                        {
+                            bsStyle: 'primary', collapsible: true, defaultExpanded: true,
+                            header: _react2.default.createElement(
+                                'div',
+                                null,
+                                _react2.default.createElement('img', {src: _carp_w_2.default, height: 40}),
+                                ' \xA0',
+                                _react2.default.createElement(
+                                    'h3',
+                                    {style: {display: 'inline'}},
+                                    ' \xDAltimos viajes publicados: \xA0 \xA0 ',
+                                    _react2.default.createElement(_reactBootstrap.Glyphicon, {
+                                        glyph: 'triangle-bottom'
+                                    })
+                                ),
+                                _react2.default.createElement(
+                                    _reactRouterDom.Link,
+                                    {to: '/trips/new'},
+                                    _react2.default.createElement(
+                                        _reactBootstrap.Button,
+                                        {style: {float: 'right'}, type: 'submit', bsStyle: 'primary'},
+                                        _react2.default.createElement(_reactBootstrap.Glyphicon, {glyph: 'plus-sign'}),
+                                        ' \xA0 Publicar viaje'
+                                    )
+                                )
+                            )
+                        },
                         _react2.default.createElement(
-                            _reactBootstrap.Button,
-                            { type: 'submit', className: 'btn-fine' },
-                            _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: 'plus-sign' }),
-                            ' \xA0 Publicar viaje'
+                            _reactBootstrap.ListGroup,
+                            {fill: true},
+                            _react2.default.createElement(
+                                _reactBootstrap.ListGroupItem,
+                                null,
+                                _react2.default.createElement(_TripList2.default, {trips: trips})
+                            )
                         )
                     )
-                ),
-                _react2.default.createElement(_TripList2.default, { trips: trips }),
-                this.props.children
+                )
             );
         }
     }]);

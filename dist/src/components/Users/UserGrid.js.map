@@ -1,0 +1,16 @@
+{
+  "version": 3,
+  "sources": [
+    "../../../../src/components/Users/UserGrid.js"
+  ],
+  "names": [
+    "UserGrid",
+    "props",
+    "children"
+  ],
+  "mappings": ";;;;;;;;AAAA;;;;AAEA;;;;;;;;;;IAEqBA,Q;;;;;;;;;;;6BACV;AACP,aACE;AAAA;AAAA;AACE;AAAA;AAAA;AACE,+DAAK,IAAI,EAAT,EAAa,IAAI,CAAjB,GADF;AAIE;AAAA;AAAA,cAAK,IAAI,EAAT,EAAa,IAAI,CAAjB;AACG,iBAAKC,KAAL,CAAWC;AADd;AAJF;AADF,OADF;AAYD;;;;;;kBAdkBF,Q",
+  "file": "UserGrid.js",
+  "sourcesContent": [
+    "import React, {Component} from 'react';\n\nimport {Col, Grid, Row} from 'react-bootstrap';\n\nexport default class UserGrid extends Component {\n  render() {\n    return (\n      <Grid>\n        <Row>\n          <Col xs={12} md={3}>\n            {/*<ContactComp />*/}\n          </Col>\n          <Col xs={12} md={9}>\n            {this.props.children}\n          </Col>\n        </Row>\n      </Grid>\n    );\n  }\n}\n"
+  ]
+}

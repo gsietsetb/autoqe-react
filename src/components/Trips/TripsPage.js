@@ -3,9 +3,9 @@ import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import TripList from './TripList';
-import {Button, Glyphicon} from 'react-bootstrap';
-
 import * as actions from '../../actions/TripActions'
+import {Button, Glyphicon, ListGroup, ListGroupItem, Panel} from 'react-bootstrap';
+import trip from "../../img/logo/carp_w_1.svg";
 
 class TripsPage extends React.Component {
     componentWillMount() {
@@ -19,20 +19,25 @@ class TripsPage extends React.Component {
         console.log('this is here: ' + JSON.stringify(trips));
         return (
             <div>
-                <h2 style={{textAlign: 'center'}}>Últimos viajes públicados: &nbsp; &nbsp;
-                    <Link to={'/trips/new'}><Button type="submit" className="btn-fine">
-                        <Glyphicon glyph="plus-sign"/> &nbsp; Publicar viaje
-                    </Button>
-                    </Link>
-                    {/*<Button className="btn-fine" >*/}
-                    {/*<Link to={'/trips/new'} >+ Publicar viaje</Link></Button>*/}
-                </h2>
-                {/*<div className="col-md-4">*/}
-                <TripList trips={trips}/>
-                {/*</div>*/}
-                {/*<div className="col-md-8">*/}
-                {this.props.children}
-                {/*</div>*/}
+                <section className="section section-regular">
+                    <Panel bsStyle="primary" collapsible defaultExpanded
+                           header={<div>
+                               <img src={trip} height={40}/> &nbsp;
+                               <h3 style={{display: 'inline'}}> Últimos viajes publicados: &nbsp; &nbsp; <Glyphicon
+                                   glyph="triangle-bottom"/>
+                               </h3>
+                               <Link to={'/trips/new'}><Button style={{float: 'right'}} type="submit" bsStyle="primary">
+                                   <Glyphicon glyph="plus-sign"/> &nbsp; Publicar viaje
+                               </Button>
+                               </Link>
+                           </div>}>
+                        <ListGroup fill>
+                            <ListGroupItem>
+                                <TripList trips={trips}/>
+                            </ListGroupItem>
+                        </ListGroup>
+                    </Panel>
+                </section>
             </div>
         );
     }

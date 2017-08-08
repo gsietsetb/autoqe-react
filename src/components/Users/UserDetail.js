@@ -35,12 +35,12 @@ class ContactDetailComponent extends Component {
   }
   render() {
     let contact;
-    if (Object.keys(this.state.contact).length != 0) {
+      if (Object.keys(this.state.contact).length !== 0) {
       contact = this.state.contact[0];
     }
     return (
       <div>
-        { Object.keys(this.state.contact).length != 0 &&
+          {Object.keys(this.state.contact).length !== 0 &&
           <div>
             <img src={contact.image} width="150" />
             <h1>{contact.name}</h1>

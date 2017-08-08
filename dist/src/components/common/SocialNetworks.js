@@ -16,6 +16,8 @@ var _contact = require('../../img/icons/material/contact.svg');
 
 var _contact2 = _interopRequireDefault(_contact);
 
+var _reactRouterDom = require('react-router-dom');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -64,7 +66,8 @@ var SocialNetworkComp = function (_Component) {
                             _react2.default.createElement('div', { className: 'g-ytsubscribe', 'data-channelid': 'UC7RUb3Ieez8Pl9uLIhZclyQ',
                                 'data-layout': 'default', 'data-count': 'default' }),
                             '\xA0 \xA0',
-                            _react2.default.createElement('a', { className: 'twitter-follow-button',
+                            _react2.default.createElement(_reactRouterDom.Link, {
+                                className: 'twitter-follow-button',
                                 href: 'https://twitter.com/autoqe' }),
                             "\n"
                         ),
@@ -101,8 +104,8 @@ var SocialNetworkComp = function (_Component) {
                                         { cite: 'https://www.facebook.com/autoqe',
                                             className: 'fb-xfbml-parse-ignore' },
                                         _react2.default.createElement(
-                                            'a',
-                                            { href: 'https://www.facebook.com/autoqe' },
+                                            _reactRouterDom.Link,
+                                            {to: 'https://www.facebook.com/autoqe'},
                                             'Autoqe'
                                         )
                                     )

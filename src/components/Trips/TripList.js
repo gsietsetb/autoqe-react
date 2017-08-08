@@ -3,19 +3,12 @@ import TripListRow from './TripListRow';
 
 const TripList = ({trips}) => {
     return (
-        <div>{/*<table className="table">*/}
-            {/*<thead>*/}
-            {/*<tr>*/}
-                {/*<th>Name</th>*/}
-            {/*</tr>*/}
-            {/*</thead>*/}
-            {/*<tbody>*/}
+        <div>
 
             {trips.map(trip =>
                 <TripListRow key={trip.id} trip={trip} />
             )}
              </div>
-        // </table>
     );
 };
 

@@ -3,21 +3,21 @@ import {Button, Col, Glyphicon, Label, ListGroupItem, Row} from 'react-bootstrap
 import {Link} from 'react-router-dom';
 import {FormattedDate, FormattedRelative, FormattedTime} from 'react-intl';
 
-import locFrom from "../../img/icons/material/location2.svg";
-import locThrough from "../../img/icons/material/location3.svg";
-import locTo from "../../img/icons/material/location.svg";
-import girl from "../../img/icons/material/girl.svg";
-import highw from "../../img/icons/material/highway.svg";
-import highw_n from "../../img/icons/material/highway_n.svg";
-import pet from "../../img/icons/material/pet.svg";
-import time_flex from "../../img/icons/material/time-left.svg";
-import time_hurry from "../../img/icons/material/fast.svg";
-import smoke from "../../img/icons/material/smoke.svg";
-import mate from "../../img/icons/material/mate-infusion.svg";
-import fb from "../../img/icons/material/facebook.svg";
-import tw from "../../img/icons/material/twitter.svg";
-import driving from "../../img/icons/material/driving-license.svg";
-import car from "../../img/logo/autoqe_gray.svg";
+import locFrom from "../../../img/icons/material/location2.svg";
+import locThrough from "../../../img/icons/material/location3.svg";
+import locTo from "../../../img/icons/material/location.svg";
+import girl from "../../../img/icons/material/girl.svg";
+import highw from "../../../img/icons/material/highway.svg";
+import highw_n from "../../../img/icons/material/highway_n.svg";
+import pet from "../../../img/icons/material/pet.svg";
+import time_flex from "../../../img/icons/material/time-left.svg";
+import time_hurry from "../../../img/icons/material/fast.svg";
+import smoke from "../../../img/icons/material/smoke.svg";
+import mate from "../../../img/icons/material/mate-infusion.svg";
+import fb from "../../../img/icons/material/facebook.svg";
+import tw from "../../../img/icons/material/twitter.svg";
+import driving from "../../../img/icons/material/driving-license.svg";
+import car from "../../../img/logo/autoqe_gray.svg";
 
 
 export default class TripListItem extends Component {

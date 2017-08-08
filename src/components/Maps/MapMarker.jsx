@@ -207,7 +207,8 @@ export default class MapMarker extends Component {
                     </div>
 
                     <div>
-                        <a className={cx('map-marker-hint__ap-link', this.props.showBallon ? 'map-marker-hint__ap-link--hidden' : '')}>Click to view more info</a>
+                        <a className={cx('map-marker-hint__ap-link', this.props.showBallon ? 'map-marker-hint__ap-link--hidden' : '')}>Click
+                            to view more info</Link>
                     </div>
 
                 </div>

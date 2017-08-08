@@ -72,13 +72,13 @@ var ContactDetailComponent = function (_Component) {
     key: 'render',
     value: function render() {
       var contact = void 0;
-      if (Object.keys(this.state.contact).length != 0) {
+        if (Object.keys(this.state.contact).length !== 0) {
         contact = this.state.contact[0];
       }
       return _react2.default.createElement(
         'div',
         null,
-        Object.keys(this.state.contact).length != 0 && _react2.default.createElement(
+          Object.keys(this.state.contact).length !== 0 && _react2.default.createElement(
           'div',
           null,
           _react2.default.createElement('img', { src: contact.image, width: '150' }),

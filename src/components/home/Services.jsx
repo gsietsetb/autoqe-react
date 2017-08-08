@@ -41,7 +41,9 @@ export default class ServiceComp extends React.Component {
                         <div className="grid-item sub-section">
                             <img src={trip} className="sub-section-icon"/>
                             <div className="sub-section-text">
-                                <h2 className="sub-section-title"><Label>Carpooling</Label> Compartí trayectos    </h2>
+                                <h2 className="sub-section-title">
+                                    <Label bsSize="lg" className="btn-fine">Carpooling</Label> Compartí trayectos
+                                </h2>
                                 <p>Dividí los gastos de tu viaje con otros pasajeros.</p>
                                 <Row className="show-grid">
                                     <Col xs={1} md={2}>

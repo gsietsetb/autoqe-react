@@ -3,8 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/App.css'
 import Auth0Lock from 'auth0-lock';
 import NavbarComponent from "./common/Header";
-import SocialNetworks from "./common/SocialNetworks";
-import FooterComponent from "./common/Footer";
+import Footer from "./common/Footer";
 import Main from "./Routes";
 
 class AppComponent extends Component {
@@ -21,10 +20,8 @@ class AppComponent extends Component {
         return (
             <div>
                 <NavbarComponent lock={this.lock}/>
-                {/*{this.props.children}*/}
                 <Main history={this.props.history}/>
-                <SocialNetworks/>
-                <FooterComponent/>
+                <Footer/>
             </div>
         );
     }

@@ -23,9 +23,7 @@ var TripList = function TripList(_ref) {
         trips.map(function (trip) {
             return _react2.default.createElement(_TripListRow2.default, { key: trip.id, trip: trip });
         })
-    )
-    // </table>
-    ;
+    );
 };
 
 TripList.propTypes = {
