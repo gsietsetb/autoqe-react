@@ -121,12 +121,12 @@ export default class ServiceComp extends React.Component {
                             </div>
                         </div>
                         <div className="grid-item sub-section">
-                            <Image responsive src={srvPark} style={{borderRadius: '50%'}}/>
+                            <Image responsive src={srvPark} style={{maxWidth: '30vh', borderRadius: '50%'}}/>
                         </div>
 
                         {/*Electric car*/}
                         <div className="grid-item sub-section">
-                            <Image responsive src={srvElec}/>
+                            <Image responsive src={srvElec} style={{maxWidth: '30vh'}}/>
                         </div>
                         <div className="grid-item sub-section">
                             <img src={elec} className="sub-section-icon"/>

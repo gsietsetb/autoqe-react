@@ -5,11 +5,11 @@ import steps from "../../img/banner/easy-steps.png";
 export default class HowWorksComp extends React.Component {
     render() {
         return (
-            <section className="section section-main">
+            <section className="section">
                 <header className="section-header">
                     <div className="container">
                         <h1 className="section-header-title">
-                            Viajar es así de sencillo: &nbsp; <Label>Sin intermediarios!</Label>
+                            ¿Cómo funciona?: &nbsp; <Label>Sin intermediarios!</Label>
                         </h1>
                         <div className="section-header-text" height={500}>
                             <h3>Tu solución de transporte en tres pasos  </h3>

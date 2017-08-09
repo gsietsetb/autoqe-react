@@ -5,7 +5,7 @@ import CarouselComp from './Carousel';
 import ServiceComp from '../services/Services';
 import MapComp from "../Maps/Map";
 import TalkAboutComp from "./TalkAboutUs";
-import HowWorksComp from "./HowItWorks";
+import HowWorksComp from "../about/HowItWorks";
 import SecurePayment from "./SecurePayment";
 import TripsPage from "../Trips/TripsPage";
 
