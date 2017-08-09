@@ -201,7 +201,9 @@ var Footer = function (_Component) {
                                     " ",
                                     _react2.default.createElement(
                                         _reactBootstrap.Label,
-                                        {bsStyle: "warning"},
+                                        {
+                                            bsStyle: "warning"
+                                        },
                                         "Pr\xF3x."
                                     )
                                 )
@@ -345,7 +347,9 @@ var Footer = function (_Component) {
                                     ),
                                     _react2.default.createElement(
                                         _reactBootstrap.Label,
-                                        { bsStyle: "success" },
+                                        {
+                                            bsStyle: "success"
+                                        },
                                         "Contratando!"
                                     )
                                 ),

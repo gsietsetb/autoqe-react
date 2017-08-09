@@ -107,12 +107,8 @@ var SocialNetworkComp = function (_Component) {
                                 null,
                                 _react2.default.createElement('iframe', {
                                     src: 'https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fautoqe%2F&width=67&layout=button_count&action=like&size=small&show_faces=true&share=false&height=21&appId=1857064684552937',
-                                    width: '67',
-                                    height: '21',
-                                    style: 'border:none;overflow:hidden',
-                                    scrolling: 'no',
-                                    frameBorder: '0',
-                                    allowTransparency: 'true'
+                                    width: '67', height: '21', style: 'border:none;overflow:hidden', scrolling: 'no',
+                                    frameBorder: '0', allowTransparency: 'true'
                                 }),
                                 _react2.default.createElement('div', {
                                     className: 'fb-like',
@@ -229,18 +225,18 @@ var SocialNetworkComp = function (_Component) {
                                     _react2.default.createElement(
                                         'div',
                                         {style: 'padding:8px;'},
-                                        ' ',
                                         _react2.default.createElement(
                                             'div',
-                                            {style: ' background:#F8F8F8; line-height:0; margin-top:40px; padding:33.33333333333333% 0; text-align:center; width:100%;'},
-                                            ' ',
-                                            _react2.default.createElement('div', {style: ' background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;'})
+                                            {
+                                                style: ' background:#F8F8F8; line-height:0; margin-top:40px; padding:33.33333333333333% 0; text-align:center; width:100%;'
+                                            },
+                                            _react2.default.createElement('div', {
+                                                style: ' background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;'
+                                            })
                                         ),
-                                        ' ',
                                         _react2.default.createElement(
                                             'p',
                                             {style: ' margin:8px 0 0 0; padding:0 4px;'},
-                                            ' ',
                                             _react2.default.createElement(
                                                 _reactRouterDom.Link,
                                                 {
@@ -251,11 +247,10 @@ var SocialNetworkComp = function (_Component) {
                                                 'Pronto podr\xE1s sentir la libertad de alquilar un auto o compartir trayectos de la manera m\xE1s facil y barata #economiaColaborativa #autoqe'
                                             )
                                         ),
-                                        ' ',
                                         _react2.default.createElement(
                                             'p',
                                             {style: ' color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;'},
-                                            'A post shared by Autoqe, Auto al toque (@autoqe) on ',
+                                            'A post shared by Autoqe, Auto al toque (@autoqe) on',
                                             _react2.default.createElement(
                                                 'time',
                                                 {
@@ -267,7 +262,6 @@ var SocialNetworkComp = function (_Component) {
                                         )
                                     )
                                 ),
-                                ' ',
                                 _react2.default.createElement('script', {
                                     async: true,
                                     defer: true,

@@ -1,5 +1,5 @@
 import React from "react";
-import {Button, Col, Glyphicon, Image, Label, Row} from "react-bootstrap";
+import {Button, Glyphicon, Image, Label, Row} from "react-bootstrap";
 import {Link} from "react-router-dom";
 
 import srvCarp from "../../img/banner/mockup-carPool.png";
@@ -105,30 +105,16 @@ export default class ServiceComp extends React.Component {
                                     Cocheras</Label> entre particulares</h2>
                                 <p>Un vehículo a tu disposición cuando lo necesites. Olvidate del mantenimiento del auto.</p>
                                 <Row>
-                                    <Col xs={1} md={2}>
-                                        <img src={money}
-                                             className="sub-section-mini-icon"/>
-                                    </Col>
-                                    <Col xs={9} md={10}>
-                                        <p><b>Tiempo</b> No creeras lo fácil que es</p>
-                                    </Col>
+                                    <img height={25} src={money}/>
+                                    <b>Tiempo</b> No creeras lo fácil que es
                                 </Row>
                                 <Row>
-                                    <Col xs={1} md={2}>
-                                        <img src={money} className="sub-section-mini-icon"/>
-                                    </Col>
-                                    <Col xs={9} md={10}>
-                                        <p><b>Dinero</b> Mucho más barato que cualquier agencia de alquiler</p>
-                                    </Col>
+                                    <img height={25} src={money}/>
+                                    <b>Dinero</b> Mucho más barato que cualquier agencia de alquiler
                                 </Row>
                                 <Row>
-                                    <Col xs={1} md={2}>
-                                        <img src={money}
-                                             alt="Increase Conversions" className="sub-section-mini-icon"/>
-                                    </Col>
-                                    <Col xs={9} md={10}>
-                                        <p><b>Seguro</b> de hogar durante el periodo del alquiler</p>
-                                    </Col>
+                                    <img height={25} src={money}/>
+                                    <b>Seguro</b> de hogar durante el periodo del alquiler
                                 </Row>
                                 <Button className="btn-fine"><Glyphicon glyph="search"/>&nbsp; Encontrá</Button>
                                 &nbsp;<Button bsStyle="primary"><Glyphicon glyph="plus-sign"/>&nbsp; Alquilá cochera</Button>
