@@ -38,9 +38,53 @@ var _code = require("../../img/icons/material/code.svg");
 
 var _code2 = _interopRequireDefault(_code);
 
+var _howWorks = require("../../img/icons/material/howWorks.svg");
+
+var _howWorks2 = _interopRequireDefault(_howWorks);
+
+var _share = require("../../img/icons/material/share.svg");
+
+var _share2 = _interopRequireDefault(_share);
+
+var _question = require("../../img/icons/material/question.svg");
+
+var _question2 = _interopRequireDefault(_question);
+
+var _leaf = require("../../img/icons/material/leaf.svg");
+
+var _leaf2 = _interopRequireDefault(_leaf);
+
+var _team = require("../../img/icons/material/team.svg");
+
+var _team2 = _interopRequireDefault(_team);
+
+var _disc = require("../../img/icons/material/disc.svg");
+
+var _disc2 = _interopRequireDefault(_disc);
+
+var _carp_g = require("../../img/logo/carp_g.svg");
+
+var _carp_g2 = _interopRequireDefault(_carp_g);
+
+var _car_g = require("../../img/logo/car_g.svg");
+
+var _car_g2 = _interopRequireDefault(_car_g);
+
+var _park_g = require("../../img/logo/park_g.svg");
+
+var _park_g2 = _interopRequireDefault(_park_g);
+
+var _elec_g = require("../../img/logo/elec_g.svg");
+
+var _elec_g2 = _interopRequireDefault(_elec_g);
+
 var _Copyright = require("./Copyright");
 
 var _Copyright2 = _interopRequireDefault(_Copyright);
+
+var _reactResponsive = require("react-responsive");
+
+var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -91,15 +135,15 @@ var Footer = function (_Component) {
                                 "Autoqe es una soluci\xF3n de transporte dentro de la econom\xEDa colaborativa. Te permite compartir trayectos, alquilar autos y cocheras entre particulares a tu alrededor. "
                             ),
                             _react2.default.createElement(
-                                "p",
-                                null,
-                                " Es m\xE1s barato, facil, y r\xE1pido ya que elimina los intermediarios y permite poner en contacto a los particulares. Adem\xE1s permite reducir el tr\xE1fico de veh\xEDculos en las grandes ciudades, ayudando al medio ambiente y reducir as\xED el impacto nocivo en la capa de ozono."
+                                _reactResponsive2.default,
+                                {maxDeviceWidth: 700},
+                                _react2.default.createElement(
+                                    "p",
+                                    null,
+                                    " Es m\xE1s barato, facil, y r\xE1pido ya que elimina los intermediarios y permite poner en contacto a los particulares. Adem\xE1s permite reducir el tr\xE1fico de veh\xEDculos en las grandes ciudades, ayudando al medio ambiente y reducir as\xED el impacto nocivo en la capa de ozono."
+                                )
                             )
-                        ),
-                        '\n',
-                        '\n',
-                        '\n',
-                        '\n'
+                        )
                     ),
                     _react2.default.createElement(
                         _reactBootstrap.Row,
@@ -110,7 +154,6 @@ var Footer = function (_Component) {
                             _react2.default.createElement(
                                 "ul",
                                 null,
-                                " ",
                                 _react2.default.createElement(
                                     "h4",
                                     null,
@@ -119,42 +162,46 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
+                                    _react2.default.createElement("img", {height: 25, src: _carp_g2.default}),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
-                                        { to: "/carpooling" },
-                                        "Carpooling"
+                                        {to: "/trips"},
+                                        " Carpooling"
                                     )
                                 ),
                                 _react2.default.createElement(
                                     "li",
                                     null,
+                                    _react2.default.createElement("img", {height: 25, src: _car_g2.default}),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         { to: "/carrent" },
-                                        "Alquiler de Autos"
+                                        " Alquiler de Autos"
                                     )
                                 ),
                                 _react2.default.createElement(
                                     "li",
                                     null,
+                                    _react2.default.createElement("img", {height: 25, src: _park_g2.default}),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         { to: "/parkrent" },
-                                        "Alquiler de Cocheras"
+                                        " Alquiler de Cocheras"
                                     )
                                 ),
                                 _react2.default.createElement(
                                     "li",
                                     null,
+                                    _react2.default.createElement("img", {height: 25, src: _elec_g2.default}),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
-                                        { to: "/elec" },
-                                        "Autos El\xE9ctricos"
+                                        {to: "/electric"},
+                                        " Autos El\xE9ctricos"
                                     ),
                                     " ",
                                     _react2.default.createElement(
                                         _reactBootstrap.Label,
-                                        { bsStyle: "success" },
+                                        {bsStyle: "warning"},
                                         "Pr\xF3x."
                                     )
                                 )
@@ -174,37 +221,94 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
+                                    _react2.default.createElement("img", {height: 25, src: _howWorks2.default}),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
-                                        { to: "/carpooling" },
-                                        "\xBFC\xF3mo funciona?"
+                                        {to: "/howWorks"},
+                                        " \xBFC\xF3mo funciona?"
                                     )
                                 ),
                                 _react2.default.createElement(
                                     "li",
                                     null,
+                                    _react2.default.createElement("img", {height: 25, src: _question2.default}),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
-                                        { to: "/carpooling" },
-                                        "Econom\xEDa Colaborativa"
+                                        {to: "/faq"},
+                                        " Preguntas frecuentes"
                                     )
                                 ),
                                 _react2.default.createElement(
                                     "li",
                                     null,
+                                    _react2.default.createElement("img", {height: 25, src: _share2.default}),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
-                                        { to: "/carrent" },
-                                        "Huella ecol\xF3gica"
+                                        {to: "/collaborative"},
+                                        " Econom\xEDa Colaborativa"
                                     )
                                 ),
                                 _react2.default.createElement(
                                     "li",
                                     null,
+                                    _react2.default.createElement("img", {height: 25, src: _leaf2.default}),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
-                                        { to: "/parkrent" },
-                                        "Alquiler Sostenible"
+                                        {to: "/green"},
+                                        " Huella ecol\xF3gica"
+                                    )
+                                )
+                            )
+                        ),
+                        _react2.default.createElement(
+                            _reactBootstrap.Col,
+                            { xs: 5, md: 3 },
+                            _react2.default.createElement(
+                                "ul",
+                                null,
+                                _react2.default.createElement(
+                                    "h4",
+                                    null,
+                                    " Autoqe"
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement("img", {height: 25, src: _world2.default}),
+                                    _react2.default.createElement(
+                                        _reactRouterDom.Link,
+                                        {to: "/next"},
+                                        " Pr\xF3ximos paises"
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement("img", {height: 25, src: _design2.default}),
+                                    _react2.default.createElement(
+                                        _reactRouterDom.Link,
+                                        {to: "/design"},
+                                        " Rinc\xF3n de dise\xF1o"
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement("img", {height: 25, src: _code2.default}),
+                                    _react2.default.createElement(
+                                        _reactRouterDom.Link,
+                                        {to: "/dev"},
+                                        " Rinc\xF3n de Desarrollo"
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement("img", {height: 25, src: _press2.default}),
+                                    _react2.default.createElement(
+                                        _reactRouterDom.Link,
+                                        {to: "/press"},
+                                        " Rinc\xF3n de Prensa"
                                     )
                                 )
                             )
@@ -223,61 +327,11 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
+                                    _react2.default.createElement("img", {height: 25, src: _disc2.default}),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
-                                        { to: "/carpooling" },
-                                        "Preguntas frecuentes"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        _reactRouterDom.Link,
-                                        { to: "/carrent" },
-                                        "Promociones"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        _reactRouterDom.Link,
-                                        { to: "/parkrent" },
-                                        "Equipo"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        _reactRouterDom.Link,
-                                        { to: "/elec" },
-                                        "Contacto"
-                                    )
-                                )
-                            )
-                        ),
-                        _react2.default.createElement(
-                            _reactBootstrap.Col,
-                            { xs: 5, md: 3 },
-                            _react2.default.createElement(
-                                "ul",
-                                null,
-                                " ",
-                                _react2.default.createElement(
-                                    "h4",
-                                    null,
-                                    " Autoqe"
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement("img", { height: 25, src: _world2.default }),
-                                    _react2.default.createElement(
-                                        _reactRouterDom.Link,
-                                        { to: "/carpooling" },
-                                        " Pr\xF3ximos paises"
+                                        {to: "/promotion"},
+                                        " Promociones"
                                     )
                                 ),
                                 _react2.default.createElement(
@@ -286,43 +340,33 @@ var Footer = function (_Component) {
                                     _react2.default.createElement("img", { height: 25, src: _handShake2.default }),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
-                                        { to: "/carpooling" },
-                                        " Trabaja con nosotros "
+                                        {to: "/work"},
+                                        " Trabajos "
                                     ),
                                     _react2.default.createElement(
                                         _reactBootstrap.Label,
                                         { bsStyle: "success" },
-                                        "Hiring"
+                                        "Contratando!"
                                     )
                                 ),
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", { height: 25, src: _design2.default }),
+                                    _react2.default.createElement("img", {height: 25, src: _team2.default}),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
-                                        { to: "/carrent" },
-                                        " Rinc\xF3n de dise\xF1o"
+                                        {to: "/team"},
+                                        " Equipo"
                                     )
                                 ),
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", { height: 25, src: _code2.default }),
+                                    _react2.default.createElement("img", {height: 25, src: _world2.default}),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
-                                        { to: "/carrent" },
-                                        " Rinc\xF3n de Desarrollo"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement("img", { height: 25, src: _press2.default }),
-                                    _react2.default.createElement(
-                                        _reactRouterDom.Link,
-                                        { to: "/carrent" },
-                                        " Rinc\xF3n de Prensa"
+                                        {to: "/contact"},
+                                        " Contacto"
                                     )
                                 )
                             )
@@ -330,37 +374,53 @@ var Footer = function (_Component) {
                     ),
                     _react2.default.createElement(
                         _reactBootstrap.Row,
-                        { className: "social-container social-btns" },
+                        {className: "social-container"},
                         _react2.default.createElement(
                             "h2",
-                            { className: "social-btns" },
+                            null,
                             _react2.default.createElement(
                                 _reactRouterDom.Link,
-                                { to: "https://www.youtube.com/rawshorts" },
-                                _react2.default.createElement("i", { className: "fa fa-youtube" })
+                                {to: "https://www.facebook.com/autoqe"},
+                                _react2.default.createElement("i", {
+                                    className: "fa fa-facebook"
+                                })
                             ),
                             " \xA0 \xA0",
                             _react2.default.createElement(
                                 _reactRouterDom.Link,
-                                { to: "https://www.twitter.com/rawshorts" },
-                                _react2.default.createElement("i", { className: "fa fa-twitter" })
+                                {to: "https://www.twitter.com/autoqe"},
+                                _react2.default.createElement("i", {
+                                    className: "fa fa-twitter"
+                                })
                             ),
                             " \xA0 \xA0",
                             _react2.default.createElement(
                                 _reactRouterDom.Link,
-                                { to: "https://www.facebook.com/rawshorts" },
-                                _react2.default.createElement("i", { className: "fa fa-facebook" })
+                                {to: "https://www.instagram.com/autoqe"},
+                                _react2.default.createElement("i", {
+                                    className: "fa fa-instagram"
+                                })
                             ),
                             " \xA0 \xA0",
                             _react2.default.createElement(
                                 _reactRouterDom.Link,
-                                { to: "https://www.linkedin.com/groups/Explainer-Videos-2803489" },
-                                _react2.default.createElement("i", { className: "fa fa-linkedin" })
+                                {to: "www.youtube.com/channel/UC7RUb3Ieez8Pl9uLIhZclyQ"},
+                                _react2.default.createElement("i", {
+                                    className: "fa fa-youtube"
+                                })
                             ),
                             " \xA0 \xA0",
                             _react2.default.createElement(
                                 _reactRouterDom.Link,
-                                { to: "https://google.com/+rawshorts" },
+                                {to: "https://www.linkedin.com/groups/autoqe"},
+                                _react2.default.createElement("i", {
+                                    className: "fa fa-linkedin"
+                                })
+                            ),
+                            " \xA0 \xA0",
+                            _react2.default.createElement(
+                                _reactRouterDom.Link,
+                                {to: "https://google.com/+autoqe"},
                                 _react2.default.createElement("i", { className: "fa fa-google-plus" })
                             )
                         )
@@ -368,7 +428,6 @@ var Footer = function (_Component) {
                     _react2.default.createElement(
                         _reactBootstrap.Row,
                         null,
-                        "s",
                         _react2.default.createElement(_Copyright2.default, null)
                     )
                 )

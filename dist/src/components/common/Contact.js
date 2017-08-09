@@ -10,7 +10,7 @@ var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _SocialNetworks = require("./SocialNetworks");
+var _SocialNetworks = require("../about/SocialNetworks");
 
 var _SocialNetworks2 = _interopRequireDefault(_SocialNetworks);
 

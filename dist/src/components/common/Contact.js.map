@@ -1,1 +1,14 @@
-{"version":3,"sources":["../../../../src/components/common/Contact.js"],"names":["ContactComp"],"mappings":";;;;;;;;AAAA;;;;AACA;;;;;;;;;;;;IAEqBA,W;;;;;;;;;;;iCACR;AACL,mBACE,6DADF;AAGH;;;;;;kBALgBA,W","file":"Contact.js","sourcesContent":["import React, {Component} from 'react';\nimport SocialNetworkComp from \"./SocialNetworks\";\n\nexport default class ContactComp extends Component {\n    render() {\n        return (\n          <SocialNetworkComp/>\n        );\n    }\n}\n"]}
+{
+  "version": 3,
+  "sources": [
+    "../../../../src/components/common/Contact.js"
+  ],
+  "names": [
+    "ContactComp"
+  ],
+  "mappings": ";;;;;;;;AAAA;;;;AACA;;;;;;;;;;;;IAEqBA,W;;;;;;;;;;;iCACR;AACL,mBACE,6DADF;AAGH;;;;;;kBALgBA,W",
+  "file": "Contact.js",
+  "sourcesContent": [
+    "import React, {Component} from 'react';\nimport SocialNetworkComp from \"../about/SocialNetworks\";\n\nexport default class ContactComp extends Component {\n    render() {\n        return (\n          <SocialNetworkComp/>\n        );\n    }\n}\n"
+  ]
+}

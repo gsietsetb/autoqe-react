@@ -2,7 +2,7 @@ import React from 'react';
 
 import SearchBarComp from './SearchBar';
 import CarouselComp from './Carousel';
-import ServiceComp from './Services';
+import ServiceComp from '../services/Services';
 import MapComp from "../Maps/Map";
 import TalkAboutComp from "./TalkAboutUs";
 import HowWorksComp from "./HowItWorks";

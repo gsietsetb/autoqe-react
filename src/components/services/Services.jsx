@@ -1,5 +1,6 @@
 import React from "react";
 import {Button, Col, Glyphicon, Image, Label, Row} from "react-bootstrap";
+import {Link} from "react-router-dom";
 
 import srvCarp from "../../img/banner/mockup-carPool.png";
 import srvShare from "../../img/banner/mockup-carShare.png";
@@ -10,8 +11,6 @@ import trip from "../../img/logo/carp_g.svg";
 import car from "../../img/logo/car_g.svg";
 import park from "../../img/logo/park_g.svg";
 import elec from "../../img/logo/elec_g.svg";
-
-import mate from "../../img/icons/material/mate.svg";
 import money from "../../img/icons/material/money.svg";
 import android from "../../img/icons/google-play-badge.svg";
 import ios from "../../img/icons/app-store-badge.svg";
@@ -27,7 +26,12 @@ export default class ServiceComp extends React.Component {
                             <img src={autoqe_gray} height={60}/>
                             Ahora viajar es más divertido, fácil y seguro</h1>
                         <div className="section-header-text">
-                            <p>Compartí lo que no usas de forma fácil y segura.</p>
+                            <p>Compartí lo que no usás &nbsp;
+                                <Link to="/green">
+                                    <Button bsStyle="success">
+                                        <Glyphicon glyph="leaf"/>
+                                        Ayudando al medioambiente</Button>
+                                </Link></p>
                             <p>Todas las soluciones de transporte alrededor tuyo en una única aplicación:</p>
                             <Image src={android} height="60"/>
                             <Image src={ios} height="60"/>
@@ -45,24 +49,14 @@ export default class ServiceComp extends React.Component {
                                     <Label bsSize="lg" className="btn-fine">Carpooling</Label> Compartí trayectos
                                 </h2>
                                 <p>Dividí los gastos de tu viaje con otros pasajeros.</p>
-                                <Row className="show-grid">
-                                    <Col xs={1} md={2}>
-                                        <img src={money}
-                                             className="sub-section-mini-icon"/>
-                                    </Col>
-                                    <Col xs={9} md={10}>
-                                        <p><b> Ahorrá</b>
-                                            &nbsp;hasta un 30% por cada pasajero o trayecto</p>
-                                    </Col>
+                                <Row>
+                                    <img height={25} src={money}/>
+                                    <b> Ahorrá</b>
+                                    &nbsp; hasta un 30% por cada pasajero o trayecto
                                 </Row>
-                                <Row className="show-grid">
-                                    <Col xs={1} md={2}>
-                                        <img src={mate}
-                                             alt="Increase Conversions" className="sub-section-mini-icon"/>
-                                    </Col>
-                                    <Col xs={9} md={10}>
-                                        <p><b>Compartí</b> rutas, viajes, escapadas de fin de semana, trayectos cortos...</p>
-                                    </Col>
+                                <Row>
+                                    <img height={25} src={money}/>
+                                    <b>Compartí</b> rutas, viajes, escapadas de fin de semana, trayectos cortos...
                                 </Row>
                                 <p> &nbsp;</p>
                                 <Button className="btn-fine"><Glyphicon glyph="search"/>&nbsp; Encontrá</Button>
@@ -81,31 +75,20 @@ export default class ServiceComp extends React.Component {
                         <div className="grid-item sub-section">
                             <img src={car} className="sub-section-icon"/>
                             <div className="sub-section-text">
-                                <h2 className="sub-section-title"><Label>Alquiler de Autos</Label> entre particulares</h2>
+                                <h2 className="sub-section-title"><Label bsSize="lg" className="btn-fine">Alquiler de
+                                    Autos</Label> entre particulares</h2>
                                 <p>Un vehículo a tu disposición cuando lo necesités.</p>
-                                <Row className="show-grid">
-                                    <Col xs={1} md={2}>
-                                        <img src={money} className="sub-section-mini-icon"/>
-                                    </Col>
-                                    <Col xs={9} md={10}>
-                                        <p><b>Ahorrá</b> plata en el mantenimiento del auto</p>
-                                    </Col>
+                                <Row>
+                                    <img height={25} src={money}/>
+                                    <b>Ahorrá</b> plata en el mantenimiento del auto
                                 </Row>
-                                <Row className="show-grid">
-                                    <Col xs={1} md={2}>
-                                        <img src={mate} className="sub-section-mini-icon"/>
-                                    </Col>
-                                    <Col xs={9} md={10}>
-                                        <p><b>Simplificá</b> trámites con nuestra app</p>
-                                    </Col>
+                                <Row>
+                                    <img height={25} src={money}/>
+                                    <b>Simplificá</b> trámites con nuestra app
                                 </Row>
-                                <Row className="show-grid">
-                                    <Col xs={1} md={2}>
-                                        <img src={money} className="sub-section-mini-icon"/>
-                                    </Col>
-                                    <Col xs={9} md={10}>
-                                        <p><b>Seguro</b> contra todo riesgo durante el periódo del alquiler</p>
-                                    </Col>
+                                <Row>
+                                    <img height={25} src={money}/>
+                                    <b>Seguro</b> contra todo riesgo durante el periódo del alquiler
                                 </Row>
                                 <p> &nbsp;</p>
                                 <Button className="btn-fine"><Glyphicon glyph="search"/>&nbsp; Alquilá</Button>
@@ -118,9 +101,10 @@ export default class ServiceComp extends React.Component {
                         <div className="grid-item sub-section">
                             <img src={park} className="sub-section-icon"/>
                             <div className="sub-section-text">
-                                <h2 className="sub-section-title"><Label>Alquiler de Cocheras</Label> entre particulares</h2>
+                                <h2 className="sub-section-title"><Label bsSize="lg" className="btn-fine">Alquiler de
+                                    Cocheras</Label> entre particulares</h2>
                                 <p>Un vehículo a tu disposición cuando lo necesites. Olvidate del mantenimiento del auto.</p>
-                                <Row className="show-grid">
+                                <Row>
                                     <Col xs={1} md={2}>
                                         <img src={money}
                                              className="sub-section-mini-icon"/>
@@ -129,7 +113,7 @@ export default class ServiceComp extends React.Component {
                                         <p><b>Tiempo</b> No creeras lo fácil que es</p>
                                     </Col>
                                 </Row>
-                                <Row className="show-grid">
+                                <Row>
                                     <Col xs={1} md={2}>
                                         <img src={money} className="sub-section-mini-icon"/>
                                     </Col>
@@ -137,7 +121,7 @@ export default class ServiceComp extends React.Component {
                                         <p><b>Dinero</b> Mucho más barato que cualquier agencia de alquiler</p>
                                     </Col>
                                 </Row>
-                                <Row className="show-grid">
+                                <Row>
                                     <Col xs={1} md={2}>
                                         <img src={money}
                                              alt="Increase Conversions" className="sub-section-mini-icon"/>
@@ -161,7 +145,8 @@ export default class ServiceComp extends React.Component {
                         <div className="grid-item sub-section">
                             <img src={elec} className="sub-section-icon"/>
                             <div className="sub-section-text">
-                                <h2 className="sub-section-title"><Label>Alquilá Autos eléctricos</Label> por horas</h2>
+                                <h2 className="sub-section-title"><Label bsSize="lg" className="btn-fine">Alquilá Autos
+                                    eléctricos</Label> por horas <Label bsStyle="warning">Próximamente.</Label></h2>
                                 <p>Por fin el auto eléctrico ha llegado a Buenos Aires!</p>
                                 <p>Tan facil como el servicio público de bicicletas.</p>
                                 <p>Ahorra hasta un tercio del coste del trayecto por cada pasajero!</p>

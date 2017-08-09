@@ -30,7 +30,7 @@ var _Home = require('./home/Home');
 
 var _Home2 = _interopRequireDefault(_Home);
 
-var _SocialNetworks = require('./common/SocialNetworks');
+var _SocialNetworks = require('./about/SocialNetworks');
 
 var _SocialNetworks2 = _interopRequireDefault(_SocialNetworks);
 
@@ -46,6 +46,14 @@ var _TripPage = require('./Trips/TripPage');
 
 var _TripPage2 = _interopRequireDefault(_TripPage);
 
+var _Dev = require('./about/Dev');
+
+var _Dev2 = _interopRequireDefault(_Dev);
+
+var _Green = require('./about/Green');
+
+var _Green2 = _interopRequireDefault(_Green);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Main = function Main() {
@@ -59,21 +67,55 @@ var Main = function Main() {
                 _reactRouterDom.Switch,
                 null,
                 _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Home2.default }),
+                _react2.default.createElement(_reactRouterDom.Route, {path: '/trips', component: _TripsPage2.default}),
+                _react2.default.createElement(_reactRouterDom.Route, {
+                    path: '/carrent',
+                    component: _SocialNetworks2.default
+                }),
                 _react2.default.createElement(_reactRouterDom.Route, { path: '/contact', component: _SocialNetworks2.default }),
-                _react2.default.createElement(_reactRouterDom.Route, { path: '/find', component: _SearchBar2.default }),
-                _react2.default.createElement(_reactRouterDom.Route, { path: '/contact/:id', component: _UserDetail2.default }),
+                _react2.default.createElement(_reactRouterDom.Route, {
+                    path: '/contact',
+                    component: _SocialNetworks2.default
+                }),
                 _react2.default.createElement(
                     _reactRouterDom.Route,
                     { path: '/trips', component: _TripsPage2.default },
                     _react2.default.createElement(_reactRouterDom.Route, { path: '/trips/new', component: _NewTripPage2.default }),
                     _react2.default.createElement(_reactRouterDom.Route, { path: '/trips/:id', component: _TripPage2.default })
                 ),
+                _react2.default.createElement(_reactRouterDom.Route, {
+                    path: '/contact',
+                    component: _SocialNetworks2.default
+                }),
+                _react2.default.createElement(_reactRouterDom.Route, {path: '/green', component: _Green2.default}),
+                _react2.default.createElement(_reactRouterDom.Route, {path: '/dev', component: _Dev2.default}),
+                _react2.default.createElement(_reactRouterDom.Route, {
+                    path: '/contact',
+                    component: _SocialNetworks2.default
+                }),
+                _react2.default.createElement(_reactRouterDom.Route, {
+                    path: '/contact',
+                    component: _SocialNetworks2.default
+                }),
+                _react2.default.createElement(_reactRouterDom.Route, {
+                    path: '/contact',
+                    component: _SocialNetworks2.default
+                }),
+                _react2.default.createElement(_reactRouterDom.Route, {
+                    path: '/contact',
+                    component: _SocialNetworks2.default
+                }),
+                _react2.default.createElement(_reactRouterDom.Route, {path: '/find', component: _SearchBar2.default}),
+                _react2.default.createElement(_reactRouterDom.Route, {
+                    path: '/contact/:id',
+                    component: _UserDetail2.default
+                }),
                 _react2.default.createElement(_reactRouterDom.Route, { path: '/trips/:id', component: _TripDetail2.default }),
                 _react2.default.createElement(_reactRouterDom.Route, { path: '/trips', component: _LastTrips2.default })
             )
         )
     );
 };
-// import Index from './components/Index';
+
 exports.default = Main;
 //# sourceMappingURL=Routes.js.map
