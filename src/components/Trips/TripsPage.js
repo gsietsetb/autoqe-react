@@ -23,8 +23,8 @@ class TripsPage extends React.Component {
                     <Panel bsStyle="primary" collapsible defaultExpanded
                            header={<div>
                                <img src={trip} height={40}/> &nbsp;
-                               <h3 style={{display: 'inline'}}> Últimos viajes publicados: &nbsp; &nbsp; <Glyphicon
-                                   glyph="triangle-bottom"/>
+                               <h3 style={{display: 'inline'}}> Últimos viajes publicados: &nbsp; &nbsp;
+                                   <Glyphicon glyph="triangle-bottom"/>
                                </h3>
                                <Link to={'/trips/new'}><Button style={{float: 'right'}} type="submit" bsStyle="primary">
                                    <Glyphicon glyph="plus-sign"/> &nbsp; Publicar viaje

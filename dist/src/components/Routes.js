@@ -14,7 +14,7 @@ var _UserDetail = require('./Users/UserDetail');
 
 var _UserDetail2 = _interopRequireDefault(_UserDetail);
 
-var _SearchBar = require('./home/SearchBar');
+var _SearchBar = require('./Trips/SearchBar');
 
 var _SearchBar2 = _interopRequireDefault(_SearchBar);
 

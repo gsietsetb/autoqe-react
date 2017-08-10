@@ -46,9 +46,9 @@ var _share = require("../../img/icons/material/share.svg");
 
 var _share2 = _interopRequireDefault(_share);
 
-var _question = require("../../img/icons/material/question.svg");
+var _interrog = require("../../img/icons/material/interrog.svg");
 
-var _question2 = _interopRequireDefault(_question);
+var _interrog2 = _interopRequireDefault(_interrog);
 
 var _leaf = require("../../img/icons/material/leaf.svg");
 
@@ -111,7 +111,7 @@ var Footer = function (_Component) {
                 { className: "footer", id: "footer" },
                 _react2.default.createElement(
                     "section",
-                    { className: "section contactBanner" },
+                    {className: "section section-footer"},
                     _react2.default.createElement(
                         _reactBootstrap.Row,
                         null,
@@ -233,7 +233,7 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", {height: 25, src: _question2.default}),
+                                    _react2.default.createElement("img", {height: 25, src: _interrog2.default}),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         {to: "/faq"},

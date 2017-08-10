@@ -21,8 +21,6 @@ import ReactRotatingText from "react-rotating-text";
 
 import AuthActions from "../../actions/AuthActions";
 import AuthStore from "../../store/AuthStore";
-
-import logo_side from "../../img/logo/autoqe_side.svg";
 import logo_txt from "../../img/logo/autoqe_txt.svg";
 
 import trip from "../../img/logo/carp_g.svg";
@@ -61,14 +59,15 @@ const styles = {
 
 function SetLogo(){
     return(
-        <MediaQuery maxDeviceWidth={700}>
+        <MediaQuery minDeviceWidth={840}>
             {(matches) => {
                 if (matches) {
-                    return (<img href="#" style={{padding: '0 2vw 0 10px', height: 70}} src={logo_side}
+                    return (<img href="#" style={{padding: '0 2vw 0 1px', height: 70}} src={logo_txt}
                                  className="App-logo" alt="autoqe"/>)
                 } else {
-                    return(<img href="#" style={{padding: '0 2vw 0 10px', height: 70}} src={logo_txt}
-                                className="App-logo" alt="autoqe"/>  )                                 }
+                    return (<img href="#" style={{padding: '0 2vw 0 1px', height: 50}} src={logo_txt}
+                                 className="App-logo" alt="autoqe"/>  )
+                }
             }}
         </MediaQuery>)
 }
@@ -129,11 +128,13 @@ class HeaderComp extends Component {
                     </Navbar.Header>
                     <Navbar.Collapse>
                         <Nav style={{marginTop: 8}} pullRight>
-                            <NavItem eventKey={1} href="/home" title="Inicio">
-                                <Glyphicon glyph="home"/>
-                                &nbsp; Inicio
-                            </NavItem>
-
+                            {/*Hideable Home*/}
+                            <MediaQuery query='(min-width: 820px)'>
+                                <NavItem eventKey={1} href="/home" title="Inicio">
+                                    <Glyphicon glyph="home"/>
+                                    &nbsp; Inicio
+                                </NavItem>
+                            </MediaQuery>
                             {/*Publicar*/}
                             <NavDropdown id="publicar" eventKey={2} title={<span>
                              <Glyphicon glyph="plus-sign"/>&nbsp; Publicar
@@ -189,6 +190,22 @@ class HeaderComp extends Component {
                                 </NavItem>
                             </MediaQuery>
 
+                            {/*</Nav>*/}
+                            {/*<Nav pullRight>*/}
+                            {/*Login Logic*/}
+                            {!this.state.authenticated ? (
+                                <NavItem onClick={this.login} style={{marginTop: -5}} eventKey={5} href="#">
+                                    <Button className="btn-fine" type="submit">LogIn</Button>
+                                </NavItem>
+                            ) : (
+                                <NavItem onClick={this.logout} eventKey={5} href="#">
+                                    <Button bsStyle={'danger'} type="submit">LogOut</Button>
+                                </NavItem>
+                            )}
+
+                            {/*Contact*/}
+                            <NavItem eventKey={6} href="#" style={{marginTop: 0}}>
+                                <Glyphicon glyph="envelope"/> &nbsp; Contacto</NavItem>
                             {/*Language selector*/}
                             <NavItem>
                                 <DropdownButton id="lang" style={styles.flagDropdown} bsStyle={'info'} title={''}>
@@ -211,24 +228,7 @@ class HeaderComp extends Component {
                                         <img src={usaFlag} height={24}/>
                                         &nbsp;  English</MenuItem>
                                 </DropdownButton>
-                            </NavItem>
-                            {/*</Nav>*/}
-                            {/*<Nav pullRight>*/}
-                            {/*Login Logic*/}
-                            {!this.state.authenticated ? (
-                                <NavItem onClick={this.login} eventKey={5} href="#">
-                                    <Button className="btn-fine" type="submit">LogIn</Button>
-                                </NavItem>
-                            ) : (
-                                <NavItem onClick={this.logout} eventKey={5} href="#">
-                                    <Button bsStyle={'danger'} type="submit">LogOut</Button>
-                                </NavItem>
-                            )}
-
-                            {/*Contact*/}
-                            <NavItem eventKey={6} href="#" style={{marginTop: 6}}>
-                                <Glyphicon glyph="envelope"/> &nbsp; Contacto</NavItem>
-                        </Nav>
+                            </NavItem> </Nav>
                     </Navbar.Collapse>
                 </Navbar>
             </div>

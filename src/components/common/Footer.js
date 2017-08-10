@@ -9,7 +9,7 @@ import world from "../../img/icons/material/world.svg"
 import code from "../../img/icons/material/code.svg"
 import hWorks from "../../img/icons/material/howWorks.svg"
 import social from "../../img/icons/material/share.svg"
-import quest from "../../img/icons/material/question.svg"
+import quest from "../../img/icons/material/interrog.svg"
 import leaf from "../../img/icons/material/leaf.svg"
 import team from "../../img/icons/material/team.svg"
 import disc from "../../img/icons/material/disc.svg"
@@ -26,7 +26,7 @@ class Footer extends Component {
     render() {
         return (
             <footer className="footer" id="footer">
-                <section className="section contactBanner">
+                <section className="section section-footer">
                     <Row>
                         <Col xs={4} md={3}> <Image responsive src={logo_side}/>
                         </Col>

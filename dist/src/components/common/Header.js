@@ -36,10 +36,6 @@ var _AuthStore = require('../../store/AuthStore');
 
 var _AuthStore2 = _interopRequireDefault(_AuthStore);
 
-var _autoqe_side = require('../../img/logo/autoqe_side.svg');
-
-var _autoqe_side2 = _interopRequireDefault(_autoqe_side);
-
 var _autoqe_txt = require('../../img/logo/autoqe_txt.svg');
 
 var _autoqe_txt2 = _interopRequireDefault(_autoqe_txt);
@@ -120,13 +116,13 @@ var styles = {
 function SetLogo() {
     return _react2.default.createElement(
         _reactResponsive2.default,
-        { maxDeviceWidth: 700 },
+        { minDeviceWidth: 840 },
         function (matches) {
             if (matches) {
-                return _react2.default.createElement('img', { href: '#', style: { padding: '0 2vw 0 10px', height: 70 }, src: _autoqe_side2.default,
+                return _react2.default.createElement('img', { href: '#', style: { padding: '0 2vw 0 1px', height: 70 }, src: _autoqe_txt2.default,
                     className: 'App-logo', alt: 'autoqe' });
             } else {
-                return _react2.default.createElement('img', { href: '#', style: { padding: '0 2vw 0 10px', height: 70 }, src: _autoqe_txt2.default,
+                return _react2.default.createElement('img', { href: '#', style: { padding: '0 2vw 0 1px', height: 50 }, src: _autoqe_txt2.default,
                     className: 'App-logo', alt: 'autoqe' });
             }
         }
@@ -217,10 +213,14 @@ var HeaderComp = function (_Component) {
                             _reactBootstrap.Nav,
                             { style: { marginTop: 8 }, pullRight: true },
                             _react2.default.createElement(
-                                _reactBootstrap.NavItem,
-                                { eventKey: 1, href: '/home', title: 'Inicio' },
-                                _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: 'home' }),
-                                '\xA0 Inicio'
+                                _reactResponsive2.default,
+                                { query: '(min-width: 820px)' },
+                                _react2.default.createElement(
+                                    _reactBootstrap.NavItem,
+                                    { eventKey: 1, href: '/home', title: 'Inicio' },
+                                    _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: 'home' }),
+                                    '\xA0 Inicio'
+                                )
                             ),
                             _react2.default.createElement(
                                 _reactBootstrap.NavDropdown,
@@ -313,6 +313,29 @@ var HeaderComp = function (_Component) {
                                     )
                                 )
                             ),
+                            !this.state.authenticated ? _react2.default.createElement(
+                                _reactBootstrap.NavItem,
+                                { onClick: this.login, style: { marginTop: -5 }, eventKey: 5, href: '#' },
+                                _react2.default.createElement(
+                                    _reactBootstrap.Button,
+                                    { className: 'btn-fine', type: 'submit' },
+                                    'LogIn'
+                                )
+                            ) : _react2.default.createElement(
+                                _reactBootstrap.NavItem,
+                                { onClick: this.logout, eventKey: 5, href: '#' },
+                                _react2.default.createElement(
+                                    _reactBootstrap.Button,
+                                    { bsStyle: 'danger', type: 'submit' },
+                                    'LogOut'
+                                )
+                            ),
+                            _react2.default.createElement(
+                                _reactBootstrap.NavItem,
+                                { eventKey: 6, href: '#', style: { marginTop: 0 } },
+                                _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: 'envelope' }),
+                                ' \xA0 Contacto'
+                            ),
                             _react2.default.createElement(
                                 _reactBootstrap.NavItem,
                                 null,
@@ -358,29 +381,7 @@ var HeaderComp = function (_Component) {
                                     )
                                 )
                             ),
-                            !this.state.authenticated ? _react2.default.createElement(
-                                _reactBootstrap.NavItem,
-                                { onClick: this.login, eventKey: 5, href: '#' },
-                                _react2.default.createElement(
-                                    _reactBootstrap.Button,
-                                    { className: 'btn-fine', type: 'submit' },
-                                    'LogIn'
-                                )
-                            ) : _react2.default.createElement(
-                                _reactBootstrap.NavItem,
-                                { onClick: this.logout, eventKey: 5, href: '#' },
-                                _react2.default.createElement(
-                                    _reactBootstrap.Button,
-                                    { bsStyle: 'danger', type: 'submit' },
-                                    'LogOut'
-                                )
-                            ),
-                            _react2.default.createElement(
-                                _reactBootstrap.NavItem,
-                                { eventKey: 6, href: '#', style: { marginTop: 6 } },
-                                _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: 'envelope' }),
-                                ' \xA0 Contacto'
-                            )
+                            ' '
                         )
                     )
                 )

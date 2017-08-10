@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import ContactDetail from './Users/UserDetail';
-import SearchBarComp from "./home/SearchBar";
+import SearchBarComp from "./Trips/SearchBar";
 import TripGrid from "./Trips/oldTrip/LastTrips";
 import TripDetailComponent from "./Trips/oldTrip/TripDetail";
 import HomePage from "./home/Home";

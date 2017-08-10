@@ -36,7 +36,7 @@ var _paypal_w = require('../../img/brands/paypal_w.png');
 
 var _paypal_w2 = _interopRequireDefault(_paypal_w);
 
-var _visa_w = require('../../img/brands/visa_w.png');
+var _visa_w = require('../../img/brands/visa_w.svg');
 
 var _visa_w2 = _interopRequireDefault(_visa_w);
 
@@ -48,9 +48,17 @@ var _AmericanExpres_w = require('../../img/brands/American-Expres_w.png');
 
 var _AmericanExpres_w2 = _interopRequireDefault(_AmericanExpres_w);
 
-var _lock = require('../../img/icons/material/lock.svg');
+var _rapipago_w = require('../../img/brands/rapipago_w.svg');
 
-var _lock2 = _interopRequireDefault(_lock);
+var _rapipago_w2 = _interopRequireDefault(_rapipago_w);
+
+var _mPago_w = require('../../img/brands/mPago_w.svg');
+
+var _mPago_w2 = _interopRequireDefault(_mPago_w);
+
+var _secure_pay = require('../../img/icons/material/secure_pay.svg');
+
+var _secure_pay2 = _interopRequireDefault(_secure_pay);
 
 function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {default: obj};
@@ -101,7 +109,7 @@ var SecurePayment = function (_Component) {
                 null,
                 _react2.default.createElement(
                     'section',
-                    {className: 'section section-footer', id: 'section-what-it-does'},
+                    {className: 'section section-dark transparent', id: 'payment'},
                     _react2.default.createElement(
                         'header',
                         {className: 'section-header'},
@@ -112,7 +120,7 @@ var SecurePayment = function (_Component) {
                                 'h3',
                                 {className: 'section-header-title'},
                                 _react2.default.createElement('img', {
-                                    src: _lock2.default,
+                                    src: _secure_pay2.default,
                                     height: 30,
                                     alt: 'Secure payment'
                                 }),
@@ -121,6 +129,23 @@ var SecurePayment = function (_Component) {
                             _react2.default.createElement(
                                 'div',
                                 {className: 'section-header-text'},
+                                _react2.default.createElement(_reactBootstrap.Image, {
+                                    src: _rapipago_w2.default,
+                                    height: '60'
+                                }),
+                                ' \xA0',
+                                _react2.default.createElement(_reactBootstrap.Image, {
+                                    src: _mPago_w2.default,
+                                    height: '60'
+                                }),
+                                ' \xA0',
+                                _react2.default.createElement(_reactBootstrap.Image, {
+                                    src: _stripe_w2.default,
+                                    height: '60'
+                                }),
+                                ' \xA0',
+                                _react2.default.createElement('p', null),
+                                _react2.default.createElement('p', null),
                                 _react2.default.createElement(_reactBootstrap.Image, {
                                     src: _mastercard_w2.default,
                                     height: '60'
@@ -133,11 +158,6 @@ var SecurePayment = function (_Component) {
                                 ' \xA0',
                                 _react2.default.createElement(_reactBootstrap.Image, {
                                     src: _AmericanExpres_w2.default,
-                                    height: '60'
-                                }),
-                                ' \xA0',
-                                _react2.default.createElement(_reactBootstrap.Image, {
-                                    src: _stripe_w2.default,
                                     height: '60'
                                 }),
                                 ' \xA0',

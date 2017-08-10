@@ -8,11 +8,19 @@ import sura from "../../img/brands/logo-sura.png";
 export default class TalkAboutComp extends React.Component {
     render() {
         return (
-            <section className="section section-main" id="section-what-it-does">
+            <section className="section">
+                {/*<header className="section-header">*/}
+                {/*<div className="container">*/}
+                {/*<h1 className="">*/}
+                {/*Hablan de nosotros &nbsp; <Label bsStyle="warning">Forma Parte!</Label>*/}
+                {/*</h1>*/}
+                {/*</div>*/}
+                {/*</header>*/}
+
                 <header className="section-header">
                     <div className="container">
                         <div className="section-header-text">
-                            <p>Con el soporte de:</p>
+                            <h3 style={{color: '#74acdf'}}>Con el soporte de:</h3>
                             <Image src={baires} height="60"/>
                             <Image src={colon} height="60"/>
                             <Image src={sura} height="60"/>

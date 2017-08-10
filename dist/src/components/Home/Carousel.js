@@ -48,6 +48,8 @@ var _reactRotatingText = require("react-rotating-text");
 
 var _reactRotatingText2 = _interopRequireDefault(_reactRotatingText);
 
+var _reactRouterDom = require("react-router-dom");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -58,33 +60,16 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var styles = {
     coverImgCarp: {
-        height: '80vh',
-        background: '',
-        backgroundImage: 'url(' + _banner2.default + ')',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        backgroundPosition: 'right'
+        backgroundImage: 'url(' + _banner2.default + ')'
     },
     coverImgCar: {
-        height: '80vh',
-        backgroundImage: 'url(' + _banner4.default + ')',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
+        backgroundImage: 'url(' + _banner4.default + ')'
     },
     coverImgPark: {
-        height: '80vh',
-        backgroundImage: 'url(' + _parking2.default + ')',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
+        backgroundImage: 'url(' + _parking2.default + ')'
     },
     coverImgElec: {
-        height: '80vh',
-        backgroundImage: 'url(' + _elec_banner_def2.default + ')',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        backgroundPosition: 'bottom'
+        backgroundImage: 'url(' + _elec_banner_def2.default + ')'
     },
     darkText: {
         color: '#122b40'
@@ -130,12 +115,15 @@ var CarouselComp = function (_React$Component) {
 
             return _react2.default.createElement(
                 _reactBootstrap.Carousel,
-                { style: { height: '80vh' }, interval: 6000, onSelect: function onSelect() {
+                { className: "carousel-container", interval: 6000, onSelect: function onSelect() {
                         return _this2.slide = false;
                     } },
                 _react2.default.createElement(
                     _reactBootstrap.Carousel.Item,
-                    { style: styles.coverImgCarp, className: "filter" },
+                    { style: {
+                            backgroundImage: 'url(' + _banner2.default + ')', backgroundSize: 'cover',
+                            backgroundRepeat: 'no-repeat', backgroundPosition: 'center'
+                        }, className: "filter coverImg" },
                     _react2.default.createElement(
                         _reactBootstrap.Carousel.Caption,
                         null,
@@ -149,7 +137,7 @@ var CarouselComp = function (_React$Component) {
                                 " \xA0 \xA0",
                                 _react2.default.createElement(_reactRotatingText2.default, { items: [' Encontrá ', ' Publicá ', ' Compartí '] }),
                                 " \xA0 \xA0",
-                                _react2.default.createElement("img", { src: _carp_g2.default, height: 60 }),
+                                _react2.default.createElement("img", { height: 60, src: _carp_g2.default }),
                                 "\xA0 TRAYECTO"
                             )
                         ),
@@ -166,7 +154,7 @@ var CarouselComp = function (_React$Component) {
                 ),
                 _react2.default.createElement(
                     _reactBootstrap.Carousel.Item,
-                    { style: styles.coverImgCar },
+                    { style: styles.coverImgCar, className: "coverImg" },
                     _react2.default.createElement(
                         _reactBootstrap.Carousel.Caption,
                         null,
@@ -196,7 +184,7 @@ var CarouselComp = function (_React$Component) {
                 ),
                 _react2.default.createElement(
                     _reactBootstrap.Carousel.Item,
-                    { style: styles.coverImgPark },
+                    { style: styles.coverImgPark, className: "coverImg" },
                     _react2.default.createElement(
                         _reactBootstrap.Carousel.Caption,
                         null,
@@ -226,10 +214,10 @@ var CarouselComp = function (_React$Component) {
                 ),
                 _react2.default.createElement(
                     _reactBootstrap.Carousel.Item,
-                    { style: styles.coverImgElec },
+                    { style: styles.coverImgElec, className: "coverImg" },
                     _react2.default.createElement(
                         _reactBootstrap.Carousel.Caption,
-                        { style: { top: '15vh' } },
+                        { className: "position-top" },
                         _react2.default.createElement(
                             "h2",
                             { style: { fontFamily: 'AllertaStencil' } },
@@ -237,7 +225,7 @@ var CarouselComp = function (_React$Component) {
                                 _reactBootstrap.Label,
                                 { bsSize: "lg", className: "btn-white" },
                                 _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "search" }),
-                                _react2.default.createElement(_reactRotatingText2.default, { items: [' Alquilá por horas un ', ' Encontrá un '] }),
+                                _react2.default.createElement(_reactRotatingText2.default, { items: [' Alquilá un', ' Encontrá un '] }),
                                 " \xA0 \xA0",
                                 _react2.default.createElement("img", { src: _elec_g2.default, height: 60 }),
                                 "\xA0 AUTO EL\xC9CTRICO"
@@ -249,10 +237,22 @@ var CarouselComp = function (_React$Component) {
                             _react2.default.createElement(
                                 _reactBootstrap.Label,
                                 { bsSize: "lg", className: "btn-fine" },
-                                "Ayud\xE1 al medioambiente con un transporte sostenible"
+                                "D\xF3nde y cu\xE1ndo lo necesit\xE9s"
+                            ),
+                            _react2.default.createElement("p", null),
+                            _react2.default.createElement(
+                                _reactRouterDom.Link,
+                                { to: "/green" },
+                                _react2.default.createElement(
+                                    _reactBootstrap.Label,
+                                    { bsSize: "lg", bsStyle: "success" },
+                                    _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "leaf" }),
+                                    " &bnsp; Ayud\xE1 al medioambiente!"
+                                )
                             )
                         )
-                    )
+                    ),
+                    "x"
                 )
             );
         }

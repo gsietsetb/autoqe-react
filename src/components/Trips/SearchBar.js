@@ -31,12 +31,12 @@ export default class SearchBarComp extends React.Component {
 
         return (
             <div className="Container" style={{textAlign: 'center'}}>
-                <img src={trip} height={60}/> &nbsp;
-                <h3 style={{display: 'inline'}}>
+                <img src={trip} className="main-icon"/> &nbsp;
+                <h4 style={{display: 'inline'}}>
                     <Label className="btn-fine" bsSize="lg">
                         Carpooling
                     </Label>
-                </h3>
+                </h4>
                 <Form inline className="inline-fit" style={{display: 'inline'}}>
                     <FormGroup controlId="formInlineFrom">
                         <ControlLabel> &nbsp;  &nbsp; De: &nbsp; </ControlLabel>

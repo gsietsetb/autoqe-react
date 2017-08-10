@@ -12,36 +12,20 @@ import park from "../../img/logo/park_g.svg";
 import elec from "../../img/logo/elec_g.svg";
 
 import ReactRotatingText from "react-rotating-text";
+import {Link} from "react-router-dom";
 
 const styles = {
     coverImgCarp: {
-        height: '80vh',
-        background: '',
         backgroundImage: 'url(' + carpBanner + ')',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        backgroundPosition: 'right'
     },
     coverImgCar: {
-        height: '80vh',
         backgroundImage: 'url(' + carBanner + ')',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
     },
     coverImgPark: {
-        height: '80vh',
         backgroundImage: 'url(' + parkBanner + ')',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
     },
     coverImgElec: {
-        height: '80vh',
         backgroundImage: 'url(' + elecBanner + ')',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        backgroundPosition: 'bottom'
     },
     darkText: {
         color: '#122b40'
@@ -74,16 +58,18 @@ export default class CarouselComp extends React.Component {
 
     render() {
         return (
-            <Carousel style={{height: '80vh'}} interval={6000} onSelect={()=>this.slide=false}>
-
+            <Carousel className="carousel-container" interval={6000} onSelect={() => this.slide = false}>
                 {/*Carpooling*/}
-                <Carousel.Item style={styles.coverImgCarp} className="filter">
+                <Carousel.Item style={{
+                    backgroundImage: 'url(' + carpBanner + ')', backgroundSize: 'cover',
+                    backgroundRepeat: 'no-repeat', backgroundPosition: 'center'
+                }} className="filter coverImg">
                     <Carousel.Caption >
                         <h2 style={{fontFamily: 'AllertaStencil'}}>
                             <Label bsSize="lg" className="btn-white">
                                 <Glyphicon glyph="search"/> &nbsp; &nbsp;
                                 <ReactRotatingText items={[' Encontrá ', ' Publicá ', ' Compartí ']}/> &nbsp; &nbsp;
-                                <img src={trip} height={60}/>
+                                <img height={60} src={trip}/>
                                 &nbsp; TRAYECTO
                             </Label>
                         </h2>
@@ -96,7 +82,7 @@ export default class CarouselComp extends React.Component {
                 </Carousel.Item>
 
                 {/*Car rental*/}
-                <Carousel.Item style={styles.coverImgCar}>
+                <Carousel.Item style={styles.coverImgCar} className="coverImg">
                     <Carousel.Caption >
                         <h2 style={{fontFamily: 'AllertaStencil'}}>
                             <Label bsSize="lg" className="btn-white">
@@ -115,7 +101,7 @@ export default class CarouselComp extends React.Component {
                 </Carousel.Item>
 
                 {/*Parking*/}
-                <Carousel.Item style={styles.coverImgPark}>
+                <Carousel.Item style={styles.coverImgPark} className="coverImg">
                     <Carousel.Caption>
                         <h2 style={{fontFamily: 'AllertaStencil'}}>
                             <Label bsSize="lg" className="btn-white">
@@ -134,23 +120,30 @@ export default class CarouselComp extends React.Component {
                 </Carousel.Item>
 
                 {/*Electric*/}
-                <Carousel.Item style={styles.coverImgElec}>
+                <Carousel.Item style={styles.coverImgElec} className="coverImg">
                     {/*<iframe src="https://player.vimeo.com/video/129498278?autoplay=1&loop=1&title=0&byline=0&portrait=0" width="100%" height="800" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen/>*/}
-                    <Carousel.Caption style={{top: '15vh'}}>
+                    <Carousel.Caption className="position-top">
                         <h2 style={{fontFamily: 'AllertaStencil'}}>
                             <Label bsSize="lg" className="btn-white">
                                 <Glyphicon glyph="search"/>
-                                <ReactRotatingText items={[' Alquilá por horas un ', ' Encontrá un ']}/> &nbsp; &nbsp;
+                                <ReactRotatingText items={[' Alquilá un', ' Encontrá un ']}/> &nbsp; &nbsp;
                                 <img src={elec} height={60}/>
                                 &nbsp; AUTO ELÉCTRICO
                             </Label>
                         </h2>
                         <h3>
                             <Label bsSize="lg" className="btn-fine">
-                                Ayudá al medioambiente con un transporte sostenible
+                                Dónde y cuándo lo necesités
                             </Label>
+                            <p/>
+                            <Link to="/green">
+                                <Label bsSize="lg" bsStyle="success">
+                                    <Glyphicon glyph="leaf"/> &bnsp;
+                                    Ayudá al medioambiente!
+                                </Label>
+                            </Link>
                         </h3>
-                    </Carousel.Caption>
+                    </Carousel.Caption>x
                 </Carousel.Item>
             </Carousel>
         );

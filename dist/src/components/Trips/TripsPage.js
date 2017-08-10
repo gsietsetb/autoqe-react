@@ -79,10 +79,8 @@ var TripsPage = function (_React$Component) {
                                 _react2.default.createElement(
                                     'h3',
                                     {style: {display: 'inline'}},
-                                    ' \xDAltimos viajes publicados: \xA0 \xA0 ',
-                                    _react2.default.createElement(_reactBootstrap.Glyphicon, {
-                                        glyph: 'triangle-bottom'
-                                    })
+                                    ' \xDAltimos viajes publicados: \xA0 \xA0',
+                                    _react2.default.createElement(_reactBootstrap.Glyphicon, {glyph: 'triangle-bottom'})
                                 ),
                                 _react2.default.createElement(
                                     _reactRouterDom.Link,
