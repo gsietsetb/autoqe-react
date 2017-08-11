@@ -1,15 +1,17 @@
 import React from "react";
 import {Image, Label} from "react-bootstrap";
+import quest from "../../img/icons/material/interrog.svg";
 import steps from "../../img/banner/easy-steps.png";
 
 export default class HowWorksComp extends React.Component {
     render() {
         return (
-            <section className="section section-dark">
+            <section className="section section-dark transparent">
                 <header className="section-header">
                     <div className="container">
                         <h1 className="section-header-title">
-                            ¿Cómo funciona?: &nbsp; <Label className="btn-fine">Solo tres pasos!</Label>
+                            <img src={quest} className="icon-title" alt="Secure payment"/> &nbsp;
+                            ¿Cómo funciona?: &nbsp; <Label className="btn-fine">Sólo tres pasos!</Label>
                         </h1>
                         <div className="section-header-text" height={500}>
                             <h3>Tu solución de transporte en tres pasos  </h3>

@@ -17,12 +17,12 @@ export default class Intro extends React.Component {
                             <p>Compartí lo que no usás &nbsp;
                                 <Link to="/green">
                                     <Button bsStyle="success">
-                                        <Glyphicon glyph="leaf"/>
+                                        <Glyphicon glyph="leaf"/> &nbsp;
                                         Ayudando al medioambiente</Button>
                                 </Link></p>
                             <p>Todas las soluciones de transporte alrededor tuyo en una única aplicación:</p>
-                            <Image src={android} height="60"/>
-                            <Image src={ios} height="60"/>
+                            <Image src={android} className="brand-logo"/>
+                            <Image src={ios} className="brand-logo"/>
                         </div>
                     </div>
                 </header>

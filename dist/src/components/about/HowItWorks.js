@@ -12,6 +12,10 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactBootstrap = require("react-bootstrap");
 
+var _interrog = require("../../img/icons/material/interrog.svg");
+
+var _interrog2 = _interopRequireDefault(_interrog);
+
 var _easySteps = require("../../img/banner/easy-steps.png");
 
 var _easySteps2 = _interopRequireDefault(_easySteps);
@@ -38,7 +42,7 @@ var HowWorksComp = function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 "section",
-                { className: "section section-dark" },
+                {className: "section section-dark transparent"},
                 _react2.default.createElement(
                     "header",
                     { className: "section-header" },
@@ -48,11 +52,16 @@ var HowWorksComp = function (_React$Component) {
                         _react2.default.createElement(
                             "h1",
                             { className: "section-header-title" },
-                            "\xBFC\xF3mo funciona?: \xA0 ",
+                            _react2.default.createElement("img", {
+                                src: _interrog2.default,
+                                className: "icon-title",
+                                alt: "Secure payment"
+                            }),
+                            " \xA0 \xBFC\xF3mo funciona?: \xA0 ",
                             _react2.default.createElement(
                                 _reactBootstrap.Label,
                                 { className: "btn-fine" },
-                                "Solo tres pasos!"
+                                "S\xF3lo tres pasos!"
                             )
                         ),
                         _react2.default.createElement(

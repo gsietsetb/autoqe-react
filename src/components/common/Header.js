@@ -14,9 +14,10 @@ import {
     NavDropdown,
     NavItem
 } from "react-bootstrap";
+import {Link} from "react-router-dom";
 import {connect} from 'react-redux';
 
-import MediaQuery from "react-responsive";
+import Responsive from "react-responsive";
 import ReactRotatingText from "react-rotating-text";
 
 import AuthActions from "../../actions/AuthActions";
@@ -56,21 +57,11 @@ const styles = {
         margin: 0
     }
 };
-
-function SetLogo(){
-    return(
-        <MediaQuery minDeviceWidth={840}>
-            {(matches) => {
-                if (matches) {
-                    return (<img href="#" style={{padding: '0 2vw 0 1px', height: 70}} src={logo_txt}
-                                 className="App-logo" alt="autoqe"/>)
-                } else {
-                    return (<img href="#" style={{padding: '0 2vw 0 1px', height: 50}} src={logo_txt}
-                                 className="App-logo" alt="autoqe"/>  )
-                }
-            }}
-        </MediaQuery>)
-}
+// Default (desktop, tablet) and mobile setup
+const Huge = ({children}) => <Responsive minWidth={1218} children={children}/>;
+const Tablet = ({children}) => <Responsive minWidth={860} children={children}/>;
+const Default = ({children}) => <Responsive minWidth={768} children={children}/>;
+const Mobile = ({children}) => <Responsive maxWidth={768} children={children}/>;
 
 class HeaderComp extends Component {
     constructor(props) {
@@ -121,20 +112,22 @@ class HeaderComp extends Component {
             <div>
                 <Navbar collapseOnSelect fixedTop fluid style={styles.navStyle}>
                     <Navbar.Header>
-                        <Navbar.Brand pullLeft>
-                            <SetLogo/>
+                        <Navbar.Brand pullLeft className="logo">
+                            <Link to="/">
+                                <img src={logo_txt} alt="autoqe"/>
+                            </Link>
                         </Navbar.Brand>
                         <Navbar.Toggle/>
                     </Navbar.Header>
                     <Navbar.Collapse>
                         <Nav style={{marginTop: 8}} pullRight>
                             {/*Hideable Home*/}
-                            <MediaQuery query='(min-width: 820px)'>
+                            <Tablet>
                                 <NavItem eventKey={1} href="/home" title="Inicio">
                                     <Glyphicon glyph="home"/>
                                     &nbsp; Inicio
                                 </NavItem>
-                            </MediaQuery>
+                            </Tablet>
                             {/*Publicar*/}
                             <NavDropdown id="publicar" eventKey={2} title={<span>
                              <Glyphicon glyph="plus-sign"/>&nbsp; Publicar
@@ -172,26 +165,24 @@ class HeaderComp extends Component {
                             </NavDropdown>
 
                             {/*Hideable Search & List form*/}
-                            <MediaQuery query='(min-width: 1218px)'>
+                            <Huge>
                                 <NavItem eventKey={4} href="#" style={{marginTop: -8, marginBottom: -9}}>
                                     <FormGroup>
                                         <InputGroup className="inputForm">
-                                            <InputGroup.Addon className="inputForm">
+                                            <InputGroup.Addon>
                                                 <Glyphicon glyph="search" style={{float: 'left'}}/> &nbsp;
                                                 <ReactRotatingText
                                                     items={['Trayecto', 'Auto', 'Cochera']}/>
                                             </InputGroup.Addon>
-                                            <FormControl className="inputForm" type="text" placeholder="Mar del Plata"/>
+                                            <FormControl type="text" placeholder="Mar del Plata"/>
                                             <InputGroup.Addon>
                                                 <img src={locTo} height={20}/>
                                             </InputGroup.Addon>
                                         </InputGroup>
                                     </FormGroup>
                                 </NavItem>
-                            </MediaQuery>
+                            </Huge>
 
-                            {/*</Nav>*/}
-                            {/*<Nav pullRight>*/}
                             {/*Login Logic*/}
                             {!this.state.authenticated ? (
                                 <NavItem onClick={this.login} style={{marginTop: -5}} eventKey={5} href="#">

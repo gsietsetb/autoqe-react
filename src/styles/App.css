@@ -1,13 +1,17 @@
 .App {
     text-align: center;
+    margin: 5vh 10vh;
 }
 
 .Container {
     margin: 2vh 2vw;
 }
 
-.App-logo img {
-    padding: 0 30px 8px 0;
+.logo {
+    padding: 0;
+}
+
+.logo img {
     height: 63px;
 }
 
@@ -16,8 +20,13 @@
     height: 80px;
 }
 
-.App-intro {
-    font-size: large;
+/*Header NavBar*/
+
+.box {
+    display: inline;
+    margin: 1em;
+    max-width: 80px;
+    min-Width: 80px;
 }
 
 .inputForm {
@@ -25,8 +34,8 @@
     min-Width: 110px;
 }
 .inputFormMain {
-    max-width: 320px;
-    min-Width: 180px;
+    max-width: 220px;
+    min-Width: 120px;
 }
 
 .navbar-default .navbar-nav > li > a,
@@ -39,17 +48,55 @@
 }
 
 @media screen and (max-width: 840px) {
-    .inline-fit {
-        text-align: center;
-        display: flex;
+
+    .logo img {
+        height: 55px;
     }
 
-    inline-fit.Button {
+    .inline-fit {
+        text-align: left;
+        display: inline;
+    }
+
+    .inline-fit.Button {
         height: 20px;
     }
 }
 
+/*Buttons:*/
+
+.icon-title {
+    height: 40px;
+}
+
+.brand-logo {
+    height: 60px;
+}
+
+@media screen and (max-width: 840px) {
+    .icon-title {
+        height: 30px;
+    }
+
+    .brand-logo {
+        height: 45px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .icon-title {
+        height: 30px;
+    }
+
+    .brand-logo {
+        height: 30px;
+    }
+}
+
 /*//Services:*/
+.img-service {
+    max-width: 30vh;
+}
 
 .to-hide-sm {
     display: none;
@@ -97,6 +144,7 @@
     font-size: 2.125rem;
     line-height: 1.375;
     color: #2C3438;
+    text-align: left;
 }
 
 @media screen and (min-width: 480px) {
@@ -281,8 +329,8 @@
     color: #122b40;
 }
 
-.autoqe_filter {
-    /*filter: hue-rotate(-20deg);*/
+.position-top {
+    top: 7vh;
 }
 
 @media screen and (max-width: 740px) {
@@ -347,7 +395,7 @@
     .sub-section-text {
         padding-left: 2em;
         text-align: left;
-        margin-top: 6vh;
+        /*margin-top: 6vh;*/
     }
 }
 
@@ -490,7 +538,6 @@
     display: block;
     margin-right: 3.86399%;
     width: 100%;
-    margin-right: 0;
     margin-bottom: 2em
 }
 

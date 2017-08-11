@@ -120,10 +120,7 @@ var CarouselComp = function (_React$Component) {
                     } },
                 _react2.default.createElement(
                     _reactBootstrap.Carousel.Item,
-                    { style: {
-                            backgroundImage: 'url(' + _banner2.default + ')', backgroundSize: 'cover',
-                            backgroundRepeat: 'no-repeat', backgroundPosition: 'center'
-                        }, className: "filter coverImg" },
+                    {style: styles.coverImgCarp, className: "coverImg"},
                     _react2.default.createElement(
                         _reactBootstrap.Carousel.Caption,
                         null,
@@ -235,20 +232,20 @@ var CarouselComp = function (_React$Component) {
                             "h3",
                             null,
                             _react2.default.createElement(
-                                _reactBootstrap.Label,
-                                { bsSize: "lg", className: "btn-fine" },
-                                "D\xF3nde y cu\xE1ndo lo necesit\xE9s"
-                            ),
-                            _react2.default.createElement("p", null),
-                            _react2.default.createElement(
                                 _reactRouterDom.Link,
                                 { to: "/green" },
                                 _react2.default.createElement(
                                     _reactBootstrap.Label,
                                     { bsSize: "lg", bsStyle: "success" },
                                     _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "leaf" }),
-                                    " &bnsp; Ayud\xE1 al medioambiente!"
+                                    " \xA0 Ayud\xE1 al medioambiente!"
                                 )
+                            ),
+                            _react2.default.createElement("p", null),
+                            _react2.default.createElement(
+                                _reactBootstrap.Label,
+                                {bsSize: "lg", className: "btn-fine"},
+                                "D\xF3nde y cu\xE1ndo lo necesit\xE9s"
                             )
                         )
                     ),

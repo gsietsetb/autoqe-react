@@ -18,6 +18,8 @@ var sessionActions = _interopRequireWildcard(_SessionActions);
 
 var _reactBootstrap = require('react-bootstrap');
 
+var _reactRouterDom = require('react-router-dom');
+
 var _reactRedux = require('react-redux');
 
 var _reactResponsive = require('react-responsive');
@@ -112,22 +114,23 @@ var styles = {
         margin: 0
     }
 };
-
-function SetLogo() {
-    return _react2.default.createElement(
-        _reactResponsive2.default,
-        { minDeviceWidth: 840 },
-        function (matches) {
-            if (matches) {
-                return _react2.default.createElement('img', { href: '#', style: { padding: '0 2vw 0 1px', height: 70 }, src: _autoqe_txt2.default,
-                    className: 'App-logo', alt: 'autoqe' });
-            } else {
-                return _react2.default.createElement('img', { href: '#', style: { padding: '0 2vw 0 1px', height: 50 }, src: _autoqe_txt2.default,
-                    className: 'App-logo', alt: 'autoqe' });
-            }
-        }
-    );
-}
+// Default (desktop, tablet) and mobile setup
+var Huge = function Huge(_ref) {
+    var children = _ref.children;
+    return _react2.default.createElement(_reactResponsive2.default, {minWidth: 1218, children: children});
+};
+var Tablet = function Tablet(_ref2) {
+    var children = _ref2.children;
+    return _react2.default.createElement(_reactResponsive2.default, {minWidth: 860, children: children});
+};
+var Default = function Default(_ref3) {
+    var children = _ref3.children;
+    return _react2.default.createElement(_reactResponsive2.default, {minWidth: 768, children: children});
+};
+var Mobile = function Mobile(_ref4) {
+    var children = _ref4.children;
+    return _react2.default.createElement(_reactResponsive2.default, {maxWidth: 768, children: children});
+};
 
 var HeaderComp = function (_Component) {
     _inherits(HeaderComp, _Component);
@@ -201,8 +204,12 @@ var HeaderComp = function (_Component) {
                         null,
                         _react2.default.createElement(
                             _reactBootstrap.Navbar.Brand,
-                            { pullLeft: true },
-                            _react2.default.createElement(SetLogo, null)
+                            {pullLeft: true, className: 'logo'},
+                            _react2.default.createElement(
+                                _reactRouterDom.Link,
+                                {to: '/'},
+                                _react2.default.createElement('img', {src: _autoqe_txt2.default, alt: 'autoqe'})
+                            )
                         ),
                         _react2.default.createElement(_reactBootstrap.Navbar.Toggle, null)
                     ),
@@ -213,8 +220,8 @@ var HeaderComp = function (_Component) {
                             _reactBootstrap.Nav,
                             { style: { marginTop: 8 }, pullRight: true },
                             _react2.default.createElement(
-                                _reactResponsive2.default,
-                                { query: '(min-width: 820px)' },
+                                Tablet,
+                                null,
                                 _react2.default.createElement(
                                     _reactBootstrap.NavItem,
                                     { eventKey: 1, href: '/home', title: 'Inicio' },
@@ -284,8 +291,8 @@ var HeaderComp = function (_Component) {
                                 )
                             ),
                             _react2.default.createElement(
-                                _reactResponsive2.default,
-                                { query: '(min-width: 1218px)' },
+                                Huge,
+                                null,
                                 _react2.default.createElement(
                                     _reactBootstrap.NavItem,
                                     { eventKey: 4, href: '#', style: { marginTop: -8, marginBottom: -9 } },
@@ -297,13 +304,16 @@ var HeaderComp = function (_Component) {
                                             { className: 'inputForm' },
                                             _react2.default.createElement(
                                                 _reactBootstrap.InputGroup.Addon,
-                                                { className: 'inputForm' },
+                                                null,
                                                 _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: 'search', style: { float: 'left' } }),
                                                 ' \xA0',
                                                 _react2.default.createElement(_reactRotatingText2.default, {
                                                     items: ['Trayecto', 'Auto', 'Cochera'] })
                                             ),
-                                            _react2.default.createElement(_reactBootstrap.FormControl, { className: 'inputForm', type: 'text', placeholder: 'Mar del Plata' }),
+                                            _react2.default.createElement(_reactBootstrap.FormControl, {
+                                                type: 'text',
+                                                placeholder: 'Mar del Plata'
+                                            }),
                                             _react2.default.createElement(
                                                 _reactBootstrap.InputGroup.Addon,
                                                 null,

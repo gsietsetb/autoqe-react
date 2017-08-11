@@ -1,11 +1,12 @@
-<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141.73 123">
-    <defs>
-        <style>
-            .cls-1{fill:#74acdf;}.cls-2{fill:none;stroke:#fff;stroke-linecap:round;stroke-miterlimit:10;stroke-width:5px;}
-        </style>
-    </defs>
-    <title>loc1</title>
-    <path class="cls-1"
-          d="M37.35,73.16l33.13,48.37,33.67-48.1c12.55-16.56,10.88-44-3.62-58.65a41.72,41.72,0,0,0-59-.3C26.87,29,24.92,56.41,37.35,73.16Zm14.8-31a19.08,19.08,0,1,1,19,19.18A19.1,19.1,0,0,1,52.15,42.18Z"/>
-    <line class="cls-2" x1="81.43" y1="52.65" x2="52.53" y2="94.36"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
+	 viewBox="0 0 141.7 123" style="enable-background:new 0 0 141.7 123;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#74ACDF;}
+</style>
+<title>loc1</title>
+<path class="st0" d="M98.4,14.3C82.2-2.1,55.8-2.2,39.4,14c-14.7,14.5-16.6,41.9-4.2,58.7l13.2,19.2l21.4-31.1c-0.2,0-0.5,0-0.7,0
+	c-10.5-0.1-19-8.6-19-19.2c0.1-10.5,8.6-19,19.2-19c10.5,0.1,19,8.6,19,19.2c0,3.4-1,6.6-2.6,9.4c-0.1,0.5-0.3,1-0.6,1.5L53.8,98.2
+	c-0.2,0.3-0.4,0.5-0.7,0.8l15.2,22.2L102,73C114.6,56.4,112.9,29,98.4,14.3z"/>
 </svg>

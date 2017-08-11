@@ -60,10 +60,7 @@ export default class CarouselComp extends React.Component {
         return (
             <Carousel className="carousel-container" interval={6000} onSelect={() => this.slide = false}>
                 {/*Carpooling*/}
-                <Carousel.Item style={{
-                    backgroundImage: 'url(' + carpBanner + ')', backgroundSize: 'cover',
-                    backgroundRepeat: 'no-repeat', backgroundPosition: 'center'
-                }} className="filter coverImg">
+                <Carousel.Item style={styles.coverImgCarp} className="coverImg">
                     <Carousel.Caption >
                         <h2 style={{fontFamily: 'AllertaStencil'}}>
                             <Label bsSize="lg" className="btn-white">
@@ -132,16 +129,16 @@ export default class CarouselComp extends React.Component {
                             </Label>
                         </h2>
                         <h3>
-                            <Label bsSize="lg" className="btn-fine">
-                                Dónde y cuándo lo necesités
-                            </Label>
-                            <p/>
                             <Link to="/green">
                                 <Label bsSize="lg" bsStyle="success">
-                                    <Glyphicon glyph="leaf"/> &bnsp;
+                                    <Glyphicon glyph="leaf"/> &nbsp;
                                     Ayudá al medioambiente!
                                 </Label>
                             </Link>
+                            <p/>
+                            <Label bsSize="lg" className="btn-fine">
+                                Dónde y cuándo lo necesités
+                            </Label>
                         </h3>
                     </Carousel.Caption>x
                 </Carousel.Item>

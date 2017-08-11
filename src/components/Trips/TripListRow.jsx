@@ -3,8 +3,8 @@ import {Button, Col, Glyphicon, Label, ListGroupItem, Row} from 'react-bootstrap
 import {Link} from 'react-router-dom';
 import {FormattedDate, FormattedRelative, FormattedTime} from 'react-intl';
 import locFrom from "../../img/icons/material/loc1.svg";
-import locThrough from "../../img/icons/material/location3.svg";
-import locTo from "../../img/icons/material/location.svg";
+import locThrough from "../../img/icons/material/loc2.svg";
+import locTo from "../../img/icons/material/loc3.svg";
 import girl from "../../img/icons/material/girl.svg";
 import highw from "../../img/icons/material/highway.svg";
 import highw_n from "../../img/icons/material/highway_n.svg";

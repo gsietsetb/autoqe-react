@@ -121,7 +121,7 @@ var SecurePayment = function (_Component) {
                                 {className: 'section-header-title'},
                                 _react2.default.createElement('img', {
                                     src: _secure_pay2.default,
-                                    height: 30,
+                                    className: 'icon-title',
                                     alt: 'Secure payment'
                                 }),
                                 ' \xA0 Plataformas de pago seguro'
@@ -131,39 +131,39 @@ var SecurePayment = function (_Component) {
                                 {className: 'section-header-text'},
                                 _react2.default.createElement(_reactBootstrap.Image, {
                                     src: _rapipago_w2.default,
-                                    height: '60'
+                                    className: 'brand-logo'
                                 }),
                                 ' \xA0',
                                 _react2.default.createElement(_reactBootstrap.Image, {
                                     src: _mPago_w2.default,
-                                    height: '60'
+                                    className: 'brand-logo'
                                 }),
                                 ' \xA0',
                                 _react2.default.createElement(_reactBootstrap.Image, {
                                     src: _stripe_w2.default,
-                                    height: '60'
+                                    className: 'brand-logo'
                                 }),
                                 ' \xA0',
                                 _react2.default.createElement('p', null),
                                 _react2.default.createElement('p', null),
                                 _react2.default.createElement(_reactBootstrap.Image, {
                                     src: _mastercard_w2.default,
-                                    height: '60'
+                                    className: 'brand-logo'
                                 }),
                                 ' \xA0',
                                 _react2.default.createElement(_reactBootstrap.Image, {
                                     src: _visa_w2.default,
-                                    height: '60'
+                                    className: 'brand-logo'
                                 }),
                                 ' \xA0',
                                 _react2.default.createElement(_reactBootstrap.Image, {
                                     src: _AmericanExpres_w2.default,
-                                    height: '60'
+                                    className: 'brand-logo'
                                 }),
                                 ' \xA0',
                                 _react2.default.createElement(_reactBootstrap.Image, {
                                     src: _paypal_w2.default,
-                                    height: '60'
+                                    className: 'brand-logo'
                                 }),
                                 ' \xA0'
                             )

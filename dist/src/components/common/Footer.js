@@ -46,9 +46,9 @@ var _share = require("../../img/icons/material/share.svg");
 
 var _share2 = _interopRequireDefault(_share);
 
-var _interrog = require("../../img/icons/material/interrog.svg");
+var _questionMark = require("../../img/icons/material/question-mark.svg");
 
-var _interrog2 = _interopRequireDefault(_interrog);
+var _questionMark2 = _interopRequireDefault(_questionMark);
 
 var _leaf = require("../../img/icons/material/leaf.svg");
 
@@ -233,7 +233,7 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", {height: 25, src: _interrog2.default}),
+                                    _react2.default.createElement("img", {height: 25, src: _questionMark2.default}),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         {to: "/faq"},
