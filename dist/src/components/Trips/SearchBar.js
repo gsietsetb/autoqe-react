@@ -48,6 +48,10 @@ var _loc3 = require("../../img/icons/material/loc3.svg");
 
 var _loc4 = _interopRequireDefault(_loc3);
 
+var _reactResponsive = require("react-responsive");
+
+var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
+
 function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {default: obj};
 }
@@ -120,8 +124,8 @@ var SearchBarComp = function (_React$Component) {
                 "div",
                 {className: "Container", style: {textAlign: 'center'}},
                 _react2.default.createElement(
-                    _reactBootstrap.Row,
-                    null,
+                    _reactResponsive2.default,
+                    {maxDeviceWidth: 740},
                     _react2.default.createElement("img", {src: _carp_g2.default, className: "main-icon"}),
                     " \xA0",
                     _react2.default.createElement(
@@ -132,87 +136,98 @@ var SearchBarComp = function (_React$Component) {
                             {className: "btn-fine", bsSize: "lg"},
                             "Carpooling"
                         )
+                    )
+                ),
+                _react2.default.createElement(
+                    _reactBootstrap.Form,
+                    {inline: true, style: {display: 'inline-block'}},
+                    _react2.default.createElement(
+                        _reactBootstrap.FormGroup,
+                        {controlId: "formInlineFrom", style: {display: 'inline'}},
+                        _react2.default.createElement(
+                            _reactBootstrap.ControlLabel,
+                            null,
+                            " \xA0  \xA0 De: \xA0 "
+                        ),
+                        _react2.default.createElement(
+                            _reactBootstrap.InputGroup,
+                            null,
+                            _react2.default.createElement(
+                                _reactBootstrap.InputGroup.Addon,
+                                {style: {minWidth: 36}},
+                                _react2.default.createElement("img", {
+                                    src: _loc2.default,
+                                    style: {marginLeft: -10},
+                                    height: 30
+                                })
+                            ),
+                            _react2.default.createElement(_reactBootstrap.FormControl, {
+                                style: {height: 'unset'},
+                                type: "text",
+                                placeholder: "Buenos Aires"
+                            })
+                        )
                     ),
                     _react2.default.createElement(
-                        _reactBootstrap.Form,
-                        {inline: true, className: "inline-fit", style: {display: 'inline'}},
+                        _reactBootstrap.FormGroup,
+                        {controlId: "formInlineFrom", style: {display: 'inline-block'}},
                         _react2.default.createElement(
-                            _reactBootstrap.FormGroup,
-                            {controlId: "formInlineFrom"},
-                            _react2.default.createElement(
-                                _reactBootstrap.ControlLabel,
-                                null,
-                                " \xA0  \xA0 De: \xA0 "
-                            ),
-                            _react2.default.createElement(
-                                _reactBootstrap.InputGroup,
-                                null,
-                                _react2.default.createElement(
-                                    _reactBootstrap.InputGroup.Addon,
-                                    null,
-                                    _react2.default.createElement("img", {src: _loc2.default, height: 30})
-                                ),
-                                _react2.default.createElement(_reactPlacesAutocomplete2.default, {
-                                    id: "from",
-                                    inputProps: inputProps
-                                })
-                            )
+                            _reactBootstrap.ControlLabel,
+                            null,
+                            " \xA0 \xA0 A: \xA0 "
                         ),
                         _react2.default.createElement(
-                            _reactBootstrap.FormGroup,
-                            {controlId: "formInlineTo"},
+                            _reactBootstrap.InputGroup,
+                            null,
                             _react2.default.createElement(
-                                _reactBootstrap.ControlLabel,
-                                null,
-                                " \xA0 \xA0 A: \xA0 "
-                            ),
-                            _react2.default.createElement(
-                                _reactBootstrap.InputGroup,
-                                null,
-                                _react2.default.createElement(
-                                    _reactBootstrap.InputGroup.Addon,
-                                    null,
-                                    _react2.default.createElement("img", {src: _loc4.default, height: 30})
-                                ),
-                                _react2.default.createElement(_reactPlacesAutocomplete2.default, {
-                                    id: "from",
-                                    inputProps: inputProps,
-                                    placeholder: "Mar del Plata"
+                                _reactBootstrap.InputGroup.Addon,
+                                {style: {minWidth: 36}},
+                                _react2.default.createElement("img", {
+                                    src: _loc4.default,
+                                    style: {marginLeft: -10},
+                                    height: 30
                                 })
-                            )
+                            ),
+                            _react2.default.createElement(_reactBootstrap.FormControl, {
+                                style: {height: 'unset'},
+                                height: 30,
+                                className: "inputForm",
+                                type: "text",
+                                placeholder: "C\xF3rdoba"
+                            })
+                        )
+                    ),
+                    _react2.default.createElement(
+                        _reactBootstrap.FormGroup,
+                        {controlId: "formInlineFrom"},
+                        _react2.default.createElement(
+                            _reactBootstrap.ControlLabel,
+                            null,
+                            " \xA0 \xA0 Cu\xE1ndo: \xA0 "
                         ),
                         _react2.default.createElement(
-                            _reactBootstrap.FormGroup,
-                            {controlId: "when"},
+                            _reactBootstrap.InputGroup,
+                            null,
                             _react2.default.createElement(
-                                _reactBootstrap.ControlLabel,
-                                null,
-                                " \xA0 \xA0 Cu\xE1ndo: \xA0 "
+                                _reactBootstrap.InputGroup.Addon,
+                                {style: {minWidth: 32}},
+                                _react2.default.createElement(_reactBootstrap.Glyphicon, {glyph: "calendar"})
                             ),
-                            _react2.default.createElement(
-                                _reactBootstrap.InputGroup,
-                                null,
-                                _react2.default.createElement(
-                                    _reactBootstrap.InputGroup.Addon,
-                                    null,
-                                    _react2.default.createElement(_reactBootstrap.Glyphicon, {glyph: "calendar"})
-                                ),
-                                _react2.default.createElement(_reactBootstrap.FormControl, {
-                                    className: "inputForm",
-                                    type: "date",
-                                    placeholder: "Hoy"
-                                })
-                            ),
-                            "\xA0",
-                            _react2.default.createElement(
-                                _reactBootstrap.Button,
-                                {type: "submit", className: "btn-fine"},
-                                _react2.default.createElement(_reactBootstrap.Glyphicon, {glyph: "search"}),
-                                " \xA0 Encontr\xE1 tu viaje"
-                            )
+                            _react2.default.createElement(_reactBootstrap.FormControl, {
+                                className: "inputForm",
+                                type: "date",
+                                placeholder: "Hoy"
+                            })
                         ),
-                        "\xA0 \xA0"
-                    )
+                        "\xA0",
+                        _react2.default.createElement(
+                            _reactBootstrap.Button,
+                            {type: "submit", className: "btn-fine", style: {display: 'inline'}},
+                            _react2.default.createElement(_reactBootstrap.Glyphicon, {glyph: "search"}),
+                            " \xA0 Encontr\xE1 tu viaje"
+                        )
+                    ),
+                    "\xA0 \xA0"
                 )
             );
         }

@@ -19,7 +19,7 @@ class TripsPage extends React.Component {
         console.log('this is here: ' + JSON.stringify(trips));
         return (
             <div>
-                <section className="section section-regular">
+                <section className="section">
                     <Panel bsStyle="primary" collapsible defaultExpanded
                            header={<div>
                                <img src={trip} height={40}/> &nbsp;
