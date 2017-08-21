@@ -3,7 +3,6 @@ import React from 'react';
 import SearchBarComp from '../Trips/SearchBar';
 import CarouselComp from './Carousel';
 import ServiceComp from '../services/Services';
-import MapComp from "../maps/Map";
 import TalkAboutComp from "../about/TalkAboutUs";
 import HowWorksComp from "../howTo/HowItWorks";
 import SecurePayment from "../about/SecurePayment";
@@ -19,7 +18,7 @@ export default class HomePage extends React.Component {
                 <SearchBarComp/>
                 {/*<LastTrips/>*/}
                 <TripsPage/>
-                <MapComp location={this.props.history.location}/>
+                {/*<MapComp location={this.props.history.location}/>*/}
                 <Intro/>
                 <ServiceComp/>
                 <Green/>
