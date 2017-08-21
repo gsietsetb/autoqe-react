@@ -81,7 +81,7 @@ var HowWorksComp = function (_React$Component) {
                         ),
                         _react2.default.createElement(
                             "div",
-                            { className: "section-header-text", height: 500 },
+                            {className: "sectio9n-header-text", height: 500},
                             _react2.default.createElement(
                                 "h3",
                                 null,

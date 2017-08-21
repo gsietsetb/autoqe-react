@@ -23,7 +23,7 @@ export default class HowWorksComp extends React.Component {
                             <img src={quest} className="icon-row" alt="Secure payment"/> &nbsp;
                             ¿Cómo funciona? &nbsp; <Label className="btn-fine">Sólo tres pasos!</Label>
                         </h1>
-                        <div className="section-header-text" height={500}>
+                        <div className="sectio9n-header-text" height={500}>
                             <h3>Tu solución de transporte en tres pasos </h3>
 
                             <Row>
