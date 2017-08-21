@@ -30,7 +30,7 @@
 }
 
 .inputForm {
-    max-width: 120px;
+    max-width: 220px;
     min-Width: 110px;
 }
 .inputFormMain {
@@ -91,6 +91,16 @@
 /*Buttons:*/
 
 /*Weird overrides...*/
+.panel-primary {
+    border-color: #122b40;
+}
+
+.panel-primary > .panel-heading {
+    color: #122b40;
+    background-color: #74acdf;
+    border-color: #122b40;
+}
+
 .nav-pills > li {
     float: unset;
     display: inline-block;
