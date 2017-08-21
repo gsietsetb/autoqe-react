@@ -24,9 +24,9 @@ var _parking = require("../../img/banner/parking2.jpg");
 
 var _parking2 = _interopRequireDefault(_parking);
 
-var _elec_banner_def = require("../../img/banner/elec_banner_def.jpg");
+var _elec = require("../../img/banner/elec.jpg");
 
-var _elec_banner_def2 = _interopRequireDefault(_elec_banner_def);
+var _elec2 = _interopRequireDefault(_elec);
 
 var _carp_g = require("../../img/logo/carp_g.svg");
 
@@ -69,7 +69,8 @@ var styles = {
         backgroundImage: 'url(' + _parking2.default + ')'
     },
     coverImgElec: {
-        backgroundImage: 'url(' + _elec_banner_def2.default + ')'
+        backgroundImage: 'url(' + _elec2.default + ')',
+        backgroundPosition: 'bottom'
     },
     darkText: {
         color: '#122b40'
@@ -244,7 +245,7 @@ var CarouselComp = function (_React$Component) {
                             _react2.default.createElement("p", null),
                             _react2.default.createElement(
                                 _reactBootstrap.Label,
-                                {bsSize: "lg", className: "btn-fine"},
+                                {bsSize: "lg", bsStyle: "warning"},
                                 "D\xF3nde y cu\xE1ndo lo necesit\xE9s"
                             )
                         )

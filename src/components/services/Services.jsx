@@ -5,7 +5,7 @@ import Responsive from 'react-responsive';
 import srvCarp from "../../img/banner/mockup-carPool.png";
 import srvShare from "../../img/banner/mockup-carShare.png";
 import srvPark from "../../img/banner/parking4.jpg";
-import srvElec from "../../img/banner/elec2.png";
+import srvElec from "../../img/banner/elec_xs.png";
 
 import trip from "../../img/logo/carp_g.svg";
 import car from "../../img/logo/car_g.svg";

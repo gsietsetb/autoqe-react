@@ -38,6 +38,14 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var optionsAuth0 = {
+    language: 'es',
+    theme: {
+        logo: 'https://www.autoqe.com/autoqe_s.png',
+        primaryColor: '#122b40'
+    }
+};
+
 var AppComponent = function (_Component) {
     _inherits(AppComponent, _Component);
 
@@ -50,7 +58,7 @@ var AppComponent = function (_Component) {
     _createClass(AppComponent, [{
         key: 'componentWillMount',
         value: function componentWillMount() {
-            this.lock = new _auth0Lock2.default('06DohMivFjjWe43rAOM0Pi1sdr62TAs9', 'autoqe.auth0.com');
+            this.lock = new _auth0Lock2.default('06DohMivFjjWe43rAOM0Pi1sdr62TAs9', 'autoqe.auth0.com', optionsAuth0);
             // this.lock = new Auth0Lock(process.env.AUTH0_ID, process.env.DOMAIN);
         }
     }, {

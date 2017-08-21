@@ -396,6 +396,7 @@
 
 .position-top {
     top: 7vh;
+    right: 0;
 }
 
 @media screen and (max-width: 740px) {

@@ -4,7 +4,7 @@ import {Carousel, Glyphicon, Label} from "react-bootstrap";
 import carpBanner from "../../img/banner/banner11.jpg";
 import carBanner from "../../img/banner/banner2.jpg";
 import parkBanner from "../../img/banner/parking2.jpg";
-import elecBanner from "../../img/banner/elec_banner_def.jpg";
+import elecBanner from "../../img/banner/elec.jpg";
 
 import trip from "../../img/logo/carp_g.svg";
 import car from "../../img/logo/car_g.svg";
@@ -26,6 +26,7 @@ const styles = {
     },
     coverImgElec: {
         backgroundImage: 'url(' + elecBanner + ')',
+        backgroundPosition: 'bottom'
     },
     darkText: {
         color: '#122b40'
@@ -136,7 +137,7 @@ export default class CarouselComp extends React.Component {
                                 </Label>
                             </Link>
                             <p/>
-                            <Label bsSize="lg" className="btn-fine">
+                            <Label bsSize="lg" bsStyle="warning">
                                 Dónde y cuándo lo necesités
                             </Label>
                         </h3>

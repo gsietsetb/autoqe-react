@@ -7,7 +7,7 @@ import MainMapBlock from './mainMap.jsx';
 
 import {bindActionCreators, Connector} from 'redux';
 
-import * as allMapActions from 'actions/MapActions.js';
+import * as allMapActions from '../../actions/MapActions.js';
 
 // slice actions to support map and table interfaces
 const mapActions = (({ changeBounds: onBoundsChange, markerHoverIndexChange: onMarkerHover, showBallon: onChildClick}) => ({

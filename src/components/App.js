@@ -6,10 +6,18 @@ import NavbarComponent from "./common/Header";
 import Footer from "./common/Footer";
 import Main from "./Routes";
 
+const optionsAuth0 = {
+    language: 'es',
+    theme: {
+        logo: 'https://www.autoqe.com/autoqe_s.png',
+        primaryColor: '#122b40'
+    }
+};
+
 class AppComponent extends Component {
 
     componentWillMount() {
-        this.lock = new Auth0Lock('06DohMivFjjWe43rAOM0Pi1sdr62TAs9', 'autoqe.auth0.com');
+        this.lock = new Auth0Lock('06DohMivFjjWe43rAOM0Pi1sdr62TAs9', 'autoqe.auth0.com', optionsAuth0);
         // this.lock = new Auth0Lock(process.env.AUTH0_ID, process.env.DOMAIN);
     }
     componentDidMount() {
