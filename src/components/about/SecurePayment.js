@@ -19,7 +19,7 @@ export default class SecurePayment extends Component {
                     <header className="section-header">
                         <div className="container">
                             <h3 className="section-header-title">
-                                <img src={lock} className="icon-title" alt="Secure payment"/> &nbsp;
+                                <img src={lock} className="icon-row" alt="Secure payment"/> &nbsp;
                                 Plataformas de pago seguro</h3>
                             <div className="section-header-text">
                                 <Image src={rapipago} className="brand-logo"/> &nbsp;

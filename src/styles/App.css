@@ -67,18 +67,84 @@
     display: inline-flex !important;
 }
 
+/*Icons*/
+.main-icon {
+    height: 45px;
+    margin-right: 12px;
+}
+
+.icon-row {
+    margin-right: 6px;
+    height: 35px;
+}
+
+.icon-glyph {
+    margin-right: 6px;
+}
+
+/*Text*/
+.main-service {
+    color: #74acdf;
+    /*-webkit-text-stroke: 0.5px #afafaf;*/
+}
+
 /*Buttons:*/
 
-.icon-title {
-    height: 40px;
+/*Weird overrides...*/
+.nav-pills > li {
+    float: unset;
+    display: inline-block;
+    /*background-color: #122b40;*/
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
+    background-color: #122b40;
 }
 
 .brand-logo {
     height: 60px;
 }
 
+.btn-driver {
+    background: -webkit-linear-gradient(left, #122b40, #74acdf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /*background: transparent;*/
+    /*padding: 0.2em 0.4em;*/
+    /*border: 2px solid transparent;*/
+    /*-moz-border-image: -moz-linear-gradient(top left, #122b40 0%, #74acdf 100%);*/
+    /*-webkit-border-image: -webkit-linear-gradient(top left, #122b40 0%, #74acdf 100%);*/
+    /*border-image: linear-gradient(to bottom right, #122b40 0%, #74acdf 100%);*/
+    /*border-image-slice: 1;*/
+}
+
+.btn-user {
+    background: -webkit-linear-gradient(left, #74acdf, #122b40);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /*background: transparent;*/
+    /*padding: 0.2em 0.4em;*/
+    /*border: 2px solid transparent;*/
+    /*-moz-border-image: -moz-linear-gradient(top left, #122b40 0%, #74acdf 100%);*/
+    /*-webkit-border-image: -webkit-linear-gradient(top left, #122b40 0%, #74acdf 100%);*/
+    /*border-image: linear-gradient(to bottom right, #122b40 0%, #74acdf 100%);*/
+    /*border-image-slice: 1;*/
+}
+
+.btn-degr-dark {
+    background: transparent;
+    padding: 0.2em 0.4em;
+    border: 2px solid transparent;
+    -moz-border-image: -moz-linear-gradient(bottom right, #122b40 0%, #74acdf 100%);
+    -webkit-border-image: -webkit-linear-gradient(bottom right, #122b40 0%, #74acdf 100%);
+    border-image: linear-gradient(to bottom right, #122b40 0%, #74acdf 100%);
+    border-image-slice: 1;
+}
+
 @media screen and (max-width: 840px) {
-    .icon-title {
+    .icon-row {
         height: 30px;
     }
 
@@ -88,8 +154,8 @@
 }
 
 @media screen and (max-width: 640px) {
-    .icon-title {
-        height: 30px;
+    .icon-row {
+        height: 25px;
     }
 
     .brand-logo {
@@ -302,11 +368,6 @@
 .btn-primary {
     background: #122b40;
     /*color: white;*/
-}
-
-/*Icons*/
-.main-icon {
-    height: 40px;
 }
 
 /*Carousel*/

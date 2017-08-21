@@ -16,6 +16,36 @@ var _interrog = require("../../img/icons/material/interrog.svg");
 
 var _interrog2 = _interopRequireDefault(_interrog);
 
+require("./timeline.css");
+
+var _loc = require("../../img/icons/material/loc1.svg");
+
+var _loc2 = _interopRequireDefault(_loc);
+
+var _carp_g = require("../../img/logo/carp_g.svg");
+
+var _carp_g2 = _interopRequireDefault(_carp_g);
+
+var _car_g = require("../../img/logo/car_g.svg");
+
+var _car_g2 = _interopRequireDefault(_car_g);
+
+var _park_g = require("../../img/logo/park_g.svg");
+
+var _park_g2 = _interopRequireDefault(_park_g);
+
+var _elec_g = require("../../img/logo/elec_g.svg");
+
+var _elec_g2 = _interopRequireDefault(_elec_g);
+
+var _loc3 = require("../../img/icons/material/loc2.svg");
+
+var _loc4 = _interopRequireDefault(_loc3);
+
+var _loc5 = require("../../img/icons/material/loc3.svg");
+
+var _loc6 = _interopRequireDefault(_loc5);
+
 var _easySteps = require("../../img/banner/easy-steps.png");
 
 var _easySteps2 = _interopRequireDefault(_easySteps);
@@ -42,7 +72,7 @@ var HowWorksComp = function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 "section",
-                {className: "section section-dark transparent"},
+                {className: "section"},
                 _react2.default.createElement(
                     "header",
                     { className: "section-header" },
@@ -72,7 +102,215 @@ var HowWorksComp = function (_React$Component) {
                                 null,
                                 "Tu soluci\xF3n de transporte en tres pasos  "
                             ),
-                            _react2.default.createElement(_reactBootstrap.Image, { responsive: true, src: _easySteps2.default, height: 400 })
+                            _react2.default.createElement(
+                                _reactBootstrap.Row,
+                                null,
+                                _react2.default.createElement(
+                                    _reactBootstrap.Tabs,
+                                    {defaultActiveKey: 1, id: "uncontrolled-tab-example"},
+                                    _react2.default.createElement(_reactBootstrap.Tab, {
+                                        eventKey: 1, title: _react2.default.createElement(
+                                            "span",
+                                            null,
+                                            _react2.default.createElement("img", {
+                                                src: _carp_g2.default,
+                                                className: "main-icon"
+                                            }),
+                                            "\xA0 Carpooling"
+                                        )
+                                    }),
+                                    _react2.default.createElement(
+                                        _reactBootstrap.Tab,
+                                        {eventKey: 2, title: "Tab 2"},
+                                        "Tab 2 content"
+                                    ),
+                                    _react2.default.createElement(
+                                        _reactBootstrap.Tab,
+                                        {eventKey: 3, title: "Tab 3", disabled: true},
+                                        "Tab 3 content"
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                _reactBootstrap.Row,
+                                null,
+                                _react2.default.createElement(
+                                    "div",
+                                    {className: " timeline-background col-lg-12"},
+                                    _react2.default.createElement(
+                                        "ul",
+                                        {className: " timeline"},
+                                        _react2.default.createElement(
+                                            "li",
+                                            null,
+                                            _react2.default.createElement("img", {
+                                                className: "timeline-image img-circle img-responsive",
+                                                src: _loc4.default,
+                                                alt: "1"
+                                            }),
+                                            _react2.default.createElement(
+                                                "h1",
+                                                {className: "timeline-image timeline-number"},
+                                                "1"
+                                            ),
+                                            _react2.default.createElement(
+                                                "div",
+                                                {className: "timeline-panel"},
+                                                _react2.default.createElement(
+                                                    "div",
+                                                    {className: "timeline-heading"},
+                                                    _react2.default.createElement(
+                                                        "h2",
+                                                        {className: "subheading"},
+                                                        "Public\xE1 viaje"
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        "h4",
+                                                        null,
+                                                        "Personal webpage template"
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        "p",
+                                                        null,
+                                                        "Designer and publisher"
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        "h5",
+                                                        {className: "date"},
+                                                        "Naples, Aug '17"
+                                                    )
+                                                )
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            {className: "timeline-inverted"},
+                                            _react2.default.createElement("img", {
+                                                className: "timeline-image img-circle img-responsive",
+                                                src: _loc4.default,
+                                                alt: ""
+                                            }),
+                                            _react2.default.createElement(
+                                                "h1",
+                                                {className: "timeline-image timeline-number"},
+                                                "2"
+                                            ),
+                                            _react2.default.createElement(
+                                                "div",
+                                                {className: "timeline-panel"},
+                                                _react2.default.createElement(
+                                                    "div",
+                                                    {className: "timeline-heading"},
+                                                    _react2.default.createElement(
+                                                        "h2",
+                                                        {className: "subheading", href: "https://www.ganomad.com/"},
+                                                        "Ganomad"
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        "h4",
+                                                        null,
+                                                        " Map Portfolio template"
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        "p",
+                                                        null,
+                                                        " Designer and publisher"
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        "h5",
+                                                        {className: "date"},
+                                                        "Jun '17"
+                                                    )
+                                                )
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            null,
+                                            _react2.default.createElement("img", {
+                                                className: "timeline-image img-circle img-responsive",
+                                                src: _loc4.default,
+                                                alt: ""
+                                            }),
+                                            _react2.default.createElement(
+                                                "h1",
+                                                {className: "timeline-image timeline-number"},
+                                                "3"
+                                            ),
+                                            _react2.default.createElement(
+                                                "div",
+                                                {className: "timeline-panel"},
+                                                _react2.default.createElement(
+                                                    "div",
+                                                    {className: "timeline-heading"},
+                                                    _react2.default.createElement(
+                                                        "h2",
+                                                        {className: "subheading"},
+                                                        "Public\xE1 viaje"
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        "h4",
+                                                        null,
+                                                        "Personal webpage template"
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        "p",
+                                                        null,
+                                                        "Designer and publisher"
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        "h5",
+                                                        {className: "date"},
+                                                        "Naples, Aug '17"
+                                                    )
+                                                )
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            {className: "timeline-inverted"},
+                                            _react2.default.createElement("img", {
+                                                className: "timeline-image img-circle img-responsive",
+                                                src: _loc4.default,
+                                                alt: ""
+                                            }),
+                                            _react2.default.createElement(
+                                                "h1",
+                                                {className: "timeline-image timeline-number"},
+                                                "4"
+                                            ),
+                                            _react2.default.createElement(
+                                                "div",
+                                                {className: "timeline-panel"},
+                                                _react2.default.createElement(
+                                                    "div",
+                                                    {className: "timeline-heading"},
+                                                    _react2.default.createElement(
+                                                        "h2",
+                                                        {className: "subheading", href: "https://www.ganomad.com/"},
+                                                        "Ganomad"
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        "h4",
+                                                        null,
+                                                        " Map Portfolio template"
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        "p",
+                                                        null,
+                                                        " Designer and publisher"
+                                                    ),
+                                                    _react2.default.createElement(
+                                                        "h5",
+                                                        {className: "date"},
+                                                        "Jun '17"
+                                                    )
+                                                )
+                                            )
+                                        )
+                                    )
+                                )
+                            )
                         )
                     )
                 )

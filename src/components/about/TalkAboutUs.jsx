@@ -13,16 +13,16 @@ export default class TalkAboutComp extends React.Component {
                 <header className="section-header">
                     <div className="container">
                         <h3 className="section-header-title">
-                            <img src={press} className="icon-title" alt="Secure payment"/>&nbsp;
+                            <img src={press} className="icon-row" alt="Secure payment"/>&nbsp;
                             Con el soporte de &nbsp;
                             {/*<Label bsStyle="warning">*/}
                             {/*<Glyphicon glyph="plus-sign"/>&nbsp;*/}
                             {/*Aparecé aquí</Label>*/}
                         </h3>
                     </div>
-                    <Image src={baires} className="brand-logo"/> &nbsp;
-                    <Image src={sura} className="brand-logo"/> &nbsp;
-                    <Image src={colon} className="brand-logo"/> &nbsp;
+                    <Image src={baires} className="brand-logo"/> &nbsp; &nbsp; &nbsp;
+                    <Image src={sura} className="brand-logo"/> &nbsp; &nbsp; &nbsp;
+                    <Image src={colon} className="brand-logo"/> &nbsp; &nbsp; &nbsp;
                 </header>
             </section>
         );

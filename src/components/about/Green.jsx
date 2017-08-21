@@ -5,11 +5,11 @@ import green from "../../img/icons/material/leaf.svg"
 export default class Green extends Component {
     render() {
         return (
-            <section className="section">
+            <section className="section section-dark">
                 <header className="section-header">
                     <div className="container">
                         <h3 className="section-header-title">
-                            <img src={green} className="icon-title" alt="Secure payment"/>&nbsp;
+                            <img src={green} className="icon-row" alt="Secure payment"/>&nbsp;
                             Colaborá con el&nbsp;
                             <Label bsStyle="success">
                                 <Glyphicon glyph="leaf"/>&nbsp;

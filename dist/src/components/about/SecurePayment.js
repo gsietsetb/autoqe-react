@@ -121,7 +121,7 @@ var SecurePayment = function (_Component) {
                                 {className: 'section-header-title'},
                                 _react2.default.createElement('img', {
                                     src: _secure_pay2.default,
-                                    className: 'icon-title',
+                                    className: 'icon-row',
                                     alt: 'Secure payment'
                                 }),
                                 ' \xA0 Plataformas de pago seguro'

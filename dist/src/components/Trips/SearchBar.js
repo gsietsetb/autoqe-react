@@ -32,10 +32,6 @@ var _moment = require("moment");
 
 var _moment2 = _interopRequireDefault(_moment);
 
-var _reactPlacesAutocomplete = require("react-places-autocomplete");
-
-var _reactPlacesAutocomplete2 = _interopRequireDefault(_reactPlacesAutocomplete);
-
 var _carp_g = require("../../img/logo/carp_g.svg");
 
 var _carp_g2 = _interopRequireDefault(_carp_g);
@@ -189,10 +185,7 @@ var SearchBarComp = function (_React$Component) {
                                 })
                             ),
                             _react2.default.createElement(_reactBootstrap.FormControl, {
-                                style: {height: 'unset'},
-                                height: 30,
-                                className: "inputForm",
-                                type: "text",
+                                style: {height: 'unset'}, height: 30, className: "inputForm", type: "text",
                                 placeholder: "C\xF3rdoba"
                             })
                         )
