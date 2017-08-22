@@ -75,7 +75,7 @@ var HowWorksComp = function (_React$Component) {
                             " \xA0 \xBFC\xF3mo funciona? \xA0 ",
                             _react2.default.createElement(
                                 _reactBootstrap.Label,
-                                { className: "btn-fine" },
+                                {className: "btn-light_w"},
                                 "S\xF3lo tres pasos!"
                             )
                         ),

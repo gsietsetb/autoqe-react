@@ -14,28 +14,45 @@ export default class HowCarpooling extends React.Component {
         super(props);
         this.state = {
             //By default, both selected
-            value: [1, 2], addTrip: 0
+            kind: [1, 2],
+            driver: true,
+            user: true,
+            addTrip: 0
         };
+        this._handleKindChange = this._handleKindChange.bind(this)
     }
 
-    onKindChange = (value) => {
-        this.setState({value});
+    _handleKindChange = (kind) => {
+        // console.log(kind.contains(1));
+        // // Correct
+        // this.setState((kind) => ({
+        //     driver: kind
+        // }));
+        // this.setState({driver: });
+        console.log('this was kind: ' + {kind} + ' while ' + this.state.driver + ' and ' + this.state.user);
+        kind.indexOf('d') !== -1 ? this.setState({
+            driver: !this.state.driver
+        }) : this.setState({
+            user: !this.state.user
+        });
+        console.log('this is kind: ' + {kind} + ' while ' + this.state.driver + ' and ' + this.state.user);
+        // this.setState({...this.state, [0]: value})
     };
 
     render() {
         return (<Grid>
                 <Row>
-                    <ToggleButtonGroup type="checkbox" value={this.state.value} onChange={this.onKindChange}>
-                        <ToggleButton value={1}><h4 style={{color: "#122b40"}}>
+                    <ToggleButtonGroup type="checkbox" value={this.state.kind} onChange={this._handleKindChange}>
+                        <ToggleButton value={'d'}><h4 style={{color: "#122b40"}}>
                             <img src={volante} className="icon-row"/>
                             Conductor</h4></ToggleButton>
-                        <ToggleButton value={2}><h4 style={{color: "#74acdf"}}>
+                        <ToggleButton value={'u'}><h4 style={{color: "#74acdf"}}>
                             <img src={users} className="icon-row"/>
                             Pasajeros</h4></ToggleButton>
                     </ToggleButtonGroup>
                     <div className=" timeline-background col-lg-12">
                         <ul className=" timeline">
-                            <Collapse in={-1 !== this.state.value.indexOf(1)}>
+                            <Collapse in={this.state.driver}>
                                 <li>
                                     <img className="timeline-image img-circle img-responsive" src={locDriver}
                                          alt="autoqe" onClick={() => this.setState({addTrip: !this.state.addTrip})}/>
@@ -63,7 +80,7 @@ export default class HowCarpooling extends React.Component {
                                 </li>
                             </Collapse>
 
-                            <Collapse in={-1 !== this.state.value.indexOf(2)}>
+                            <Collapse in={this.state.user}>
                                 <li className="timeline-inverted">
                                     <img className="timeline-image img-circle img-responsive" src={locUser} alt=""/>
                                     <h3 className="timeline-image timeline-number-user"><Glyphicon glyph="search"/></h3>
@@ -74,15 +91,15 @@ export default class HowCarpooling extends React.Component {
                                                 <img src={pay} height={25}/>&nbsp;
                                                 Pago seguro</Label></h4>
                                             <p> Filtra las opciones deseadas</p>
-                                            <Button className="btn-fine"><Glyphicon glyph="search"
-                                                                                    className="icon-glyph"/> Encontrá
+                                            <Button className="btn-light_w"><Glyphicon glyph="search"
+                                                                                       className="icon-glyph"/> Encontrá
                                                 viaje</Button>
                                         </div>
                                     </div>
                                 </li>
                             </Collapse>
 
-                            <Collapse in={-1 !== this.state.value.indexOf(1)}>
+                            <Collapse in={this.state.driver}>
                                 <li>
                                     <img className="timeline-image img-circle img-responsive" src={locDriver}
                                          alt="autoqe"/>
@@ -101,7 +118,7 @@ export default class HowCarpooling extends React.Component {
                                 </li>
                             </Collapse>
 
-                            <Collapse in={-1 !== this.state.value.indexOf(2)}>
+                            <Collapse in={this.state.user}>
                                 <li className="timeline-inverted">
                                     <img className="timeline-image img-circle img-responsive" src={locUser} alt=""/>
                                     <h3 className="timeline-image timeline-number-user"><Glyphicon glyph="road"/></h3>
@@ -116,7 +133,7 @@ export default class HowCarpooling extends React.Component {
                                 </li>
                             </Collapse>
 
-                            <Collapse in={-1 !== this.state.value.indexOf(1)}>
+                            <Collapse in={this.state.driver}>
                                 <li>
                                     <img className="timeline-image img-circle img-responsive" src={locDriver}
                                          alt="autoqe"/>

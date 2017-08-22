@@ -186,7 +186,7 @@ class HeaderComp extends Component {
                             {/*Login Logic*/}
                             {!this.state.authenticated ? (
                                 <NavItem onClick={this.login} style={{marginTop: -5}} eventKey={5} href="#">
-                                    <Button className="btn-fine" type="submit">LogIn</Button>
+                                    <Button className="btn-light_w" type="submit">LogIn</Button>
                                 </NavItem>
                             ) : (
                                 <NavItem onClick={this.logout} eventKey={5} href="#">

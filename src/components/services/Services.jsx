@@ -43,7 +43,7 @@ export default class ServiceComp extends React.Component {
                                 <b> Ahorrá</b> hasta un 30% por cada pasajero o trayecto
                             </Row>
                             <p/>
-                            <Button className="btn-fine"><Glyphicon glyph="search" className="icon-glyph"/>
+                            <Button className="btn-light_w"><Glyphicon glyph="search" className="icon-glyph"/>
                                 Encontrá</Button>&nbsp;
                             <Button bsStyle="primary"><Glyphicon glyph="plus-sign" className="icon-glyph"/> Publicá
                                 trayecto:</Button>
@@ -82,7 +82,7 @@ export default class ServiceComp extends React.Component {
                                 <b>Seguro</b> contra todo riesgo durante el periódo del alquiler
                             </Row>
                             <p/>
-                            <Button className="btn-fine"><Glyphicon glyph="search" className="icon-glyph"/>
+                            <Button className="btn-light_w"><Glyphicon glyph="search" className="icon-glyph"/>
                                 Alquilá</Button>&nbsp;
                             <Button bsStyle="primary"><Glyphicon glyph="plus-sign" className="icon-glyph"/> Publicá tu
                                 Auto</Button>
@@ -116,7 +116,7 @@ export default class ServiceComp extends React.Component {
                                 <b>Seguro</b> de hogar durante el periodo del alquiler
                             </Row>
                             <p/>
-                            <Button className="btn-fine"><Glyphicon glyph="search" className="icon-glyph"/>
+                            <Button className="btn-light_w"><Glyphicon glyph="search" className="icon-glyph"/>
                                 Encontrá</Button>&nbsp;
                             <Button bsStyle="primary"><Glyphicon glyph="plus-sign" className="icon-glyph"/> Alquilá
                                 cochera</Button>
@@ -145,7 +145,7 @@ export default class ServiceComp extends React.Component {
                                 <b>Por horas</b> Cúando quieras y dónde lo necesitás.
                             </Row>
                             <p/>
-                            <Button className="btn-fine"><Glyphicon glyph="search" className="icon-glyph"/> Encontrá
+                            <Button className="btn-light_w"><Glyphicon glyph="search" className="icon-glyph"/> Encontrá
                                 auto eléctrico</Button>&nbsp;
                             <Label bsStyle="warning">Próximamente</Label>
 

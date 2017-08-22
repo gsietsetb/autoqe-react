@@ -144,7 +144,7 @@ var CarouselComp = function (_React$Component) {
                             null,
                             _react2.default.createElement(
                                 _reactBootstrap.Label,
-                                { bsSize: "lg", className: "btn-fine" },
+                                {bsSize: "lg", className: "btn-light_w"},
                                 "Compart\xED los gastos del viaje, ahorr\xE1 plata"
                             )
                         )
@@ -174,7 +174,7 @@ var CarouselComp = function (_React$Component) {
                             null,
                             _react2.default.createElement(
                                 _reactBootstrap.Label,
-                                { bsSize: "lg", className: "btn-fine" },
+                                {bsSize: "lg", className: "btn-light_w"},
                                 "Alquiler de Auto entre particulares"
                             )
                         )
@@ -204,7 +204,7 @@ var CarouselComp = function (_React$Component) {
                             null,
                             _react2.default.createElement(
                                 _reactBootstrap.Label,
-                                { bsSize: "lg", className: "btn-fine" },
+                                {bsSize: "lg", className: "btn-light_w"},
                                 "Alquiler de Cocheras entre particulares"
                             )
                         )

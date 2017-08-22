@@ -129,7 +129,7 @@ var SearchBarComp = function (_React$Component) {
                         {style: {display: 'inline'}},
                         _react2.default.createElement(
                             _reactBootstrap.Label,
-                            {className: "btn-fine", bsSize: "lg"},
+                            {className: "btn-light_w", bsSize: "lg"},
                             "Carpooling"
                         )
                     )
@@ -215,7 +215,7 @@ var SearchBarComp = function (_React$Component) {
                         "\xA0",
                         _react2.default.createElement(
                             _reactBootstrap.Button,
-                            {type: "submit", className: "btn-fine", style: {display: 'inline'}},
+                            {type: "submit", className: "btn-light_w", style: {display: 'inline'}},
                             _react2.default.createElement(_reactBootstrap.Glyphicon, {glyph: "search"}),
                             " \xA0 Encontr\xE1 tu viaje"
                         )

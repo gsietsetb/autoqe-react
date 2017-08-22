@@ -72,7 +72,7 @@ export default class CarouselComp extends React.Component {
                             </Label>
                         </h2>
                         <h3>
-                            <Label bsSize="lg" className="btn-fine">
+                            <Label bsSize="lg" className="btn-light_w">
                                 Compartí los gastos del viaje, ahorrá plata
                             </Label>
                         </h3>
@@ -91,7 +91,7 @@ export default class CarouselComp extends React.Component {
                             </Label>
                         </h2>
                         <h3>
-                            <Label bsSize="lg" className="btn-fine">
+                            <Label bsSize="lg" className="btn-light_w">
                                 Alquiler de Auto entre particulares
                             </Label>
                         </h3>
@@ -110,7 +110,7 @@ export default class CarouselComp extends React.Component {
                             </Label>
                         </h2>
                         <h3>
-                            <Label bsSize="lg" className="btn-fine">
+                            <Label bsSize="lg" className="btn-light_w">
                                 Alquiler de Cocheras entre particulares
                             </Label>
                         </h3>

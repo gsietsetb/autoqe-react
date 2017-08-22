@@ -328,7 +328,7 @@ var HeaderComp = function (_Component) {
                                 { onClick: this.login, style: { marginTop: -5 }, eventKey: 5, href: '#' },
                                 _react2.default.createElement(
                                     _reactBootstrap.Button,
-                                    { className: 'btn-fine', type: 'submit' },
+                                    {className: 'btn-light_w', type: 'submit'},
                                     'LogIn'
                                 )
                             ) : _react2.default.createElement(

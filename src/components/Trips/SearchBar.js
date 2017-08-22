@@ -34,7 +34,7 @@ export default class SearchBarComp extends React.Component {
                 <MediaQuery maxDeviceWidth={740}>
                     <img src={trip} className="main-icon"/> &nbsp;
                     <h4 style={{display: 'inline'}}>
-                        <Label className="btn-fine" bsSize="lg">
+                        <Label className="btn-light_w" bsSize="lg">
                             Carpooling
                         </Label>
                     </h4>
@@ -79,7 +79,7 @@ export default class SearchBarComp extends React.Component {
                             {/*<FormControl className="inputForm" type="date" placeholder="Hoy"  />*/}
                         </InputGroup>
                         &nbsp;
-                        <Button type="submit" className="btn-fine" style={{display: 'inline'}}>
+                        <Button type="submit" className="btn-light_w" style={{display: 'inline'}}>
                             <Glyphicon glyph="search"/> &nbsp; Encontrá tu viaje
                         </Button>
                     </FormGroup>
