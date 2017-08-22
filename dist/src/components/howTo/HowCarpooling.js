@@ -28,43 +28,27 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactBootstrap = require("react-bootstrap");
 
-var _interrog = require("../../img/icons/material/interrog.svg");
-
-var _interrog2 = _interopRequireDefault(_interrog);
-
 require("./timeline.css");
 
-var _loc = require("../../img/icons/material/loc1.svg");
+var _steeringWheel = require("../../img/icons/material/steering-wheel.svg");
+
+var _steeringWheel2 = _interopRequireDefault(_steeringWheel);
+
+var _users = require("../../img/icons/material/users.svg");
+
+var _users2 = _interopRequireDefault(_users);
+
+var _secure_pay_w = require("../../img/icons/material/secure_pay_w.svg");
+
+var _secure_pay_w2 = _interopRequireDefault(_secure_pay_w);
+
+var _loc = require("../../img/icons/material/loc2.svg");
 
 var _loc2 = _interopRequireDefault(_loc);
 
-var _carp_g = require("../../img/logo/carp_g.svg");
-
-var _carp_g2 = _interopRequireDefault(_carp_g);
-
-var _car_g = require("../../img/logo/car_g.svg");
-
-var _car_g2 = _interopRequireDefault(_car_g);
-
-var _park_g = require("../../img/logo/park_g.svg");
-
-var _park_g2 = _interopRequireDefault(_park_g);
-
-var _elec_g = require("../../img/logo/elec_g.svg");
-
-var _elec_g2 = _interopRequireDefault(_elec_g);
-
-var _loc3 = require("../../img/icons/material/loc2.svg");
+var _loc3 = require("../../img/icons/material/loc4.svg");
 
 var _loc4 = _interopRequireDefault(_loc3);
-
-var _loc5 = require("../../img/icons/material/loc3.svg");
-
-var _loc6 = _interopRequireDefault(_loc5);
-
-var _easySteps = require("../../img/banner/easy-steps.png");
-
-var _easySteps2 = _interopRequireDefault(_easySteps);
 
 var _SearchBar = require("../Trips/SearchBar");
 
@@ -102,33 +86,44 @@ function _inherits(subClass, superClass) {
     if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
 }
 
-//
-// function onKindChange(value) {
-//     this.setState({ value });
-// }
-
 var HowCarpooling = function (_React$Component) {
     _inherits(HowCarpooling, _React$Component);
 
-    function HowCarpooling(props) {
+    function HowCarpooling() {
         _classCallCheck(this, HowCarpooling);
 
-        var _this = _possibleConstructorReturn(this, (HowCarpooling.__proto__ || Object.getPrototypeOf(HowCarpooling)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (HowCarpooling.__proto__ || Object.getPrototypeOf(HowCarpooling)).call(this));
 
-        _this.addTrip = {};
-        _this.searchBar = {};
-        _this.kind = {
+        _this.state = {
             //By default, both selected
-            value: [1, 2]
+            kind: [1, 2],
+            driver: true,
+            user: true,
+            addTrip: 0
         };
+        _this._handleKindChange = _this._handleKindChange.bind(_this);
         return _this;
     }
 
-    // onKindChange = (value) => {
-    //     this.setState({ value });
-    // };
-
     _createClass(HowCarpooling, [{
+        key: "_handleKindChange",
+        value: function _handleKindChange(kind) {
+            // console.log(kind.contains(1));
+            // // Correct
+            // this.setState((kind) => ({
+            //     driver: kind
+            // }));
+            // this.setState({driver: });
+            console.log('this was kind: ' + {kind: kind} + ' while ' + this.state.driver + ' and ' + this.state.user);
+            kind.indexOf('d') !== -1 ? this.setState({
+                driver: !this.state.driver
+            }) : this.setState({
+                user: !this.state.user
+            });
+            console.log('this is kind: ' + {kind: kind} + ' while ' + this.state.driver + ' and ' + this.state.user);
+            // this.setState({...this.state, [0]: value})
+        }
+    }, {
         key: "render",
         value: function render() {
             var _this2 = this;
@@ -140,31 +135,29 @@ var HowCarpooling = function (_React$Component) {
                     _reactBootstrap.Row,
                     null,
                     _react2.default.createElement(
-                        "h3",
-                        null,
-                        "hola, esto es: ",
-                        this.kind.value[0],
-                        " queso!",
+                        _reactBootstrap.ToggleButtonGroup,
+                        {type: "checkbox", value: this.state.kind, onChange: this._handleKindChange},
                         _react2.default.createElement(
-                            _reactBootstrap.ToggleButtonGroup,
-                            {type: "checkbox", value: this.kind.value, onChange: onKindChange},
+                            _reactBootstrap.ToggleButton,
+                            {value: 'd'},
                             _react2.default.createElement(
-                                _reactBootstrap.ToggleButton,
-                                {value: 1},
-                                _react2.default.createElement(
-                                    "span",
-                                    {style: {color: "#122b40"}},
-                                    "Conductor"
-                                )
-                            ),
+                                "h4",
+                                {style: {color: "#122b40"}},
+                                _react2.default.createElement("img", {
+                                    src: _steeringWheel2.default,
+                                    className: "icon-row"
+                                }),
+                                "Conductor"
+                            )
+                        ),
+                        _react2.default.createElement(
+                            _reactBootstrap.ToggleButton,
+                            {value: 'u'},
                             _react2.default.createElement(
-                                _reactBootstrap.ToggleButton,
-                                {value: 2},
-                                _react2.default.createElement(
-                                    "span",
-                                    {style: {color: "#74acdf"}},
-                                    "Pasajero"
-                                )
+                                "h4",
+                                {style: {color: "#74acdf"}},
+                                _react2.default.createElement("img", {src: _users2.default, className: "icon-row"}),
+                                "Pasajeros"
                             )
                         )
                     ),
@@ -176,21 +169,19 @@ var HowCarpooling = function (_React$Component) {
                             {className: " timeline"},
                             _react2.default.createElement(
                                 _reactBootstrap.Collapse,
-                                {"in": !this.kind.value[0]},
+                                {"in": this.state.driver},
                                 _react2.default.createElement(
                                     "li",
-                                    {className: "driver"},
+                                    null,
                                     _react2.default.createElement("img", {
-                                        className: "timeline-image img-circle img-responsive",
-                                        src: _loc4.default,
-                                        alt: "autoqe",
-                                        onClick: function onClick() {
-                                            return _this2.setState({open: !_this2.addTrip.open});
+                                        className: "timeline-image img-circle img-responsive", src: _loc2.default,
+                                        alt: "autoqe", onClick: function onClick() {
+                                            return _this2.setState({addTrip: !_this2.state.addTrip});
                                         }
                                     }),
                                     _react2.default.createElement(
                                         "h1",
-                                        {className: "timeline-image timeline-number-cond"},
+                                        {className: "timeline-image timeline-number-driver"},
                                         "+"
                                     ),
                                     _react2.default.createElement(
@@ -202,164 +193,224 @@ var HowCarpooling = function (_React$Component) {
                                             _react2.default.createElement(
                                                 "h2",
                                                 {
-                                                    className: "subheading", onClick: function onClick() {
-                                                    return _this2.setState({open: !_this2.addTrip.open});
-                                                }, style: {color: '#122b40'}
+                                                    className: "subheading",
+                                                    onClick: function onClick() {
+                                                        return _this2.setState({addTrip: !_this2.state.addTrip});
+                                                    },
+                                                    style: {color: '#122b40'}
                                                 },
-                                                "Public\xE1 tu viaje"
+                                                "1. Public\xE1 tu viaje"
                                             ),
                                             _react2.default.createElement(
                                                 _reactBootstrap.Collapse,
-                                                {"in": this.addTrip.open},
+                                                {"in": this.state.addTrip},
                                                 _react2.default.createElement(
                                                     "div",
                                                     null,
-                                                    " ",
                                                     _react2.default.createElement(_SearchBar2.default, {style: {float: 'left'}})
                                                 )
                                             ),
                                             _react2.default.createElement(
                                                 "h4",
-                                                {style: {color: '#74acdf'}, className: "driver"},
-                                                "A\xF1ad\xED facilmente los detalles de tu viaje \xA0",
-                                                _react2.default.createElement(
-                                                    _reactBootstrap.Button,
-                                                    {
-                                                        bsStyle: "primary", onClick: function onClick() {
-                                                        return _this2.setState({open: !_this2.addTrip.open});
+                                                {className: "driver"},
+                                                "A\xF1ad\xED facilmente los detalles de tu viaje \xA0"
+                                            ),
+                                            _react2.default.createElement(
+                                                "p",
+                                                null,
+                                                "Puedes configurar diversas opciones"
+                                            ),
+                                            _react2.default.createElement(
+                                                _reactBootstrap.Button,
+                                                {
+                                                    bsStyle: "primary",
+                                                    onClick: function onClick() {
+                                                        return _this2.setState({addTrip: !_this2.state.addTrip});
                                                     }
-                                                    },
-                                                    _react2.default.createElement(_reactBootstrap.Glyphicon, {glyph: "plus-sign"}),
-                                                    "\xA0 Public\xE1 trayecto:"
-                                                )
+                                                },
+                                                _react2.default.createElement(_reactBootstrap.Glyphicon, {glyph: "plus-sign"}),
+                                                "\xA0 Public\xE1 viaje"
                                             )
                                         )
                                     )
                                 )
                             ),
                             _react2.default.createElement(
-                                "li",
-                                {className: "timeline-inverted"},
-                                _react2.default.createElement("img", {
-                                    className: "timeline-image img-circle img-responsive",
-                                    src: _loc4.default,
-                                    alt: ""
-                                }),
+                                _reactBootstrap.Collapse,
+                                {"in": this.state.user},
                                 _react2.default.createElement(
-                                    "h3",
-                                    {className: "timeline-image timeline-number"},
-                                    _react2.default.createElement(_reactBootstrap.Glyphicon, {glyph: "search"})
-                                ),
-                                _react2.default.createElement(
-                                    "div",
-                                    {className: "timeline-panel"},
+                                    "li",
+                                    {className: "timeline-inverted"},
+                                    _react2.default.createElement("img", {
+                                        className: "timeline-image img-circle img-responsive",
+                                        src: _loc4.default,
+                                        alt: ""
+                                    }),
+                                    _react2.default.createElement(
+                                        "h3",
+                                        {className: "timeline-image timeline-number-user"},
+                                        _react2.default.createElement(_reactBootstrap.Glyphicon, {glyph: "search"})
+                                    ),
                                     _react2.default.createElement(
                                         "div",
-                                        {className: "timeline-heading"},
+                                        {className: "timeline-panel"},
                                         _react2.default.createElement(
-                                            "h2",
-                                            {className: "subheading"},
-                                            _react2.default.createElement(_reactBootstrap.Glyphicon, {glyph: "search"}),
-                                            "\xA0 Busc\xE1 viaje"
-                                        ),
-                                        _react2.default.createElement(
-                                            "h4",
-                                            null,
-                                            " Map Portfolio template"
-                                        ),
-                                        _react2.default.createElement(
-                                            "p",
-                                            null,
-                                            " Designer and publisher"
-                                        ),
-                                        _react2.default.createElement(
-                                            "h5",
-                                            {className: "date"},
-                                            "Jun '17"
+                                            "div",
+                                            {className: "timeline-heading"},
+                                            _react2.default.createElement(
+                                                "h2",
+                                                {className: "subheading"},
+                                                "1. Encuentra y Reserva"
+                                            ),
+                                            _react2.default.createElement(
+                                                "h4",
+                                                null,
+                                                "Busca y reserva con un m\xE9todo de \xA0",
+                                                _react2.default.createElement(
+                                                    _reactBootstrap.Label,
+                                                    {bsStyle: "success"},
+                                                    _react2.default.createElement("img", {
+                                                        src: _secure_pay_w2.default,
+                                                        height: 25
+                                                    }),
+                                                    "\xA0 Pago seguro"
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                "p",
+                                                null,
+                                                " Filtra las opciones deseadas"
+                                            ),
+                                            _react2.default.createElement(
+                                                _reactBootstrap.Button,
+                                                {className: "btn-light_w"},
+                                                _react2.default.createElement(_reactBootstrap.Glyphicon, {
+                                                    glyph: "search",
+                                                    className: "icon-glyph"
+                                                }),
+                                                " Encontr\xE1 viaje"
+                                            )
                                         )
                                     )
                                 )
                             ),
                             _react2.default.createElement(
-                                "li",
-                                null,
-                                _react2.default.createElement("img", {
-                                    className: "timeline-image img-circle img-responsive",
-                                    src: _loc4.default,
-                                    alt: ""
-                                }),
+                                _reactBootstrap.Collapse,
+                                {"in": this.state.driver},
                                 _react2.default.createElement(
-                                    "h1",
-                                    {className: "timeline-image timeline-number"},
-                                    "3"
-                                ),
-                                _react2.default.createElement(
-                                    "div",
-                                    {className: "timeline-panel"},
+                                    "li",
+                                    null,
+                                    _react2.default.createElement("img", {
+                                        className: "timeline-image img-circle img-responsive", src: _loc2.default,
+                                        alt: "autoqe"
+                                    }),
+                                    _react2.default.createElement(
+                                        "h3",
+                                        {className: "timeline-image timeline-number-user"},
+                                        _react2.default.createElement(_reactBootstrap.Glyphicon, {glyph: "ok"})
+                                    ),
                                     _react2.default.createElement(
                                         "div",
-                                        {className: "timeline-heading"},
+                                        {className: "timeline-panel"},
                                         _react2.default.createElement(
-                                            "h2",
-                                            {className: "subheading"},
-                                            "Public\xE1 viaje"
-                                        ),
-                                        _react2.default.createElement(
-                                            "h4",
-                                            null,
-                                            "Personal webpage template"
-                                        ),
-                                        _react2.default.createElement(
-                                            "p",
-                                            null,
-                                            "Designer and publisher"
-                                        ),
-                                        _react2.default.createElement(
-                                            "h5",
-                                            {className: "date"},
-                                            "Naples, Aug '17"
+                                            "div",
+                                            {className: "timeline-heading "},
+                                            _react2.default.createElement(
+                                                "h2",
+                                                {className: "subheading", style: {color: '#122b40'}},
+                                                "2. Recib\xEDs la reserva"
+                                            ),
+                                            _react2.default.createElement(
+                                                "h4",
+                                                {className: "driver"},
+                                                "Cuando un pasajero reserva una plaza obtienes su tel\xE9fono"
+                                            ),
+                                            _react2.default.createElement(
+                                                "p",
+                                                null,
+                                                "Contactas con el para acordar lugar y hora exacta de reuni\xF3n"
+                                            )
                                         )
                                     )
                                 )
                             ),
                             _react2.default.createElement(
-                                "li",
-                                {className: "timeline-inverted"},
-                                _react2.default.createElement("img", {
-                                    className: "timeline-image img-circle img-responsive",
-                                    src: _loc4.default,
-                                    alt: ""
-                                }),
+                                _reactBootstrap.Collapse,
+                                {"in": this.state.user},
                                 _react2.default.createElement(
-                                    "h1",
-                                    {className: "timeline-image timeline-number"},
-                                    "4"
-                                ),
-                                _react2.default.createElement(
-                                    "div",
-                                    {className: "timeline-panel"},
+                                    "li",
+                                    {className: "timeline-inverted"},
+                                    _react2.default.createElement("img", {
+                                        className: "timeline-image img-circle img-responsive",
+                                        src: _loc4.default,
+                                        alt: ""
+                                    }),
+                                    _react2.default.createElement(
+                                        "h3",
+                                        {className: "timeline-image timeline-number-user"},
+                                        _react2.default.createElement(_reactBootstrap.Glyphicon, {glyph: "road"})
+                                    ),
                                     _react2.default.createElement(
                                         "div",
-                                        {className: "timeline-heading"},
+                                        {className: "timeline-panel"},
                                         _react2.default.createElement(
-                                            "h2",
-                                            {className: "subheading", href: "https://www.ganomad.com/"},
-                                            "Ganomad"
-                                        ),
+                                            "div",
+                                            {className: "timeline-heading"},
+                                            _react2.default.createElement(
+                                                "h2",
+                                                {className: "subheading"},
+                                                "2. Comparten el trayecto"
+                                            ),
+                                            _react2.default.createElement(
+                                                "h4",
+                                                null,
+                                                "Se encuentran y comparten juntos la experiencia"
+                                            ),
+                                            _react2.default.createElement(
+                                                "p",
+                                                null,
+                                                " Al llegar a destino solo deben confirmar el trayecto y puntuar al conductor"
+                                            )
+                                        )
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                _reactBootstrap.Collapse,
+                                {"in": this.state.driver},
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement("img", {
+                                        className: "timeline-image img-circle img-responsive", src: _loc2.default,
+                                        alt: "autoqe"
+                                    }),
+                                    _react2.default.createElement(
+                                        "h3",
+                                        {className: "timeline-image timeline-number-user"},
+                                        _react2.default.createElement(_reactBootstrap.Glyphicon, {glyph: "star"})
+                                    ),
+                                    _react2.default.createElement(
+                                        "div",
+                                        {className: "timeline-panel"},
                                         _react2.default.createElement(
-                                            "h4",
-                                            null,
-                                            " Map Portfolio template"
-                                        ),
-                                        _react2.default.createElement(
-                                            "p",
-                                            null,
-                                            " Designer and publisher"
-                                        ),
-                                        _react2.default.createElement(
-                                            "h5",
-                                            {className: "date"},
-                                            "Jun '17"
+                                            "div",
+                                            {className: "timeline-heading "},
+                                            _react2.default.createElement(
+                                                "h2",
+                                                {className: "subheading", style: {color: '#122b40'}},
+                                                "3. Valor\xE1s y recib\xEDs el dinero"
+                                            ),
+                                            _react2.default.createElement(
+                                                "h4",
+                                                {className: "driver"},
+                                                "Una vez confirmado el fin del trayecto por los pasajeros, recibes el dinero."
+                                            ),
+                                            _react2.default.createElement(
+                                                "p",
+                                                null,
+                                                "Acordate de poner una valoraci\xF3n de cada pasajero, es la mejor manera de saber en quien confiar!"
+                                            )
                                         )
                                     )
                                 )

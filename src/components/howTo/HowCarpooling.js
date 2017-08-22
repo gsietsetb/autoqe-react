@@ -10,8 +10,8 @@ import locUser from "../../img/icons/material/loc4.svg";
 import SearchBarComp from "../Trips/SearchBar";
 
 export default class HowCarpooling extends React.Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
         this.state = {
             //By default, both selected
             kind: [1, 2],
@@ -22,7 +22,7 @@ export default class HowCarpooling extends React.Component {
         this._handleKindChange = this._handleKindChange.bind(this)
     }
 
-    _handleKindChange = (kind) => {
+    _handleKindChange(kind) {
         // console.log(kind.contains(1));
         // // Correct
         // this.setState((kind) => ({
@@ -87,11 +87,15 @@ export default class HowCarpooling extends React.Component {
                                     <div className="timeline-panel">
                                         <div className="timeline-heading">
                                             <h2 className="subheading">1. Encuentra y Reserva</h2>
-                                            <h4>Busca y reserva con un método de <Label>
-                                                <img src={pay} height={25}/>&nbsp;
-                                                Pago seguro</Label></h4>
+                                            <h4>Busca y reserva con un método de &nbsp;
+                                                <Label bsStyle="success">
+                                                    <img src={pay} height={25}/>&nbsp;
+                                                    Pago seguro
+                                                </Label>
+                                            </h4>
                                             <p> Filtra las opciones deseadas</p>
-                                            <Button className="btn-light_w"><Glyphicon glyph="search"
+                                            <Button className="btn-light_w">
+                                                <Glyphicon glyph="search"
                                                                                        className="icon-glyph"/> Encontrá
                                                 viaje</Button>
                                         </div>
