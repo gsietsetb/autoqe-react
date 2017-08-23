@@ -26,9 +26,9 @@ var actions = _interopRequireWildcard(_TripActions);
 
 var _reactBootstrap = require('react-bootstrap');
 
-var _carp_w_ = require('../../img/logo/carp_w_1.svg');
+var _carp_g = require('../../img/logo/carp_g.svg');
 
-var _carp_w_2 = _interopRequireDefault(_carp_w_);
+var _carp_g2 = _interopRequireDefault(_carp_g);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -70,11 +70,10 @@ var TripsPage = function (_React$Component) {
                     _react2.default.createElement(
                         _reactBootstrap.Panel,
                         {
-                            bsStyle: 'primary', collapsible: true, defaultExpanded: true,
-                            header: _react2.default.createElement(
+                            collapsible: true, defaultExpanded: true, header: _react2.default.createElement(
                                 'div',
                                 null,
-                                _react2.default.createElement('img', {src: _carp_w_2.default, height: 40}),
+                            _react2.default.createElement('img', {src: _carp_g2.default, height: 40}),
                                 ' \xA0',
                                 _react2.default.createElement(
                                     'h3',
@@ -92,7 +91,7 @@ var TripsPage = function (_React$Component) {
                                         ' \xA0 Publicar viaje'
                                     )
                                 )
-                            )
+                        )
                         },
                         _react2.default.createElement(
                             _reactBootstrap.ListGroup,

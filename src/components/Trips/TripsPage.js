@@ -5,7 +5,7 @@ import {bindActionCreators} from 'redux';
 import TripList from './TripList';
 import * as actions from '../../actions/TripActions'
 import {Button, Glyphicon, ListGroup, ListGroupItem, Panel} from 'react-bootstrap';
-import trip from "../../img/logo/carp_w_1.svg";
+import trip from "../../img/logo/carp_g.svg";
 
 class TripsPage extends React.Component {
     componentWillMount() {
@@ -20,8 +20,7 @@ class TripsPage extends React.Component {
         return (
             <div>
                 <section className="section Container">
-                    <Panel bsStyle="primary" collapsible defaultExpanded
-                           header={<div>
+                    <Panel collapsible defaultExpanded header={<div>
                                <img src={trip} height={40}/> &nbsp;
                                <h3 style={{display: 'inline'}}> Últimos viajes publicados: &nbsp; &nbsp;
                                    <Glyphicon glyph="triangle-bottom"/>
