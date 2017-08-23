@@ -9,7 +9,6 @@ import SecurePayment from "../about/SecurePayment";
 import TripsPage from "../Trips/TripsPage";
 import Intro from "./Intro";
 import Green from "../about/Green";
-import MainMap from "../maps/Map";
 
 export default class HomePage extends React.Component {
     render() {
@@ -19,7 +18,7 @@ export default class HomePage extends React.Component {
                 <SearchBarComp/>
                 {/*<LastTrips/>*/}
                 <TripsPage/>
-                <MainMap location={this.props.history.location}/>
+                {/*<MainMap location={this.props.history.location}/>*/}
                 <Intro/>
                 <ServiceComp/>
                 <Green/>

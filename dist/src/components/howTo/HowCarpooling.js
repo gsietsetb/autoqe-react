@@ -114,13 +114,13 @@ var HowCarpooling = function (_React$Component) {
             //     driver: kind
             // }));
             // this.setState({driver: });
-            console.log('this was kind: ' + {kind: kind} + ' while ' + this.state.driver + ' and ' + this.state.user);
+            // console.log('this was kind: ' + {kind} + ' while ' + this.state.driver + ' and ' + this.state.user);
             kind.indexOf('d') !== -1 ? this.setState({
                 driver: !this.state.driver
             }) : this.setState({
                 user: !this.state.user
             });
-            console.log('this is kind: ' + {kind: kind} + ' while ' + this.state.driver + ' and ' + this.state.user);
+            // console.log('this is kind: ' + {kind} + ' while ' + this.state.driver + ' and ' + this.state.user);
             // this.setState({...this.state, [0]: value})
         }
     }, {
