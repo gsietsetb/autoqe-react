@@ -66,7 +66,7 @@ var TripsPage = function (_React$Component) {
                 null,
                 _react2.default.createElement(
                     'section',
-                    {className: 'section'},
+                    {className: 'section Container'},
                     _react2.default.createElement(
                         _reactBootstrap.Panel,
                         {

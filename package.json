@@ -1,6 +1,10 @@
 {
   "name": "autoqe-react",
   "version": "0.1.0",
+  "engines": {
+    "node": "8.2.1",
+    "npm": "4.6.1"
+  },
   "private": true,
   "dependencies": {
     "async-decorators": "^0.1.5",
@@ -16,7 +20,6 @@
     "babel-runtime": "^6.26.0",
     "bootstrap": "^3.3.7",
     "can-use-dom": "^0.1.0",
-    "tapable": "latest",
     "case-sensitive-paths-webpack-plugin": "2.1.1",
     "chalk": "^2.1.0",
     "classnames": "^2.2.5",
