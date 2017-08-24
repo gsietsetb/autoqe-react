@@ -28,25 +28,25 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactBootstrap = require("react-bootstrap");
 
-var _banner = require("../../img/banner/banner11.jpg");
-
-var _banner2 = _interopRequireDefault(_banner);
-
-var _banner3 = require("../../img/banner/banner2.jpg");
-
-var _banner4 = _interopRequireDefault(_banner3);
-
-var _parking = require("../../img/banner/parking2.jpg");
-
-var _parking2 = _interopRequireDefault(_parking);
-
-var _elec = require("../../img/banner/elec.jpg");
-
-var _elec2 = _interopRequireDefault(_elec);
-
 var _Carousel = require("./Carousel");
 
 var _Carousel2 = _interopRequireDefault(_Carousel);
+
+var _carp = require("../../img/icons/services/carp.svg");
+
+var _carp2 = _interopRequireDefault(_carp);
+
+var _rent = require("../../img/icons/services/rent.svg");
+
+var _rent2 = _interopRequireDefault(_rent);
+
+var _park = require("../../img/icons/services/park.svg");
+
+var _park2 = _interopRequireDefault(_park);
+
+var _el = require("../../img/icons/services/el.svg");
+
+var _el2 = _interopRequireDefault(_el);
 
 function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {default: obj};
@@ -80,33 +80,8 @@ function _inherits(subClass, superClass) {
     if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
 }
 
-var styles = {
-    coverImgCarp: {
-        backgroundImage: 'url(' + _banner2.default + ')'
-    },
-    coverImgCar: {
-        backgroundImage: 'url(' + _banner4.default + ')'
-    },
-    coverImgPark: {
-        backgroundImage: 'url(' + _parking2.default + ')'
-    },
-    coverImgElec: {
-        backgroundImage: 'url(' + _elec2.default + ')',
-        backgroundPosition: 'bottom'
-    },
-    darkText: {
-        color: '#122b40'
-    },
-    labeledButton: {
-        backgroundColor: 'rgba(224, 253, 255, 0.4)'
-    },
-    subButton: {
-        color: 'white',
-        backgroundColor: 'rgba(116, 172, 223,0.2)'
-    }
-};
+//Icons
 
-// bootstrapUtils.addStyle(Label, 'white');
 
 var HeaderComp = function (_React$Component) {
     _inherits(HeaderComp, _React$Component);
@@ -137,50 +112,76 @@ var HeaderComp = function (_React$Component) {
             return _react2.default.createElement(
                 "div",
                 null,
-                _react2.default.createElement(_Carousel2.default, null),
                 _react2.default.createElement(
-                    _reactBootstrap.Tab.Container,
-                    {id: "left-tabs-example", defaultActiveKey: "first"},
+                    _reactBootstrap.Row,
+                    null,
                     _react2.default.createElement(
-                        _reactBootstrap.Row,
-                        {className: "clearfix"},
-                        _react2.default.createElement(
-                            _reactBootstrap.Col,
-                            {sm: 4},
-                            _react2.default.createElement(
-                                _reactBootstrap.Nav,
-                                {bsStyle: "pills", stacked: true},
+                        _reactBootstrap.Tabs,
+                        {defaultActiveKey: 1, id: "uncontrolled-tab-example"},
+                        _react2.default.createElement(_reactBootstrap.Tab, {
+                            eventKey: 1, title: _react2.default.createElement(
+                                "span",
+                                {className: "service-carp"},
+                                _react2.default.createElement("img", {
+                                    alt: "",
+                                    src: _carp2.default,
+                                    className: "main-icon"
+                                }),
+                                "\xA0",
                                 _react2.default.createElement(
-                                    _reactBootstrap.NavItem,
-                                    {eventKey: "first"},
-                                    "Tab 1"
-                                ),
-                                _react2.default.createElement(
-                                    _reactBootstrap.NavItem,
-                                    {eventKey: "second"},
-                                    "Tab 2"
+                                    "b",
+                                    null,
+                                    "Carpooling"
                                 )
                             )
-                        ),
-                        _react2.default.createElement(
-                            _reactBootstrap.Col,
-                            {sm: 8},
-                            _react2.default.createElement(
-                                _reactBootstrap.Tab.Content,
-                                {animation: true},
+                        }),
+                        _react2.default.createElement(_reactBootstrap.Tab, {
+                            eventKey: 2, title: _react2.default.createElement(
+                                "span",
+                                {className: "service-rent"},
+                                _react2.default.createElement("img", {
+                                    alt: "",
+                                    src: _rent2.default,
+                                    className: "main-icon"
+                                }),
+                                "\xA0 Alquiler de Autos"
+                            )
+                        }),
+                        _react2.default.createElement(_reactBootstrap.Tab, {
+                            eventKey: 3, title: _react2.default.createElement(
+                                "span",
+                                {className: "service-park"},
+                                _react2.default.createElement("img", {
+                                    alt: "",
+                                    src: _park2.default,
+                                    className: "main-icon"
+                                }),
+                                "\xA0 Alquiler de Cocheras"
+                            )
+                        }),
+                        _react2.default.createElement(_reactBootstrap.Tab, {
+                            eventKey: 4, disabled: true, title: _react2.default.createElement(
+                                "span",
+                                {className: "service-elec"},
+                                _react2.default.createElement("img", {
+                                    alt: "",
+                                    src: _el2.default,
+                                    className: "main-icon"
+                                }),
+                                "\xA0 Autos el\xE9ctricos \xA0",
                                 _react2.default.createElement(
-                                    _reactBootstrap.Tab.Pane,
-                                    {eventKey: "first"},
-                                    "Tab 1 content"
-                                ),
-                                _react2.default.createElement(
-                                    _reactBootstrap.Tab.Pane,
-                                    {eventKey: "second"},
-                                    "Tab 2 content"
+                                    _reactBootstrap.Label,
+                                    {bsStyle: "warning"},
+                                    "Pr\xF3x."
                                 )
                             )
-                        )
+                        })
                     )
+                ),
+                _react2.default.createElement(
+                    _reactBootstrap.Row,
+                    null,
+                    _react2.default.createElement(_Carousel2.default, null)
                 )
             );
         }

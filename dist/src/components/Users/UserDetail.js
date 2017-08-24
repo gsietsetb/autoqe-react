@@ -81,7 +81,7 @@ var ContactDetailComponent = function (_Component) {
           Object.keys(this.state.contact).length !== 0 && _react2.default.createElement(
           'div',
           null,
-          _react2.default.createElement('img', { src: contact.image, width: '150' }),
+          _react2.default.createElement('img', {alt: '', src: contact.image, width: '150'}),
           _react2.default.createElement(
             'h1',
             null,

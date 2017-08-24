@@ -81,7 +81,7 @@ export default class SocialNetworkComp extends Component {
                                         <div
                                             style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:33.33333333333333% 0; text-align:center; width:100%;">
                                             <div
-                                                style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div>
+                                                style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"/>
                                         </div>
                                         <p style=" margin:8px 0 0 0; padding:0 4px;"><Link
                                             to="https://www.instagram.com/p/BW-SfInFBRp/"
@@ -93,12 +93,12 @@ export default class SocialNetworkComp extends Component {
                                             A post shared by Autoqe, Auto al toque (@autoqe) on
                                             <time
                                                 style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;"
-                                                datetime="2017-07-25T14:41:22+00:00">Jul 25, 2017 at 7:41am PDT
+                                                dateTime="2017-07-25T14:41:22+00:00">Jul 25, 2017 at 7:41am PDT
                                             </time>
                                         </p>
                                     </div>
                                 </blockquote>
-                                <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+                                <script async defer src="//platform.instagram.com/en_US/embeds.js"/>
                                 <InstagramEmbed
                                     url='https://www.instagram.com/p/BWcbc2gFoTX/?taken-by=autoqe'
                                     maxWidth={320}

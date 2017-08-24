@@ -1,11 +1,13 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from "prop-types"
+
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import TripList from './TripList';
 import * as actions from '../../actions/TripActions'
 import {Button, Glyphicon, ListGroup, ListGroupItem, Panel} from 'react-bootstrap';
-import trip from "../../img/logo/carp_g.svg";
+import carp from "../../img/icons/services/carp.svg";
 
 class TripsPage extends React.Component {
     componentWillMount() {
@@ -16,12 +18,12 @@ class TripsPage extends React.Component {
 
     render() {
         const trips = this.props.trips;
-        console.log('this is here: ' + JSON.stringify(trips));
+        // console.log('this is here: ' + JSON.stringify(trips));
         return (
             <div>
                 <section className="section Container">
                     <Panel collapsible defaultExpanded header={<div>
-                               <img src={trip} height={40}/> &nbsp;
+                        <img alt="" src={carp} height={40}/> &nbsp;
                                <h3 style={{display: 'inline'}}> Últimos viajes publicados: &nbsp; &nbsp;
                                    <Glyphicon glyph="triangle-bottom"/>
                                </h3>

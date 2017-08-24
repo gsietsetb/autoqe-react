@@ -96,7 +96,7 @@ var HowCarpooling = function (_React$Component) {
 
         _this.state = {
             //By default, both selected
-            kind: [1, 2],
+            kind: ['d', 'u'],
             driver: true,
             user: true,
             addTrip: 0
@@ -144,6 +144,7 @@ var HowCarpooling = function (_React$Component) {
                                 "h4",
                                 {style: {color: "#122b40"}},
                                 _react2.default.createElement("img", {
+                                    alt: "",
                                     src: _steeringWheel2.default,
                                     className: "icon-row"
                                 }),
@@ -156,7 +157,11 @@ var HowCarpooling = function (_React$Component) {
                             _react2.default.createElement(
                                 "h4",
                                 {style: {color: "#74acdf"}},
-                                _react2.default.createElement("img", {src: _users2.default, className: "icon-row"}),
+                                _react2.default.createElement("img", {
+                                    alt: "",
+                                    src: _users2.default,
+                                    className: "icon-row"
+                                }),
                                 "Pasajeros"
                             )
                         )
@@ -270,6 +275,7 @@ var HowCarpooling = function (_React$Component) {
                                                     _reactBootstrap.Button,
                                                     {className: "btn-green", bsStyle: "success"},
                                                     _react2.default.createElement("img", {
+                                                        alt: "",
                                                         src: _secure_pay2.default,
                                                         height: 25
                                                     }),

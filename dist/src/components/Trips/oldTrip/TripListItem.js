@@ -88,7 +88,7 @@ var _drivingLicense = require('../../../img/icons/material/driving-license.svg')
 
 var _drivingLicense2 = _interopRequireDefault(_drivingLicense);
 
-var _autoqe_gray = require('../../../img/logo/autoqe_gray.svg');
+var _autoqe_gray = require('../../../img/old_logos/autoqe_gray.svg');
 
 var _autoqe_gray2 = _interopRequireDefault(_autoqe_gray);
 
@@ -127,10 +127,16 @@ function _inherits(subClass, superClass) {
 var TripListItem = function (_Component) {
     _inherits(TripListItem, _Component);
 
-    function TripListItem() {
+    function TripListItem(props) {
         _classCallCheck(this, TripListItem);
 
-        return _possibleConstructorReturn(this, (TripListItem.__proto__ || Object.getPrototypeOf(TripListItem)).apply(this, arguments));
+        //Auth side
+        var _this = _possibleConstructorReturn(this, (TripListItem.__proto__ || Object.getPrototypeOf(TripListItem)).call(this, props));
+
+        _this.state = {
+            value: ''
+        };
+        return _this;
     }
 
     _createClass(TripListItem, [{
@@ -150,7 +156,6 @@ var TripListItem = function (_Component) {
                     reviews
                 );
             }
-
             function setSeats() {
                 if (trip.seats > 3) return _react2.default.createElement(
                     _reactBootstrap.Label,
@@ -169,7 +174,6 @@ var TripListItem = function (_Component) {
                     ' Asientos'
                 );
             }
-
             return _react2.default.createElement(
                 _reactBootstrap.ListGroupItem,
                 null,
@@ -182,7 +186,7 @@ var TripListItem = function (_Component) {
                         _react2.default.createElement(
                             _reactBootstrap.Col,
                             {xs: 1, s: 1, md: 1},
-                            _react2.default.createElement('img', {src: trip.image, height: 80})
+                            _react2.default.createElement('img', {alt: '', src: trip.image, height: 80})
                         ),
                         _react2.default.createElement(
                             _reactBootstrap.Col,
@@ -195,9 +199,9 @@ var TripListItem = function (_Component) {
                             _react2.default.createElement(
                                 'div',
                                 null,
-                                _react2.default.createElement('img', {src: _facebook2.default, height: 15}),
+                                _react2.default.createElement('img', {alt: '', src: _facebook2.default, height: 15}),
                                 ' \xA0',
-                                _react2.default.createElement('img', {src: _twitter2.default, height: 15}),
+                                _react2.default.createElement('img', {alt: '', src: _twitter2.default, height: 15}),
                                 ' \xA0',
                                 _react2.default.createElement(_reactBootstrap.Glyphicon, {glyph: 'star'}),
                                 _react2.default.createElement(_reactBootstrap.Glyphicon, {glyph: 'star'}),
@@ -205,7 +209,7 @@ var TripListItem = function (_Component) {
                                 _react2.default.createElement(_reactBootstrap.Glyphicon, {glyph: 'star'}),
                                 _react2.default.createElement(_reactBootstrap.Glyphicon, {glyph: 'star-empty'})
                             ),
-                            _react2.default.createElement('img', {src: _drivingLicense2.default, height: 25}),
+                            _react2.default.createElement('img', {alt: '', src: _drivingLicense2.default, height: 25}),
                             ' \xA0',
                             _react2.default.createElement(
                                 _reactBootstrap.Label,
@@ -221,17 +225,17 @@ var TripListItem = function (_Component) {
                             _react2.default.createElement(
                                 'h4',
                                 {style: {display: 'inline'}},
-                                _react2.default.createElement('img', {src: _location2.default, height: 30}),
+                                _react2.default.createElement('img', {alt: '', src: _location2.default, height: 30}),
                                 trip.from,
                                 ' \u2192',
                                 trip.stops && _react2.default.createElement(
                                 'div',
                                 {style: {display: 'inline'}},
-                                _react2.default.createElement('img', {src: _location4.default, height: 30}),
+                                _react2.default.createElement('img', {alt: '', src: _location4.default, height: 30}),
                                 trip.stops,
                                 '\u2192'
                                 ),
-                                _react2.default.createElement('img', {src: _location6.default, height: 30}),
+                                _react2.default.createElement('img', {alt: '', src: _location6.default, height: 30}),
                                 trip.to,
                                 ' \xA0 \xA0'
                             ),
@@ -242,7 +246,11 @@ var TripListItem = function (_Component) {
                                     _reactBootstrap.Button,
                                     null,
                                     ' ',
-                                    _react2.default.createElement('img', {src: _autoqe_gray2.default, height: 20}),
+                                    _react2.default.createElement('img', {
+                                        alt: '',
+                                        src: _autoqe_gray2.default,
+                                        height: 20
+                                    }),
                                     trip.car
                                 ),
                                 ' \xA0',
@@ -250,6 +258,7 @@ var TripListItem = function (_Component) {
                                     _reactBootstrap.Button,
                                     {style: {display: 'inline'}},
                                     _react2.default.createElement('img', {
+                                        alt: '',
                                         title: 'Por Autopista!',
                                         src: _highway2.default,
                                         height: 20
@@ -258,6 +267,7 @@ var TripListItem = function (_Component) {
                                     _reactBootstrap.Button,
                                     {style: {display: 'inline'}},
                                     _react2.default.createElement('img', {
+                                        alt: '',
                                         title: 'Sin Autopista o peajes!',
                                         src: _highway_n2.default,
                                         height: 20
@@ -267,6 +277,7 @@ var TripListItem = function (_Component) {
                                 _reactBootstrap.Button,
                                 {style: {display: 'inline'}},
                                 _react2.default.createElement('img', {
+                                    alt: '',
                                     title: 'Pueden subir mascotas!',
                                     src: _pet2.default,
                                     height: 20
@@ -276,6 +287,7 @@ var TripListItem = function (_Component) {
                                 _reactBootstrap.Button,
                                 {style: {display: 'inline'}},
                                 _react2.default.createElement('img', {
+                                    alt: '',
                                     title: 'Se puede fumar!',
                                     src: _smoke2.default,
                                     height: 20
@@ -285,6 +297,7 @@ var TripListItem = function (_Component) {
                                 _reactBootstrap.Button,
                                 {style: {display: 'inline'}},
                                 _react2.default.createElement('img', {
+                                    alt: '',
                                     title: 'Lleva Mate!',
                                     src: _mateInfusion2.default,
                                     height: 20
@@ -294,6 +307,7 @@ var TripListItem = function (_Component) {
                                 _reactBootstrap.Button,
                                 {style: {display: 'inline'}},
                                 _react2.default.createElement('img', {
+                                    alt: '',
                                     title: 'S\xF3lo mujeres!',
                                     src: _girl2.default,
                                     height: 20
@@ -308,9 +322,14 @@ var TripListItem = function (_Component) {
                                 'h4',
                                 null,
                                 !trip.hurry ? _react2.default.createElement('img', {
+                                    alt: '',
                                     src: _fast2.default,
                                     height: 20
-                                }) : _react2.default.createElement('img', {src: _timeLeft2.default, height: 20}),
+                                }) : _react2.default.createElement('img', {
+                                    alt: '',
+                                    src: _timeLeft2.default,
+                                    height: 20
+                                }),
                                 ' \xA0',
                                 _react2.default.createElement(_reactIntl.FormattedRelative, {value: trip.date}),
                                 ','

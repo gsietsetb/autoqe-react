@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import TextInput from '../common/TextInput';
 import CheckBox from '../common/CheckBox';
 
@@ -57,8 +58,8 @@ class TripForm extends React.Component {
     }
 }
 
-TripForm.propTypes = {
-    trip: React.PropTypes.object.isRequired,
+TripForm = {
+    trip: PropTypes.object.isRequired,
     hobbies: React.PropTypes.array.isRequired,
     onSave: React.PropTypes.func.isRequired,
     onChange: React.PropTypes.func.isRequired,

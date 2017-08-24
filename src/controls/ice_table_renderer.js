@@ -121,7 +121,7 @@ function renderColumn2(cellDataKey, rowData /*, rowIndex*/) {
     // image load hack (just put in array with key eq to src (c) istarkov :-))
     return (
         <div className="ice-table__column2">
-            {[<img key={rowData.get('image')} src={rowData.get('image')} style={K_STYLE_IMAGE} />]}
+            {[<img alt="" key={rowData.get('image')} src={rowData.get('image')} style={K_STYLE_IMAGE}/>]}
         </div>
     );
 }

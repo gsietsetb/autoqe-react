@@ -21,7 +21,7 @@ export function loadTrips() {
     // make async call to api, handle promise, dispatch action when promise is resolved
     return function(dispatch) {
         return tripApi.getAllTrips().then(trips => {
-            console.log('dispatching: '+JSON.stringify(trips));
+            // console.log('dispatching: '+JSON.stringify(trips));
             dispatch(loadTripsSuccess(trips));
         }).catch(error => {
             throw(error);

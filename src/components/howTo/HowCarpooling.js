@@ -14,7 +14,7 @@ export default class HowCarpooling extends React.Component {
         super();
         this.state = {
             //By default, both selected
-            kind: [1, 2],
+            kind: ['d', 'u'],
             driver: true,
             user: true,
             addTrip: 0
@@ -44,10 +44,10 @@ export default class HowCarpooling extends React.Component {
                 <Row>
                     <ToggleButtonGroup type="checkbox" value={this.state.kind} onChange={this._handleKindChange}>
                         <ToggleButton value={'d'}><h4 style={{color: "#122b40"}}>
-                            <img src={volante} className="icon-row"/>
+                            <img alt="" src={volante} className="icon-row"/>
                             Conductor</h4></ToggleButton>
                         <ToggleButton value={'u'}><h4 style={{color: "#74acdf"}}>
-                            <img src={users} className="icon-row"/>
+                            <img alt="" src={users} className="icon-row"/>
                             Pasajeros</h4></ToggleButton>
                     </ToggleButtonGroup>
                     <div className=" timeline-background col-lg-12">
@@ -89,7 +89,7 @@ export default class HowCarpooling extends React.Component {
                                             <h2 className="subheading">1. Encuentra y Reserva</h2>
                                             <h4>Busca y reserva con un método de &nbsp;
                                                 <Button className="btn-green" bsStyle="success">
-                                                    <img src={pay} height={25}/>&nbsp;
+                                                    <img alt="" src={pay} height={25}/>&nbsp;
                                                     Pago seguro
                                                 </Button>
                                             </h4>

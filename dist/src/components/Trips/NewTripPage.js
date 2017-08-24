@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _reactRedux = require('react-redux');
 
 var _redux = require('redux');
@@ -58,7 +62,7 @@ var NewTripPage = function (_React$Component) {
             var trip = this.state.trip;
             var hobbyId = event.target.value;
             var hobby = this.props.checkBoxHobbies.filter(function (hobby) {
-                return hobby.id == hobbyId;
+                return hobby.id === hobbyId;
             })[0];
             var checked = !hobby.checked;
             hobby['checked'] = !hobby.checked;
@@ -116,8 +120,8 @@ function hobbiesForCheckBoxes(hobbies) {
 }
 
 NewTripPage.propTypes = {
-    checkBoxHobbies: _react.PropTypes.array.isRequired,
-    actions: _react.PropTypes.object.isRequired
+    checkBoxHobbies: _propTypes2.default.array.isRequired,
+    actions: _propTypes2.default.object.isRequired
 };
 
 function mapStateToProps(state, ownProps) {

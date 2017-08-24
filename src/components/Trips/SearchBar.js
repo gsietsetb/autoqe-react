@@ -2,7 +2,7 @@ import React from "react";
 import {Button, ControlLabel, Form, FormControl, FormGroup, Glyphicon, InputGroup, Label} from "react-bootstrap";
 import moment from "moment";
 // import Autocomplete from 'react-google-autocomplete';
-import trip from "../../img/logo/carp_g.svg";
+import carp from "../../img/icons/services/carp.svg";
 import locFrom from "../../img/icons/material/loc1.svg";
 import locTo from "../../img/icons/material/loc3.svg";
 import MediaQuery from "react-responsive";
@@ -32,7 +32,7 @@ export default class SearchBarComp extends React.Component {
         return (
             <div className="Container" style={{textAlign: 'center'}}>
                 <MediaQuery maxDeviceWidth={740}>
-                    <img src={trip} className="main-icon"/> &nbsp;
+                    <img alt="" src={carp} className="main-icon"/> &nbsp;
                     <h4 style={{display: 'inline'}}>
                         <Label className="btn-light_w" bsSize="lg">
                             Carpooling
@@ -44,7 +44,7 @@ export default class SearchBarComp extends React.Component {
                         <ControlLabel> &nbsp;  &nbsp; De: &nbsp; </ControlLabel>
                         <InputGroup>
                             <InputGroup.Addon style={{minWidth: 36}}>
-                                <img src={locFrom} style={{marginLeft: -10}} height={30}/>
+                                <img alt="" src={locFrom} style={{marginLeft: -10}} height={30}/>
                             </InputGroup.Addon>
                             <FormControl style={{height: 'unset'}} type="text" placeholder="Buenos Aires"/>
                             {/*<PlacesAutocomplete id="from" inputProps={inputProps} />*/}
@@ -54,7 +54,7 @@ export default class SearchBarComp extends React.Component {
                         <ControlLabel> &nbsp; &nbsp; A: &nbsp; </ControlLabel>
                         <InputGroup>
                             <InputGroup.Addon style={{minWidth: 36}}>
-                                <img src={locTo} style={{marginLeft: -10}} height={30}/>
+                                <img alt="" src={locTo} style={{marginLeft: -10}} height={30}/>
                             </InputGroup.Addon>
                             <FormControl style={{height: 'unset'}} height={30} className="inputForm" type="text"
                                          placeholder="Córdoba"/>
@@ -66,7 +66,7 @@ export default class SearchBarComp extends React.Component {
                     <FormGroup controlId="formInlineFrom">
                         <ControlLabel> &nbsp; &nbsp; Cuándo: &nbsp; </ControlLabel>
                         <InputGroup>
-                            <InputGroup.Addon style={{minWidth: 32}}>
+                            <InputGroup.Addon style={{minWidth: 32, maxWidth: 30}}>
                                 <Glyphicon glyph="calendar"/>
                             </InputGroup.Addon>
                             <FormControl className="inputForm" type="date" placeholder="Hoy"/>

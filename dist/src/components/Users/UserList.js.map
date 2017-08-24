@@ -13,9 +13,9 @@
     "array",
     "isRequired"
   ],
-  "mappings": ";;;;;;AAAA;;;;AACA;;;;;;AAEA,IAAMA,WAAW,SAAXA,QAAW,OAAe;AAAA,QAAbC,OAAa,QAAbA,OAAa;;AAC5B,WACI;AAAA;AAAA;AACI;AAAA;AAAA;AAAA;AAAA,SADJ;AAEI;AAAA;AAAA,cAAO,WAAU,OAAjB;AACI;AAAA;AAAA;AACA;AAAA;AAAA;AACI;AADJ;AADA,aADJ;AAMI;AAAA;AAAA;AACCA,wBAAQC,GAAR,CAAY;AAAA,2BACT,uDAAa,KAAKC,KAAKC,EAAvB,EAA2B,MAAMD,IAAjC,GADS;AAAA,iBAAZ;AADD;AANJ;AAFJ,KADJ;AAiBH,CAlBD;;AAoBAH,SAASK,SAAT,GAAqB;AACjBJ,aAAS,iBAAUK,KAAV,CAAgBC;AADR,CAArB;;kBAIeP,Q",
+  "mappings": ";;;;;;AAAA;;;;AACA;;;;AAEA;;;;;;AAEA,IAAMA,WAAW,SAAXA,QAAW,OAAe;AAAA,QAAbC,OAAa,QAAbA,OAAa;;AAC5B,WACI;AAAA;AAAA;AACI;AAAA;AAAA;AAAA;AAAA,SADJ;AAEI;AAAA;AAAA,cAAO,WAAU,OAAjB;AACI;AAAA;AAAA;AACA;AAAA;AAAA;AACI;AADJ;AADA,aADJ;AAMI;AAAA;AAAA;AACCA,wBAAQC,GAAR,CAAY;AAAA,2BACT,uDAAa,KAAKC,KAAKC,EAAvB,EAA2B,MAAMD,IAAjC,GADS;AAAA,iBAAZ;AADD;AANJ;AAFJ,KADJ;AAiBH,CAlBD;;AAoBAH,SAASK,SAAT,GAAqB;AACjBJ,aAAS,oBAAUK,KAAV,CAAgBC;AADR,CAArB;;kBAIeP,Q",
   "file": "UserList.js",
   "sourcesContent": [
-    "import React, {PropTypes} from 'react';\nimport UserListRow from './UserListRow';\n\nconst UserList = ({hobbies}) => {\n    return (\n        <div>\n            <h3>Hobbies</h3>\n            <table className=\"table\">\n                <thead>\n                <tr>\n                    <th></th>\n                </tr>\n                </thead>\n                <tbody>\n                {hobbies.map(user =>\n                    <UserListRow key={user.id} user={user} />\n                )}\n                </tbody>\n            </table>\n        </div>\n    );\n};\n\nUserList.propTypes = {\n    hobbies: PropTypes.array.isRequired\n};\n\nexport default UserList;"
+    "import React from 'react';\nimport PropTypes from \"prop-types\"\n\nimport UserListRow from './UserListRow';\n\nconst UserList = ({hobbies}) => {\n    return (\n        <div>\n            <h3>Hobbies</h3>\n            <table className=\"table\">\n                <thead>\n                <tr>\n                    <th></th>\n                </tr>\n                </thead>\n                <tbody>\n                {hobbies.map(user =>\n                    <UserListRow key={user.id} user={user} />\n                )}\n                </tbody>\n            </table>\n        </div>\n    );\n};\n\nUserList.propTypes = {\n    hobbies: PropTypes.array.isRequired\n};\n\nexport default UserList;"
   ]
 }

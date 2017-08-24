@@ -29,6 +29,7 @@ const Main = () => (
                     <Route path="/trips/:id" component={TripPage}/>
                 </Route><Route path="/contact" component={ContactComp}/>
 
+                {/*About*/}
                 <Route path="/green" component={Green}/>
                 <Route path="/dev" component={Dev}/>
                 <Route path="/contact" component={ContactComp}/>

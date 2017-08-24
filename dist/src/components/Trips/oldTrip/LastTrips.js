@@ -12,9 +12,9 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactBootstrap = require('react-bootstrap');
 
-var _carp_w_ = require('../../../img/logo/carp_w_1.svg');
+var _carp = require('../../../img/icons/services/carp.svg');
 
-var _carp_w_2 = _interopRequireDefault(_carp_w_);
+var _carp2 = _interopRequireDefault(_carp);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45,7 +45,7 @@ var TripGrid = function (_Component) {
                         header: _react2.default.createElement(
                             'div',
                             null,
-                            _react2.default.createElement('img', { src: _carp_w_2.default, height: 40 }),
+                            _react2.default.createElement('img', {alt: '', src: _carp2.default, height: 40}),
                             ' \xA0',
                             _react2.default.createElement(
                                 'h4',

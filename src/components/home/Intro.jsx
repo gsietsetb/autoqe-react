@@ -11,7 +11,7 @@ export default class Intro extends React.Component {
                 <header className="section-header">
                     <div className="container">
                         <h1 className="section-header-title">
-                            {/*<img src={autoqe_gray} className="main-icon"/>&bnsp;*/}
+                            {/*<img alt="" src={autoqe_gray} className="main-icon"/>&bnsp;*/}
                             Ahora viajar es más barato, fácil y divetido</h1>
                         <div className="section-header-text">
                             <p>Compartí lo que no usás &nbsp;

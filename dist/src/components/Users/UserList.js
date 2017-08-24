@@ -8,6 +8,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _UserListRow = require('./UserListRow');
 
 var _UserListRow2 = _interopRequireDefault(_UserListRow);
@@ -49,7 +53,7 @@ var UserList = function UserList(_ref) {
 };
 
 UserList.propTypes = {
-    hobbies: _react.PropTypes.array.isRequired
+    hobbies: _propTypes2.default.array.isRequired
 };
 
 exports.default = UserList;

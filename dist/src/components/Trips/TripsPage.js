@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _reactRouterDom = require('react-router-dom');
 
 var _reactRedux = require('react-redux');
@@ -26,9 +30,9 @@ var actions = _interopRequireWildcard(_TripActions);
 
 var _reactBootstrap = require('react-bootstrap');
 
-var _carp_g = require('../../img/logo/carp_g.svg');
+var _carp = require('../../img/icons/services/carp.svg');
 
-var _carp_g2 = _interopRequireDefault(_carp_g);
+var _carp2 = _interopRequireDefault(_carp);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -60,7 +64,7 @@ var TripsPage = function (_React$Component) {
         key: 'render',
         value: function render() {
             var trips = this.props.trips;
-            console.log('this is here: ' + JSON.stringify(trips));
+            // console.log('this is here: ' + JSON.stringify(trips));
             return _react2.default.createElement(
                 'div',
                 null,
@@ -73,7 +77,7 @@ var TripsPage = function (_React$Component) {
                             collapsible: true, defaultExpanded: true, header: _react2.default.createElement(
                                 'div',
                                 null,
-                            _react2.default.createElement('img', {src: _carp_g2.default, height: 40}),
+                            _react2.default.createElement('img', {alt: '', src: _carp2.default, height: 40}),
                                 ' \xA0',
                                 _react2.default.createElement(
                                     'h3',
@@ -112,8 +116,8 @@ var TripsPage = function (_React$Component) {
 }(_react2.default.Component);
 
 TripsPage.propTypes = {
-    trips: _react.PropTypes.array.isRequired,
-    children: _react.PropTypes.object
+    trips: _propTypes2.default.array.isRequired,
+    children: _propTypes2.default.object
 };
 
 // function mapStateToProps(state, ownProps) {

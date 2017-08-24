@@ -1,12 +1,16 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _react = require('react');
+var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require("prop-types");
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26,26 +30,26 @@ var TextInput = function TextInput(_ref) {
     }
 
     return _react2.default.createElement(
-        'div',
+        "div",
         { className: wrapperClass },
         _react2.default.createElement(
-            'label',
+            "label",
             { htmlFor: name },
             label
         ),
         _react2.default.createElement(
-            'div',
-            { className: 'field' },
-            _react2.default.createElement('input', {
+            "div",
+            {className: "field"},
+            _react2.default.createElement("input", {
                 type: type,
                 name: name,
-                className: 'form-control',
+                className: "form-control",
                 placeholder: placeholder,
                 value: value,
                 onChange: onChange }),
             error && _react2.default.createElement(
-                'div',
-                { className: 'alert alert-danger' },
+            "div",
+            {className: "alert alert-danger"},
                 error
             )
         )
@@ -53,12 +57,12 @@ var TextInput = function TextInput(_ref) {
 };
 
 TextInput.propTypes = {
-    name: _react.PropTypes.string.isRequired,
-    label: _react.PropTypes.string.isRequired,
-    onChange: _react.PropTypes.func.isRequired,
-    placeholder: _react.PropTypes.string,
-    value: _react.PropTypes.string,
-    error: _react.PropTypes.string
+    name: _propTypes2.default.string.isRequired,
+    label: _propTypes2.default.string.isRequired,
+    onChange: _propTypes2.default.func.isRequired,
+    placeholder: _propTypes2.default.string,
+    value: _propTypes2.default.string,
+    error: _propTypes2.default.string
 };
 
 exports.default = TextInput;

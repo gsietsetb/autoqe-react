@@ -1,6 +1,6 @@
-import React, {Component, PropTypes} from "react";
+import React, {Component} from "react";
+import PropTypes from "prop-types"
 import {bindActionCreators} from 'redux';
-import * as sessionActions from '../../actions/SessionActions';
 import {
     Button,
     DropdownButton,
@@ -16,18 +16,17 @@ import {
 } from "react-bootstrap";
 import {Link} from "react-router-dom";
 import {connect} from 'react-redux';
-
 import Responsive from "react-responsive";
 import ReactRotatingText from "react-rotating-text";
-
+import * as sessionActions from '../../actions/SessionActions';
 import AuthActions from "../../actions/AuthActions";
 import AuthStore from "../../store/AuthStore";
 import logo_txt from "../../img/logo/autoqe_txt.svg";
-
-import trip from "../../img/logo/carp_g.svg";
-import car from "../../img/logo/car_g.svg";
-import park from "../../img/logo/park_g.svg";
-import elec from "../../img/logo/elec_g.svg";
+//Icons
+import carp from "../../img/icons/services/carp.svg";
+import rent from "../../img/icons/services/rent.svg";
+import park from "../../img/icons/services/park.svg";
+import el from "../../img/icons/services/el.svg";
 
 import argFlag from "../../img/icons/flag/061-argentina.svg";
 import spFlag from "../../img/icons/flag/012-spain.svg";
@@ -133,11 +132,11 @@ class NavbarComp extends Component {
                              <Glyphicon glyph="plus-sign"/>&nbsp; Publicar
                            </span>}>
                                 <MenuItem eventKey={2.1}>
-                                    <img style={styles.icon} src={trip} className="App-logo" alt="logo"/>
+                                    <img style={styles.icon} src={carp} className="App-logo" alt="logo"/>
                                     &nbsp; Trayecto
                                 </MenuItem>
                                 <MenuItem eventKey={2.2}>
-                                    <img style={styles.icon} src={car} className="App-logo" alt="logo"/>
+                                    <img style={styles.icon} src={rent} className="App-logo" alt="logo"/>
                                     &nbsp; Auto</MenuItem>
                                 <MenuItem eventKey={2.3}>
                                     <img style={styles.icon} src={park} className="App-logo" alt="logo"/>
@@ -149,18 +148,18 @@ class NavbarComp extends Component {
                              <Glyphicon glyph="search"/>&nbsp; Buscar
                            </span>}>
                                 <MenuItem eventKey={3.1}>
-                                    <img style={styles.icon} src={trip} className="" alt="logo"/>
+                                    <img style={styles.icon} src={carp} className="" alt="logo"/>
                                     &nbsp; Trayecto
                                 </MenuItem>
                                 <MenuItem eventKey={3.2}>
-                                    <img style={styles.icon} src={car} className="App-logo" alt="logo"/>
+                                    <img style={styles.icon} src={rent} className="App-logo" alt="logo"/>
                                     &nbsp; Auto</MenuItem>
                                 <MenuItem eventKey={3.3}>
                                     <img style={styles.icon} src={park} className="App-logo" alt="logo"/>
                                     &nbsp; Cochera</MenuItem>
                                 <MenuItem divider/>
                                 <MenuItem eventKey={3.4}>
-                                    <img style={styles.icon} src={elec} className="App-logo" alt="logo"/>
+                                    <img style={styles.icon} src={el} className="App-logo" alt="logo"/>
                                     &nbsp; Auto Eléctrico</MenuItem>
                             </NavDropdown>
 
@@ -176,7 +175,7 @@ class NavbarComp extends Component {
                                             </InputGroup.Addon>
                                             <FormControl type="text" placeholder="Mar del Plata"/>
                                             <InputGroup.Addon>
-                                                <img src={locTo} height={20}/>
+                                                <img alt="" src={locTo} height={20}/>
                                             </InputGroup.Addon>
                                         </InputGroup>
                                     </FormGroup>
@@ -201,22 +200,22 @@ class NavbarComp extends Component {
                             <NavItem>
                                 <DropdownButton id="lang" style={styles.flagDropdown} bsStyle={'info'} title={''}>
                                     <MenuItem eventKey="1" active>
-                                        <img src={argFlag} height={24}/>
+                                        <img alt="" src={argFlag} height={24}/>
                                         &nbsp;  Argentina</MenuItem>
                                     <MenuItem eventKey="2">
-                                        <img src={spFlag} height={24}/>
+                                        <img alt="" src={spFlag} height={24}/>
                                         &nbsp;  España</MenuItem>
                                     <MenuItem eventKey="3">
-                                        <img src={brFlag} height={24}/>
+                                        <img alt="" src={brFlag} height={24}/>
                                         &nbsp;  Brasil</MenuItem>
                                     <MenuItem eventKey="4">
-                                        <img src={chFlag} height={24}/>
+                                        <img alt="" src={chFlag} height={24}/>
                                         &nbsp;  Chile</MenuItem>
                                     <MenuItem eventKey="5">
-                                        <img src={bolFlag} height={24}/>
+                                        <img alt="" src={bolFlag} height={24}/>
                                         &nbsp;  Bolivia</MenuItem><MenuItem divider/>
                                     <MenuItem eventKey="6">
-                                        <img src={usaFlag} height={24}/>
+                                        <img alt="" src={usaFlag} height={24}/>
                                         &nbsp;  English</MenuItem>
                                 </DropdownButton>
                             </NavItem> </Nav>

@@ -42,7 +42,7 @@ class ContactDetailComponent extends Component {
       <div>
           {Object.keys(this.state.contact).length !== 0 &&
           <div>
-            <img src={contact.image} width="150" />
+              <img alt="" src={contact.image} width="150"/>
             <h1>{contact.name}</h1>
             <h3>{contact.email}</h3>
           </div>

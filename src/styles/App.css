@@ -1,11 +1,15 @@
 
-.colors {
-    --Primary: #122b40;
-    --Secondary: #74acdf;
-    --Carpooling: #122b40;
-    --Rental: #74acdf;
-    --Parking: #498d19;
-    --Elec: #e8a135;
+:root {
+    --primary: #122b40;
+    --secondary: #74acdf;
+    --carpooling: #122b40;
+    --rental: #74acdf;
+    --parking: #498d19;
+    --elec: #e8a135;
+    --carp-transp: rgba(18, 43, 64, 0.8);
+    --rent-transp: rgba(116, 172, 223, 0.8);
+    --park-transp: rgba(73, 141, 25, 0.8);
+    --elec-transp: rgba(232, 161, 53, 0.8);
 }
 
 @font-face {
@@ -86,37 +90,6 @@
     display: inline-flex !important;
 }
 
-.header-title {
-    left: 0px;
-    text-align: left;
-
-}
-
-/* Carousel*/
-
-.carousel-caption {
-    text-align: left;
-    left: 2vw;
-    margin: 1em;
-    max-width: 25vw;
-}
-
-.carousel-caption h1 {
-    font-size: 34px;
-    font-family: 'Lemon/Milk', serif;
-}
-
-.carousel-caption h3 {
-    font-family: 'Lemon/Milk light', serif;
-    font-size: 22px
-}
-
-.carousel-caption img {
-    height: 80px;
-    margin-right: 12px;
-    /*max-height: 36px;*/
-}
-
 /*Icons*/
 .header-icon {
     height: 120px;
@@ -142,9 +115,21 @@
 }
 
 /*Text*/
-.main-service {
+.service-carp {
+    color: #122b40;
+}
+
+.service-rent {
     color: #74acdf;
     /*-webkit-text-stroke: 0.5px #afafaf;*/
+}
+
+.service-park {
+    color: #498d19;
+}
+
+.service-elec {
+    color: #e8a135;
 }
 
 /*Buttons:*/
@@ -446,18 +431,6 @@
     /*color: white;*/
 }
 
-/*Carousel*/
-.carousel-container {
-    height: 93vh;
-}
-
-.coverImg {
-    height: 93vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
 /*Sections*/
 
 .section-light {
@@ -468,45 +441,6 @@
 .section-light h1 {
     /*background: #74acdf;*/
     color: #122b40;
-}
-
-.position-top {
-    top: 7vh;
-    right: 0;
-}
-
-@media screen and (max-width: 740px) {
-    .coverImg {
-        height: 70vh;
-    }
-
-    .position-top {
-        top: 7vh;
-    }
-
-    .carousel-container {
-        height: 70vh;
-    }
-
-    .carousel-caption {
-        left: 0;
-    }
-
-    .carousel-caption h1 {
-        font-size: 34px
-    }
-
-    .carousel-caption h3 {
-        font-size: 22px
-    }
-
-    .carousel-caption img {
-        max-height: 36px;
-    }
-
-    .carousel-caption button {
-        padding: 0
-    }
 }
 
 /*"If [device width] is less than or equal to 640px, then do {...}"*/

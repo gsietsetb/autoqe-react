@@ -1,40 +1,50 @@
 import React from "react";
 import {Carousel, Glyphicon, Label} from "react-bootstrap";
-
-import carpBanner from "../../img/header/carpool.jpg";
-import carBanner from "../../img/header/rental.jpg";
-import parkBanner from "../../img/header/parking.jpg";
-import elecBanner from "../../img/header/elec.jpg";
-
-import trip from "../../img/logo/carp_g.svg";
-import car from "../../img/logo/car_g.svg";
-import park from "../../img/logo/park_g.svg";
-import elec from "../../img/logo/elec_g.svg";
 import {Link} from "react-router-dom";
+import "./carousel.css"
+// //Banners
+// import carpBanner from "../../img/header/carpool.jpg";
+// import carBanner from "../../img/header/rent.jpg";
+// import parkBanner from "../../img/header/parking.jpg";
+// import elecBanner from "../../img/header/elec.jpg";
+//Icons
+import carp from "../../img/icons/services/carp.svg";
+import rent from "../../img/icons/services/rent.svg";
+import park from "../../img/icons/services/park.svg";
+import el from "../../img/icons/services/el.svg";
 
-const styles = {
-    coverImgCarp: {
-        backgroundPosition: 'top',
-        backgroundImage: 'url(' + carpBanner + ')',
-    },
-    coverImgCar: {
-        backgroundImage: 'url(' + carBanner + ')',
-    },
-    coverImgPark: {
-        backgroundPosition: 'top',
-        backgroundImage: 'url(' + parkBanner + ')',
-    },
-    coverImgElec: {
-        backgroundPosition: 'bottom',
-        backgroundImage: 'url(' + elecBanner + ')',
-    }
-};
+// const styles = {
+//     coverImgCarp: {
+//         backgroundPosition: 'top',
+//         backgroundImage: 'url(' + carpBanner + ')',
+//     },
+//     coverImgCar: {
+//         backgroundImage: 'url(' + carBanner + ')',
+//     },
+//     coverImgPark: {
+//         backgroundPosition: 'top',
+//         backgroundImage: 'url(' + parkBanner + ')',
+//     },
+//     coverImgElec: {
+//         backgroundPosition: 'bottom',
+//         backgroundImage: 'url(' + elecBanner + ')',
+//     }
+// };
 
 export default class CarouselComp extends React.Component {
     // onLoadStart={(e) => this.setState({loading: true})}
     constructor(props) {
         super(props);
-        this.state = {imageStatus: 'loading'};
+        this.state = {
+            imageStatus: 'loading',
+            index: 0,
+            direction: 'next'
+        };
+        this._handleSelect = this._handleSelect.bind(this)
+    }
+
+    _handleSelect(selectedIndex) {
+        this.setState({index: selectedIndex});
     }
 
     handleImageLoaded() {
@@ -47,50 +57,60 @@ export default class CarouselComp extends React.Component {
 
     render() {
         return (
-            <Carousel className="carousel-container" interval={6000} onSelect={() => this.slide = false}>
+            <Carousel className="carousel-container" interval={1000} activeIndex={this.state.index}
+                      direction={this.state.direction} onSelect={this._handleSelect}>
                 {/*Carpooling*/}
-                <Carousel.Item style={styles.coverImgCarp} className="coverImg">
-                    <Carousel.Caption >
-                        <img src={trip}/>
-                        <h1>Carpooling: trayectos compartidos</h1>
-                        <h3>Compartí los gastos del viaje, ahorrá plata</h3>
-                    </Carousel.Caption>
+                <Carousel.Item animateIn animateOut index={0} className="coverImg cover-carp">
+                    <div className="deg-carp">
+                        <Carousel.Caption>
+                            <img alt="carpooling" src={carp}/>
+                            <h1>Carpooling: trayectos compartidos</h1>
+                            <h3>Ahorrá plata compartiendo los gastos del viaje</h3>
+                        </Carousel.Caption>
+                    </div>
                 </Carousel.Item>
 
                 {/*Car rental*/}
-                <Carousel.Item style={styles.coverImgCar} className="coverImg">
-                    <Carousel.Caption className="dark-color">
-                        <img src={car}/>
-                        <h1>Alquiler de Auto entre particulares</h1>
-                        <h3>Rentabilizá tu auto mientras no lo usás</h3>
-                    </Carousel.Caption>
+                <Carousel.Item index={1} className="coverImg cover-rent">
+                    <div className="deg-rent">
+                        <Carousel.Caption>
+                            <img alt="car rental" src={rent}/>
+                            <h1>Alquiler de Auto entre particulares</h1>
+                            <h3>Rentabilizá tu auto mientras no lo usás</h3>
+                        </Carousel.Caption>
+                    </div>
                 </Carousel.Item>
 
                 {/*Parking*/}
-                <Carousel.Item style={styles.coverImgPark} className="coverImg">
-                    <Carousel.Caption>
-                        <img src={park}/>
-                        <h1>Alquiler de Cocheras entre particulares</h1>
-                        <h3>Perdele el miedo a ir al centro en auto!</h3>
-                    </Carousel.Caption>
+                <Carousel.Item index={2} className="coverImg cover-park">
+                    <div className="deg-park">
+                        <Carousel.Caption>
+                            <img alt="parking rental" src={park}/>
+                            <h1>Alquiler de Cocheras entre particulares</h1>
+                            <h3>Perdele el miedo a ir al centro en auto!</h3>
+                        </Carousel.Caption>
+                    </div>
                 </Carousel.Item>
 
                 {/*Electric*/}
-                <Carousel.Item style={styles.coverImgElec} className="coverImg">
+                <Carousel.Item index={3} className="coverImg cover-elec">
                     {/*<iframe src="https://player.vimeo.com/video/129498278?autoplay=1&loop=1&title=0&byline=0&portrait=0" width="100%" height="800" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen/>*/}
-                    <Carousel.Caption className="dark-color">
-                        <img src={elec}/>
-                        <h1> Alquiler de <b>AUTOS ELÉCTRICOS</b> por horas</h1>
-                        <h3><Link to="/green">
-                            <Label bsSize="lg" bsStyle="success">
-                                <Glyphicon glyph="leaf"/> &nbsp;
-                                Ayudá al medioambiente!
-                            </Label>
-                        </Link>
-                            <p/>
-                            Dónde y cuándo lo necesités
-                        </h3>
-                    </Carousel.Caption>x
+                    <div className="deg-elec">
+                        <Carousel.Caption className="">
+                            <img alt="electric car" src={el}/>
+                            <h1> Alquiler de <b>AUTOS ELÉCTRICOS</b> por horas</h1>
+                            <h3>
+                                Dónde y cuándo lo necesités
+                                <p/>
+                                <Link to="/green">
+                                    <Label bsSize="lg" bsStyle="success">
+                                        <Glyphicon glyph="leaf"/> &nbsp;
+                                        Ayudá al medioambiente!
+                                    </Label>
+                                </Link>
+                            </h3>
+                        </Carousel.Caption>
+                    </div>
                 </Carousel.Item>
             </Carousel>
         );

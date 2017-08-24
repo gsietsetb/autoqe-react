@@ -1,0 +1,153 @@
+/* Carousel*/
+.carousel-container {
+    height: 83vh;
+}
+
+.coverImg {
+    height: 83vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /*background-image: url(../../img/header/carpool.jpg);*/
+
+}
+
+.cover-carp {
+    background-position: top;
+    background-image: url(../../img/banner/carp.jpg);
+}
+
+.cover-rent {
+    background-position: top;
+    background-image: url(../../img/banner/rent.jpg);
+}
+
+.cover-park {
+    background-position: top;
+    background-image: url(../../img/banner/park.jpg);
+}
+
+.cover-elec {
+    background-position: top;
+    background-image: url(../../img/banner/elec.jpg);
+}
+
+.header-title {
+    left: 0px;
+}
+
+.carousel-caption {
+    /*float: left!important;*/
+    text-align: left !important;
+    left: 3em !important;
+    margin-left: 1em !important;
+    /*width: 40vw;*/
+    max-width: 50vw;
+}
+
+.deg-carp {
+    height: 83vh;
+    width: 50vw;
+    /*background: -webkit-gradient(linear-gradient(right,#122b40, rgba(18, 43, 64, 0.59))) ;*/
+    background: -webkit-linear-gradient(left, var(--carpooling), rgba(18, 43, 64, 0)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, var(--carpooling), rgba(18, 43, 64, 0)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, var(--carpooling), rgba(18, 43, 64, 0.0)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, var(--carpooling), rgba(18, 43, 64, 0.0)); /* Standard syntax */
+    text-align: left;
+}
+
+.deg-rent {
+    height: 83vh;
+    width: 50vw;
+    /*background: -webkit-gradient(linear-gradient(right,#122b40, rgba(18, 43, 64, 0.59))) ;*/
+    background: -webkit-linear-gradient(left, var(--rent-transp), rgba(18, 43, 64, 0)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, var(--rent-transp), rgba(18, 43, 64, 0)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, var(--rent-transp), rgba(18, 43, 64, 0.0)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, var(--rent-transp), rgba(18, 43, 64, 0.0)); /* Standard syntax */
+    text-align: left;
+}
+
+.deg-park {
+    height: 83vh;
+    width: 50vw;
+    /*background: -webkit-gradient(linear-gradient(right,#122b40, rgba(18, 43, 64, 0.59))) ;*/
+    background: -webkit-linear-gradient(left, var(--park-transp), rgba(18, 43, 64, 0)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, var(--park-transp), rgba(18, 43, 64, 0)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, var(--park-transp), rgba(18, 43, 64, 0.0)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, var(--park-transp), rgba(18, 43, 64, 0.0)); /* Standard syntax */
+    text-align: left;
+}
+
+.deg-elec {
+    height: 83vh;
+    width: 80vw;
+    /*background: -webkit-gradient(linear-gradient(right,#122b40, rgba(18, 43, 64, 0.59))) ;*/
+    background: -webkit-linear-gradient(left, var(--elec-transp), rgba(18, 43, 64, 0)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, var(--elec-transp), rgba(18, 43, 64, 0)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, var(--elec-transp), rgba(18, 43, 64, 0.0)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, var(--elec-transp), rgba(18, 43, 64, 0.0)); /* Standard syntax */
+    text-align: left;
+}
+
+.carousel-caption h1 {
+    font-size: 34px;
+    font-family: 'Lemon/Milk', serif;
+}
+
+.carousel-caption h3 {
+    font-family: 'Lemon/Milk light', serif;
+    font-size: 22px
+}
+
+.carousel-caption img {
+    height: 80px;
+    margin-right: 12px;
+    background: white;
+    border-radius: 12px;
+    /*border-radius:99%;*/
+    padding: 0.5em;
+    /*max-height: 36px;*/
+}
+
+.position-top {
+    top: 7vh;
+    right: 0;
+}
+
+@media screen and (max-width: 740px) {
+    .coverImg {
+        height: 70vh;
+    }
+
+    .cover-carp {
+        background-position: right;
+    }
+
+    .position-top {
+        top: 7vh;
+    }
+
+    .carousel-container {
+        height: 70vh;
+    }
+
+    .carousel-caption {
+        /*left: 0;*/
+    }
+
+    .carousel-caption h1 {
+        font-size: 34px
+    }
+
+    .carousel-caption h3 {
+        font-size: 22px
+    }
+
+    .carousel-caption img {
+        max-height: 36px;
+    }
+
+    .carousel-caption button {
+        padding: 0
+    }
+}

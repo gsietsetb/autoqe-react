@@ -14,6 +14,14 @@ var _reactRouterDom = require("react-router-dom");
 
 var _reactBootstrap = require("react-bootstrap");
 
+var _Copyright = require("./Copyright");
+
+var _Copyright2 = _interopRequireDefault(_Copyright);
+
+var _reactResponsive = require("react-responsive");
+
+var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
+
 var _autoqe_txt_w = require("../../img/logo/autoqe_txt_w.svg");
 
 var _autoqe_txt_w2 = _interopRequireDefault(_autoqe_txt_w);
@@ -62,29 +70,21 @@ var _disc = require("../../img/icons/material/disc.svg");
 
 var _disc2 = _interopRequireDefault(_disc);
 
-var _carp_g = require("../../img/logo/carp_g.svg");
+var _carp = require("../../img/icons/services/carp.svg");
 
-var _carp_g2 = _interopRequireDefault(_carp_g);
+var _carp2 = _interopRequireDefault(_carp);
 
-var _car_g = require("../../img/logo/car_g.svg");
+var _rent = require("../../img/icons/services/rent.svg");
 
-var _car_g2 = _interopRequireDefault(_car_g);
+var _rent2 = _interopRequireDefault(_rent);
 
-var _park_g = require("../../img/logo/park_g.svg");
+var _park = require("../../img/icons/services/park.svg");
 
-var _park_g2 = _interopRequireDefault(_park_g);
+var _park2 = _interopRequireDefault(_park);
 
-var _elec_g = require("../../img/logo/elec_g.svg");
+var _el = require("../../img/icons/services/el.svg");
 
-var _elec_g2 = _interopRequireDefault(_elec_g);
-
-var _Copyright = require("./Copyright");
-
-var _Copyright2 = _interopRequireDefault(_Copyright);
-
-var _reactResponsive = require("react-responsive");
-
-var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
+var _el2 = _interopRequireDefault(_el);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -93,6 +93,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+//Icons
+
 
 var Footer = function (_Component) {
     _inherits(Footer, _Component);
@@ -162,7 +165,7 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", {height: 25, src: _carp_g2.default}),
+                                    _react2.default.createElement("img", {alt: "", height: 25, src: _carp2.default}),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         {to: "/trips"},
@@ -172,7 +175,7 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", {height: 25, src: _car_g2.default}),
+                                    _react2.default.createElement("img", {alt: "", height: 25, src: _rent2.default}),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         { to: "/carrent" },
@@ -182,7 +185,7 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", {height: 25, src: _park_g2.default}),
+                                    _react2.default.createElement("img", {alt: "", height: 25, src: _park2.default}),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         { to: "/parkrent" },
@@ -192,7 +195,7 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", {height: 25, src: _elec_g2.default}),
+                                    _react2.default.createElement("img", {alt: "", height: 25, src: _el2.default}),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         {to: "/electric"},
@@ -223,7 +226,11 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", {height: 25, src: _howWorks2.default}),
+                                    _react2.default.createElement("img", {
+                                        alt: "",
+                                        height: 25,
+                                        src: _howWorks2.default
+                                    }),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         {to: "/howWorks"},
@@ -233,7 +240,11 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", {height: 25, src: _questionMark2.default}),
+                                    _react2.default.createElement("img", {
+                                        alt: "",
+                                        height: 25,
+                                        src: _questionMark2.default
+                                    }),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         {to: "/faq"},
@@ -243,7 +254,7 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", {height: 25, src: _share2.default}),
+                                    _react2.default.createElement("img", {alt: "", height: 25, src: _share2.default}),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         {to: "/collaborative"},
@@ -253,7 +264,7 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", {height: 25, src: _leaf2.default}),
+                                    _react2.default.createElement("img", {alt: "", height: 25, src: _leaf2.default}),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         {to: "/green"},
@@ -276,7 +287,7 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", {height: 25, src: _world2.default}),
+                                    _react2.default.createElement("img", {alt: "", height: 25, src: _world2.default}),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         {to: "/next"},
@@ -286,7 +297,7 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", {height: 25, src: _design2.default}),
+                                    _react2.default.createElement("img", {alt: "", height: 25, src: _design2.default}),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         {to: "/design"},
@@ -296,7 +307,7 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", {height: 25, src: _code2.default}),
+                                    _react2.default.createElement("img", {alt: "", height: 25, src: _code2.default}),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         {to: "/dev"},
@@ -306,7 +317,7 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", {height: 25, src: _press2.default}),
+                                    _react2.default.createElement("img", {alt: "", height: 25, src: _press2.default}),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         {to: "/press"},
@@ -329,7 +340,7 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", {height: 25, src: _disc2.default}),
+                                    _react2.default.createElement("img", {alt: "", height: 25, src: _disc2.default}),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         {to: "/promotion"},
@@ -339,7 +350,11 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", { height: 25, src: _handShake2.default }),
+                                    _react2.default.createElement("img", {
+                                        alt: "",
+                                        height: 25,
+                                        src: _handShake2.default
+                                    }),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         {to: "/work"},
@@ -356,7 +371,7 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", {height: 25, src: _team2.default}),
+                                    _react2.default.createElement("img", {alt: "", height: 25, src: _team2.default}),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         {to: "/team"},
@@ -366,7 +381,7 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", {height: 25, src: _world2.default}),
+                                    _react2.default.createElement("img", {alt: "", height: 25, src: _world2.default}),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         {to: "/contact"},

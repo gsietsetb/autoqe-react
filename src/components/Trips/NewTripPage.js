@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from "prop-types"
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {browserHistory} from 'react-router-dom';
@@ -22,7 +23,7 @@ class NewTripPage extends React.Component {
     updateTripHobbies(event) {
         const trip = this.state.trip;
         const hobbyId = event.target.value;
-        const hobby = this.props.checkBoxHobbies.filter(hobby => hobby.id == hobbyId)[0];
+        const hobby = this.props.checkBoxHobbies.filter(hobby => hobby.id === hobbyId)[0];
         const checked = !hobby.checked;
         hobby['checked'] = !hobby.checked;
         if (checked) {

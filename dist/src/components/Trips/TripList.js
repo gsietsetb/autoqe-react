@@ -8,6 +8,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _TripListRow = require('./TripListRow');
 
 var _TripListRow2 = _interopRequireDefault(_TripListRow);
@@ -27,7 +31,7 @@ var TripList = function TripList(_ref) {
 };
 
 TripList.propTypes = {
-    trips: _react.PropTypes.array.isRequired
+    trips: _propTypes2.default.array.isRequired
 };
 
 exports.default = TripList;
