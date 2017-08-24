@@ -38,9 +38,9 @@ var _users = require("../../img/icons/material/users.svg");
 
 var _users2 = _interopRequireDefault(_users);
 
-var _secure_pay_w = require("../../img/icons/material/secure_pay_w.svg");
+var _secure_pay = require("../../img/icons/material/secure_pay.svg");
 
-var _secure_pay_w2 = _interopRequireDefault(_secure_pay_w);
+var _secure_pay2 = _interopRequireDefault(_secure_pay);
 
 var _loc = require("../../img/icons/material/loc2.svg");
 
@@ -267,10 +267,10 @@ var HowCarpooling = function (_React$Component) {
                                                 null,
                                                 "Busca y reserva con un m\xE9todo de \xA0",
                                                 _react2.default.createElement(
-                                                    _reactBootstrap.Label,
-                                                    {bsStyle: "success"},
+                                                    _reactBootstrap.Button,
+                                                    {className: "btn-green", bsStyle: "success"},
                                                     _react2.default.createElement("img", {
-                                                        src: _secure_pay_w2.default,
+                                                        src: _secure_pay2.default,
                                                         height: 25
                                                     }),
                                                     "\xA0 Pago seguro"

@@ -3,8 +3,8 @@
   "name": "Autoqe, Auto al Toque",
   "icons": [
     {
-      "src": "autoqe.png",
-      "sizes": "192x192",
+      "src": "autoqe_circ.png",
+      "sizes": "454x460",
       "type": "image/png"
     }
   ],

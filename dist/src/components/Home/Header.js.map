@@ -1,0 +1,31 @@
+{
+  "version": 3,
+  "sources": [
+    "../../../../src/components/home/Header.js"
+  ],
+  "names": [
+    "styles",
+    "coverImgCarp",
+    "backgroundImage",
+    "coverImgCar",
+    "coverImgPark",
+    "coverImgElec",
+    "backgroundPosition",
+    "darkText",
+    "color",
+    "labeledButton",
+    "backgroundColor",
+    "subButton",
+    "HeaderComp",
+    "props",
+    "state",
+    "imageStatus",
+    "setState",
+    "Component"
+  ],
+  "mappings": ";;;;;;;;AAAA;;;;AACA;;AAEA;;;;AACA;;;;AACA;;;;AACA;;;;AACA;;;;;;;;;;;;AAEA,IAAMA,SAAS;AACXC,kBAAc;AACVC,yBAAiB,4BAAsB;AAD7B,KADH;AAIXC,iBAAa;AACTD,yBAAiB,4BAAqB;AAD7B,KAJF;AAOXE,kBAAc;AACVF,yBAAiB,6BAAsB;AAD7B,KAPH;AAUXG,kBAAc;AACVH,yBAAiB,0BAAsB,GAD7B;AAEVI,4BAAoB;AAFV,KAVH;AAcXC,cAAU;AACNC,eAAO;AADD,KAdC;AAiBXC,mBAAe;AACXC,yBAAiB;AADN,KAjBJ;AAoBXC,eAAW;AACPH,eAAO,OADA;AAEPE,yBAAiB;AAFV;AApBA,CAAf;;AA0BA;;IAEqBE,U;;;AACjB;AACA,wBAAYC,KAAZ,EAAmB;AAAA;;AAAA,4HACTA,KADS;;AAEf,cAAKC,KAAL,GAAa,EAACC,aAAa,SAAd,EAAb;AAFe;AAGlB;;;;4CAEmB;AAChB,iBAAKC,QAAL,CAAc,EAACD,aAAa,QAAd,EAAd;AACH;;;6CAEoB;AACjB,iBAAKC,QAAL,CAAc,EAACD,aAAa,gBAAd,EAAd;AACH;;;iCAEQ;AACL,mBACI;AAAA;AAAA;AACI,uEADJ;AAEI;AAAA,wCAAK,SAAL;AAAA,sBAAe,IAAG,mBAAlB,EAAsC,kBAAiB,OAAvD;AACI;AAAA;AAAA,0BAAK,WAAU,UAAf;AAGI;AAAA;AAAA,8BAAK,IAAI,CAAT;AACI;AAAA;AAAA,kCAAK,SAAQ,OAAb,EAAqB,aAArB;AACI;AAAA;AAAA,sCAAS,UAAS,OAAlB;AAAA;AAAA,iCADJ;AAII;AAAA;AAAA,sCAAS,UAAS,QAAlB;AAAA;AAAA;AAJJ;AADJ,yBAHJ;AAaI;AAAA;AAAA,8BAAK,IAAI,CAAT;AACI;AAAA,oDAAK,OAAL;AAAA,kCAAa,eAAb;AACI;AAAA,wDAAK,IAAL;AAAA,sCAAU,UAAS,OAAnB;AAAA;AAAA,iCADJ;AAII;AAAA,wDAAK,IAAL;AAAA,sCAAU,UAAS,QAAnB;AAAA;AAAA;AAJJ;AADJ;AAbJ;AADJ;AAFJ,aADJ;AA+BH;;;;EA/CmC,gBAAME,S;;kBAAzBL,U",
+  "file": "Header.js",
+  "sourcesContent": [
+    "import React from \"react\";\nimport {Col, Nav, NavItem, Row, Tab} from \"react-bootstrap\";\n\nimport carpBanner from \"../../img/banner/banner11.jpg\";\nimport carBanner from \"../../img/banner/banner2.jpg\";\nimport parkBanner from \"../../img/banner/parking2.jpg\";\nimport elecBanner from \"../../img/banner/elec.jpg\";\nimport CarouselComp from \"./Carousel\";\n\nconst styles = {\n    coverImgCarp: {\n        backgroundImage: 'url(' + carpBanner + ')',\n    },\n    coverImgCar: {\n        backgroundImage: 'url(' + carBanner + ')',\n    },\n    coverImgPark: {\n        backgroundImage: 'url(' + parkBanner + ')',\n    },\n    coverImgElec: {\n        backgroundImage: 'url(' + elecBanner + ')',\n        backgroundPosition: 'bottom'\n    },\n    darkText: {\n        color: '#122b40'\n    },\n    labeledButton: {\n        backgroundColor: 'rgba(224, 253, 255, 0.4)'\n    },\n    subButton: {\n        color: 'white',\n        backgroundColor: 'rgba(116, 172, 223,0.2)'\n    }\n};\n\n// bootstrapUtils.addStyle(Label, 'white');\n\nexport default class HeaderComp extends React.Component {\n    // onLoadStart={(e) => this.setState({loading: true})}\n    constructor(props) {\n        super(props);\n        this.state = {imageStatus: 'loading'};\n    }\n\n    handleImageLoaded() {\n        this.setState({imageStatus: 'loaded'});\n    }\n\n    handleImageErrored() {\n        this.setState({imageStatus: 'failed to load'});\n    }\n\n    render() {\n        return (\n            <div>\n                <CarouselComp/>\n                <Tab.Container id=\"left-tabs-example\" defaultActiveKey=\"first\">\n                    <Row className=\"clearfix\">\n\n\n                        <Col sm={4}>\n                            <Nav bsStyle=\"pills\" stacked>\n                                <NavItem eventKey=\"first\">\n                                    Tab 1\n                                </NavItem>\n                                <NavItem eventKey=\"second\">\n                                    Tab 2\n                                </NavItem>\n                            </Nav>\n                        </Col>\n                        <Col sm={8}>\n                            <Tab.Content animation>\n                                <Tab.Pane eventKey=\"first\">\n                                    Tab 1 content\n                                </Tab.Pane>\n                                <Tab.Pane eventKey=\"second\">\n                                    Tab 2 content\n                                </Tab.Pane>\n                            </Tab.Content>\n                        </Col>\n                    </Row>\n                </Tab.Container>\n            </div>\n        );\n    }\n}\n"
+  ]
+}

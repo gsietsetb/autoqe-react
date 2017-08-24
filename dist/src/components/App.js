@@ -18,9 +18,9 @@ var _auth0Lock = require('auth0-lock');
 
 var _auth0Lock2 = _interopRequireDefault(_auth0Lock);
 
-var _Header = require('./common/Header');
+var _Navbar = require('./common/Navbar');
 
-var _Header2 = _interopRequireDefault(_Header);
+var _Navbar2 = _interopRequireDefault(_Navbar);
 
 var _Footer = require('./common/Footer');
 
@@ -72,7 +72,7 @@ var AppComponent = function (_Component) {
             return _react2.default.createElement(
                 'div',
                 null,
-                _react2.default.createElement(_Header2.default, { lock: this.lock }),
+                _react2.default.createElement(_Navbar2.default, {lock: this.lock}),
                 _react2.default.createElement(_Routes2.default, { history: this.props.history }),
                 _react2.default.createElement(_Footer2.default, null)
             );

@@ -20,9 +20,9 @@ export default class TalkAboutComp extends React.Component {
                             {/*Aparecé aquí</Label>*/}
                         </h3>
                     </div>
-                    <Image src={baires} className="brand-logo"/> &nbsp; &nbsp; &nbsp;
-                    <Image src={sura} className="brand-logo"/> &nbsp; &nbsp; &nbsp;
-                    <Image src={colon} className="brand-logo"/> &nbsp; &nbsp; &nbsp;
+                    <Image src={colon} className="brand-logo"/>
+                    <Image src={baires} className="brand-logo"/>
+                    <Image src={sura} className="brand-logo"/>
                 </header>
             </section>
         );

@@ -117,19 +117,19 @@ var styles = {
 // Default (desktop, tablet) and mobile setup
 var Huge = function Huge(_ref) {
     var children = _ref.children;
-    return _react2.default.createElement(_reactResponsive2.default, {minWidth: 1218, children: children});
+    return _react2.default.createElement(_reactResponsive2.default, { minWidth: 1218, children: children });
 };
 var Tablet = function Tablet(_ref2) {
     var children = _ref2.children;
-    return _react2.default.createElement(_reactResponsive2.default, {minWidth: 860, children: children});
+    return _react2.default.createElement(_reactResponsive2.default, { minWidth: 860, children: children });
 };
 var Default = function Default(_ref3) {
     var children = _ref3.children;
-    return _react2.default.createElement(_reactResponsive2.default, {minWidth: 768, children: children});
+    return _react2.default.createElement(_reactResponsive2.default, { minWidth: 768, children: children });
 };
 var Mobile = function Mobile(_ref4) {
     var children = _ref4.children;
-    return _react2.default.createElement(_reactResponsive2.default, {maxWidth: 768, children: children});
+    return _react2.default.createElement(_reactResponsive2.default, { maxWidth: 768, children: children });
 };
 
 var HeaderComp = function (_Component) {
@@ -204,11 +204,11 @@ var HeaderComp = function (_Component) {
                         null,
                         _react2.default.createElement(
                             _reactBootstrap.Navbar.Brand,
-                            {pullLeft: true, className: 'logo'},
+                            { pullLeft: true, className: 'logo' },
                             _react2.default.createElement(
                                 _reactRouterDom.Link,
-                                {to: '/'},
-                                _react2.default.createElement('img', {src: _autoqe_txt2.default, alt: 'autoqe'})
+                                { to: '/' },
+                                _react2.default.createElement('img', { src: _autoqe_txt2.default, alt: 'autoqe' })
                             )
                         ),
                         _react2.default.createElement(_reactBootstrap.Navbar.Toggle, null)
@@ -310,10 +310,7 @@ var HeaderComp = function (_Component) {
                                                 _react2.default.createElement(_reactRotatingText2.default, {
                                                     items: ['Trayecto', 'Auto', 'Cochera'] })
                                             ),
-                                            _react2.default.createElement(_reactBootstrap.FormControl, {
-                                                type: 'text',
-                                                placeholder: 'Mar del Plata'
-                                            }),
+                                            _react2.default.createElement(_reactBootstrap.FormControl, { type: 'text', placeholder: 'Mar del Plata' }),
                                             _react2.default.createElement(
                                                 _reactBootstrap.InputGroup.Addon,
                                                 null,
@@ -328,7 +325,7 @@ var HeaderComp = function (_Component) {
                                 { onClick: this.login, style: { marginTop: -5 }, eventKey: 5, href: '#' },
                                 _react2.default.createElement(
                                     _reactBootstrap.Button,
-                                    {className: 'btn-light_w', type: 'submit'},
+                                    { className: 'btn-light_w', type: 'submit' },
                                     'LogIn'
                                 )
                             ) : _react2.default.createElement(
@@ -416,4 +413,4 @@ function mapDispatchToProps(dispatch) {
     };
 }
 exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(HeaderComp);
-//# sourceMappingURL=Header.js.map
+//# sourceMappingURL=Navbar.js.map

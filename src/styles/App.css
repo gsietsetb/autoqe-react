@@ -1,3 +1,22 @@
+
+.colors {
+    --Primary: #122b40;
+    --Secondary: #74acdf;
+    --Carpooling: #122b40;
+    --Rental: #74acdf;
+    --Parking: #498d19;
+    --Elec: #e8a135;
+}
+
+@font-face {
+    font-family: 'Lemon/Milk';
+    src: url("fonts/LemonMilk.otf"); /* IE9 Compat Modes */
+    /*src: url("webfont.eot?#iefix") format("embedded-opentype"), !* IE6-IE8 *!*/
+    /*url("webfont.woff") format("woff"), !* Modern Browsers *!*/
+    /*url("webfont.ttf")  format("truetype"), !* Safari, Android, iOS *!*/
+    /*url("webfont.svg#svgFontName") format("svg"); !* Legacy iOS *!*/
+}
+
 .App {
     text-align: center;
     margin: 5vh 10vh;
@@ -20,7 +39,7 @@
     height: 80px;
 }
 
-/*Header NavBar*/
+/*NavBar*/
 
 .box {
     display: inline;
@@ -67,7 +86,43 @@
     display: inline-flex !important;
 }
 
+.header-title {
+    left: 0px;
+    text-align: left;
+
+}
+
+/* Carousel*/
+
+.carousel-caption {
+    text-align: left;
+    left: 2vw;
+    margin: 1em;
+    max-width: 25vw;
+}
+
+.carousel-caption h1 {
+    font-size: 34px;
+    font-family: 'Lemon/Milk', serif;
+}
+
+.carousel-caption h3 {
+    font-family: 'Lemon/Milk light', serif;
+    font-size: 22px
+}
+
+.carousel-caption img {
+    height: 80px;
+    margin-right: 12px;
+    /*max-height: 36px;*/
+}
+
 /*Icons*/
+.header-icon {
+    height: 120px;
+    margin-right: 12px;
+}
+
 .main-icon {
     height: 45px;
     margin-right: 12px;
@@ -80,6 +135,10 @@
 
 .icon-glyph {
     margin-right: 6px;
+}
+
+.dark-color {
+    color: #122b40;
 }
 
 /*Text*/
@@ -113,6 +172,13 @@
 
 .brand-logo {
     height: 60px;
+    margin-right: 2em;
+}
+
+.btn-green {
+    background: transparent;
+    color: #122b40;
+    border: 1px dotted #122b40;
 }
 
 .btn-driver {
@@ -382,11 +448,11 @@
 
 /*Carousel*/
 .carousel-container {
-    height: 80vh;
+    height: 93vh;
 }
 
 .coverImg {
-    height: 80vh;
+    height: 93vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -423,11 +489,11 @@
     }
 
     .carousel-caption {
-        left: 3vw;
+        left: 0;
     }
 
-    .carousel-caption h2 {
-        font-size: 26px
+    .carousel-caption h1 {
+        font-size: 34px
     }
 
     .carousel-caption h3 {

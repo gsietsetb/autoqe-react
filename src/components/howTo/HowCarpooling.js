@@ -1,9 +1,9 @@
 import React from "react";
-import {Button, Collapse, Glyphicon, Grid, Label, Row, ToggleButton, ToggleButtonGroup} from "react-bootstrap";
+import {Button, Collapse, Glyphicon, Grid, Row, ToggleButton, ToggleButtonGroup} from "react-bootstrap";
 import "./timeline.css";
 import volante from "../../img/icons/material/steering-wheel.svg";
 import users from "../../img/icons/material/users.svg";
-import pay from "../../img/icons/material/secure_pay_w.svg";
+import pay from "../../img/icons/material/secure_pay.svg";
 
 import locDriver from "../../img/icons/material/loc2.svg";
 import locUser from "../../img/icons/material/loc4.svg";
@@ -88,10 +88,10 @@ export default class HowCarpooling extends React.Component {
                                         <div className="timeline-heading">
                                             <h2 className="subheading">1. Encuentra y Reserva</h2>
                                             <h4>Busca y reserva con un método de &nbsp;
-                                                <Label bsStyle="success">
+                                                <Button className="btn-green" bsStyle="success">
                                                     <img src={pay} height={25}/>&nbsp;
                                                     Pago seguro
-                                                </Label>
+                                                </Button>
                                             </h4>
                                             <p> Filtra las opciones deseadas</p>
                                             <Button className="btn-light_w">

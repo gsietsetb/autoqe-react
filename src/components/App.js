@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/App.css'
 import Auth0Lock from 'auth0-lock';
-import NavbarComponent from "./common/Header";
+import NavbarComponent from "./common/Navbar";
 import Footer from "./common/Footer";
 import Main from "./Routes";
 

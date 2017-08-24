@@ -12,19 +12,19 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactBootstrap = require("react-bootstrap");
 
-var _banner = require("../../img/banner/banner11.jpg");
+var _carpool = require("../../img/header/carpool.jpg");
 
-var _banner2 = _interopRequireDefault(_banner);
+var _carpool2 = _interopRequireDefault(_carpool);
 
-var _banner3 = require("../../img/banner/banner2.jpg");
+var _rental = require("../../img/header/rental.jpg");
 
-var _banner4 = _interopRequireDefault(_banner3);
+var _rental2 = _interopRequireDefault(_rental);
 
-var _parking = require("../../img/banner/parking2.jpg");
+var _parking = require("../../img/header/parking.jpg");
 
 var _parking2 = _interopRequireDefault(_parking);
 
-var _elec = require("../../img/banner/elec.jpg");
+var _elec = require("../../img/header/elec.jpg");
 
 var _elec2 = _interopRequireDefault(_elec);
 
@@ -44,10 +44,6 @@ var _elec_g = require("../../img/logo/elec_g.svg");
 
 var _elec_g2 = _interopRequireDefault(_elec_g);
 
-var _reactRotatingText = require("react-rotating-text");
-
-var _reactRotatingText2 = _interopRequireDefault(_reactRotatingText);
-
 var _reactRouterDom = require("react-router-dom");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -60,31 +56,21 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var styles = {
     coverImgCarp: {
-        backgroundImage: 'url(' + _banner2.default + ')'
+        backgroundPosition: 'top',
+        backgroundImage: 'url(' + _carpool2.default + ')'
     },
     coverImgCar: {
-        backgroundImage: 'url(' + _banner4.default + ')'
+        backgroundImage: 'url(' + _rental2.default + ')'
     },
     coverImgPark: {
+        backgroundPosition: 'top',
         backgroundImage: 'url(' + _parking2.default + ')'
     },
     coverImgElec: {
-        backgroundImage: 'url(' + _elec2.default + ')',
-        backgroundPosition: 'bottom'
-    },
-    darkText: {
-        color: '#122b40'
-    },
-    labeledButton: {
-        backgroundColor: 'rgba(224, 253, 255, 0.4)'
-    },
-    subButton: {
-        color: 'white',
-        backgroundColor: 'rgba(116, 172, 223,0.2)'
+        backgroundPosition: 'bottom',
+        backgroundImage: 'url(' + _elec2.default + ')'
     }
 };
-
-// bootstrapUtils.addStyle(Label, 'white');
 
 var CarouselComp = function (_React$Component) {
     _inherits(CarouselComp, _React$Component);
@@ -125,28 +111,16 @@ var CarouselComp = function (_React$Component) {
                     _react2.default.createElement(
                         _reactBootstrap.Carousel.Caption,
                         null,
+                        _react2.default.createElement("img", {src: _carp_g2.default}),
                         _react2.default.createElement(
-                            "h2",
-                            { style: { fontFamily: 'AllertaStencil' } },
-                            _react2.default.createElement(
-                                _reactBootstrap.Label,
-                                { bsSize: "lg", className: "btn-white" },
-                                _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "search" }),
-                                " \xA0 \xA0",
-                                _react2.default.createElement(_reactRotatingText2.default, { items: [' Encontrá ', ' Publicá ', ' Compartí '] }),
-                                " \xA0 \xA0",
-                                _react2.default.createElement("img", { height: 60, src: _carp_g2.default }),
-                                "\xA0 TRAYECTO"
-                            )
+                            "h1",
+                            null,
+                            "Carpooling: trayectos compartidos"
                         ),
                         _react2.default.createElement(
                             "h3",
                             null,
-                            _react2.default.createElement(
-                                _reactBootstrap.Label,
-                                {bsSize: "lg", className: "btn-light_w"},
-                                "Compart\xED los gastos del viaje, ahorr\xE1 plata"
-                            )
+                            "Compart\xED los gastos del viaje, ahorr\xE1 plata"
                         )
                     )
                 ),
@@ -155,28 +129,17 @@ var CarouselComp = function (_React$Component) {
                     { style: styles.coverImgCar, className: "coverImg" },
                     _react2.default.createElement(
                         _reactBootstrap.Carousel.Caption,
-                        null,
+                        {className: "dark-color"},
+                        _react2.default.createElement("img", {src: _car_g2.default}),
                         _react2.default.createElement(
-                            "h2",
-                            { style: { fontFamily: 'AllertaStencil' } },
-                            _react2.default.createElement(
-                                _reactBootstrap.Label,
-                                { bsSize: "lg", className: "btn-white" },
-                                _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "search" }),
-                                _react2.default.createElement(_reactRotatingText2.default, { items: [' Alquilá tu ', ' Encontrá '] }),
-                                " \xA0 \xA0",
-                                _react2.default.createElement("img", { src: _car_g2.default, height: 60 }),
-                                "\xA0 AUTO"
-                            )
+                            "h1",
+                            null,
+                            "Alquiler de Auto entre particulares"
                         ),
                         _react2.default.createElement(
                             "h3",
                             null,
-                            _react2.default.createElement(
-                                _reactBootstrap.Label,
-                                {bsSize: "lg", className: "btn-light_w"},
-                                "Alquiler de Auto entre particulares"
-                            )
+                            "Rentabiliz\xE1 tu auto mientras no lo us\xE1s"
                         )
                     )
                 ),
@@ -186,27 +149,16 @@ var CarouselComp = function (_React$Component) {
                     _react2.default.createElement(
                         _reactBootstrap.Carousel.Caption,
                         null,
+                        _react2.default.createElement("img", {src: _park_g2.default}),
                         _react2.default.createElement(
-                            "h2",
-                            { style: { fontFamily: 'AllertaStencil' } },
-                            _react2.default.createElement(
-                                _reactBootstrap.Label,
-                                { bsSize: "lg", className: "btn-white" },
-                                _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "search" }),
-                                _react2.default.createElement(_reactRotatingText2.default, { items: [' Alquilá tu ', ' Encontrá '] }),
-                                " \xA0 \xA0",
-                                _react2.default.createElement("img", { src: _park_g2.default, height: 60 }),
-                                "\xA0 COCHERA"
-                            )
+                            "h1",
+                            null,
+                            "Alquiler de Cocheras entre particulares"
                         ),
                         _react2.default.createElement(
                             "h3",
                             null,
-                            _react2.default.createElement(
-                                _reactBootstrap.Label,
-                                {bsSize: "lg", className: "btn-light_w"},
-                                "Alquiler de Cocheras entre particulares"
-                            )
+                            "Perdele el miedo a ir al centro en auto!"
                         )
                     )
                 ),
@@ -215,19 +167,18 @@ var CarouselComp = function (_React$Component) {
                     { style: styles.coverImgElec, className: "coverImg" },
                     _react2.default.createElement(
                         _reactBootstrap.Carousel.Caption,
-                        { className: "position-top" },
+                        {className: "dark-color"},
+                        _react2.default.createElement("img", {src: _elec_g2.default}),
                         _react2.default.createElement(
-                            "h2",
-                            { style: { fontFamily: 'AllertaStencil' } },
+                            "h1",
+                            null,
+                            " Alquiler de ",
                             _react2.default.createElement(
-                                _reactBootstrap.Label,
-                                { bsSize: "lg", className: "btn-white" },
-                                _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "search" }),
-                                _react2.default.createElement(_reactRotatingText2.default, { items: [' Alquilá un', ' Encontrá un '] }),
-                                " \xA0 \xA0",
-                                _react2.default.createElement("img", { src: _elec_g2.default, height: 60 }),
-                                "\xA0 AUTO EL\xC9CTRICO"
-                            )
+                                "b",
+                                null,
+                                "AUTOS EL\xC9CTRICOS"
+                            ),
+                            " por horas"
                         ),
                         _react2.default.createElement(
                             "h3",
@@ -243,11 +194,7 @@ var CarouselComp = function (_React$Component) {
                                 )
                             ),
                             _react2.default.createElement("p", null),
-                            _react2.default.createElement(
-                                _reactBootstrap.Label,
-                                {bsSize: "lg", bsStyle: "warning"},
-                                "D\xF3nde y cu\xE1ndo lo necesit\xE9s"
-                            )
+                            "D\xF3nde y cu\xE1ndo lo necesit\xE9s"
                         )
                     ),
                     "x"

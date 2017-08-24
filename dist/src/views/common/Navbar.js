@@ -363,4 +363,4 @@ var NavbarComponent = function (_Component) {
 }(_react.Component);
 
 exports.default = NavbarComponent;
-//# sourceMappingURL=Header.js.map
+//# sourceMappingURL=Navbar.js.map

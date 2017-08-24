@@ -54,6 +54,24 @@
     /*color: #122b40 !important;*/
 }
 
+@media (min-width: 992px) {
+
+    .timeline-background:before {
+        top: 64px;
+    }
+
+    .timeline-number-driver {
+        top: -6px;
+        /*color: #74acdf !important;*/
+    }
+
+    .timeline-number-user {
+        top: 4px;
+        /*color: #122b40 !important;*/
+    }
+
+}
+
 .timeline-title-driver {
     /*background-color: #122b40 !important;*/
     /*font-weight: 900;*/
