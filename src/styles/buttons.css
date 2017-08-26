@@ -1,0 +1,92 @@
+
+.social-btns {
+    margin: 25px 0
+}
+
+/*Main buttons:*/
+.btn-light_w {
+    background: var(--rental);
+    color: #ffffff;
+}
+
+.btn-service {
+    background: #afafaf;
+    color: var(--carpooling);
+}
+
+.btn-light {
+    border: 1px var(--rental);
+    background: white;
+    color: var(--carpooling);
+}
+
+.btn-dark {
+    background: var(--carpooling);
+    color: #ffffff;
+}
+
+.forGirls {
+    background: #ED1CAF;
+    color: #ffffff;
+}
+
+.btn-nope {
+    background: #afafafaf;
+    color: var(--carpooling);
+}
+
+.btn-white {
+    padding: 1em 1em;
+    background: #ffffff;
+    color: var(--rental);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+}
+
+.btn-primary {
+    background: var(--carpooling);
+    /*color: white;*/
+}
+
+.btn-green {
+    background: transparent;
+    color: var(--carpooling);
+    border: 1px dotted var(--carpooling);
+}
+
+.btn-driver {
+    background: -webkit-linear-gradient(left, var(--carpooling), var(--rental));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /*background: transparent;*/
+    /*padding: 0.2em 0.4em;*/
+    /*border: 2px solid transparent;*/
+    /*-moz-border-image: -moz-linear-gradient(top left,  var(--carpooling) 0%,  var(--rental) 100%);*/
+    /*-webkit-border-image: -webkit-linear-gradient(top left,  var(--carpooling) 0%,  var(--rental) 100%);*/
+    /*border-image: linear-gradient(to bottom right,  var(--carpooling) 0%,  var(--rental) 100%);*/
+    /*border-image-slice: 1;*/
+}
+
+.btn-user {
+    background: -webkit-linear-gradient(left, var(--rental), var(--carpooling));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /*background: transparent;*/
+    /*padding: 0.2em 0.4em;*/
+    /*border: 2px solid transparent;*/
+    /*-moz-border-image: -moz-linear-gradient(top left,  var(--carpooling) 0%,  var(--rental) 100%);*/
+    /*-webkit-border-image: -webkit-linear-gradient(top left,  var(--carpooling) 0%,  var(--rental) 100%);*/
+    /*border-image: linear-gradient(to bottom right,  var(--carpooling) 0%,  var(--rental) 100%);*/
+    /*border-image-slice: 1;*/
+}
+
+.btn-degr-dark {
+    background: transparent;
+    padding: 0.2em 0.4em;
+    border: 2px solid transparent;
+    -moz-border-image: -moz-linear-gradient(bottom right, var(--carpooling) 0%, var(--rental) 100%);
+    -webkit-border-image: -webkit-linear-gradient(bottom right, var(--carpooling) 0%, var(--rental) 100%);
+    border-image: linear-gradient(to bottom right, var(--carpooling) 0%, var(--rental) 100%);
+    border-image-slice: 1;
+}

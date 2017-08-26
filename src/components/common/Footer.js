@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import {Link} from "react-router-dom";
 import {Col, Image, Label, Row} from "react-bootstrap";
-import Copyright from "./Copyright";
 import MediaQuery from "react-responsive";
 
 import logo_side from "../../img/logo/autoqe_txt_w.svg"
@@ -16,6 +15,7 @@ import quest from "../../img/icons/material/question-mark.svg"
 import leaf from "../../img/icons/material/leaf.svg"
 import team from "../../img/icons/material/team.svg"
 import disc from "../../img/icons/material/disc.svg"
+import "./footer.css"
 //Icons
 import carp from "../../img/icons/services/carp.svg";
 import rent from "../../img/icons/services/rent.svg";
@@ -107,7 +107,8 @@ class Footer extends Component {
                         </h2>
                     </Row>
                     <Row>
-                        <Copyright/>
+                        <p style={{textAlign: 'center'}}>Autoqe.com © 2017 - Todos los derechos reservados. Creado entre
+                            Buenos Aires y Barcelona </p>
                     </Row>
                 </section>
             </footer>

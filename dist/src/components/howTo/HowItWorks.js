@@ -12,13 +12,13 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactBootstrap = require("react-bootstrap");
 
-var _interrog = require("../../img/icons/material/interrog.svg");
-
-var _interrog2 = _interopRequireDefault(_interrog);
-
 var _HowCarpooling = require("./HowCarpooling");
 
 var _HowCarpooling2 = _interopRequireDefault(_HowCarpooling);
+
+var _reactResponsive = require("react-responsive");
+
+var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
 
 var _carp = require("../../img/icons/services/carp.svg");
 
@@ -36,6 +36,10 @@ var _el = require("../../img/icons/services/el.svg");
 
 var _el2 = _interopRequireDefault(_el);
 
+var _interrog = require("../../img/icons/material/interrog.svg");
+
+var _interrog2 = _interopRequireDefault(_interrog);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -49,7 +53,10 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 // import MediaQuery from "react-responsive";
 
 // const Default = ({children}) => <Responsive minWidth={768} children={children}/>;
-// const Mobile = ({children}) => <Responsive maxWidth={768} children={children}/>;
+var Mobile = function Mobile(_ref) {
+    var children = _ref.children;
+    return _react2.default.createElement(_reactResponsive2.default, {maxWidth: 768, children: children});
+};
 // var MediaQuery = require('react-responsive');
 
 
@@ -103,7 +110,7 @@ var HowWorksComp = function (_React$Component) {
                                                 "\xA0",
                                                 _react2.default.createElement(
                                                     "b",
-                                                    null,
+                                                    {className: "avoid-if-small"},
                                                     "Carpooling"
                                                 )
                                             ) },
@@ -113,25 +120,52 @@ var HowWorksComp = function (_React$Component) {
                                             "span",
                                             { className: "service-rent" },
                                             _react2.default.createElement("img", { alt: "", src: _rent2.default, className: "main-icon" }),
-                                            "\xA0 Alquiler de Autos"
+                                        "\xA0",
+                                        _react2.default.createElement(
+                                            "b",
+                                            {className: "avoid-if-small"},
+                                            "Alquiler de Autos"
+                                        )
                                         ) }),
                                     _react2.default.createElement(_reactBootstrap.Tab, { eventKey: 3, title: _react2.default.createElement(
                                             "span",
                                             { className: "service-park" },
                                             _react2.default.createElement("img", { alt: "", src: _park2.default, className: "main-icon" }),
-                                            "\xA0 Alquiler de Cocheras"
+                                        "\xA0",
+                                        _react2.default.createElement(
+                                            "b",
+                                            {className: "avoid-if-small"},
+                                            "Alquiler de Cocheras"
+                                        )
                                         ) }),
-                                    _react2.default.createElement(_reactBootstrap.Tab, { eventKey: 4, disabled: true, title: _react2.default.createElement(
-                                            "span",
-                                            { className: "service-elec" },
-                                            _react2.default.createElement("img", { alt: "", src: _el2.default, className: "main-icon" }),
-                                            "\xA0 Autos el\xE9ctricos \xA0",
-                                            _react2.default.createElement(
-                                                _reactBootstrap.Label,
-                                                { bsStyle: "warning" },
-                                                "Pr\xF3x."
+                                    _react2.default.createElement(
+                                        _reactResponsive2.default,
+                                        {maxWidth: 768},
+                                        _react2.default.createElement(_reactBootstrap.Tab, {
+                                            eventKey: 4, title: _react2.default.createElement(
+                                                "span",
+                                                {className: "service-elec"},
+                                                _react2.default.createElement("img", {
+                                                    alt: "",
+                                                    src: _el2.default,
+                                                    className: "main-icon"
+                                                }),
+                                                "\xA0",
+                                                _react2.default.createElement(
+                                                    "b",
+                                                    {className: "avoid-if-small"},
+                                                    " Autos el\xE9ctricos \xA0"
+                                                ),
+                                                _react2.default.createElement(
+                                                    _reactBootstrap.Label,
+                                                    {
+                                                        className: "avoid-if-small", bsStyle: "warning"
+                                                    },
+                                                    "Pr\xF3x."
+                                                )
                                             )
-                                        ) })
+                                        })
+                                    )
                                 )
                             )
                         )

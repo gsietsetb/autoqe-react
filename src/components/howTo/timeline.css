@@ -40,6 +40,14 @@
     min-height: 50px
 }
 
+*:active {
+    color: #595f62;
+}
+
+li > h4:active {
+    color: #e8a135 !important;
+}
+
 .driver {
     color: #74acdf;
 }

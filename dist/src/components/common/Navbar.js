@@ -58,6 +58,8 @@ var _AuthStore = require("../../store/AuthStore");
 
 var _AuthStore2 = _interopRequireDefault(_AuthStore);
 
+require("./navbar.css");
+
 var _autoqe_txt = require("../../img/logo/autoqe_txt.svg");
 
 var _autoqe_txt2 = _interopRequireDefault(_autoqe_txt);
@@ -152,7 +154,6 @@ function _inherits(subClass, superClass) {
     });
     if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
 }
-
 //Icons
 
 
@@ -279,16 +280,6 @@ var NavbarComp = function (_Component) {
                         _react2.default.createElement(
                             _reactBootstrap.Nav,
                             {style: {marginTop: 8}, pullRight: true},
-                            _react2.default.createElement(
-                                Tablet,
-                                null,
-                                _react2.default.createElement(
-                                    _reactBootstrap.NavItem,
-                                    {eventKey: 1, href: "/home", title: "Inicio"},
-                                    _react2.default.createElement(_reactBootstrap.Glyphicon, {glyph: "home"}),
-                                    "\xA0 Inicio"
-                                )
-                            ),
                             _react2.default.createElement(
                                 _reactBootstrap.NavDropdown,
                                 {

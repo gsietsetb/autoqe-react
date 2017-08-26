@@ -1,15 +1,68 @@
 /* Carousel*/
 .carousel-container {
-    height: 83vh;
+    height: 70vh;
 }
 
 .coverImg {
-    height: 83vh;
+    height: 70vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    /*background-image: url(../../img/header/carpool.jpg);*/
+}
 
+.header-tabs {
+    /*background-color: #122b40;*/
+    text-align: center;
+    top: -67px;
+    /*left: 3vw;*/
+    /*bottom: 30vh;*/
+    z-index: 1000;
+    /*margin-bottom: 20px;*/
+    position: relative;
+}
+
+/*.nav-tabs>li.active>a{*/
+/*background: #122b40;*/
+/*}*/
+
+.nav-tabs > li {
+    margin-left: 0.3em;
+    border-radius: 5px;
+}
+
+.li.park-transp:active {
+    color: var(--parking);
+}
+
+.avoid-if-small {
+    display: inline-block;
+    font-family: "Lemon/Milk", serif;
+}
+
+.white-text {
+    color: white !important;
+}
+
+@media screen and (max-width: 790px) {
+    /*.avoid-if-small:active{*/
+    /*display: inline-block;*/
+    /*}*/
+    .avoid-if-small {
+        display: none;
+    }
+
+    .logo img {
+        height: 55px;
+    }
+
+    .inline-fit {
+        text-align: left;
+        display: inline;
+    }
+
+    .inline-fit.Button {
+        height: 20px;
+    }
 }
 
 .cover-carp {
@@ -41,9 +94,28 @@
     text-align: left !important;
     left: 3em !important;
     margin-left: 1em !important;
+    bottom: 10vh !important;
     /*width: 40vw;*/
-    max-width: 50vw;
+    max-width: 30vw;
 }
+
+.carp-transp {
+    background: var(--carp-transp);
+}
+
+.rent-transp {
+    /*background-color: #74acdf !important;*/
+    background: var(--rent-transp);
+}
+
+.park-transp {
+    background: var(--park-transp);
+}
+
+.elec-transp {
+    background: var(--elec-transp);
+}
+
 
 .deg-carp {
     height: 83vh;
@@ -100,12 +172,12 @@
 }
 
 .carousel-caption img {
-    height: 80px;
+    height: 60px;
     margin-right: 12px;
     background: white;
     border-radius: 12px;
     /*border-radius:99%;*/
-    padding: 0.5em;
+    padding: 0.1em;
     /*max-height: 36px;*/
 }
 
@@ -120,12 +192,13 @@
     }
 
     .cover-carp {
-        background-position: right;
+        background-position: center;
     }
 
-    .position-top {
-        top: 7vh;
+    .header-tabs {
+        left: 10%;
     }
+
 
     .carousel-container {
         height: 70vh;
@@ -144,7 +217,7 @@
     }
 
     .carousel-caption img {
-        max-height: 36px;
+        max-height: 64px;
     }
 
     .carousel-caption button {

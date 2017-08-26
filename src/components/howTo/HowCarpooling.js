@@ -42,7 +42,7 @@ export default class HowCarpooling extends React.Component {
     render() {
         return (<Grid>
                 <Row>
-                    <ToggleButtonGroup type="checkbox" value={this.state.kind} onChange={this._handleKindChange}>
+                    <ToggleButtonGroup type="checkbox" value={!this.state.kind} onChange={this._handleKindChange}>
                         <ToggleButton value={'d'}><h4 style={{color: "#122b40"}}>
                             <img alt="" src={volante} className="icon-row"/>
                             Conductor</h4></ToggleButton>

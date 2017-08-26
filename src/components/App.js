@@ -1,10 +1,14 @@
 import React, {Component} from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../styles/App.css'
+
 import Auth0Lock from 'auth0-lock';
 import NavbarComponent from "./common/Navbar";
 import Footer from "./common/Footer";
 import Main from "./Routes";
+//Global Styles
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../styles/main.css'
+import '../styles/buttons.css'
+import '../styles/icons.css'
 
 const optionsAuth0 = {
     language: 'es',

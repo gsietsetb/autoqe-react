@@ -146,4 +146,4 @@ function mapDispatchToProps(dispatch) {
 }
 
 exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(TripsPage);
-//# sourceMappingURL=TripsPage.js.map
+//# sourceMappingURL=TripsPage.jsx.map

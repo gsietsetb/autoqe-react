@@ -1,0 +1,83 @@
+.logo {
+    padding: 0;
+}
+
+.logo img {
+    height: 63px;
+}
+
+.App-logo-spin {
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
+}
+
+.main-icon {
+    height: 45px;
+    margin-right: 12px;
+}
+
+.icon-row {
+    margin-right: 6px;
+    height: 35px;
+}
+
+.icon-glyph {
+    margin-right: 6px;
+}
+
+/*Icons*/
+.header-icon {
+    height: 45px;
+    /*margin-right: 12px;*/
+}
+
+/*//Services:*/
+.img-service {
+    max-width: 30vh;
+}
+
+.brand-logo {
+    height: 60px;
+    margin-right: 2em;
+}
+
+@media screen and (max-width: 840px) {
+    .icon-row {
+        height: 30px;
+    }
+
+    .brand-logo {
+        height: 45px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .main-icon {
+        height: 30px;
+    }
+
+    .sub-section-icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 2.5em;
+        margin: 36px auto 1.4em -2em
+    }
+
+    .sub-section-mini-icon {
+        /*display: block;*/
+        width: 2em;
+        display: inline;
+        margin: 0 auto 1.4em -2em
+    }
+
+    .icon-row {
+        height: 25px;
+    }
+
+    .brand-logo {
+        height: 30px;
+    }
+}
+

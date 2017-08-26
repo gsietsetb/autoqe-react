@@ -1,0 +1,19 @@
+/*NavBar*/
+.inputForm {
+    max-width: 220px;
+    min-Width: 110px;
+}
+
+.inputFormMain {
+    max-width: 220px;
+    min-Width: 120px;
+}
+
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li {
+    color: var(--carpooling) !important;
+}
+
+.navbar-nav > li > a + #toLeft {
+    padding-right: 0;
+}

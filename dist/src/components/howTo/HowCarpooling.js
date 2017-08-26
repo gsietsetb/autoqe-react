@@ -136,7 +136,7 @@ var HowCarpooling = function (_React$Component) {
                     null,
                     _react2.default.createElement(
                         _reactBootstrap.ToggleButtonGroup,
-                        {type: "checkbox", value: this.state.kind, onChange: this._handleKindChange},
+                        {type: "checkbox", value: !this.state.kind, onChange: this._handleKindChange},
                         _react2.default.createElement(
                             _reactBootstrap.ToggleButton,
                             {value: 'd'},

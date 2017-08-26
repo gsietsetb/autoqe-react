@@ -21,6 +21,8 @@ import ReactRotatingText from "react-rotating-text";
 import * as sessionActions from '../../actions/SessionActions';
 import AuthActions from "../../actions/AuthActions";
 import AuthStore from "../../store/AuthStore";
+import "./navbar.css"
+
 import logo_txt from "../../img/logo/autoqe_txt.svg";
 //Icons
 import carp from "../../img/icons/services/carp.svg";
@@ -121,12 +123,12 @@ class NavbarComp extends Component {
                     <Navbar.Collapse>
                         <Nav style={{marginTop: 8}} pullRight>
                             {/*Hideable Home*/}
-                            <Tablet>
-                                <NavItem eventKey={1} href="/home" title="Inicio">
-                                    <Glyphicon glyph="home"/>
-                                    &nbsp; Inicio
-                                </NavItem>
-                            </Tablet>
+                            {/*<Tablet>*/}
+                            {/*<NavItem eventKey={1} href="/home" title="Inicio">*/}
+                            {/*<Glyphicon glyph="home"/>*/}
+                            {/*&nbsp; Inicio*/}
+                            {/*</NavItem>*/}
+                            {/*</Tablet>*/}
                             {/*Publicar*/}
                             <NavDropdown id="publicar" eventKey={2} title={<span>
                              <Glyphicon glyph="plus-sign"/>&nbsp; Publicar

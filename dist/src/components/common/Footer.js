@@ -14,10 +14,6 @@ var _reactRouterDom = require("react-router-dom");
 
 var _reactBootstrap = require("react-bootstrap");
 
-var _Copyright = require("./Copyright");
-
-var _Copyright2 = _interopRequireDefault(_Copyright);
-
 var _reactResponsive = require("react-responsive");
 
 var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
@@ -70,6 +66,8 @@ var _disc = require("../../img/icons/material/disc.svg");
 
 var _disc2 = _interopRequireDefault(_disc);
 
+require("./footer.css");
+
 var _carp = require("../../img/icons/services/carp.svg");
 
 var _carp2 = _interopRequireDefault(_carp);
@@ -93,7 +91,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
 //Icons
 
 
@@ -201,7 +198,6 @@ var Footer = function (_Component) {
                                         {to: "/electric"},
                                         " Autos El\xE9ctricos"
                                     ),
-                                    " ",
                                     _react2.default.createElement(
                                         _reactBootstrap.Label,
                                         {
@@ -447,7 +443,11 @@ var Footer = function (_Component) {
                     _react2.default.createElement(
                         _reactBootstrap.Row,
                         null,
-                        _react2.default.createElement(_Copyright2.default, null)
+                        _react2.default.createElement(
+                            "p",
+                            {style: {textAlign: 'center'}},
+                            "Autoqe.com \xA9 2017 - Todos los derechos reservados. Creado entre Buenos Aires y Barcelona "
+                        )
                     )
                 )
             );

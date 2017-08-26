@@ -12,7 +12,7 @@ var _react2 = _interopRequireDefault(_react);
 
 require('bootstrap/dist/css/bootstrap.min.css');
 
-require('../src/styles/App.css');
+require('../src/styles/main.css');
 
 var _auth0Lock = require('auth0-lock');
 
