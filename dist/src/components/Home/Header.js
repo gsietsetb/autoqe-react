@@ -36,10 +36,6 @@ var _el = require("../../img/icons/services/el.svg");
 
 var _el2 = _interopRequireDefault(_el);
 
-var _SearchBar = require("../Trips/SearchBar");
-
-var _SearchBar2 = _interopRequireDefault(_SearchBar);
-
 var _SearchTrip = require("../Trips/SearchTrip");
 
 var _SearchTrip2 = _interopRequireDefault(_SearchTrip);
