@@ -39,7 +39,7 @@ var TextInput = function TextInput(_ref) {
         ),
         _react2.default.createElement(
             "div",
-            {className: "field"},
+            { className: "field" },
             _react2.default.createElement("input", {
                 type: type,
                 name: name,
@@ -48,8 +48,8 @@ var TextInput = function TextInput(_ref) {
                 value: value,
                 onChange: onChange }),
             error && _react2.default.createElement(
-            "div",
-            {className: "alert alert-danger"},
+                "div",
+                { className: "alert alert-danger" },
                 error
             )
         )

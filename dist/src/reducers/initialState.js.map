@@ -1,15 +1,1 @@
-{
-  "version": 3,
-  "sources": [
-    "../../../src/reducers/initialState.js"
-  ],
-  "names": [
-    "trips",
-    "users"
-  ],
-  "mappings": ";;;;;kBAAe;AACXA,WAAO,EADI;AAEXC,WAAO;AAFI,C",
-  "file": "initialState.js",
-  "sourcesContent": [
-    "export default {\n    trips: [],\n    users: []\n}"
-  ]
-}
+{"version":3,"sources":["../../../src/reducers/initialState.js"],"names":["trips","users"],"mappings":";;;;;kBAAe;AACXA,WAAO,EADI;AAEXC,WAAO;AAFI,C","file":"initialState.js","sourcesContent":["export default {\n    trips: [],\n    users: []\n}"]}

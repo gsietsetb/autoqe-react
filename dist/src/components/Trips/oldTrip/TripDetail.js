@@ -81,7 +81,7 @@ var TripDetailComponent = function (_Component) {
         Object.keys(this.state.trip).length !== 0 && _react2.default.createElement(
           'div',
           null,
-          _react2.default.createElement('img', {alt: '', src: trip.image, width: '150'}),
+          _react2.default.createElement('img', { alt: '', src: trip.image, width: '150' }),
           _react2.default.createElement(
             'h1',
             null,

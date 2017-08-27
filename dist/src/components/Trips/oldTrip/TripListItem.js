@@ -4,23 +4,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _createClass = function () {
-    function defineProperties(target, props) {
-        for (var i = 0; i < props.length; i++) {
-            var descriptor = props[i];
-            descriptor.enumerable = descriptor.enumerable || false;
-            descriptor.configurable = true;
-            if ("value" in descriptor) descriptor.writable = true;
-            Object.defineProperty(target, descriptor.key, descriptor);
-        }
-    }
-
-    return function (Constructor, protoProps, staticProps) {
-        if (protoProps) defineProperties(Constructor.prototype, protoProps);
-        if (staticProps) defineProperties(Constructor, staticProps);
-        return Constructor;
-    };
-}();
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = require('react');
 
@@ -92,37 +76,13 @@ var _autoqe_gray = require('../../../img/old_logos/autoqe_gray.svg');
 
 var _autoqe_gray2 = _interopRequireDefault(_autoqe_gray);
 
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : {default: obj};
-}
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) {
-    if (!(instance instanceof Constructor)) {
-        throw new TypeError("Cannot call a class as a function");
-    }
-}
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function _possibleConstructorReturn(self, call) {
-    if (!self) {
-        throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-    }
-    return call && (typeof call === "object" || typeof call === "function") ? call : self;
-}
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-function _inherits(subClass, superClass) {
-    if (typeof superClass !== "function" && superClass !== null) {
-        throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
-    }
-    subClass.prototype = Object.create(superClass && superClass.prototype, {
-        constructor: {
-            value: subClass,
-            enumerable: false,
-            writable: true,
-            configurable: true
-        }
-    });
-    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var TripListItem = function (_Component) {
     _inherits(TripListItem, _Component);
@@ -145,12 +105,11 @@ var TripListItem = function (_Component) {
             var trip = this.props.trip;
 
             function review_stars() {
-                var reviews = _react2.default.createElement(_reactBootstrap.Glyphicon, {glyph: 'star'}),
+                var reviews = _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: 'star' }),
                     i = void 0;
                 for (i = 1; i <= 5; i++) {
-                    reviews += i <= trip.id ? _react2.default.createElement(_reactBootstrap.Glyphicon, {glyph: 'star'}) : _react2.default.createElement(_reactBootstrap.Glyphicon, {glyph: 'star-empty'});
-                }
-                return _react2.default.createElement(
+                    reviews += i <= trip.id ? _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: 'star' }) : _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: 'star-empty' });
+                }return _react2.default.createElement(
                     'div',
                     null,
                     reviews
@@ -159,15 +118,15 @@ var TripListItem = function (_Component) {
             function setSeats() {
                 if (trip.seats > 3) return _react2.default.createElement(
                     _reactBootstrap.Label,
-                    {bsStyle: 'success'},
+                    { bsStyle: 'success' },
                     trip.seats,
                     ' Asientos'
-                ); else if (trip.seats < 2) return _react2.default.createElement(
+                );else if (trip.seats < 2) return _react2.default.createElement(
                     _reactBootstrap.Label,
-                    {bsStyle: 'danger'},
+                    { bsStyle: 'danger' },
                     trip.seats,
                     ' Asiento!'
-                ); else return _react2.default.createElement(
+                );else return _react2.default.createElement(
                     _reactBootstrap.Label,
                     null,
                     trip.seats,
@@ -179,18 +138,18 @@ var TripListItem = function (_Component) {
                 null,
                 _react2.default.createElement(
                     _reactRouterDom.Link,
-                    {to: '/trips/' + trip.id, style: {color: '#122b40'}},
+                    { to: '/trips/' + trip.id, style: { color: '#122b40' } },
                     _react2.default.createElement(
                         _reactBootstrap.Row,
                         null,
                         _react2.default.createElement(
                             _reactBootstrap.Col,
-                            {xs: 1, s: 1, md: 1},
-                            _react2.default.createElement('img', {alt: '', src: trip.image, height: 80})
+                            { xs: 1, s: 1, md: 1 },
+                            _react2.default.createElement('img', { alt: '', src: trip.image, height: 80 })
                         ),
                         _react2.default.createElement(
                             _reactBootstrap.Col,
-                            {xs: 2, s: 1, md: 2},
+                            { xs: 2, s: 1, md: 2 },
                             _react2.default.createElement(
                                 'h4',
                                 null,
@@ -199,43 +158,43 @@ var TripListItem = function (_Component) {
                             _react2.default.createElement(
                                 'div',
                                 null,
-                                _react2.default.createElement('img', {alt: '', src: _facebook2.default, height: 15}),
+                                _react2.default.createElement('img', { alt: '', src: _facebook2.default, height: 15 }),
                                 ' \xA0',
-                                _react2.default.createElement('img', {alt: '', src: _twitter2.default, height: 15}),
+                                _react2.default.createElement('img', { alt: '', src: _twitter2.default, height: 15 }),
                                 ' \xA0',
-                                _react2.default.createElement(_reactBootstrap.Glyphicon, {glyph: 'star'}),
-                                _react2.default.createElement(_reactBootstrap.Glyphicon, {glyph: 'star'}),
-                                _react2.default.createElement(_reactBootstrap.Glyphicon, {glyph: 'star'}),
-                                _react2.default.createElement(_reactBootstrap.Glyphicon, {glyph: 'star'}),
-                                _react2.default.createElement(_reactBootstrap.Glyphicon, {glyph: 'star-empty'})
+                                _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: 'star' }),
+                                _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: 'star' }),
+                                _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: 'star' }),
+                                _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: 'star' }),
+                                _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: 'star-empty' })
                             ),
-                            _react2.default.createElement('img', {alt: '', src: _drivingLicense2.default, height: 25}),
+                            _react2.default.createElement('img', { alt: '', src: _drivingLicense2.default, height: 25 }),
                             ' \xA0',
                             _react2.default.createElement(
                                 _reactBootstrap.Label,
-                                {bsStyle: 'info'},
-                                _react2.default.createElement(_reactBootstrap.Glyphicon, {glyph: 'ok'}),
+                                { bsStyle: 'info' },
+                                _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: 'ok' }),
                                 '\xA0Verifcado'
                             ),
                             ' \xA0'
                         ),
                         _react2.default.createElement(
                             _reactBootstrap.Col,
-                            {xs: 3, s: 5, md: 5},
+                            { xs: 3, s: 5, md: 5 },
                             _react2.default.createElement(
                                 'h4',
-                                {style: {display: 'inline'}},
-                                _react2.default.createElement('img', {alt: '', src: _location2.default, height: 30}),
+                                { style: { display: 'inline' } },
+                                _react2.default.createElement('img', { alt: '', src: _location2.default, height: 30 }),
                                 trip.from,
                                 ' \u2192',
                                 trip.stops && _react2.default.createElement(
-                                'div',
-                                {style: {display: 'inline'}},
-                                _react2.default.createElement('img', {alt: '', src: _location4.default, height: 30}),
-                                trip.stops,
-                                '\u2192'
+                                    'div',
+                                    { style: { display: 'inline' } },
+                                    _react2.default.createElement('img', { alt: '', src: _location4.default, height: 30 }),
+                                    trip.stops,
+                                    '\u2192'
                                 ),
-                                _react2.default.createElement('img', {alt: '', src: _location6.default, height: 30}),
+                                _react2.default.createElement('img', { alt: '', src: _location6.default, height: 30 }),
                                 trip.to,
                                 ' \xA0 \xA0'
                             ),
@@ -246,109 +205,67 @@ var TripListItem = function (_Component) {
                                     _reactBootstrap.Button,
                                     null,
                                     ' ',
-                                    _react2.default.createElement('img', {
-                                        alt: '',
-                                        src: _autoqe_gray2.default,
-                                        height: 20
-                                    }),
+                                    _react2.default.createElement('img', { alt: '', src: _autoqe_gray2.default, height: 20 }),
                                     trip.car
                                 ),
                                 ' \xA0',
                                 trip.highway ? _react2.default.createElement(
                                     _reactBootstrap.Button,
-                                    {style: {display: 'inline'}},
-                                    _react2.default.createElement('img', {
-                                        alt: '',
-                                        title: 'Por Autopista!',
-                                        src: _highway2.default,
-                                        height: 20
-                                    })
+                                    { style: { display: 'inline' } },
+                                    _react2.default.createElement('img', { alt: '', title: 'Por Autopista!', src: _highway2.default, height: 20 })
                                 ) : _react2.default.createElement(
                                     _reactBootstrap.Button,
-                                    {style: {display: 'inline'}},
-                                    _react2.default.createElement('img', {
-                                        alt: '',
-                                        title: 'Sin Autopista o peajes!',
-                                        src: _highway_n2.default,
-                                        height: 20
-                                    })
+                                    { style: { display: 'inline' } },
+                                    _react2.default.createElement('img', { alt: '', title: 'Sin Autopista o peajes!', src: _highway_n2.default, height: 20 })
                                 ),
                                 trip.pets && _react2.default.createElement(
-                                _reactBootstrap.Button,
-                                {style: {display: 'inline'}},
-                                _react2.default.createElement('img', {
-                                    alt: '',
-                                    title: 'Pueden subir mascotas!',
-                                    src: _pet2.default,
-                                    height: 20
-                                })
+                                    _reactBootstrap.Button,
+                                    { style: { display: 'inline' } },
+                                    _react2.default.createElement('img', { alt: '', title: 'Pueden subir mascotas!', src: _pet2.default, height: 20 })
                                 ),
                                 !trip.smoke && _react2.default.createElement(
-                                _reactBootstrap.Button,
-                                {style: {display: 'inline'}},
-                                _react2.default.createElement('img', {
-                                    alt: '',
-                                    title: 'Se puede fumar!',
-                                    src: _smoke2.default,
-                                    height: 20
-                                })
+                                    _reactBootstrap.Button,
+                                    { style: { display: 'inline' } },
+                                    _react2.default.createElement('img', { alt: '', title: 'Se puede fumar!', src: _smoke2.default, height: 20 })
                                 ),
                                 trip.withMate && _react2.default.createElement(
-                                _reactBootstrap.Button,
-                                {style: {display: 'inline'}},
-                                _react2.default.createElement('img', {
-                                    alt: '',
-                                    title: 'Lleva Mate!',
-                                    src: _mateInfusion2.default,
-                                    height: 20
-                                })
+                                    _reactBootstrap.Button,
+                                    { style: { display: 'inline' } },
+                                    _react2.default.createElement('img', { alt: '', title: 'Lleva Mate!', src: _mateInfusion2.default, height: 20 })
                                 ),
                                 trip.onlyGirls && _react2.default.createElement(
-                                _reactBootstrap.Button,
-                                {style: {display: 'inline'}},
-                                _react2.default.createElement('img', {
-                                    alt: '',
-                                    title: 'S\xF3lo mujeres!',
-                                    src: _girl2.default,
-                                    height: 20
-                                })
+                                    _reactBootstrap.Button,
+                                    { style: { display: 'inline' } },
+                                    _react2.default.createElement('img', { alt: '', title: 'S\xF3lo mujeres!', src: _girl2.default, height: 20 })
                                 )
                             )
                         ),
                         _react2.default.createElement(
                             _reactBootstrap.Col,
-                            {xs: 3, s: 2, md: 2},
+                            { xs: 3, s: 2, md: 2 },
                             _react2.default.createElement(
                                 'h4',
                                 null,
-                                !trip.hurry ? _react2.default.createElement('img', {
-                                    alt: '',
-                                    src: _fast2.default,
-                                    height: 20
-                                }) : _react2.default.createElement('img', {
-                                    alt: '',
-                                    src: _timeLeft2.default,
-                                    height: 20
-                                }),
+                                !trip.hurry ? _react2.default.createElement('img', { alt: '', src: _fast2.default, height: 20 }) : _react2.default.createElement('img', { alt: '', src: _timeLeft2.default, height: 20 }),
                                 ' \xA0',
-                                _react2.default.createElement(_reactIntl.FormattedRelative, {value: trip.date}),
+                                _react2.default.createElement(_reactIntl.FormattedRelative, { value: trip.date }),
                                 ','
                             ),
                             _react2.default.createElement(
                                 _reactBootstrap.Button,
-                                {style: {padding: ''}},
+                                { style: { padding: '' } },
                                 _react2.default.createElement(
                                     'h4',
-                                    {style: {margin: '0 0'}},
-                                    _react2.default.createElement(_reactIntl.FormattedDate, {value: trip.date}),
+                                    { style: { margin: '0 0' } },
+                                    _react2.default.createElement(_reactIntl.FormattedDate, { value: trip.date }),
                                     '\xA0  \u2192',
-                                    _react2.default.createElement(_reactIntl.FormattedTime, {value: trip.date})
+                                    _react2.default.createElement(_reactIntl.FormattedTime, { value: trip.date })
                                 )
                             )
                         ),
                         _react2.default.createElement(
                             _reactBootstrap.Col,
-                            {xs: 3, s: 2, md: 2, style: {display: 'flex'}},
+                            { xs: 3, s: 2, md: 2, style: { display: 'flex' } },
                             _react2.default.createElement(
                                 'h4',
                                 null,
@@ -358,7 +275,7 @@ var TripListItem = function (_Component) {
                                     trip.price
                                 ),
                                 ' $ ARS \xA0',
-                                _react2.default.createElement(_reactBootstrap.Glyphicon, {glyph: 'piggy-bank'}),
+                                _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: 'piggy-bank' }),
                                 ' \xA0',
                                 setSeats()
                             )

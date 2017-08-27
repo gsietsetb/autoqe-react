@@ -4,23 +4,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _createClass = function () {
-    function defineProperties(target, props) {
-        for (var i = 0; i < props.length; i++) {
-            var descriptor = props[i];
-            descriptor.enumerable = descriptor.enumerable || false;
-            descriptor.configurable = true;
-            if ("value" in descriptor) descriptor.writable = true;
-            Object.defineProperty(target, descriptor.key, descriptor);
-        }
-    }
-
-    return function (Constructor, protoProps, staticProps) {
-        if (protoProps) defineProperties(Constructor.prototype, protoProps);
-        if (staticProps) defineProperties(Constructor, staticProps);
-        return Constructor;
-    };
-}();
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = require("react");
 
@@ -108,52 +92,15 @@ var _loc = require("../../img/icons/material/loc3.svg");
 
 var _loc2 = _interopRequireDefault(_loc);
 
-function _interopRequireWildcard(obj) {
-    if (obj && obj.__esModule) {
-        return obj;
-    } else {
-        var newObj = {};
-        if (obj != null) {
-            for (var key in obj) {
-                if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];
-            }
-        }
-        newObj.default = obj;
-        return newObj;
-    }
-}
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : {default: obj};
-}
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) {
-    if (!(instance instanceof Constructor)) {
-        throw new TypeError("Cannot call a class as a function");
-    }
-}
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function _possibleConstructorReturn(self, call) {
-    if (!self) {
-        throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-    }
-    return call && (typeof call === "object" || typeof call === "function") ? call : self;
-}
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-function _inherits(subClass, superClass) {
-    if (typeof superClass !== "function" && superClass !== null) {
-        throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
-    }
-    subClass.prototype = Object.create(superClass && superClass.prototype, {
-        constructor: {
-            value: subClass,
-            enumerable: false,
-            writable: true,
-            configurable: true
-        }
-    });
-    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 //Icons
 
 
@@ -178,19 +125,19 @@ var styles = {
 // Default (desktop, tablet) and mobile setup
 var Huge = function Huge(_ref) {
     var children = _ref.children;
-    return _react2.default.createElement(_reactResponsive2.default, {minWidth: 1218, children: children});
+    return _react2.default.createElement(_reactResponsive2.default, { minWidth: 1218, children: children });
 };
 var Tablet = function Tablet(_ref2) {
     var children = _ref2.children;
-    return _react2.default.createElement(_reactResponsive2.default, {minWidth: 860, children: children});
+    return _react2.default.createElement(_reactResponsive2.default, { minWidth: 860, children: children });
 };
 var Default = function Default(_ref3) {
     var children = _ref3.children;
-    return _react2.default.createElement(_reactResponsive2.default, {minWidth: 768, children: children});
+    return _react2.default.createElement(_reactResponsive2.default, { minWidth: 768, children: children });
 };
 var Mobile = function Mobile(_ref4) {
     var children = _ref4.children;
-    return _react2.default.createElement(_reactResponsive2.default, {maxWidth: 768, children: children});
+    return _react2.default.createElement(_reactResponsive2.default, { maxWidth: 768, children: children });
 };
 
 var NavbarComp = function (_Component) {
@@ -235,14 +182,14 @@ var NavbarComp = function (_Component) {
                 _AuthActions2.default.logUserIn(profile, token);
                 // We also want to set the authentication state
                 // for the component to true
-                _this2.setState({authenticated: true});
+                _this2.setState({ authenticated: true });
             });
         }
     }, {
         key: "logout",
         value: function logout() {
             _AuthActions2.default.logUserOut();
-            this.setState({authenticated: false});
+            this.setState({ authenticated: false });
         }
     }, {
         key: "toggle",
@@ -259,17 +206,17 @@ var NavbarComp = function (_Component) {
                 null,
                 _react2.default.createElement(
                     _reactBootstrap.Navbar,
-                    {collapseOnSelect: true, fixedTop: true, fluid: true, style: styles.navStyle},
+                    { collapseOnSelect: true, fixedTop: true, fluid: true, style: styles.navStyle },
                     _react2.default.createElement(
                         _reactBootstrap.Navbar.Header,
                         null,
                         _react2.default.createElement(
                             _reactBootstrap.Navbar.Brand,
-                            {pullLeft: true, className: "logo"},
+                            { pullLeft: true, className: "logo" },
                             _react2.default.createElement(
                                 _reactRouterDom.Link,
-                                {to: "/"},
-                                _react2.default.createElement("img", {src: _autoqe_txt2.default, alt: "autoqe"})
+                                { to: "/" },
+                                _react2.default.createElement("img", { src: _autoqe_txt2.default, alt: "autoqe" })
                             )
                         ),
                         _react2.default.createElement(_reactBootstrap.Navbar.Toggle, null)
@@ -279,104 +226,65 @@ var NavbarComp = function (_Component) {
                         null,
                         _react2.default.createElement(
                             _reactBootstrap.Nav,
-                            {style: {marginTop: 8}, pullRight: true},
+                            { style: { marginTop: 8 }, pullRight: true },
                             _react2.default.createElement(
                                 _reactBootstrap.NavDropdown,
-                                {
-                                    id: "publicar", eventKey: 2, title: _react2.default.createElement(
-                                    "span",
-                                    null,
-                                    _react2.default.createElement(_reactBootstrap.Glyphicon, {glyph: "plus-sign"}),
-                                    "\xA0 Publicar"
-                                )
-                                },
+                                { id: "publicar", eventKey: 2, title: _react2.default.createElement(
+                                        "span",
+                                        null,
+                                        _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "plus-sign" }),
+                                        "\xA0 Publicar"
+                                    ) },
                                 _react2.default.createElement(
                                     _reactBootstrap.MenuItem,
-                                    {eventKey: 2.1},
-                                    _react2.default.createElement("img", {
-                                        style: styles.icon,
-                                        src: _carp2.default,
-                                        className: "App-logo",
-                                        alt: "logo"
-                                    }),
+                                    { eventKey: 2.1 },
+                                    _react2.default.createElement("img", { style: styles.icon, src: _carp2.default, className: "App-logo", alt: "logo" }),
                                     "\xA0 Trayecto"
                                 ),
                                 _react2.default.createElement(
                                     _reactBootstrap.MenuItem,
-                                    {eventKey: 2.2},
-                                    _react2.default.createElement("img", {
-                                        style: styles.icon,
-                                        src: _rent2.default,
-                                        className: "App-logo",
-                                        alt: "logo"
-                                    }),
+                                    { eventKey: 2.2 },
+                                    _react2.default.createElement("img", { style: styles.icon, src: _rent2.default, className: "App-logo", alt: "logo" }),
                                     "\xA0 Auto"
                                 ),
                                 _react2.default.createElement(
                                     _reactBootstrap.MenuItem,
-                                    {eventKey: 2.3},
-                                    _react2.default.createElement("img", {
-                                        style: styles.icon,
-                                        src: _park2.default,
-                                        className: "App-logo",
-                                        alt: "logo"
-                                    }),
+                                    { eventKey: 2.3 },
+                                    _react2.default.createElement("img", { style: styles.icon, src: _park2.default, className: "App-logo", alt: "logo" }),
                                     "\xA0 Cochera"
                                 )
                             ),
                             _react2.default.createElement(
                                 _reactBootstrap.NavDropdown,
-                                {
-                                    id: "buscar", eventKey: 3, title: _react2.default.createElement(
-                                    "span",
-                                    null,
-                                    _react2.default.createElement(_reactBootstrap.Glyphicon, {glyph: "search"}),
-                                    "\xA0 Buscar"
-                                )
-                                },
+                                { id: "buscar", eventKey: 3, title: _react2.default.createElement(
+                                        "span",
+                                        null,
+                                        _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "search" }),
+                                        "\xA0 Buscar"
+                                    ) },
                                 _react2.default.createElement(
                                     _reactBootstrap.MenuItem,
-                                    {eventKey: 3.1},
-                                    _react2.default.createElement("img", {
-                                        style: styles.icon,
-                                        src: _carp2.default,
-                                        className: "",
-                                        alt: "logo"
-                                    }),
+                                    { eventKey: 3.1 },
+                                    _react2.default.createElement("img", { style: styles.icon, src: _carp2.default, className: "", alt: "logo" }),
                                     "\xA0 Trayecto"
                                 ),
                                 _react2.default.createElement(
                                     _reactBootstrap.MenuItem,
-                                    {eventKey: 3.2},
-                                    _react2.default.createElement("img", {
-                                        style: styles.icon,
-                                        src: _rent2.default,
-                                        className: "App-logo",
-                                        alt: "logo"
-                                    }),
+                                    { eventKey: 3.2 },
+                                    _react2.default.createElement("img", { style: styles.icon, src: _rent2.default, className: "App-logo", alt: "logo" }),
                                     "\xA0 Auto"
                                 ),
                                 _react2.default.createElement(
                                     _reactBootstrap.MenuItem,
-                                    {eventKey: 3.3},
-                                    _react2.default.createElement("img", {
-                                        style: styles.icon,
-                                        src: _park2.default,
-                                        className: "App-logo",
-                                        alt: "logo"
-                                    }),
+                                    { eventKey: 3.3 },
+                                    _react2.default.createElement("img", { style: styles.icon, src: _park2.default, className: "App-logo", alt: "logo" }),
                                     "\xA0 Cochera"
                                 ),
-                                _react2.default.createElement(_reactBootstrap.MenuItem, {divider: true}),
+                                _react2.default.createElement(_reactBootstrap.MenuItem, { divider: true }),
                                 _react2.default.createElement(
                                     _reactBootstrap.MenuItem,
-                                    {eventKey: 3.4},
-                                    _react2.default.createElement("img", {
-                                        style: styles.icon,
-                                        src: _el2.default,
-                                        className: "App-logo",
-                                        alt: "logo"
-                                    }),
+                                    { eventKey: 3.4 },
+                                    _react2.default.createElement("img", { style: styles.icon, src: _el2.default, className: "App-logo", alt: "logo" }),
                                     "\xA0 Auto El\xE9ctrico"
                                 )
                             ),
@@ -385,37 +293,26 @@ var NavbarComp = function (_Component) {
                                 null,
                                 _react2.default.createElement(
                                     _reactBootstrap.NavItem,
-                                    {eventKey: 4, href: "#", style: {marginTop: -8, marginBottom: -9}},
+                                    { eventKey: 4, href: "#", style: { marginTop: -8, marginBottom: -9 } },
                                     _react2.default.createElement(
                                         _reactBootstrap.FormGroup,
                                         null,
                                         _react2.default.createElement(
                                             _reactBootstrap.InputGroup,
-                                            {className: "inputForm"},
+                                            { className: "inputForm" },
                                             _react2.default.createElement(
                                                 _reactBootstrap.InputGroup.Addon,
                                                 null,
-                                                _react2.default.createElement(_reactBootstrap.Glyphicon, {
-                                                    glyph: "search",
-                                                    style: {float: 'left'}
-                                                }),
+                                                _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "search", style: { float: 'left' } }),
                                                 " \xA0",
                                                 _react2.default.createElement(_reactRotatingText2.default, {
-                                                    items: ['Trayecto', 'Auto', 'Cochera']
-                                                })
+                                                    items: ['Trayecto', 'Auto', 'Cochera'] })
                                             ),
-                                            _react2.default.createElement(_reactBootstrap.FormControl, {
-                                                type: "text",
-                                                placeholder: "Mar del Plata"
-                                            }),
+                                            _react2.default.createElement(_reactBootstrap.FormControl, { type: "text", placeholder: "Mar del Plata" }),
                                             _react2.default.createElement(
                                                 _reactBootstrap.InputGroup.Addon,
                                                 null,
-                                                _react2.default.createElement("img", {
-                                                    alt: "",
-                                                    src: _loc2.default,
-                                                    height: 20
-                                                })
+                                                _react2.default.createElement("img", { alt: "", src: _loc2.default, height: 20 })
                                             )
                                         )
                                     )
@@ -423,25 +320,25 @@ var NavbarComp = function (_Component) {
                             ),
                             !this.state.authenticated ? _react2.default.createElement(
                                 _reactBootstrap.NavItem,
-                                {onClick: this.login, style: {marginTop: -5}, eventKey: 5, href: "#"},
+                                { onClick: this.login, style: { marginTop: -5 }, eventKey: 5, href: "#" },
                                 _react2.default.createElement(
                                     _reactBootstrap.Button,
-                                    {className: "btn-light_w", type: "submit"},
+                                    { className: "btn-light_w", type: "submit" },
                                     "LogIn"
                                 )
                             ) : _react2.default.createElement(
                                 _reactBootstrap.NavItem,
-                                {onClick: this.logout, eventKey: 5, href: "#"},
+                                { onClick: this.logout, eventKey: 5, href: "#" },
                                 _react2.default.createElement(
                                     _reactBootstrap.Button,
-                                    {bsStyle: 'danger', type: "submit"},
+                                    { bsStyle: 'danger', type: "submit" },
                                     "LogOut"
                                 )
                             ),
                             _react2.default.createElement(
                                 _reactBootstrap.NavItem,
-                                {eventKey: 6, href: "#", style: {marginTop: 0}},
-                                _react2.default.createElement(_reactBootstrap.Glyphicon, {glyph: "envelope"}),
+                                { eventKey: 6, href: "#", style: { marginTop: 0 } },
+                                _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "envelope" }),
                                 " \xA0 Contacto"
                             ),
                             _react2.default.createElement(
@@ -449,66 +346,42 @@ var NavbarComp = function (_Component) {
                                 null,
                                 _react2.default.createElement(
                                     _reactBootstrap.DropdownButton,
-                                    {id: "lang", style: styles.flagDropdown, bsStyle: 'info', title: ''},
+                                    { id: "lang", style: styles.flagDropdown, bsStyle: 'info', title: '' },
                                     _react2.default.createElement(
                                         _reactBootstrap.MenuItem,
-                                        {eventKey: "1", active: true},
-                                        _react2.default.createElement("img", {
-                                            alt: "",
-                                            src: _argentina2.default,
-                                            height: 24
-                                        }),
+                                        { eventKey: "1", active: true },
+                                        _react2.default.createElement("img", { alt: "", src: _argentina2.default, height: 24 }),
                                         "\xA0  Argentina"
                                     ),
                                     _react2.default.createElement(
                                         _reactBootstrap.MenuItem,
-                                        {eventKey: "2"},
-                                        _react2.default.createElement("img", {
-                                            alt: "",
-                                            src: _spain2.default,
-                                            height: 24
-                                        }),
+                                        { eventKey: "2" },
+                                        _react2.default.createElement("img", { alt: "", src: _spain2.default, height: 24 }),
                                         "\xA0  Espa\xF1a"
                                     ),
                                     _react2.default.createElement(
                                         _reactBootstrap.MenuItem,
-                                        {eventKey: "3"},
-                                        _react2.default.createElement("img", {
-                                            alt: "",
-                                            src: _brazil2.default,
-                                            height: 24
-                                        }),
+                                        { eventKey: "3" },
+                                        _react2.default.createElement("img", { alt: "", src: _brazil2.default, height: 24 }),
                                         "\xA0  Brasil"
                                     ),
                                     _react2.default.createElement(
                                         _reactBootstrap.MenuItem,
-                                        {eventKey: "4"},
-                                        _react2.default.createElement("img", {
-                                            alt: "",
-                                            src: _chile2.default,
-                                            height: 24
-                                        }),
+                                        { eventKey: "4" },
+                                        _react2.default.createElement("img", { alt: "", src: _chile2.default, height: 24 }),
                                         "\xA0  Chile"
                                     ),
                                     _react2.default.createElement(
                                         _reactBootstrap.MenuItem,
-                                        {eventKey: "5"},
-                                        _react2.default.createElement("img", {
-                                            alt: "",
-                                            src: _bolivia2.default,
-                                            height: 24
-                                        }),
+                                        { eventKey: "5" },
+                                        _react2.default.createElement("img", { alt: "", src: _bolivia2.default, height: 24 }),
                                         "\xA0  Bolivia"
                                     ),
-                                    _react2.default.createElement(_reactBootstrap.MenuItem, {divider: true}),
+                                    _react2.default.createElement(_reactBootstrap.MenuItem, { divider: true }),
                                     _react2.default.createElement(
                                         _reactBootstrap.MenuItem,
-                                        {eventKey: "6"},
-                                        _react2.default.createElement("img", {
-                                            alt: "",
-                                            src: _unitedStates2.default,
-                                            height: 24
-                                        }),
+                                        { eventKey: "6" },
+                                        _react2.default.createElement("img", { alt: "", src: _unitedStates2.default, height: 24 }),
                                         "\xA0  English"
                                     )
                                 )
@@ -529,7 +402,7 @@ _reactBootstrap.Navbar.propTypes = {
 };
 
 function mapStateToProps(state, ownProps) {
-    return {logged_in: state.session};
+    return { logged_in: state.session };
 }
 
 function mapDispatchToProps(dispatch) {

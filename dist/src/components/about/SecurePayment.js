@@ -4,23 +4,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _createClass = function () {
-    function defineProperties(target, props) {
-        for (var i = 0; i < props.length; i++) {
-            var descriptor = props[i];
-            descriptor.enumerable = descriptor.enumerable || false;
-            descriptor.configurable = true;
-            if ("value" in descriptor) descriptor.writable = true;
-            Object.defineProperty(target, descriptor.key, descriptor);
-        }
-    }
-
-    return function (Constructor, protoProps, staticProps) {
-        if (protoProps) defineProperties(Constructor.prototype, protoProps);
-        if (staticProps) defineProperties(Constructor, staticProps);
-        return Constructor;
-    };
-}();
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = require('react');
 
@@ -60,37 +44,13 @@ var _secure_pay = require('../../img/icons/material/secure_pay.svg');
 
 var _secure_pay2 = _interopRequireDefault(_secure_pay);
 
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : {default: obj};
-}
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) {
-    if (!(instance instanceof Constructor)) {
-        throw new TypeError("Cannot call a class as a function");
-    }
-}
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function _possibleConstructorReturn(self, call) {
-    if (!self) {
-        throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-    }
-    return call && (typeof call === "object" || typeof call === "function") ? call : self;
-}
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-function _inherits(subClass, superClass) {
-    if (typeof superClass !== "function" && superClass !== null) {
-        throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
-    }
-    subClass.prototype = Object.create(superClass && superClass.prototype, {
-        constructor: {
-            value: subClass,
-            enumerable: false,
-            writable: true,
-            configurable: true
-        }
-    });
-    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var SecurePayment = function (_Component) {
     _inherits(SecurePayment, _Component);
@@ -109,62 +69,37 @@ var SecurePayment = function (_Component) {
                 null,
                 _react2.default.createElement(
                     'section',
-                    {className: 'section section-dark transparent', id: 'payment'},
+                    { className: 'section section-dark transparent', id: 'payment' },
                     _react2.default.createElement(
                         'header',
-                        {className: 'section-header'},
+                        { className: 'section-header' },
                         _react2.default.createElement(
                             'div',
-                            {className: 'container'},
+                            { className: 'container' },
                             _react2.default.createElement(
                                 'h3',
-                                {className: 'section-header-title'},
-                                _react2.default.createElement('img', {
-                                    src: _secure_pay2.default,
-                                    className: 'icon-row',
-                                    alt: 'Secure payment'
-                                }),
+                                { className: 'section-header-title' },
+                                _react2.default.createElement('img', { src: _secure_pay2.default, className: 'icon-row', alt: 'Secure payment' }),
                                 ' \xA0 Plataformas de pago seguro'
                             ),
                             _react2.default.createElement(
                                 'div',
-                                {className: 'section-header-text'},
-                                _react2.default.createElement(_reactBootstrap.Image, {
-                                    src: _rapipago_w2.default,
-                                    className: 'brand-logo'
-                                }),
+                                { className: 'section-header-text' },
+                                _react2.default.createElement(_reactBootstrap.Image, { src: _rapipago_w2.default, className: 'brand-logo' }),
                                 ' \xA0',
-                                _react2.default.createElement(_reactBootstrap.Image, {
-                                    src: _mPago_w2.default,
-                                    className: 'brand-logo'
-                                }),
+                                _react2.default.createElement(_reactBootstrap.Image, { src: _mPago_w2.default, className: 'brand-logo' }),
                                 ' \xA0',
-                                _react2.default.createElement(_reactBootstrap.Image, {
-                                    src: _stripe_w2.default,
-                                    className: 'brand-logo'
-                                }),
+                                _react2.default.createElement(_reactBootstrap.Image, { src: _stripe_w2.default, className: 'brand-logo' }),
                                 ' \xA0',
                                 _react2.default.createElement('p', null),
                                 _react2.default.createElement('p', null),
-                                _react2.default.createElement(_reactBootstrap.Image, {
-                                    src: _mastercard_w2.default,
-                                    className: 'brand-logo'
-                                }),
+                                _react2.default.createElement(_reactBootstrap.Image, { src: _mastercard_w2.default, className: 'brand-logo' }),
                                 ' \xA0',
-                                _react2.default.createElement(_reactBootstrap.Image, {
-                                    src: _visa_w2.default,
-                                    className: 'brand-logo'
-                                }),
+                                _react2.default.createElement(_reactBootstrap.Image, { src: _visa_w2.default, className: 'brand-logo' }),
                                 ' \xA0',
-                                _react2.default.createElement(_reactBootstrap.Image, {
-                                    src: _AmericanExpres_w2.default,
-                                    className: 'brand-logo'
-                                }),
+                                _react2.default.createElement(_reactBootstrap.Image, { src: _AmericanExpres_w2.default, className: 'brand-logo' }),
                                 ' \xA0',
-                                _react2.default.createElement(_reactBootstrap.Image, {
-                                    src: _paypal_w2.default,
-                                    className: 'brand-logo'
-                                }),
+                                _react2.default.createElement(_reactBootstrap.Image, { src: _paypal_w2.default, className: 'brand-logo' }),
                                 ' \xA0'
                             )
                         )

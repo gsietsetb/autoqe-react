@@ -55,7 +55,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 // const Default = ({children}) => <Responsive minWidth={768} children={children}/>;
 var Mobile = function Mobile(_ref) {
     var children = _ref.children;
-    return _react2.default.createElement(_reactResponsive2.default, {maxWidth: 768, children: children});
+    return _react2.default.createElement(_reactResponsive2.default, { maxWidth: 768, children: children });
 };
 // var MediaQuery = require('react-responsive');
 
@@ -110,7 +110,7 @@ var HowWorksComp = function (_React$Component) {
                                                 "\xA0",
                                                 _react2.default.createElement(
                                                     "b",
-                                                    {className: "avoid-if-small"},
+                                                    { className: "avoid-if-small" },
                                                     "Carpooling"
                                                 )
                                             ) },
@@ -120,51 +120,44 @@ var HowWorksComp = function (_React$Component) {
                                             "span",
                                             { className: "service-rent" },
                                             _react2.default.createElement("img", { alt: "", src: _rent2.default, className: "main-icon" }),
-                                        "\xA0",
-                                        _react2.default.createElement(
-                                            "b",
-                                            {className: "avoid-if-small"},
-                                            "Alquiler de Autos"
-                                        )
+                                            "\xA0",
+                                            _react2.default.createElement(
+                                                "b",
+                                                { className: "avoid-if-small" },
+                                                "Alquiler de Autos"
+                                            )
                                         ) }),
                                     _react2.default.createElement(_reactBootstrap.Tab, { eventKey: 3, title: _react2.default.createElement(
                                             "span",
                                             { className: "service-park" },
                                             _react2.default.createElement("img", { alt: "", src: _park2.default, className: "main-icon" }),
-                                        "\xA0",
-                                        _react2.default.createElement(
-                                            "b",
-                                            {className: "avoid-if-small"},
-                                            "Alquiler de Cocheras"
-                                        )
+                                            "\xA0",
+                                            _react2.default.createElement(
+                                                "b",
+                                                { className: "avoid-if-small" },
+                                                "Alquiler de Cocheras"
+                                            )
                                         ) }),
                                     _react2.default.createElement(
                                         _reactResponsive2.default,
-                                        {maxWidth: 768},
-                                        _react2.default.createElement(_reactBootstrap.Tab, {
-                                            eventKey: 4, title: _react2.default.createElement(
+                                        { maxWidth: 768 },
+                                        _react2.default.createElement(_reactBootstrap.Tab, { eventKey: 4, title: _react2.default.createElement(
                                                 "span",
-                                                {className: "service-elec"},
-                                                _react2.default.createElement("img", {
-                                                    alt: "",
-                                                    src: _el2.default,
-                                                    className: "main-icon"
-                                                }),
+                                                { className: "service-elec" },
+                                                _react2.default.createElement("img", { alt: "", src: _el2.default, className: "main-icon" }),
                                                 "\xA0",
                                                 _react2.default.createElement(
                                                     "b",
-                                                    {className: "avoid-if-small"},
+                                                    { className: "avoid-if-small" },
                                                     " Autos el\xE9ctricos \xA0"
                                                 ),
                                                 _react2.default.createElement(
                                                     _reactBootstrap.Label,
                                                     {
-                                                        className: "avoid-if-small", bsStyle: "warning"
-                                                    },
+                                                        className: "avoid-if-small", bsStyle: "warning" },
                                                     "Pr\xF3x."
                                                 )
-                                            )
-                                        })
+                                            ) })
                                     )
                                 )
                             )

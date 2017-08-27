@@ -45,7 +45,7 @@ var TripGrid = function (_Component) {
                         header: _react2.default.createElement(
                             'div',
                             null,
-                            _react2.default.createElement('img', {alt: '', src: _carp2.default, height: 40}),
+                            _react2.default.createElement('img', { alt: '', src: _carp2.default, height: 40 }),
                             ' \xA0',
                             _react2.default.createElement(
                                 'h4',

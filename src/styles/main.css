@@ -6,10 +6,10 @@
     --rental: #74acdf;
     --parking: #498d19;
     --elec: #e8a135;
-    --carp-transp: rgba(18, 43, 64, 0.6);
-    --rent-transp: rgba(116, 172, 223, 0.6);
-    --park-transp: rgba(73, 141, 25, 0.6);
-    --elec-transp: rgba(232, 161, 53, 0.6);
+    --carp-transp: rgba(18, 43, 64, 0.5);
+    --rent-transp: rgba(116, 172, 223, 0.5);
+    --park-transp: rgba(73, 141, 25, 0.5);
+    --elec-transp: rgba(232, 161, 53, 0.5);
 }
 
 @font-face {
@@ -42,7 +42,7 @@
 
 /*Text*/
 .service-carp-transp {
-    -webkit-text-stroke: 0.5px var(--carpooling);
+    -webkit-text-stroke: 1px var(--carpooling);
 }
 
 .service-rent-transp {

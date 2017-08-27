@@ -165,12 +165,7 @@ function renderColumn2(cellDataKey, rowData /*, rowIndex*/) {
     return _react2.default.createElement(
         'div',
         { className: 'ice-table__column2' },
-        [_react2.default.createElement('img', {
-            alt: '',
-            key: rowData.get('image'),
-            src: rowData.get('image'),
-            style: K_STYLE_IMAGE
-        })]
+        [_react2.default.createElement('img', { alt: '', key: rowData.get('image'), src: rowData.get('image'), style: K_STYLE_IMAGE })]
     );
 }
 

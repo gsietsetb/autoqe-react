@@ -10,6 +10,7 @@ import carp from "../../img/icons/services/carp.svg";
 import rent from "../../img/icons/services/rent.svg";
 import park from "../../img/icons/services/park.svg";
 import el from "../../img/icons/services/el.svg";
+import SearchTrip from "../Trips/SearchTrip";
 
 // let cx = classNames.bind(styles);
 
@@ -83,7 +84,9 @@ export default class CarouselComp extends React.Component {
                         <div className="deg-carp">
                             <Carousel.Caption>
                                 <h1>Carpooling: trayectos compartidos</h1>
+                                <SearchTrip/>
                                 <h3>Ahorrá plata compartiendo los gastos del viaje</h3>
+
                             </Carousel.Caption>
                         </div>
                     </Carousel.Item>

@@ -70,7 +70,7 @@ var K_ROW_DEBOUNCE_INTERVAL = 16; // increase if you wanna show really big amoun
 
 var asyncActions = (_dec = (0, _asyncDecorators.serialize)({ raiseSkipError: false }), _dec2 = (0, _asyncDecorators.memoize)({ expireMs: 1000 * 60 * 15 }), _dec3 = (0, _asyncDecorators.serialize)({ raiseSkipError: false }), (_obj = {
   query: function () {
-    var _ref = _asyncToGenerator(regeneratorRuntime.mark(function _callee(params) {
+    var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(params) {
       return regeneratorRuntime.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -97,7 +97,7 @@ var asyncActions = (_dec = (0, _asyncDecorators.serialize)({ raiseSkipError: fal
   }(),
   // skips all but first and last
   tableVisibleRowsChange: function () {
-    var _ref3 = _asyncToGenerator(regeneratorRuntime.mark(function _callee2(_ref2) {
+    var _ref3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(_ref2) {
       var visibleRowFirst = _ref2.visibleRowFirst,
           visibleRowLast = _ref2.visibleRowLast,
           maxVisibleRows = _ref2.maxVisibleRows;
