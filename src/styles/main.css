@@ -30,6 +30,9 @@
     margin: 2vh 2vw;
 }
 
+.white-text h4{
+    color: white!important;
+}
 
 .input-group {
     display: inline-flex !important;
@@ -38,25 +41,6 @@
 
 .dark-color {
     color: var(--carpooling);
-}
-
-/*Text*/
-.service-carp-transp {
-    -webkit-text-stroke: 1px var(--carpooling);
-}
-
-.service-rent-transp {
-    -webkit-text-stroke: 0.5px var(--rental);
-}
-
-/*li.service-park:active {*/
-.service-park-transp {
-    -webkit-text-stroke: 0.5px var(--parking);
-}
-
-.service-elec-transp {
-    -webkit-text-stroke: 0.5px var(--elec);
-
 }
 
 /*Text*/
@@ -97,7 +81,6 @@
 .nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
     background-color: var(--carpooling);
 }
-
 
 .to-hide-sm {
     display: none;

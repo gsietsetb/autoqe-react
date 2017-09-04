@@ -45,7 +45,11 @@ var CheckBox = function (_React$Component) {
                         null,
                         this.props.item.name
                     ),
-                    _react2.default.createElement("input", { type: "checkbox", name: this.props.item.name, value: this.props.item.id, checked: this.props.item.checked, onChange: this.props.handleChange })
+                    _react2.default.createElement("input", { type: "checkbox",
+                        name: this.props.item.name,
+                        value: this.props.item.id,
+                        checked: this.props.item.checked,
+                        onChange: this.props.handleChange })
                 )
             );
         }

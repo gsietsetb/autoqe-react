@@ -14,15 +14,40 @@
     color: var(--carpooling);
 }
 
-.btn-light {
-    border: 1px var(--rental);
+.btn-to{
+    border: 0px double var(--rental);
+    background: white;
+    color: var(--rental);
+    padding: 0.4em 0.2em;
+    font-family: "Lemon/Milk", serif;
+}
+
+.btn-stop {
+    border: 0px double var(--rental);
+    background: white;
+    color: linear-gradient(to right, var(--carpooling), var(--rental)); /* Standard syntax */
+    padding: 0.4em 0.2em;
+}
+
+.btn-from {
+    border: 0px double var(--carpooling);
     background: white;
     color: var(--carpooling);
+    font-family: "Lemon/Milk", serif;
+    padding: 0.4em 0.2em;
+}
+
+.btn-label{
+    border: 0px dotted #595f62;
+    background: white;
+    color: var(--carpooling);
+    padding: 0.2em 0.2em;
 }
 
 .btn-dark {
     background: var(--carpooling);
-    color: #ffffff;
+    color: var(--rental);
+    padding-top: 0.7em;
 }
 
 .forGirls {

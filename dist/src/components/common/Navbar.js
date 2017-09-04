@@ -88,9 +88,9 @@ var _brazil = require("../../img/icons/flag/brazil.svg");
 
 var _brazil2 = _interopRequireDefault(_brazil);
 
-var _loc = require("../../img/icons/material/loc3.svg");
+var _dest = require("../../img/icons/custom/dest.svg");
 
-var _loc2 = _interopRequireDefault(_loc);
+var _dest2 = _interopRequireDefault(_dest);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -110,16 +110,6 @@ var styles = {
         backgroundColor: 'transparent',
         border: 'none',
         marginTop: -5
-    },
-    displayInline: {
-        display: 'inline'
-    },
-    icon: {
-        height: 24
-    },
-    navStyle: {
-        background: 'white',
-        margin: 0
     }
 };
 // Default (desktop, tablet) and mobile setup
@@ -127,16 +117,20 @@ var Huge = function Huge(_ref) {
     var children = _ref.children;
     return _react2.default.createElement(_reactResponsive2.default, { minWidth: 1218, children: children });
 };
-var Tablet = function Tablet(_ref2) {
+var NotHuge = function NotHuge(_ref2) {
     var children = _ref2.children;
+    return _react2.default.createElement(_reactResponsive2.default, { maxWidth: 1218, children: children });
+};
+var Tablet = function Tablet(_ref3) {
+    var children = _ref3.children;
     return _react2.default.createElement(_reactResponsive2.default, { minWidth: 860, children: children });
 };
-var Default = function Default(_ref3) {
-    var children = _ref3.children;
+var Default = function Default(_ref4) {
+    var children = _ref4.children;
     return _react2.default.createElement(_reactResponsive2.default, { minWidth: 768, children: children });
 };
-var Mobile = function Mobile(_ref4) {
-    var children = _ref4.children;
+var Mobile = function Mobile(_ref5) {
+    var children = _ref5.children;
     return _react2.default.createElement(_reactResponsive2.default, { maxWidth: 768, children: children });
 };
 
@@ -206,13 +200,13 @@ var NavbarComp = function (_Component) {
                 null,
                 _react2.default.createElement(
                     _reactBootstrap.Navbar,
-                    { collapseOnSelect: true, fixedTop: true, fluid: true, style: styles.navStyle },
+                    { collapseOnSelect: true, fixedTop: true, fluid: true },
                     _react2.default.createElement(
                         _reactBootstrap.Navbar.Header,
                         null,
                         _react2.default.createElement(
                             _reactBootstrap.Navbar.Brand,
-                            { pullLeft: true, className: "logo" },
+                            { pullLeft: true, className: "logo brand-text" },
                             _react2.default.createElement(
                                 _reactRouterDom.Link,
                                 { to: "/" },
@@ -232,60 +226,92 @@ var NavbarComp = function (_Component) {
                                 { id: "publicar", eventKey: 2, title: _react2.default.createElement(
                                         "span",
                                         null,
-                                        _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "plus-sign" }),
-                                        "\xA0 Publicar"
+                                        _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "plus-sign", className: "nav-icon" }),
+                                        "Publicar"
                                     ) },
                                 _react2.default.createElement(
                                     _reactBootstrap.MenuItem,
                                     { eventKey: 2.1 },
-                                    _react2.default.createElement("img", { style: styles.icon, src: _carp2.default, className: "App-logo", alt: "logo" }),
-                                    "\xA0 Trayecto"
+                                    _react2.default.createElement("img", { src: _carp2.default, className: "nav-icon", alt: "logo" }),
+                                    _react2.default.createElement(
+                                        "span",
+                                        { className: "service-carp" },
+                                        "Trayecto "
+                                    )
                                 ),
                                 _react2.default.createElement(
                                     _reactBootstrap.MenuItem,
                                     { eventKey: 2.2 },
-                                    _react2.default.createElement("img", { style: styles.icon, src: _rent2.default, className: "App-logo", alt: "logo" }),
-                                    "\xA0 Auto"
+                                    _react2.default.createElement("img", { src: _rent2.default, className: "nav-icon", alt: "logo" }),
+                                    _react2.default.createElement(
+                                        "span",
+                                        { className: "service-rent" },
+                                        "Auto"
+                                    )
                                 ),
                                 _react2.default.createElement(
                                     _reactBootstrap.MenuItem,
                                     { eventKey: 2.3 },
-                                    _react2.default.createElement("img", { style: styles.icon, src: _park2.default, className: "App-logo", alt: "logo" }),
-                                    "\xA0 Cochera"
+                                    _react2.default.createElement("img", { src: _park2.default, className: "nav-icon", alt: "logo" }),
+                                    _react2.default.createElement(
+                                        "span",
+                                        { className: "service-park" },
+                                        "Cochera"
+                                    )
                                 )
                             ),
                             _react2.default.createElement(
-                                _reactBootstrap.NavDropdown,
-                                { id: "buscar", eventKey: 3, title: _react2.default.createElement(
-                                        "span",
-                                        null,
-                                        _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "search" }),
-                                        "\xA0 Buscar"
-                                    ) },
+                                NotHuge,
+                                null,
                                 _react2.default.createElement(
-                                    _reactBootstrap.MenuItem,
-                                    { eventKey: 3.1 },
-                                    _react2.default.createElement("img", { style: styles.icon, src: _carp2.default, className: "", alt: "logo" }),
-                                    "\xA0 Trayecto"
-                                ),
-                                _react2.default.createElement(
-                                    _reactBootstrap.MenuItem,
-                                    { eventKey: 3.2 },
-                                    _react2.default.createElement("img", { style: styles.icon, src: _rent2.default, className: "App-logo", alt: "logo" }),
-                                    "\xA0 Auto"
-                                ),
-                                _react2.default.createElement(
-                                    _reactBootstrap.MenuItem,
-                                    { eventKey: 3.3 },
-                                    _react2.default.createElement("img", { style: styles.icon, src: _park2.default, className: "App-logo", alt: "logo" }),
-                                    "\xA0 Cochera"
-                                ),
-                                _react2.default.createElement(_reactBootstrap.MenuItem, { divider: true }),
-                                _react2.default.createElement(
-                                    _reactBootstrap.MenuItem,
-                                    { eventKey: 3.4 },
-                                    _react2.default.createElement("img", { style: styles.icon, src: _el2.default, className: "App-logo", alt: "logo" }),
-                                    "\xA0 Auto El\xE9ctrico"
+                                    _reactBootstrap.NavDropdown,
+                                    { id: "buscar", eventKey: 3, title: _react2.default.createElement(
+                                            "span",
+                                            { className: "service-rent" },
+                                            _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "search", className: "nav-icon" }),
+                                            "Buscar"
+                                        ) },
+                                    _react2.default.createElement(
+                                        _reactBootstrap.MenuItem,
+                                        { eventKey: 3.1 },
+                                        _react2.default.createElement("img", { src: _carp2.default, className: "nav-icon", alt: "logo" }),
+                                        _react2.default.createElement(
+                                            "span",
+                                            { className: "service-carp" },
+                                            "Trayecto "
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        _reactBootstrap.MenuItem,
+                                        { eventKey: 3.2 },
+                                        _react2.default.createElement("img", { src: _rent2.default, className: "nav-icon", alt: "logo" }),
+                                        _react2.default.createElement(
+                                            "span",
+                                            { className: "service-rent" },
+                                            "Auto"
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        _reactBootstrap.MenuItem,
+                                        { eventKey: 3.3 },
+                                        _react2.default.createElement("img", { src: _park2.default, className: "nav-icon", alt: "logo" }),
+                                        _react2.default.createElement(
+                                            "span",
+                                            { className: "service-park" },
+                                            "Cochera"
+                                        )
+                                    ),
+                                    _react2.default.createElement(_reactBootstrap.MenuItem, { divider: true }),
+                                    _react2.default.createElement(
+                                        _reactBootstrap.MenuItem,
+                                        { eventKey: 3.4 },
+                                        _react2.default.createElement("img", { src: _el2.default, className: "nav-icon", alt: "logo" }),
+                                        _react2.default.createElement(
+                                            "span",
+                                            { className: "service-elec" },
+                                            "Auto El\xE9ctrico"
+                                        )
+                                    )
                                 )
                             ),
                             _react2.default.createElement(
@@ -293,7 +319,7 @@ var NavbarComp = function (_Component) {
                                 null,
                                 _react2.default.createElement(
                                     _reactBootstrap.NavItem,
-                                    { eventKey: 4, href: "#", style: { marginTop: -8, marginBottom: -9 } },
+                                    { eventKey: 4, href: "#", style: { marginTop: -5, marginBottom: -9 } },
                                     _react2.default.createElement(
                                         _reactBootstrap.FormGroup,
                                         null,
@@ -302,17 +328,17 @@ var NavbarComp = function (_Component) {
                                             { className: "inputForm" },
                                             _react2.default.createElement(
                                                 _reactBootstrap.InputGroup.Addon,
-                                                null,
-                                                _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "search", style: { float: 'left' } }),
-                                                " \xA0",
-                                                _react2.default.createElement(_reactRotatingText2.default, {
+                                                { className: "search-icon" },
+                                                _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "search", style: { float: 'left', color: '#74acdf' } }),
+                                                "\xA0",
+                                                _react2.default.createElement(_reactRotatingText2.default, { style: { color: '#74acdf' },
                                                     items: ['Trayecto', 'Auto', 'Cochera'] })
                                             ),
                                             _react2.default.createElement(_reactBootstrap.FormControl, { type: "text", placeholder: "Mar del Plata" }),
                                             _react2.default.createElement(
                                                 _reactBootstrap.InputGroup.Addon,
-                                                null,
-                                                _react2.default.createElement("img", { alt: "", src: _loc2.default, height: 20 })
+                                                { style: { minWidth: 40 } },
+                                                _react2.default.createElement("img", { alt: "destination", src: _dest2.default, height: 20, style: { float: 'right' } })
                                             )
                                         )
                                     )
@@ -320,11 +346,12 @@ var NavbarComp = function (_Component) {
                             ),
                             !this.state.authenticated ? _react2.default.createElement(
                                 _reactBootstrap.NavItem,
-                                { onClick: this.login, style: { marginTop: -5 }, eventKey: 5, href: "#" },
+                                { onClick: this.login, style: { marginTop: -8 }, eventKey: 5, href: "#" },
                                 _react2.default.createElement(
                                     _reactBootstrap.Button,
                                     { className: "btn-light_w", type: "submit" },
-                                    "LogIn"
+                                    _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "user", className: "nav-icon" }),
+                                    "Registro"
                                 )
                             ) : _react2.default.createElement(
                                 _reactBootstrap.NavItem,
@@ -338,8 +365,8 @@ var NavbarComp = function (_Component) {
                             _react2.default.createElement(
                                 _reactBootstrap.NavItem,
                                 { eventKey: 6, href: "#", style: { marginTop: 0 } },
-                                _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "envelope" }),
-                                " \xA0 Contacto"
+                                _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "envelope", className: "nav-icon" }),
+                                "Contacto"
                             ),
                             _react2.default.createElement(
                                 _reactBootstrap.NavItem,
@@ -350,39 +377,39 @@ var NavbarComp = function (_Component) {
                                     _react2.default.createElement(
                                         _reactBootstrap.MenuItem,
                                         { eventKey: "1", active: true },
-                                        _react2.default.createElement("img", { alt: "", src: _argentina2.default, height: 24 }),
-                                        "\xA0  Argentina"
+                                        _react2.default.createElement("img", { alt: "arg", src: _argentina2.default, className: "nav-icon" }),
+                                        "Argentina"
                                     ),
                                     _react2.default.createElement(
                                         _reactBootstrap.MenuItem,
                                         { eventKey: "2" },
-                                        _react2.default.createElement("img", { alt: "", src: _spain2.default, height: 24 }),
-                                        "\xA0  Espa\xF1a"
+                                        _react2.default.createElement("img", { alt: "sp", src: _spain2.default, className: "nav-icon" }),
+                                        "Espa\xF1a"
                                     ),
                                     _react2.default.createElement(
                                         _reactBootstrap.MenuItem,
                                         { eventKey: "3" },
-                                        _react2.default.createElement("img", { alt: "", src: _brazil2.default, height: 24 }),
-                                        "\xA0  Brasil"
+                                        _react2.default.createElement("img", { alt: "br", src: _brazil2.default, className: "nav-icon" }),
+                                        "Brasil"
                                     ),
                                     _react2.default.createElement(
                                         _reactBootstrap.MenuItem,
                                         { eventKey: "4" },
-                                        _react2.default.createElement("img", { alt: "", src: _chile2.default, height: 24 }),
-                                        "\xA0  Chile"
+                                        _react2.default.createElement("img", { alt: "Ch", src: _chile2.default, className: "nav-icon" }),
+                                        "Chile"
                                     ),
                                     _react2.default.createElement(
                                         _reactBootstrap.MenuItem,
                                         { eventKey: "5" },
-                                        _react2.default.createElement("img", { alt: "", src: _bolivia2.default, height: 24 }),
-                                        "\xA0  Bolivia"
+                                        _react2.default.createElement("img", { alt: "Bol", src: _bolivia2.default, className: "nav-icon" }),
+                                        "Bolivia"
                                     ),
                                     _react2.default.createElement(_reactBootstrap.MenuItem, { divider: true }),
                                     _react2.default.createElement(
                                         _reactBootstrap.MenuItem,
                                         { eventKey: "6" },
-                                        _react2.default.createElement("img", { alt: "", src: _unitedStates2.default, height: 24 }),
-                                        "\xA0  English"
+                                        _react2.default.createElement("img", { alt: "Eng", src: _unitedStates2.default, className: "nav-icon" }),
+                                        "English"
                                     )
                                 )
                             ),

@@ -13,7 +13,7 @@ import '../styles/icons.css'
 const optionsAuth0 = {
     language: 'es',
     theme: {
-        logo: 'https://www.autoqe.com/autoqe_s.png',
+        logo: 'https://www.autoqe.com/autoqe.png',
         primaryColor: '#122b40'
     }
 };

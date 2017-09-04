@@ -7,7 +7,7 @@ export default function tripReducer(state = initialState.trips, action) {
     switch (action.type) {
         case types.LOAD_TRIPS_SUCCESS:
             // return action.trips;
-            // return action.trips.map(trip => Object.assign({}, trip, Object.assign([], trip.hobby_ids)))
+            // return action.trips.map(trip => Object.assign({}, trip, Object.assign([], trip.user_ids)))
             return Object.assign([], state, action.trips);
         case types.CREATE_TRIP_SUCCESS:
             this.props.history.push(`/trips/${action.trip.id}`);

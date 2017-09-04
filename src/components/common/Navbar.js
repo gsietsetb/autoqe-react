@@ -37,7 +37,7 @@ import usaFlag from "../../img/icons/flag/002-united-states.svg";
 import bolFlag from "../../img/icons/flag/bolivia.svg";
 import brFlag from "../../img/icons/flag/brazil.svg";
 
-import locTo from "../../img/icons/material/loc3.svg";
+import locTo from "../../img/icons/custom/dest.svg";
 
 
 const styles = {
@@ -46,20 +46,11 @@ const styles = {
         backgroundColor: 'transparent',
         border: 'none',
         marginTop: -5
-    },
-    displayInline: {
-        display: 'inline'
-    },
-    icon: {
-        height: 24
-    },
-    navStyle: {
-        background: 'white',
-        margin: 0
     }
 };
 // Default (desktop, tablet) and mobile setup
 const Huge = ({children}) => <Responsive minWidth={1218} children={children}/>;
+const NotHuge = ({children}) => <Responsive maxWidth={1218} children={children}/>;
 const Tablet = ({children}) => <Responsive minWidth={860} children={children}/>;
 const Default = ({children}) => <Responsive minWidth={768} children={children}/>;
 const Mobile = ({children}) => <Responsive maxWidth={768} children={children}/>;
@@ -111,9 +102,9 @@ class NavbarComp extends Component {
     render() {
         return (
             <div>
-                <Navbar collapseOnSelect fixedTop fluid style={styles.navStyle}>
+                <Navbar collapseOnSelect fixedTop fluid>
                     <Navbar.Header>
-                        <Navbar.Brand pullLeft className="logo">
+                        <Navbar.Brand pullLeft className="logo brand-text">
                             <Link to="/">
                                 <img src={logo_txt} alt="autoqe"/>
                             </Link>
@@ -131,53 +122,60 @@ class NavbarComp extends Component {
                             {/*</Tablet>*/}
                             {/*Publicar*/}
                             <NavDropdown id="publicar" eventKey={2} title={<span>
-                             <Glyphicon glyph="plus-sign"/>&nbsp; Publicar
+                             <Glyphicon glyph="plus-sign" className="nav-icon"/>Publicar
                            </span>}>
                                 <MenuItem eventKey={2.1}>
-                                    <img style={styles.icon} src={carp} className="App-logo" alt="logo"/>
-                                    &nbsp; Trayecto
+                                    <img src={carp} className="nav-icon" alt="logo"/>
+                                    <span className="service-carp">Trayecto </span>
                                 </MenuItem>
                                 <MenuItem eventKey={2.2}>
-                                    <img style={styles.icon} src={rent} className="App-logo" alt="logo"/>
-                                    &nbsp; Auto</MenuItem>
+                                    <img src={rent} className="nav-icon" alt="logo"/>
+                                    <span className="service-rent">Auto</span>
+                                </MenuItem>
                                 <MenuItem eventKey={2.3}>
-                                    <img style={styles.icon} src={park} className="App-logo" alt="logo"/>
-                                    &nbsp; Cochera</MenuItem>
+                                    <img src={park} className="nav-icon" alt="logo"/>
+                                    <span className="service-park">Cochera</span>
+                                </MenuItem>
                             </NavDropdown>
 
                             {/*Buscar*/}
-                            <NavDropdown id="buscar" eventKey={3} title={<span>
-                             <Glyphicon glyph="search"/>&nbsp; Buscar
+                            <NotHuge>
+                                <NavDropdown id="buscar" eventKey={3} title={<span className="service-rent">
+                             <Glyphicon glyph="search" className="nav-icon"/>Buscar
                            </span>}>
-                                <MenuItem eventKey={3.1}>
-                                    <img style={styles.icon} src={carp} className="" alt="logo"/>
-                                    &nbsp; Trayecto
-                                </MenuItem>
-                                <MenuItem eventKey={3.2}>
-                                    <img style={styles.icon} src={rent} className="App-logo" alt="logo"/>
-                                    &nbsp; Auto</MenuItem>
-                                <MenuItem eventKey={3.3}>
-                                    <img style={styles.icon} src={park} className="App-logo" alt="logo"/>
-                                    &nbsp; Cochera</MenuItem>
-                                <MenuItem divider/>
-                                <MenuItem eventKey={3.4}>
-                                    <img style={styles.icon} src={el} className="App-logo" alt="logo"/>
-                                    &nbsp; Auto Eléctrico</MenuItem>
-                            </NavDropdown>
+                                    <MenuItem eventKey={3.1}>
+                                        <img src={carp} className="nav-icon" alt="logo"/>
+                                        <span className="service-carp">Trayecto </span>
+                                    </MenuItem>
+                                    <MenuItem eventKey={3.2}>
+                                        <img src={rent} className="nav-icon" alt="logo"/>
+                                        <span className="service-rent">Auto</span>
+                                    </MenuItem>
+                                    <MenuItem eventKey={3.3}>
+                                        <img src={park} className="nav-icon" alt="logo"/>
+                                        <span className="service-park">Cochera</span>
+                                    </MenuItem>
+                                    <MenuItem divider/>
+                                    <MenuItem eventKey={3.4}>
+                                        <img src={el} className="nav-icon" alt="logo"/>
+                                        <span className="service-elec">Auto Eléctrico</span>
+                                    </MenuItem>
+                                </NavDropdown>
+                            </NotHuge>
 
                             {/*Hideable Search & List form*/}
                             <Huge>
-                                <NavItem eventKey={4} href="#" style={{marginTop: -8, marginBottom: -9}}>
+                                <NavItem eventKey={4} href="#" style={{marginTop: -5, marginBottom: -9}}>
                                     <FormGroup>
                                         <InputGroup className="inputForm">
-                                            <InputGroup.Addon>
-                                                <Glyphicon glyph="search" style={{float: 'left'}}/> &nbsp;
-                                                <ReactRotatingText
-                                                    items={['Trayecto', 'Auto', 'Cochera']}/>
+                                            <InputGroup.Addon className="search-icon">
+                                                <Glyphicon glyph="search" style={{float: 'left', color: '#74acdf'}}/>&nbsp;
+                                                <ReactRotatingText style={{color: '#74acdf'}}
+                                                                   items={['Trayecto', 'Auto', 'Cochera']}/>
                                             </InputGroup.Addon>
                                             <FormControl type="text" placeholder="Mar del Plata"/>
-                                            <InputGroup.Addon>
-                                                <img alt="" src={locTo} height={20}/>
+                                            <InputGroup.Addon style={{minWidth: 40}}>
+                                                <img alt="destination" src={locTo} height={20} style={{float: 'right'}}/>
                                             </InputGroup.Addon>
                                         </InputGroup>
                                     </FormGroup>
@@ -186,8 +184,10 @@ class NavbarComp extends Component {
 
                             {/*Login Logic*/}
                             {!this.state.authenticated ? (
-                                <NavItem onClick={this.login} style={{marginTop: -5}} eventKey={5} href="#">
-                                    <Button className="btn-light_w" type="submit">LogIn</Button>
+                                <NavItem onClick={this.login} style={{marginTop: -8}} eventKey={5} href="#">
+                                    <Button className="btn-light_w" type="submit">
+                                        <Glyphicon glyph="user" className="nav-icon"/>
+                                        Registro</Button>
                                 </NavItem>
                             ) : (
                                 <NavItem onClick={this.logout} eventKey={5} href="#">
@@ -197,28 +197,22 @@ class NavbarComp extends Component {
 
                             {/*Contact*/}
                             <NavItem eventKey={6} href="#" style={{marginTop: 0}}>
-                                <Glyphicon glyph="envelope"/> &nbsp; Contacto</NavItem>
+                                <Glyphicon glyph="envelope" className="nav-icon"/>Contacto</NavItem>
                             {/*Language selector*/}
                             <NavItem>
                                 <DropdownButton id="lang" style={styles.flagDropdown} bsStyle={'info'} title={''}>
                                     <MenuItem eventKey="1" active>
-                                        <img alt="" src={argFlag} height={24}/>
-                                        &nbsp;  Argentina</MenuItem>
+                                        <img alt="arg" src={argFlag} className="nav-icon"/>Argentina</MenuItem>
                                     <MenuItem eventKey="2">
-                                        <img alt="" src={spFlag} height={24}/>
-                                        &nbsp;  España</MenuItem>
+                                        <img alt="sp" src={spFlag} className="nav-icon"/>España</MenuItem>
                                     <MenuItem eventKey="3">
-                                        <img alt="" src={brFlag} height={24}/>
-                                        &nbsp;  Brasil</MenuItem>
+                                        <img alt="br" src={brFlag} className="nav-icon"/>Brasil</MenuItem>
                                     <MenuItem eventKey="4">
-                                        <img alt="" src={chFlag} height={24}/>
-                                        &nbsp;  Chile</MenuItem>
+                                        <img alt="Ch" src={chFlag} className="nav-icon"/>Chile</MenuItem>
                                     <MenuItem eventKey="5">
-                                        <img alt="" src={bolFlag} height={24}/>
-                                        &nbsp;  Bolivia</MenuItem><MenuItem divider/>
+                                        <img alt="Bol" src={bolFlag} className="nav-icon"/>Bolivia</MenuItem><MenuItem divider/>
                                     <MenuItem eventKey="6">
-                                        <img alt="" src={usaFlag} height={24}/>
-                                        &nbsp;  English</MenuItem>
+                                        <img alt="Eng" src={usaFlag} className="nav-icon"/>English</MenuItem>
                                 </DropdownButton>
                             </NavItem> </Nav>
                     </Navbar.Collapse>

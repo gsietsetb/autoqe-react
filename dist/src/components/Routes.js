@@ -69,8 +69,6 @@ var Main = function Main() {
                 _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Home2.default }),
                 _react2.default.createElement(_reactRouterDom.Route, { path: '/trips', component: _TripsPage2.default }),
                 _react2.default.createElement(_reactRouterDom.Route, { path: '/carrent', component: _SocialNetworks2.default }),
-                _react2.default.createElement(_reactRouterDom.Route, { path: '/contact', component: _SocialNetworks2.default }),
-                _react2.default.createElement(_reactRouterDom.Route, { path: '/contact', component: _SocialNetworks2.default }),
                 _react2.default.createElement(
                     _reactRouterDom.Route,
                     { path: '/trips', component: _TripsPage2.default },
@@ -85,9 +83,7 @@ var Main = function Main() {
                 _react2.default.createElement(_reactRouterDom.Route, { path: '/contact', component: _SocialNetworks2.default }),
                 _react2.default.createElement(_reactRouterDom.Route, { path: '/contact', component: _SocialNetworks2.default }),
                 _react2.default.createElement(_reactRouterDom.Route, { path: '/find', component: _SearchBar2.default }),
-                _react2.default.createElement(_reactRouterDom.Route, { path: '/contact/:id', component: _UserDetail2.default }),
-                _react2.default.createElement(_reactRouterDom.Route, { path: '/trips/:id', component: _TripDetail2.default }),
-                _react2.default.createElement(_reactRouterDom.Route, { path: '/trips', component: _LastTrips2.default })
+                _react2.default.createElement(_reactRouterDom.Route, { path: '/contact/:id', component: _UserDetail2.default })
             )
         )
     );

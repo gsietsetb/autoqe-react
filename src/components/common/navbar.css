@@ -1,6 +1,6 @@
 /*NavBar*/
 .inputForm {
-    max-width: 220px;
+    max-width: 250px;
     min-Width: 110px;
 }
 
@@ -16,4 +16,43 @@
 
 .navbar-nav > li > a + #toLeft {
     padding-right: 0;
+}
+
+.navbar{
+    background: white;
+    margin: 0;
+}
+
+@media (max-width: 780px) {
+    .navbar-header{
+        padding-bottom: 14px;
+    }
+}
+
+.nav-icon{
+    height: 24px;
+    margin-right: 1em;
+}
+
+#buscar span.caret{
+     color: #74acdf;
+}
+
+.brand-text{
+    margin: 0.3em 0 ;
+}
+
+.search-icon{
+    min-width: 7em;
+    color: #74acdf;
+}
+
+.navbar-toggle{
+    margin-top: 1.4em!important;
+    background: #122b40!important;
+    border-color: #74acdf!important;
+}
+
+.icon-bar{
+    background: #74acdf!important;
 }

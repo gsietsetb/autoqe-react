@@ -24,11 +24,13 @@ class TripsPage extends React.Component {
                 <section className="section Container">
                     <Panel style={{textAlign: 'left'}} collapsible defaultExpanded header={<div>
                         <img alt="" src={carp} height={40}/> &nbsp;
-                               <h3 style={{display: 'inline'}}> Últimos viajes publicados: &nbsp; &nbsp;
+                               <h3 style={{display: 'inline'}}> Últimos viajes publicados: &nbsp;
                                    <Glyphicon glyph="triangle-bottom"/>
                                </h3>
                                <Link to={'/trips/new'}><Button style={{float: 'right'}} type="submit" bsStyle="primary">
-                                   <Glyphicon glyph="plus-sign"/> &nbsp; Publicar viaje
+                                   {/*<img src={add} className="main-icon"/>*/}
+                                   <Glyphicon glyph="plus-sign"/> &nbsp;
+                                   Publicar viaje
                                </Button>
                                </Link>
                            </div>}>
@@ -36,6 +38,9 @@ class TripsPage extends React.Component {
                             <ListGroupItem>
                                 <TripList trips={trips}/>
                             </ListGroupItem>
+                            {/*<ListGroupItem>*/}
+                                {/*{this.props.children}*/}
+                            {/*</ListGroupItem>*/}
                         </ListGroup>
                     </Panel>
                 </section>

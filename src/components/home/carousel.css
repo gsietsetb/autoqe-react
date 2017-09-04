@@ -30,17 +30,18 @@
     border-radius: 5px;
 }
 
-.li.park-transp:active {
-    color: var(--parking);
-}
+/*.li.park-transp:active {*/
+    /*color: var(--parking);*/
+/*}*/
 
 .avoid-if-small {
     display: inline-block;
     font-family: "Lemon/Milk", serif;
 }
 
-.white-text {
+.white-text{
     color: white !important;
+    vertical-align: bottom;
 }
 
 @media screen and (max-width: 790px) {
@@ -97,6 +98,23 @@
     bottom: 10vh !important;
     /*width: 40vw;*/
     /*max-width: 30vw;*/
+}
+
+.nav-tabs > li.active > a h4.service-carp{
+/*.nav-tabs > li.active > a:hover h4,*/
+/*.nav-tabs > li.active > a:focus h4*/
+    color: #122b40!important;
+
+}
+
+.nav-tabs > li.active > a h4.service-rent {
+    color: var(--rental)!important;
+}
+.nav-tabs > li.active > a h4.service-park {
+    color: var(--parking)!important;
+}
+.nav-tabs > li.active > a h4.service-elec {
+    color: var(--elec)!important;
 }
 
 .carousel-caption h1{

@@ -12,14 +12,14 @@ class TripPage extends React.Component {
         super(props, context);
         this.state = {
             trip: this.props.trip,
-            tripUsers: this.props.tripUsers,
-            checkBoxUsers: props.checkBoxUsers,
+            tripPassengers: this.props.tripPassengers,
+            checkBoxPassengers: props.checkBoxPassengers,
             saving: false,
             isEditing: false
         };
         this.saveTrip = this.saveTrip.bind(this);
         this.updateTripState = this.updateTripState.bind(this);
-        this.updateTripUsers = this.updateTripUsers.bind(this);
+        this.updateTripPassengers = this.updateTripPassengers.bind(this);
         this.toggleEdit = this.toggleEdit.bind(this);
         this.deleteTrip = this.deleteTrip.bind(this);
         this.redirect = this.redirect.bind(this);
@@ -30,8 +30,8 @@ class TripPage extends React.Component {
         if (this.props.trip.id !== nextProps.trip.id) {
             this.setState({trip: nextProps.trip});
         }
-        if (this.props.checkBoxUsers.length < nextProps.checkBoxUsers.length) {
-            this.setState({tripUsers: nextProps.tripUsers, checkBoxUsers: nextProps.checkBoxUsers});
+        if (this.props.checkBoxPassengers.length < nextProps.checkBoxPassengers.length) {
+            this.setState({tripPassengers: nextProps.tripPassengers, checkBoxPassengers: nextProps.checkBoxPassengers});
         }
 
         this.setState({saving: false, isEditing: false});
@@ -41,19 +41,18 @@ class TripPage extends React.Component {
         this.setState({isEditing: true});
     }
 
-    updateTripUsers(event) {
+    updateTripPassengers(event) {
         const trip = this.state.trip;
-        const userId = event.target.value;
-        const user = this.state.checkBoxUsers.filter(user => user.id === userId)[0];
-        const checked = !user.checked;
-        user['checked'] = !user.checked;
+        const passengerId = event.target.value;
+        const passenger = this.state.checkBoxPassengers.filter(passenger => passenger.id === passengerId)[0];
+        const checked = !passenger.checked;
+        passenger['checked'] = !passenger.checked;
         if (checked) {
-            trip.user_ids.push(user.id);
+            trip.passenger_ids.push(passenger.id);
         } else {
-            trip.user_ids.splice(trip.user_ids.indexOf(user.id));
+            trip.passenger_ids.splice(trip.passenger_ids.indexOf(passenger.id));
         }
         this.setState({trip: trip});
-
     }
 
     updateTripState(event) {
@@ -85,23 +84,23 @@ class TripPage extends React.Component {
                     <h1>edit trip</h1>
                     <TripForm
                         trip={this.state.trip}
-                        users={this.state.checkBoxUsers}
+                        passengers={this.state.checkBoxPassengers}
                         onSave={this.saveTrip}
                         onChange={this.updateTripState}
-                        onUserChange={this.updateTripUsers}
+                        onPassengerChange={this.updateTripPassengers}
                         saving={this.state.saving}/>
                 </div>
             )
         }
         return (
             <div className="col-md-8 col-md-offset-2">
-                <h1>{this.state.trip.from}</h1>
-                <p>To: {this.state.trip.to}</p>
-                <p>place: {this.state.trip.weight}</p>
-                <p>temperament: {this.state.trip.temperament}</p>
-                <UserList users={this.state.tripUsers}/>
-                <button onClick={this.toggleEdit} className="btn btn-default  ">edit</button>
-                <button onClick={this.deleteTrip} className="btn btn-default  ">delete</button>
+                <h1>{this.state.trip.to}</h1>
+                <p>From: {this.state.trip.from}</p>
+                <p>Price: {this.state.trip.price}</p>
+                <p>seats: {this.state.trip.seats}</p>
+                <UserList users={this.state.tripPassengers}/>
+                <button onClick={this.toggleEdit} className="btn btn-default  ">Editar</button>
+                <button onClick={this.deleteTrip} className="btn btn-default  ">Borrar</button>
             </div>
         );
     }
@@ -110,8 +109,8 @@ class TripPage extends React.Component {
 
 TripPage.propTypes = {
     trip: PropTypes.object.isRequired,
-    tripUsers: PropTypes.array.isRequired,
-    checkBoxUsers: PropTypes.array.isRequired,
+    tripPassengers: PropTypes.array.isRequired,
+    checkBoxPassengers: PropTypes.array.isRequired,
     actions: PropTypes.object.isRequired
 };
 
@@ -120,38 +119,39 @@ function getTripById(trips, id) {
     return Object.assign({}, trip)
 }
 
-function usersForCheckBoxes(users, trip = null) {
-    return users.map(user => {
-        user['checked'] = !!(trip && trip.user_ids.filter(userId => userId === user.id).length > 0);
-        return user;
+function PassengersForCheckBoxes(passengers, trip = null) {
+    return passengers.map(passenger => {
+        passenger['checked'] = !!(trip && trip.passenger_ids.filter(passengerId => passengerId === passenger.id).length > 0);
+        return passenger;
     });
 }
 
-function collectTripUsers(users, trip) {
-    let selected = users.map(user => {
-        if (trip.user_ids.filter(userId => userId === user.id).length > 0) {
-            return user;
+function collectTripPassengers(passengers, trip) {
+    let selected = passengers.map(passenger => {
+        if (trip.passenger_ids.filter(passengerId => passengerId === passenger.id).length > 0) {
+            return passenger;
         }
     });
     return selected.filter(el => el !== undefined)
 }
 
 function mapStateToProps(state, ownProps) {
-    const stateUsers = Object.assign([], state.users);
-    let checkBoxUsers = [];
-    let tripUsers = [];
-    let trip = {name: '', breed: '', weight: '', temperament: '', user_ids: []};
+    const statePassengers = Object.assign([], state.passengers);
+    let checkBoxPassengers = [];
+    let tripPassengers = [];
+    let trip = {from: '', to: '', price: '', seats: '', passenger_ids: []};
     const tripId = ownProps.params.id;
-    if (tripId && state.trips.length > 0 && state.users.length > 0) {
+    if (tripId && state.trips.length > 0 && state.passengers.length > 0) {
         trip = getTripById(state.trips, ownProps.params.id);
-        if (trip.id && trip.user_ids.length > 0) {
-            checkBoxUsers = usersForCheckBoxes(stateUsers, trip);
-            tripUsers = collectTripUsers(stateUsers, trip);
+        if (trip.id && trip.passenger_ids.length > 0) {
+            console.log("(NO passengers associated) never here....");
+            checkBoxPassengers = PassengersForCheckBoxes(statePassengers, trip);
+            tripPassengers = collectTripPassengers(statePassengers, trip);
         } else {
-            checkBoxUsers = usersForCheckBoxes(stateUsers)
+            checkBoxPassengers = PassengersForCheckBoxes(statePassengers)
         }
     }
-    return {trip: trip, checkBoxUsers: checkBoxUsers, tripUsers: tripUsers};
+    return {trip: trip, checkBoxPassengers: checkBoxPassengers, tripPassengers: tripPassengers};
 }
 
 function mapDispatchToProps(dispatch) {

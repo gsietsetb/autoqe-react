@@ -40,6 +40,10 @@ var _SearchTrip = require("../Trips/SearchTrip");
 
 var _SearchTrip2 = _interopRequireDefault(_SearchTrip);
 
+var _NewTripPage = require("../Trips/NewTripPage");
+
+var _NewTripPage2 = _interopRequireDefault(_NewTripPage);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -194,7 +198,7 @@ var CarouselComp = function (_React$Component) {
                                 _react2.default.createElement(
                                     "h3",
                                     null,
-                                    "Perdele el miedo a ir al centro en auto!"
+                                    "Perd\xE9 el miedo a estacionar en el centro!"
                                 )
                             )
                         )
@@ -255,17 +259,17 @@ var CarouselComp = function (_React$Component) {
                                 _react2.default.createElement("img", { alt: "carpool", src: _carp2.default, className: "header-icon" }),
                                 _react2.default.createElement(
                                     "h4",
-                                    { className: "white-text avoid-if-small service-carp-transp" },
+                                    { id: "carp-tab", className: "white-text avoid-if-small service-carp" },
                                     " \xA0Carpooling"
                                 )
                             ),
                             _react2.default.createElement(
                                 _reactBootstrap.NavItem,
-                                { className: " rent-transp ", eventKey: 1 },
+                                { className: "rent-transp", eventKey: 1 },
                                 _react2.default.createElement("img", { alt: "Private car rental", src: _rent2.default, className: "header-icon" }),
                                 _react2.default.createElement(
                                     "h4",
-                                    { className: "white-text avoid-if-small service-rent-transp" },
+                                    { className: "white-text avoid-if-small service-rent" },
                                     "\xA0Autos"
                                 )
                             ),
@@ -275,7 +279,7 @@ var CarouselComp = function (_React$Component) {
                                 _react2.default.createElement("img", { alt: "Private Parking spot rental", src: _park2.default, className: "header-icon" }),
                                 _react2.default.createElement(
                                     "h4",
-                                    { className: "white-text avoid-if-small service-park-transp" },
+                                    { className: "white-text avoid-if-small service-park" },
                                     "\xA0Cocheras"
                                 )
                             ),
@@ -285,7 +289,7 @@ var CarouselComp = function (_React$Component) {
                                 _react2.default.createElement("img", { alt: "Electric car", src: _el2.default, className: "header-icon" }),
                                 _react2.default.createElement(
                                     "h4",
-                                    { className: "white-text avoid-if-small service-elec-transp" },
+                                    { className: "white-text avoid-if-small service-elec" },
                                     "\xA0Autos el\xE9ctricos"
                                 )
                             )
@@ -305,11 +309,7 @@ var CarouselComp = function (_React$Component) {
                             _react2.default.createElement(
                                 _reactBootstrap.Tab.Pane,
                                 { eventKey: 1 },
-                                _react2.default.createElement(
-                                    _reactBootstrap.Row,
-                                    null,
-                                    _react2.default.createElement(_TripsPage2.default, null)
-                                )
+                                _react2.default.createElement(_reactBootstrap.Row, null)
                             ),
                             _react2.default.createElement(
                                 _reactBootstrap.Tab.Pane,

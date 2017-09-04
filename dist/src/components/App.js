@@ -47,7 +47,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var optionsAuth0 = {
     language: 'es',
     theme: {
-        logo: 'https://www.autoqe.com/autoqe_s.png',
+        logo: 'https://www.autoqe.com/autoqe.png',
         primaryColor: '#122b40'
     }
 };

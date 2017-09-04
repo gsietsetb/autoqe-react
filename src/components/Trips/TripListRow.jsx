@@ -4,9 +4,9 @@ import PropTypes from "prop-types"
 import {Button, Col, Glyphicon, Label, ListGroupItem, Row} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import {FormattedDate, FormattedRelative, FormattedTime} from 'react-intl';
-import locFrom from "../../img/icons/material/loc1.svg";
-import locThrough from "../../img/icons/material/loc2.svg";
-import locTo from "../../img/icons/material/loc3.svg";
+import locFrom from "../../img/icons/custom/from.svg";
+import locThrough from "../../img/icons/custom/through.svg";
+import locTo from "../../img/icons/custom/dest.svg";
 import girl from "../../img/icons/material/girl.svg";
 import highw from "../../img/icons/material/highway.svg";
 import highw_n from "../../img/icons/material/highway_n.svg";
@@ -15,7 +15,7 @@ import time_flex from "../../img/icons/material/time-left.svg";
 import time_hurry from "../../img/icons/material/fast.svg";
 import smoke from "../../img/icons/material/smoke.svg";
 import mate from "../../img/icons/material/mate-infusion.svg";
-import fb from "../../img/icons/material/facebook.svg";
+import fb from "../../img/icons/social_network/facebook.svg";
 import tw from "../../img/icons/material/twitter.svg";
 import driving from "../../img/icons/material/driving-license.svg";
 import car from "../../img/old_logos/autoqe_gray.svg";
@@ -61,43 +61,45 @@ const TripListRow = ({trip}) => {
                         {/*{review_stars()}*/}
                     </Col>
                     <Col xs={3} s={5} md={5}>
-                        <h4 style={{display: 'inline'}}>
-                            <img alt="" src={locFrom} height={30}/>{trip.from} →
+                        <h3 style={{display: 'inline'}}>
+                           <Button className="btn-from">
+                            <img alt="from" src={locFrom} className="icon-trip"/>{trip.from}
+                           </Button> →&nbsp;
                             {trip.stops &&
-                            <div style={{display: 'inline'}}><img alt="" src={locThrough} height={30}/>{trip.stops}→
-                            </div>}
-                            <img alt="" src={locTo} height={30}/>{trip.to} &nbsp; &nbsp;
-                        </h4>
+                            <span><Button className="btn-stop" style={{display: 'inline'}}><img alt="" src={locThrough} className="icon-trip"/> {trip.stops}
+                            </Button> → </span>}
+                           <Button className="btn-to"> <img alt="to" src={locTo} className="icon-trip"/> {trip.to}</Button>
+                        </h3>
                         <div>
-                            <Button> <img alt="" src={car} height={20}/>{trip.car}</Button> &nbsp;
+                            <Button className="btn-label"><img alt="" src={car} className="icon-trip"/> {trip.car}</Button> &nbsp;
                             {trip.highway ? (
                                 <Button style={{display: 'inline'}}>
-                                    <img alt="" title="Por Autopista!" src={highw} height={20}/></Button>
+                                    <img alt="" title="Por Autopista!" src={highw} className="icon-trip"/></Button>
                             ) : (
                                 <Button style={{display: 'inline'}}>
-                                    <img alt="" title="Sin Autopista o peajes!" src={highw_n} height={20}/></Button>
+                                    <img alt="" title="Sin Autopista o peajes!" src={highw_n} className="icon-trip"/></Button>
                             )}
 
                             {trip.pets &&
                             <Button style={{display: 'inline'}}>
-                                <img alt="" title="Pueden subir mascotas!" src={pet} height={20}/></Button>}
+                                <img alt="" title="Pueden subir mascotas!" src={pet} className="icon-trip"/></Button>}
                             {!trip.smoke &&
                             <Button style={{display: 'inline'}}>
-                                <img alt="" title="Se puede fumar!" src={smoke} height={20}/></Button>}
+                                <img alt="" title="Se puede fumar!" src={smoke} className="icon-trip"/></Button>}
                             {trip.withMate &&
                             <Button style={{display: 'inline'}}>
-                                <img alt="" title="Lleva Mate!" src={mate} height={20}/></Button>}
+                                <img alt="" title="Lleva Mate!" src={mate} className="icon-trip"/></Button>}
                             {trip.onlyGirls &&
                             <Button style={{display: 'inline'}}>
-                                <img alt="" title="Sólo mujeres!" src={girl} height={20}/></Button>}
+                                <img alt="" title="Sólo mujeres!" src={girl} className="icon-trip"/></Button>}
                         </div>
                     </Col>
                     <Col xs={3} s={2} md={2}>
                         <h4>
                             {!trip.hurry ? (
-                                <img alt="" src={time_hurry} height={20}/>
+                                <img alt="" src={time_hurry} className="icon-trip"/>
                             ) : (
-                                <img alt="" src={time_flex} height={20}/>
+                                <img alt="" src={time_flex} className="icon-trip"/>
                             )} &nbsp;
                             <FormattedRelative value={trip.date}/>,
                         </h4>

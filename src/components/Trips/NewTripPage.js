@@ -12,24 +12,25 @@ class NewTripPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            trip: {name: '', breed: '', weight: '', temperament: '', hobby_ids: []},
+            trip: {from: '', to: '', price: '', seats: '', passenger_ids: []},
             saving: false
         };
+        // this.redirect = this.redirect.bind(this);
         this.saveTrip = this.saveTrip.bind(this);
-        this.updateTripHobbies = this.updateTripHobbies.bind(this);
+        this.updateTripPassengers = this.updateTripPassengers.bind(this);
         this.updateTripState = this.updateTripState.bind(this);
     }
 
-    updateTripHobbies(event) {
+    updateTripPassengers(event) {
         const trip = this.state.trip;
-        const hobbyId = event.target.value;
-        const hobby = this.props.checkBoxHobbies.filter(hobby => hobby.id === hobbyId)[0];
-        const checked = !hobby.checked;
-        hobby['checked'] = !hobby.checked;
+        const passengerId = event.target.value;
+        const passenger = this.props.checkBoxPassengers.filter(passenger => passenger.id === passengerId)[0];
+        const checked = !passenger.checked;
+        passenger['checked'] = !passenger.checked;
         if (checked) {
-            trip.hobby_ids.push(hobby.id);
+            trip.passenger_ids.push(passenger.id);
         } else {
-            trip.hobby_ids.splice(trip.hobby_ids.indexOf(hobby.id));
+            trip.passenger_ids.splice(trip.passenger_ids.indexOf(passenger.id));
         }
 
         this.setState({trip: trip});
@@ -50,41 +51,41 @@ class NewTripPage extends React.Component {
     render() {
         return (
             <div>
-                <h1>new trip</h1>
+                <h1>Añadir viaje</h1>
                 <TripForm
                     trip={this.state.trip}
-                    hobbies={this.props.checkBoxHobbies}
+                    passengers={this.props.checkBoxPassengers}
                     onSave={this.saveTrip}
                     onChange={this.updateTripState}
-                    onHobbyChange={this.updateTripHobbies}/>
+                    // onPassengerChange={this.updateTripPassengers}
+                />
             </div>
         );
     }
 }
 
-function hobbiesForCheckBoxes(hobbies) {
-    return hobbies.map(hobby => {
-        hobby['checked'] = false;
-        return hobby;
+function passengersForCheckBoxes(passengers) {
+    return passengers.map(passenger => {
+        passenger['checked'] = false;
+        return passenger;
     });
 }
 
 NewTripPage.propTypes = {
-    checkBoxHobbies: PropTypes.array.isRequired,
+    checkBoxPassengers: PropTypes.array.isRequired,
     actions: PropTypes.object.isRequired
 };
 
 
-
 function mapStateToProps(state, ownProps) {
-    let checkBoxHobbies = [];
-    if (state.hobbies.length > 0) {
-        checkBoxHobbies = hobbiesForCheckBoxes(Object.assign([], state.hobbies));
-    }
-
-    return {
-        checkBoxHobbies: checkBoxHobbies
-    };
+    // let checkBoxPassengers = [];
+    // if (state.user.length > 0) {
+    //     checkBoxPassengers = passengersForCheckBoxes(Object.assign([], state.passengers));
+    // }
+    //
+    // return {
+    //     checkBoxPassengers: checkBoxPassengers
+    // };
 }
 
 function mapDispatchToProps(dispatch) {
@@ -95,3 +96,4 @@ function mapDispatchToProps(dispatch) {
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(NewTripPage);
+// export default connect(mapStateToProps)(NewTripPage);

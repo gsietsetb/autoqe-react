@@ -26,13 +26,13 @@ var _secure_pay = require("../../img/icons/material/secure_pay.svg");
 
 var _secure_pay2 = _interopRequireDefault(_secure_pay);
 
-var _loc = require("../../img/icons/material/loc2.svg");
+var _from_shift = require("../../img/icons/custom/from_shift.svg");
 
-var _loc2 = _interopRequireDefault(_loc);
+var _from_shift2 = _interopRequireDefault(_from_shift);
 
-var _loc3 = require("../../img/icons/material/loc4.svg");
+var _dest_shift = require("../../img/icons/custom/dest_shift.svg");
 
-var _loc4 = _interopRequireDefault(_loc3);
+var _dest_shift2 = _interopRequireDefault(_dest_shift);
 
 var _SearchBar = require("../Trips/SearchBar");
 
@@ -61,27 +61,14 @@ var HowCarpooling = function (_React$Component) {
             user: true,
             addTrip: 0
         };
-        _this._handleKindChange = _this._handleKindChange.bind(_this);
+        _this._setRole = _this._setRole.bind(_this);
         return _this;
     }
 
     _createClass(HowCarpooling, [{
-        key: "_handleKindChange",
-        value: function _handleKindChange(kind) {
-            // console.log(kind.contains(1));
-            // // Correct
-            // this.setState((kind) => ({
-            //     driver: kind
-            // }));
-            // this.setState({driver: });
-            // console.log('this was kind: ' + {kind} + ' while ' + this.state.driver + ' and ' + this.state.user);
-            kind.indexOf('d') !== -1 ? this.setState({
-                driver: !this.state.driver
-            }) : this.setState({
-                user: !this.state.user
-            });
-            // console.log('this is kind: ' + {kind} + ' while ' + this.state.driver + ' and ' + this.state.user);
-            // this.setState({...this.state, [0]: value})
+        key: "_setRole",
+        value: function _setRole(kind) {
+            this.setState(kind.indexOf('d') !== -1 ? { driver: !this.state.driver } : { user: !this.state.user });
         }
     }, {
         key: "render",
@@ -96,14 +83,14 @@ var HowCarpooling = function (_React$Component) {
                     null,
                     _react2.default.createElement(
                         _reactBootstrap.ToggleButtonGroup,
-                        { type: "checkbox", value: !this.state.kind, onChange: this._handleKindChange },
+                        { type: "checkbox", value: !this.state.kind, onChange: this._setRole },
                         _react2.default.createElement(
                             _reactBootstrap.ToggleButton,
                             { value: 'd' },
                             _react2.default.createElement(
                                 "h4",
                                 { style: { color: "#122b40" } },
-                                _react2.default.createElement("img", { alt: "", src: _steeringWheel2.default, className: "icon-row" }),
+                                _react2.default.createElement("img", { alt: "driver", src: _steeringWheel2.default, className: "icon-row" }),
                                 "Conductor"
                             )
                         ),
@@ -113,7 +100,7 @@ var HowCarpooling = function (_React$Component) {
                             _react2.default.createElement(
                                 "h4",
                                 { style: { color: "#74acdf" } },
-                                _react2.default.createElement("img", { alt: "", src: _users2.default, className: "icon-row" }),
+                                _react2.default.createElement("img", { alt: "passenger", src: _users2.default, className: "icon-row" }),
                                 "Pasajeros"
                             )
                         )
@@ -130,14 +117,14 @@ var HowCarpooling = function (_React$Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", { className: "timeline-image img-circle img-responsive", src: _loc2.default,
+                                    _react2.default.createElement("img", { className: "timeline-image img-circle img-responsive isDriver", src: _from_shift2.default,
                                         alt: "autoqe", onClick: function onClick() {
                                             return _this2.setState({ addTrip: !_this2.state.addTrip });
                                         } }),
                                     _react2.default.createElement(
                                         "h1",
                                         { className: "timeline-image timeline-number-driver" },
-                                        "+"
+                                        "1"
                                     ),
                                     _react2.default.createElement(
                                         "div",
@@ -152,7 +139,7 @@ var HowCarpooling = function (_React$Component) {
                                                         return _this2.setState({ addTrip: !_this2.state.addTrip });
                                                     },
                                                     style: { color: '#122b40' } },
-                                                "1. Public\xE1 tu viaje"
+                                                "+ Public\xE1 tu viaje"
                                             ),
                                             _react2.default.createElement(
                                                 _reactBootstrap.Collapse,
@@ -192,11 +179,11 @@ var HowCarpooling = function (_React$Component) {
                                 _react2.default.createElement(
                                     "li",
                                     { className: "timeline-inverted" },
-                                    _react2.default.createElement("img", { className: "timeline-image img-circle img-responsive", src: _loc4.default, alt: "" }),
+                                    _react2.default.createElement("img", { className: "timeline-image img-circle img-responsive", src: _dest_shift2.default, alt: "" }),
                                     _react2.default.createElement(
-                                        "h3",
+                                        "h1",
                                         { className: "timeline-image timeline-number-user" },
-                                        _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "search" })
+                                        "1"
                                     ),
                                     _react2.default.createElement(
                                         "div",
@@ -207,7 +194,8 @@ var HowCarpooling = function (_React$Component) {
                                             _react2.default.createElement(
                                                 "h2",
                                                 { className: "subheading" },
-                                                "1. Encuentra y Reserva"
+                                                _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "search" }),
+                                                " Encontr\xE1 y Reserv\xE1"
                                             ),
                                             _react2.default.createElement(
                                                 "h4",
@@ -228,8 +216,7 @@ var HowCarpooling = function (_React$Component) {
                                             _react2.default.createElement(
                                                 _reactBootstrap.Button,
                                                 { className: "btn-light_w" },
-                                                _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "search",
-                                                    className: "icon-glyph" }),
+                                                _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "search", className: "icon-glyph" }),
                                                 " Encontr\xE1 viaje"
                                             )
                                         )
@@ -242,12 +229,12 @@ var HowCarpooling = function (_React$Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", { className: "timeline-image img-circle img-responsive", src: _loc2.default,
+                                    _react2.default.createElement("img", { className: "timeline-image img-circle img-responsive isDriver", src: _from_shift2.default,
                                         alt: "autoqe" }),
                                     _react2.default.createElement(
-                                        "h3",
-                                        { className: "timeline-image timeline-number-user" },
-                                        _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "ok" })
+                                        "h1",
+                                        { className: "timeline-image timeline-number-driver" },
+                                        "2"
                                     ),
                                     _react2.default.createElement(
                                         "div",
@@ -258,7 +245,8 @@ var HowCarpooling = function (_React$Component) {
                                             _react2.default.createElement(
                                                 "h2",
                                                 { className: "subheading", style: { color: '#122b40' } },
-                                                "2. Recib\xEDs la reserva"
+                                                _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "ok" }),
+                                                " Recib\xEDs la reserva"
                                             ),
                                             _react2.default.createElement(
                                                 "h4",
@@ -280,11 +268,11 @@ var HowCarpooling = function (_React$Component) {
                                 _react2.default.createElement(
                                     "li",
                                     { className: "timeline-inverted" },
-                                    _react2.default.createElement("img", { className: "timeline-image img-circle img-responsive", src: _loc4.default, alt: "" }),
+                                    _react2.default.createElement("img", { className: "timeline-image img-circle img-responsive", src: _dest_shift2.default, alt: "" }),
                                     _react2.default.createElement(
-                                        "h3",
+                                        "h1",
                                         { className: "timeline-image timeline-number-user" },
-                                        _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "road" })
+                                        " 2"
                                     ),
                                     _react2.default.createElement(
                                         "div",
@@ -295,7 +283,8 @@ var HowCarpooling = function (_React$Component) {
                                             _react2.default.createElement(
                                                 "h2",
                                                 { className: "subheading" },
-                                                "2. Comparten el trayecto"
+                                                _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "road" }),
+                                                " Comparten el trayecto"
                                             ),
                                             _react2.default.createElement(
                                                 "h4",
@@ -317,12 +306,12 @@ var HowCarpooling = function (_React$Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", { className: "timeline-image img-circle img-responsive", src: _loc2.default,
+                                    _react2.default.createElement("img", { className: "timeline-image img-circle img-responsive isDriver", src: _from_shift2.default,
                                         alt: "autoqe" }),
                                     _react2.default.createElement(
-                                        "h3",
-                                        { className: "timeline-image timeline-number-user" },
-                                        _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "star" })
+                                        "h1",
+                                        { className: "timeline-image timeline-number-driver" },
+                                        "3"
                                     ),
                                     _react2.default.createElement(
                                         "div",
@@ -333,7 +322,8 @@ var HowCarpooling = function (_React$Component) {
                                             _react2.default.createElement(
                                                 "h2",
                                                 { className: "subheading", style: { color: '#122b40' } },
-                                                "3. Valor\xE1s y recib\xEDs el dinero"
+                                                _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "star" }),
+                                                " Valor\xE1s y recib\xEDs el dinero"
                                             ),
                                             _react2.default.createElement(
                                                 "h4",

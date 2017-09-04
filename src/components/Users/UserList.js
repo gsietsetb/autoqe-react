@@ -3,18 +3,18 @@ import PropTypes from "prop-types"
 
 import UserListRow from './UserListRow';
 
-const UserList = ({hobbies}) => {
+const UserList = ({users}) => {
     return (
         <div>
-            <h3>Hobbies</h3>
+            <h3>Users</h3>
             <table className="table">
                 <thead>
                 <tr>
-                    <th></th>
+                    <th>This goes here...</th>
                 </tr>
                 </thead>
                 <tbody>
-                {hobbies.map(user =>
+                {users.map(user =>
                     <UserListRow key={user.id} user={user} />
                 )}
                 </tbody>
@@ -24,7 +24,7 @@ const UserList = ({hobbies}) => {
 };
 
 UserList.propTypes = {
-    hobbies: PropTypes.array.isRequired
+    users: PropTypes.array.isRequired
 };
 
 export default UserList;

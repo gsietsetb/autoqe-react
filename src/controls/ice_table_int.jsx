@@ -1,11 +1,19 @@
-import React, {PropTypes, Component} from 'react';
+import React, {Component} from 'react';
 import shouldPureComponentUpdate from 'react-pure-render-utils/function';
+import PropTypes from 'prop-types'
 
 import IceTableInt from './ice_table_int.jsx';
-
 // TODO pass in props in future versions
-import {columns, cellRenderer, getRowClassNameAt, renderHeader, renderMiniHeader,
-    K_ROW_HEIGHT, K_HEADER_HEIGHT, K_MINI_HEADER_HEIGHT} from './ice_table_renderer.js';
+import {
+    cellRenderer,
+    columns,
+    getRowClassNameAt,
+    K_HEADER_HEIGHT,
+    K_MINI_HEADER_HEIGHT,
+    K_ROW_HEIGHT,
+    renderHeader,
+    renderMiniHeader
+} from './ice_table_renderer.js';
 
 const K_MIN_DEFAULT_ROWS_SIZE = 0;
 
@@ -37,41 +45,41 @@ export default class IceTable extends Component {
 
     _cellRenderer = (cellDataKey, rowData, rowIndex) => {
         return cellRenderer(cellDataKey, rowData, rowIndex);
-    }
+    };
 
     _getRowObjectAt = (i) => {
         return this.props.markers && this.props.markers.get(i);
-    }
+    };
 
     _getRowClassNameAt = (i, isHovered) => {
         return getRowClassNameAt(i, isHovered || i === this.props.hoveredMapRowIndex, i === this.props.firstInvisibleRowIndex);
-    }
+    };
 
     _renderHeader = (resetFn) => {
         return renderHeader(resetFn);
-    }
+    };
 
     _renderMiniHeader = (resetFn) => {
         return renderMiniHeader(resetFn);
-    }
+    };
 
     _onHoveredRowIndexChange = (index) => {
         if (this.props.onHoveredRowIndexChange) {
             this.props.onHoveredRowIndexChange(index);
         }
-    }
+    };
 
     _onVisibleRowsChange = ({visibleRowFirst, visibleRowLast, maxVisibleRows}) => {
         if (this.props.onVisibleRowsChange) {
             this.props.onVisibleRowsChange({visibleRowFirst, visibleRowLast, maxVisibleRows});
         }
-    }
+    };
 
     _onRowClick = (index /*, rowData */) => {
         if (this.props.onRowClick) {
             this.props.onRowClick(index);
         }
-    }
+    };
 
     render() {
         return (

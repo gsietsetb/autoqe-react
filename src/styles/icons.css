@@ -41,6 +41,10 @@
     margin-right: 2em;
 }
 
+.icon-trip{
+    height: 20px;
+}
+
 @media screen and (max-width: 840px) {
     .icon-row {
         height: 30px;

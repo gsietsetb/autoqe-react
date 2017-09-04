@@ -10,8 +10,10 @@ class TripForm extends React.Component {
     }
 
     makeCheckBoxes() {
-        return this.props.hobbies.map(hobby => {
-            return <CheckBox item={hobby} handleChange={this.props.onHobbyChange} key={hobby.id}/>
+        return this.props.users.map(user => {
+            return <CheckBox item={user}
+                             handleChange={this.props.onUserChange}
+                             key={user.id}/>
         })
     }
 
@@ -21,35 +23,35 @@ class TripForm extends React.Component {
             <div>
                 <form>
                     <TextInput
-                        name="name"
-                        label="name"
-                        value={this.props.trip.name}
+                        name="from"
+                        label="from"
+                        value={this.props.trip.from}
                         onChange={this.props.onChange}/>
 
                     {boxes}
 
                     <TextInput
-                        name="breed"
-                        label="Breed"
-                        value={this.props.trip.breed}
+                        name="to"
+                        label="To"
+                        value={this.props.trip.to}
                         onChange={this.props.onChange}/>
 
                     <TextInput
-                        name="weight"
-                        label="weight"
-                        value={this.props.trip.weight}
+                        name="price"
+                        label="price"
+                        value={this.props.trip.price}
                         onChange={this.props.onChange}/>
 
                     <TextInput
-                        name="temperament"
-                        label="temperament"
-                        value={this.props.trip.temperament}
+                        name="seats"
+                        label="seats"
+                        value={this.props.trip.seats}
                         onChange={this.props.onChange}/>
 
                     <input
                         type="submit"
                         disabled={this.props.saving}
-                        value={this.props.saving ? 'Saving...' : 'Save'}
+                        value={this.props.saving ? 'Guardando...' : 'Hecho!'}
                         className="btn btn-primary"
                         onClick={this.props.onSave}/>
                 </form>
@@ -60,10 +62,10 @@ class TripForm extends React.Component {
 
 TripForm = {
     trip: PropTypes.object.isRequired,
-    hobbies: React.PropTypes.array.isRequired,
+    users: React.PropTypes.array.isRequired,
     onSave: React.PropTypes.func.isRequired,
     onChange: React.PropTypes.func.isRequired,
-    onHobbyChange: React.PropTypes.func.isRequired,
+    onUserChange: React.PropTypes.func.isRequired,
     saving: React.PropTypes.bool
 };
 

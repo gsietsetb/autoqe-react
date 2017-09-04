@@ -19,7 +19,7 @@ var _UserListRow2 = _interopRequireDefault(_UserListRow);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var UserList = function UserList(_ref) {
-    var hobbies = _ref.hobbies;
+    var users = _ref.users;
 
     return _react2.default.createElement(
         'div',
@@ -27,7 +27,7 @@ var UserList = function UserList(_ref) {
         _react2.default.createElement(
             'h3',
             null,
-            'Hobbies'
+            'Users'
         ),
         _react2.default.createElement(
             'table',
@@ -38,13 +38,17 @@ var UserList = function UserList(_ref) {
                 _react2.default.createElement(
                     'tr',
                     null,
-                    _react2.default.createElement('th', null)
+                    _react2.default.createElement(
+                        'th',
+                        null,
+                        'This goes here...'
+                    )
                 )
             ),
             _react2.default.createElement(
                 'tbody',
                 null,
-                hobbies.map(function (user) {
+                users.map(function (user) {
                     return _react2.default.createElement(_UserListRow2.default, { key: user.id, user: user });
                 })
             )
@@ -53,7 +57,7 @@ var UserList = function UserList(_ref) {
 };
 
 UserList.propTypes = {
-    hobbies: _propTypes2.default.array.isRequired
+    users: _propTypes2.default.array.isRequired
 };
 
 exports.default = UserList;

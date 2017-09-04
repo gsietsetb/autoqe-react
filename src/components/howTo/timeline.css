@@ -7,7 +7,7 @@
 
 .timeline-background:before {
     text-align: center;
-    top: 35px;
+    top: 70px;
     bottom: 25px;
     position: absolute;
     content: "";
@@ -40,12 +40,16 @@
     min-height: 50px
 }
 
-*:active {
-    color: #595f62;
-}
+/**:active {*/
+    /*color: #595f62;*/
+/*}*/
 
-li > h4:active {
-    color: #e8a135 !important;
+/*li > h4:active {*/
+    /*color: #e8a135 !important;*/
+/*}*/
+
+.isDriver{
+    left: 47%!important;
 }
 
 .driver {
@@ -53,29 +57,33 @@ li > h4:active {
 }
 
 .timeline-number-driver {
-    top: -12px;
-    /*color: #74acdf !important;*/
+    top: -6px;
+    padding-right: 2.5em!important;
+    color: #122b40 !important;
 }
 
 .timeline-number-user {
     top: -4px;
-    /*color: #122b40 !important;*/
+    color: #74acdf !important;
+    padding-left: 0.6em
 }
 
 @media (min-width: 992px) {
 
     .timeline-background:before {
-        top: 64px;
+        top: 120px;
     }
 
     .timeline-number-driver {
-        top: -6px;
+        top: 3px;
+        padding-left: -22px!important;
+        /*left: 2px !important;*/
         /*color: #74acdf !important;*/
     }
 
     .timeline-number-user {
         top: 4px;
-        /*color: #122b40 !important;*/
+        /*color: #74acdf !important;*/
     }
 
 }
@@ -254,7 +262,7 @@ li > h4:active {
     .timeline > li .timeline-image {
         width: 80px;
         height: 80px;
-        left: 50%;
+        left: 51%;
         margin-left: -40px
     }
 

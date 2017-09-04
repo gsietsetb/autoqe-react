@@ -16,7 +16,7 @@ export default class TripsAPI {
         //     method: 'GET',
         //     // headers: headers
         // });
-
+        // console.log(" This is the: "+API_URL+trip.id);
         return new Promise((resolve, reject) => {
             request
                 .get(API_URL)
@@ -35,6 +35,7 @@ export default class TripsAPI {
 
     static updateTrip(trip) {
         const headers = Object.assign({'Content-Type': 'application/json'}, this.requestHeaders());
+        console.log(" This is the: "+API_URL+trip.id);
         const request = new Request(API_URL+trip.id, {
             method: 'PUT',
             headers: headers,

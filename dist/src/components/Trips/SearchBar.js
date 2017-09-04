@@ -20,13 +20,17 @@ var _carp = require("../../img/icons/services/carp.svg");
 
 var _carp2 = _interopRequireDefault(_carp);
 
-var _loc = require("../../img/icons/material/loc1.svg");
+var _from = require("../../img/icons/custom/from.svg");
 
-var _loc2 = _interopRequireDefault(_loc);
+var _from2 = _interopRequireDefault(_from);
 
-var _loc3 = require("../../img/icons/material/loc3.svg");
+var _search = require("../../img/icons/custom/search.svg");
 
-var _loc4 = _interopRequireDefault(_loc3);
+var _search2 = _interopRequireDefault(_search);
+
+var _dest = require("../../img/icons/custom/dest.svg");
+
+var _dest2 = _interopRequireDefault(_dest);
 
 var _reactResponsive = require("react-responsive");
 
@@ -111,7 +115,7 @@ var SearchBarComp = function (_React$Component) {
                             _react2.default.createElement(
                                 _reactBootstrap.InputGroup.Addon,
                                 { style: { minWidth: 36 } },
-                                _react2.default.createElement("img", { alt: "", src: _loc2.default, style: { marginLeft: -10 }, height: 30 })
+                                _react2.default.createElement("img", { alt: "", src: _from2.default, style: { marginLeft: -10 }, height: 30 })
                             ),
                             _react2.default.createElement(_reactBootstrap.FormControl, { style: { height: 'unset' }, type: "text", placeholder: "Buenos Aires" })
                         )
@@ -130,7 +134,7 @@ var SearchBarComp = function (_React$Component) {
                             _react2.default.createElement(
                                 _reactBootstrap.InputGroup.Addon,
                                 { style: { minWidth: 36 } },
-                                _react2.default.createElement("img", { alt: "", src: _loc4.default, style: { marginLeft: -10 }, height: 30 })
+                                _react2.default.createElement("img", { alt: "", src: _dest2.default, style: { marginLeft: -10 }, height: 30 })
                             ),
                             _react2.default.createElement(_reactBootstrap.FormControl, { style: { height: 'unset' }, height: 30, className: "inputForm", type: "text",
                                 placeholder: "C\xF3rdoba" })
@@ -158,8 +162,8 @@ var SearchBarComp = function (_React$Component) {
                         _react2.default.createElement(
                             _reactBootstrap.Button,
                             { type: "submit", className: "btn-light_w", style: { display: 'inline' } },
-                            _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "search" }),
-                            " \xA0 Encontr\xE1 tu viaje"
+                            _react2.default.createElement("img", { src: _search2.default }),
+                            "Encontr\xE1 tu viaje"
                         )
                     ),
                     "\xA0 \xA0"

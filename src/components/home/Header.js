@@ -106,7 +106,7 @@ export default class CarouselComp extends React.Component {
                         <div className="deg-park">
                             <Carousel.Caption>
                                 <h1>Alquiler de Cocheras entre particulares</h1>
-                                <h3>Perdele el miedo a ir al centro en auto!</h3>
+                                <h3>Perdé el miedo a estacionar en el centro!</h3>
                             </Carousel.Caption>
                         </div>
                     </Carousel.Item>
@@ -138,19 +138,19 @@ export default class CarouselComp extends React.Component {
                         <Nav bsStyle="tabs" id="header-tab">
                             <NavItem className="carp-transp " eventKey={0}>
                                 <img alt="carpool" src={carp} className="header-icon"/>
-                                <h4 className="white-text avoid-if-small service-carp-transp"> &nbsp;Carpooling</h4>
+                                <h4 id="carp-tab" className="white-text avoid-if-small service-carp"> &nbsp;Carpooling</h4>
                             </NavItem>
-                            <NavItem className=" rent-transp " eventKey={1}>
+                            <NavItem className="rent-transp" eventKey={1}>
                                 <img alt="Private car rental" src={rent} className="header-icon"/>
-                                <h4 className="white-text avoid-if-small service-rent-transp">&nbsp;Autos</h4>
+                                <h4 className="white-text avoid-if-small service-rent">&nbsp;Autos</h4>
                             </NavItem>
                             <NavItem className=" park-transp " eventKey={2}>
                                 <img alt="Private Parking spot rental" src={park} className="header-icon"/>
-                                <h4 className="white-text avoid-if-small service-park-transp">&nbsp;Cocheras</h4>
+                                <h4 className="white-text avoid-if-small service-park">&nbsp;Cocheras</h4>
                             </NavItem>
                             <NavItem className=" elec-transp" eventKey={3}>
                                 <img alt="Electric car" src={el} className="header-icon"/>
-                                <h4 className="white-text avoid-if-small service-elec-transp">&nbsp;Autos
+                                <h4 className="white-text avoid-if-small service-elec">&nbsp;Autos
                                     eléctricos</h4>
                                 {/*&nbsp;</b><Label className="avoid-if-small" bsStyle="warning">Próx.</Label>*/}
                             </NavItem>
@@ -165,7 +165,7 @@ export default class CarouselComp extends React.Component {
                             </Tab.Pane>
                             <Tab.Pane eventKey={1}>
                                 <Row>
-                                    <TripsPage/>
+                                    {/*<NewTripPage/>*/}
                                 </Row>
                             </Tab.Pane>
                             <Tab.Pane eventKey={2}>

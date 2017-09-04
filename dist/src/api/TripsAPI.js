@@ -41,7 +41,7 @@ var TripsAPI = function () {
             //     method: 'GET',
             //     // headers: headers
             // });
-
+            // console.log(" This is the: "+API_URL+trip.id);
             return new Promise(function (resolve, reject) {
                 _client2.default.get(API_URL).end(function (err, resp) {
                     if (err) reject(err);
@@ -59,6 +59,7 @@ var TripsAPI = function () {
         key: 'updateTrip',
         value: function updateTrip(trip) {
             var headers = Object.assign({ 'Content-Type': 'application/json' }, this.requestHeaders());
+            console.log(" This is the: " + API_URL + trip.id);
             var request = new Request(API_URL + trip.id, {
                 method: 'PUT',
                 headers: headers,

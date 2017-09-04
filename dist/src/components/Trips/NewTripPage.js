@@ -47,29 +47,30 @@ var NewTripPage = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (NewTripPage.__proto__ || Object.getPrototypeOf(NewTripPage)).call(this, props));
 
         _this.state = {
-            trip: { name: '', breed: '', weight: '', temperament: '', hobby_ids: [] },
+            trip: { from: '', to: '', price: '', seats: '', passenger_ids: [] },
             saving: false
         };
+        // this.redirect = this.redirect.bind(this);
         _this.saveTrip = _this.saveTrip.bind(_this);
-        _this.updateTripHobbies = _this.updateTripHobbies.bind(_this);
+        _this.updateTripPassengers = _this.updateTripPassengers.bind(_this);
         _this.updateTripState = _this.updateTripState.bind(_this);
         return _this;
     }
 
     _createClass(NewTripPage, [{
-        key: 'updateTripHobbies',
-        value: function updateTripHobbies(event) {
+        key: 'updateTripPassengers',
+        value: function updateTripPassengers(event) {
             var trip = this.state.trip;
-            var hobbyId = event.target.value;
-            var hobby = this.props.checkBoxHobbies.filter(function (hobby) {
-                return hobby.id === hobbyId;
+            var passengerId = event.target.value;
+            var passenger = this.props.checkBoxPassengers.filter(function (passenger) {
+                return passenger.id === passengerId;
             })[0];
-            var checked = !hobby.checked;
-            hobby['checked'] = !hobby.checked;
+            var checked = !passenger.checked;
+            passenger['checked'] = !passenger.checked;
             if (checked) {
-                trip.hobby_ids.push(hobby.id);
+                trip.passenger_ids.push(passenger.id);
             } else {
-                trip.hobby_ids.splice(trip.hobby_ids.indexOf(hobby.id));
+                trip.passenger_ids.splice(trip.passenger_ids.indexOf(passenger.id));
             }
 
             this.setState({ trip: trip });
@@ -97,14 +98,15 @@ var NewTripPage = function (_React$Component) {
                 _react2.default.createElement(
                     'h1',
                     null,
-                    'new trip'
+                    'A\xF1adir viaje'
                 ),
                 _react2.default.createElement(_TripForm2.default, {
                     trip: this.state.trip,
-                    hobbies: this.props.checkBoxHobbies,
+                    passengers: this.props.checkBoxPassengers,
                     onSave: this.saveTrip,
-                    onChange: this.updateTripState,
-                    onHobbyChange: this.updateTripHobbies })
+                    onChange: this.updateTripState
+                    // onPassengerChange={this.updateTripPassengers}
+                })
             );
         }
     }]);
@@ -112,27 +114,27 @@ var NewTripPage = function (_React$Component) {
     return NewTripPage;
 }(_react2.default.Component);
 
-function hobbiesForCheckBoxes(hobbies) {
-    return hobbies.map(function (hobby) {
-        hobby['checked'] = false;
-        return hobby;
+function passengersForCheckBoxes(passengers) {
+    return passengers.map(function (passenger) {
+        passenger['checked'] = false;
+        return passenger;
     });
 }
 
 NewTripPage.propTypes = {
-    checkBoxHobbies: _propTypes2.default.array.isRequired,
+    checkBoxPassengers: _propTypes2.default.array.isRequired,
     actions: _propTypes2.default.object.isRequired
 };
 
 function mapStateToProps(state, ownProps) {
-    var checkBoxHobbies = [];
-    if (state.hobbies.length > 0) {
-        checkBoxHobbies = hobbiesForCheckBoxes(Object.assign([], state.hobbies));
-    }
-
-    return {
-        checkBoxHobbies: checkBoxHobbies
-    };
+    // let checkBoxPassengers = [];
+    // if (state.user.length > 0) {
+    //     checkBoxPassengers = passengersForCheckBoxes(Object.assign([], state.passengers));
+    // }
+    //
+    // return {
+    //     checkBoxPassengers: checkBoxPassengers
+    // };
 }
 
 function mapDispatchToProps(dispatch) {
@@ -142,4 +144,5 @@ function mapDispatchToProps(dispatch) {
 }
 
 exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(NewTripPage);
+// export default connect(mapStateToProps)(NewTripPage);
 //# sourceMappingURL=NewTripPage.js.map

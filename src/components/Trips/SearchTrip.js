@@ -2,8 +2,8 @@ import React from "react";
 import {Button, Form, FormControl, FormGroup, Glyphicon, InputGroup} from "react-bootstrap";
 import moment from "moment";
 // import Autocomplete from 'react-google-autocomplete';
-import locFrom from "../../img/icons/material/loc1.svg";
-import locTo from "../../img/icons/material/loc3.svg";
+import locFrom from "../../img/icons/custom/from.svg";
+import locTo from "../../img/icons/custom/dest.svg";
 
 export default class SearchTrip extends React.Component {
     constructor(props) {
@@ -67,11 +67,12 @@ export default class SearchTrip extends React.Component {
                             {/*/>*/}
                             {/*<FormControl className="inputForm" type="date" placeholder="Hoy"  />*/}
                         </InputGroup>
-                        <Button type="submit" className="btn-light_w" style={{display: 'inline-block',  marginLeft: '1em'}}>
-                            <Glyphicon glyph="search"/> &nbsp; Encontrá tu viaje
+                        <Button type="submit" className="btn-light_w" style={{display: 'inline-block',  marginLeft: '1.2em'}}>
+                            <Glyphicon glyph="search"/> &nbsp;
+                            {/*<img src={search} className="main-icon"/>*/}
+                            Encontrá tu viaje
                         </Button>
                     </FormGroup>
-                    &nbsp; &nbsp;
                 </Form>
         );
     }
