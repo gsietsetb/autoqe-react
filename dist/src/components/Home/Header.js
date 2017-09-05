@@ -40,10 +40,6 @@ var _SearchTrip = require("../Trips/SearchTrip");
 
 var _SearchTrip2 = _interopRequireDefault(_SearchTrip);
 
-var _NewTripPage = require("../Trips/NewTripPage");
-
-var _NewTripPage2 = _interopRequireDefault(_NewTripPage);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -300,11 +296,7 @@ var CarouselComp = function (_React$Component) {
                             _react2.default.createElement(
                                 _reactBootstrap.Tab.Pane,
                                 { eventKey: 0 },
-                                _react2.default.createElement(
-                                    _reactBootstrap.Row,
-                                    null,
-                                    _react2.default.createElement(_TripsPage2.default, null)
-                                )
+                                _react2.default.createElement(_TripsPage2.default, null)
                             ),
                             _react2.default.createElement(
                                 _reactBootstrap.Tab.Pane,

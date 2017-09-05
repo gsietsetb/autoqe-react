@@ -94,6 +94,16 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 //Icons
 
 
+// Default (desktop, tablet) and mobile setup
+var Huge = function Huge(_ref) {
+    var children = _ref.children;
+    return _react2.default.createElement(_reactResponsive2.default, { minWidth: 1218, children: children });
+};
+var NotHuge = function NotHuge(_ref2) {
+    var children = _ref2.children;
+    return _react2.default.createElement(_reactResponsive2.default, { maxWidth: 1218, children: children });
+};
+
 var Footer = function (_Component) {
     _inherits(Footer, _Component);
 
@@ -135,8 +145,8 @@ var Footer = function (_Component) {
                                 "Autoqe es una soluci\xF3n de transporte dentro de la econom\xEDa colaborativa. Te permite compartir trayectos, alquilar autos y cocheras entre particulares a tu alrededor. "
                             ),
                             _react2.default.createElement(
-                                _reactResponsive2.default,
-                                { maxDeviceWidth: 700 },
+                                Huge,
+                                null,
                                 _react2.default.createElement(
                                     "p",
                                     null,
@@ -162,7 +172,7 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", { alt: "", height: 25, src: _carp2.default }),
+                                    _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _carp2.default }),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         { to: "/trips" },
@@ -172,7 +182,7 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", { alt: "", height: 25, src: _rent2.default }),
+                                    _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _rent2.default }),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         { to: "/carrent" },
@@ -182,7 +192,7 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", { alt: "", height: 25, src: _park2.default }),
+                                    _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _park2.default }),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         { to: "/parkrent" },
@@ -192,16 +202,15 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", { alt: "", height: 25, src: _el2.default }),
+                                    _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _el2.default }),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         { to: "/electric" },
-                                        " Autos El\xE9ctricos"
+                                        " Autos El\xE9ctricos "
                                     ),
                                     _react2.default.createElement(
                                         _reactBootstrap.Label,
-                                        {
-                                            bsStyle: "warning" },
+                                        { bsStyle: "warning" },
                                         "Pr\xF3x."
                                     )
                                 )
@@ -221,7 +230,7 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", { alt: "", height: 25, src: _howWorks2.default }),
+                                    _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _howWorks2.default }),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         { to: "/howWorks" },
@@ -231,7 +240,7 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", { alt: "", height: 25, src: _quest2.default }),
+                                    _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _quest2.default }),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         { to: "/faq" },
@@ -241,7 +250,7 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", { alt: "", height: 25, src: _share2.default }),
+                                    _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _share2.default }),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         { to: "/collaborative" },
@@ -251,7 +260,7 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", { alt: "", height: 25, src: _leaf2.default }),
+                                    _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _leaf2.default }),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         { to: "/green" },
@@ -274,7 +283,7 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", { alt: "", height: 25, src: _world2.default }),
+                                    _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _world2.default }),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         { to: "/next" },
@@ -284,7 +293,7 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", { alt: "", height: 25, src: _design2.default }),
+                                    _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _design2.default }),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         { to: "/design" },
@@ -294,7 +303,7 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", { alt: "", height: 25, src: _code2.default }),
+                                    _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _code2.default }),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         { to: "/dev" },
@@ -304,7 +313,7 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", { alt: "", height: 25, src: _press2.default }),
+                                    _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _press2.default }),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         { to: "/press" },
@@ -327,7 +336,7 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", { alt: "", height: 25, src: _disc2.default }),
+                                    _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _disc2.default }),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         { to: "/promotion" },
@@ -337,7 +346,7 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", { alt: "", height: 25, src: _handShake2.default }),
+                                    _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _handShake2.default }),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         { to: "/work" },
@@ -353,7 +362,7 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", { alt: "", height: 25, src: _team2.default }),
+                                    _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _team2.default }),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         { to: "/team" },
@@ -363,7 +372,7 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", { alt: "", height: 25, src: _world2.default }),
+                                    _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _world2.default }),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         { to: "/contact" },
@@ -383,37 +392,32 @@ var Footer = function (_Component) {
                                 _reactRouterDom.Link,
                                 { to: "https://www.facebook.com/autoqe" },
                                 _react2.default.createElement("i", {
-                                    className: "fa fa-facebook" })
+                                    className: "social-icon fa fa-facebook" })
                             ),
-                            " \xA0 \xA0",
                             _react2.default.createElement(
                                 _reactRouterDom.Link,
                                 { to: "https://www.twitter.com/autoqe" },
                                 _react2.default.createElement("i", {
-                                    className: "fa fa-twitter" })
+                                    className: "social-icon fa fa-twitter" })
                             ),
-                            " \xA0 \xA0",
                             _react2.default.createElement(
                                 _reactRouterDom.Link,
                                 { to: "https://www.instagram.com/autoqe" },
                                 _react2.default.createElement("i", {
-                                    className: "fa fa-instagram" })
+                                    className: "social-icon fa fa-instagram" })
                             ),
-                            " \xA0 \xA0",
                             _react2.default.createElement(
                                 _reactRouterDom.Link,
-                                { to: "www.youtube.com/channel/UC7RUb3Ieez8Pl9uLIhZclyQ" },
+                                { to: "https://www.youtube.com/channel/UC7RUb3Ieez8Pl9uLIhZclyQ" },
                                 _react2.default.createElement("i", {
-                                    className: "fa fa-youtube" })
+                                    className: "social-icon fa fa-youtube" })
                             ),
-                            " \xA0 \xA0",
                             _react2.default.createElement(
                                 _reactRouterDom.Link,
-                                { to: "https://www.linkedin.com/groups/autoqe" },
+                                { to: "https://www.linkedin.com/company/16232988/" },
                                 _react2.default.createElement("i", {
-                                    className: "fa fa-linkedin" })
+                                    className: "social-icon fa fa-linkedin" })
                             ),
-                            " \xA0 \xA0",
                             _react2.default.createElement(
                                 _reactRouterDom.Link,
                                 { to: "https://google.com/+autoqe" },

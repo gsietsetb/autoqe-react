@@ -15,11 +15,19 @@
 }
 
 .btn-to{
-    border: 0px double var(--rental);
+    /*border: 0px double var(--rental);*/
     background: white;
     color: var(--rental);
     padding: 0.4em 0.2em;
     font-family: "Lemon/Milk", serif;
+
+    border: 0;
+    border-right: 2px solid var(--rental);
+    background: linear-gradient(to left, var(--rental) -50%, transparent)
+    left
+    bottom
+    no-repeat;
+    background-size:100% 3px ;
 }
 
 .btn-stop {
@@ -30,8 +38,17 @@
 }
 
 .btn-from {
-    border: 0px double var(--carpooling);
-    background: white;
+    border: 0;
+    border-left: 2px solid var(--carpooling);
+    background: linear-gradient(to right, var(--carpooling) -50%, transparent)
+        /*left*/
+        /*top*/
+    left
+    top
+        /*#777*/
+    no-repeat;
+    background-size:100% 3px ;
+
     color: var(--carpooling);
     font-family: "Lemon/Milk", serif;
     padding: 0.4em 0.2em;

@@ -21,7 +21,7 @@ class TripsPage extends React.Component {
         // console.log('this is here: ' + JSON.stringify(trips));
         return (
             <div>
-                <section className="section Container">
+                <section className=" Container">
                     <Panel style={{textAlign: 'left'}} collapsible defaultExpanded header={<div>
                         <img alt="" src={carp} height={40}/> &nbsp;
                                <h3 style={{display: 'inline'}}> Últimos viajes publicados: &nbsp;

@@ -159,9 +159,9 @@ export default class CarouselComp extends React.Component {
                         {/*<Col sm={12} >*/}
                         <Tab.Content style={{left: 0}} animation>
                             <Tab.Pane eventKey={0}>
-                                <Row>
+                                {/*<Row>*/}
                                     <TripsPage/>
-                                </Row>
+                                {/*</Row>*/}
                             </Tab.Pane>
                             <Tab.Pane eventKey={1}>
                                 <Row>

@@ -18,14 +18,6 @@ var _SearchBar = require('./Trips/SearchBar');
 
 var _SearchBar2 = _interopRequireDefault(_SearchBar);
 
-var _LastTrips = require('./Trips/oldTrip/LastTrips');
-
-var _LastTrips2 = _interopRequireDefault(_LastTrips);
-
-var _TripDetail = require('./Trips/oldTrip/TripDetail');
-
-var _TripDetail2 = _interopRequireDefault(_TripDetail);
-
 var _Home = require('./home/Home');
 
 var _Home2 = _interopRequireDefault(_Home);

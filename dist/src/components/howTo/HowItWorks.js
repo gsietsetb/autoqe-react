@@ -36,10 +36,6 @@ var _el = require("../../img/icons/services/el.svg");
 
 var _el2 = _interopRequireDefault(_el);
 
-var _quest = require("../../img/icons/custom/quest.svg");
-
-var _quest2 = _interopRequireDefault(_quest);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }

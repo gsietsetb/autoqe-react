@@ -19,6 +19,13 @@
     z-index: 1000;
     /*margin-bottom: 20px;*/
     position: relative;
+    left: 3%;
+}
+
+@media screen and (max-width: 740px) {
+    .header-tabs {
+        left: 4% !important;
+    }
 }
 
 /*.nav-tabs>li.active>a{*/

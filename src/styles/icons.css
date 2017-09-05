@@ -31,6 +31,43 @@
     /*margin-right: 12px;*/
 }
 
+.small-icon-container{
+    margin-left: -0.8em!important;
+    /*display: inline-block;*/
+}
+
+.show-small{
+    display: inline-block;
+}
+
+.hide-small{
+    display: none;
+}
+
+.small-icon {
+    display: inline;
+    height: 15px;
+    margin-right: 2px;
+}
+
+.user-icon{
+    text-align: center!important;
+    margin-left: -1.8em!important;
+    height: 60px;
+    border-radius: 50%;
+    vertical-align: text-bottom;
+}
+
+.footer-icon {
+    height: 20px;
+    margin-right: 3px;
+}
+
+.social-icon {
+    /*height: 20px;*/
+    margin-right: 1em;
+}
+
 /*//Services:*/
 .img-service {
     max-width: 30vh;
@@ -38,13 +75,42 @@
 
 .brand-logo {
     height: 60px;
-    margin-right: 2em;
+    margin-right: 1em;
+}
+.trip-icon-container{
+    display: inline;
+    margin-top: 0.4em;
+    padding: 2px;
 }
 
 .icon-trip{
-    height: 20px;
+    /*margin-right: 2px;*/
+    height: 15px;
 }
 
+@media screen and (min-width: 960px) {
+    .user-icon{
+        height: 100px;
+    }
+
+    .icon-trip{
+        height: 20px;
+    }
+    .small-icon-container{
+        margin-left: 0em!important;
+        /*display: inline-block;*/
+    }
+}
+@media screen and (max-width: 960px) {
+    .show-small{
+        display: none;
+    }
+
+    .hide-small{
+        display: inline-block;
+    }
+
+}
 @media screen and (max-width: 840px) {
     .icon-row {
         height: 30px;
@@ -53,6 +119,8 @@
     .brand-logo {
         height: 45px;
     }
+
+
 }
 
 @media screen and (max-width: 640px) {
