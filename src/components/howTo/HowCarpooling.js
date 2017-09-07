@@ -61,7 +61,7 @@ export default class HowCarpooling extends React.Component {
                                                 Añadí facilmente los detalles de tu viaje &nbsp;
                                             </h4>
                                             <p>Puedes configurar diversas opciones</p>
-                                            <Button bsStyle="primary"
+                                            <Button className="btn-mix"
                                                     onClick={() => this.setState({addTrip: !this.state.addTrip})}>
                                                 <Glyphicon glyph="plus-sign"/>&nbsp; Publicá viaje</Button>
                                         </div>

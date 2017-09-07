@@ -2,8 +2,8 @@
 :root {
     --dark: #122b40;
     --light: #74acdf;
-    --carpooling: #122b40;
-    --rental: #74acdf;
+    --carpooling: var(--light);
+    --rental: var(--dark);
     --parking: #498d19;
     --elec: #e8a135;
     --rent-transp: rgba(116, 172, 223, 0.5);
@@ -39,7 +39,7 @@
 }
 
 .dark-text {
-    color: var(--dark);
+    color: var(--dark)!important;
 }
 
 .light-text{
@@ -125,10 +125,11 @@
 
 .sub-section-title {
     margin-bottom: 0.25em;
-    font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 600;
+    font-family: "Lemon/Milk", serif;
+    /*font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    font-weight: 400;
     font-style: normal;
-    font-size: 2.125rem;
+    font-size: 1.825rem;
     line-height: 1.375;
     color: #b0b0b0;
     text-align: left;
@@ -307,6 +308,10 @@
     display: block
 }
 
+.spaciate .row, .spaciate button{
+    margin-top: 1em;
+}
+
 .row {
     display: block
 }
@@ -461,7 +466,6 @@
     display: block;
     margin-right: 3.86399%;
     width: 100%;
-    margin-right: 0
 }
 
 .grid-row-two-up-skinny:last-child {
@@ -473,7 +477,6 @@
     display: block;
     margin-right: 3.86399%;
     width: 100%;
-    margin-right: 0;
     margin-bottom: 2em
 }
 

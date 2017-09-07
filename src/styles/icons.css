@@ -50,6 +50,15 @@
     margin-right: 2px;
 }
 
+.highlight-icon{
+    text-align: center;
+
+}
+
+.highlight-icon img{
+    height: 3em;
+
+}
 .user-icon{
     text-align: center!important;
     margin-left: -0.8em!important;
@@ -74,7 +83,7 @@
 }
 
 .brand-logo {
-    height: 70px;
+    height: 60px;
     margin-right: 1em;
 }
 

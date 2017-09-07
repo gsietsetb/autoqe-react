@@ -6,6 +6,8 @@ import SecurePayment from "../about/SecurePayment";
 import Intro from "./Intro";
 import Green from "../about/Green";
 import CarouselComp from "./Header";
+import Devices from "../about/Devices";
+import SocialNetworkComp from "../about/SocialNetworks";
 
 export default class HomePage extends React.Component {
     render() {
@@ -17,6 +19,8 @@ export default class HomePage extends React.Component {
                 <ServiceComp/>
                 <Green/>
                 <HowWorksComp/>
+                <Devices/>
+                <SocialNetworkComp/>
                 <SecurePayment/>
                 <TalkAboutComp/>
             </div>

@@ -2,10 +2,11 @@ import React from "react";
 import {Button, Glyphicon, Image, Label, Row} from "react-bootstrap";
 import Responsive from 'react-responsive';
 
-import srvCarp from "../../img/banner/mockup-carPool.png";
+import srvCarp from "../../img/mockup/Galaxy S8.png";
 import srvShare from "../../img/banner/mockup-carShare.png";
-import srvPark from "../../img/banner/parking4.jpg";
+import srvPark from "../../img/banner/parking_g.jpg";
 import srvElec from "../../img/banner/elec_xs.png";
+import srv from "../../img/icons/services/serv.gif";
 //Icons
 import carp from "../../img/icons/services/carp.svg";
 import rent from "../../img/icons/services/rent.svg";
@@ -13,6 +14,7 @@ import park from "../../img/icons/services/park.svg";
 import el from "../../img/icons/services/el.svg";
 
 import money from "../../img/icons/material/money.svg";
+import secure from "../../img/icons/material/secure_pay.svg";
 import share from "../../img/icons/material/hand-shake.svg";
 import time from "../../img/icons/material/fast.svg";
 
@@ -24,26 +26,41 @@ export default class ServiceComp extends React.Component {
     render() {
         return (
             <section className="container">
+                <Row className="sub-section-title" style={{textAlign: 'center'}}>
+                    <h1 className="dark-text">
+                        <img alt="" src={srv} className="main-icon"/>
+                        <span className="service-carp">Ser</span><span className="service-rent">Vi</span>
+                        <span className="service-park">Ci</span><span className="service-elec">Os</span>
+                    </h1>
+                </Row>
                 <div className="grid-row-two-up-skinny">
                     {/*Carpooling*/}
-                    <div className="grid-item sub-section" style={{marginTop: '3vh'}}>
+                    <div className="grid-item sub-section spaciate" style={{marginTop: '8vh'}}>
                         <Row className="sub-section-title">
                             <h3>
                                 <img alt="" src={carp} className="main-icon"/>
                                 <span className="service-carp"><b>Carpooling</b>:</span> Compartí trayectos
                             </h3>
                         </Row>
+                        <Row> </Row>
                         <div className="sub-section-text">
                             <p>Dividí los gastos del viaje con otros pasajeros.</p>
-                            <Row>
-                                <img alt="" className="icon-row" src={share}/>
-                                <b>Compartí</b> rutas, viajes, escapadas de fin de semana, trayectos cortos...
-                            </Row>
-                            <Row>
-                                <img alt="" src={money} className="icon-row"/>
-                                <b> Ahorrá</b> hasta un 30% por cada pasajero o trayecto
-                            </Row>
-                            <p/>
+                                <Row> </Row>
+                             <p>
+                                 <Row>
+                                    <img alt="" className="icon-row" src={share}/>
+                                    <b>Compartí</b> rutas, viajes, escapadas de fin de semana, trayectos cortos...
+                                </Row>
+
+                                <Row>
+                                    <img alt="" src={money} className="icon-row"/>
+                                    <b> Ahorrá</b> hasta un 30% por cada pasajero o trayecto
+                                </Row>
+                                <Row>
+                                    <img alt="" className="icon-row" src={secure}/>
+                                    <b>Pago seguro</b> Un único pago para reservar que no se cobra hasta que se completa el trayecto
+                                </Row>
+                            </p>
                             <Button className="btn-light_w"><Glyphicon glyph="search" className="icon-glyph"/>
                                 Encontrá</Button>&nbsp;
                             <Button className="btn-mix"><Glyphicon glyph="plus-sign" className="icon-glyph"/> Publicá

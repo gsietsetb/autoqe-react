@@ -29,6 +29,7 @@ import carp from "../../img/icons/services/carp.svg";
 import rent from "../../img/icons/services/rent.svg";
 import park from "../../img/icons/services/park.svg";
 import el from "../../img/icons/services/el.svg";
+import srv from "../../img/icons/services/serv.gif";
 
 import argFlag from "../../img/icons/flag/061-argentina.svg";
 import spFlag from "../../img/icons/flag/012-spain.svg";
@@ -113,12 +114,7 @@ class NavbarComp extends Component {
                     </Navbar.Header>
                     <Navbar.Collapse>
                         <Nav style={{marginTop: 8}} pullRight>
-                            {/*Hideable Home*/}
-                            {/*<Tablet>*/}
-                            {/*<NavItem eventKey={1} href="/home" title="Inicio">*/}
-                            {/*<Glyphicon glyph="home"/>*/}
-                            {/*&nbsp; Inicio*/}
-                            {/*</NavItem>*/}
+
                             {/*</Tablet>*/}
                             {/*Publicar*/}
                             <NavDropdown id="publicar" eventKey={2} title={<span>
@@ -138,9 +134,14 @@ class NavbarComp extends Component {
                                 </MenuItem>
                             </NavDropdown>
 
+                            {/*Services home*/}
+                            <NavItem eventKey={1} href="/services" title="Inicio">
+                                    <img style={{marginTop: '-0.3em'}} height={30} src={srv}/>
+                            </NavItem>
+
                             {/*Buscar*/}
                             <NotHuge>
-                                <NavDropdown id="buscar" eventKey={3} title={<span className="service-rent">
+                                <NavDropdown id="buscar" eventKey={3} title={<span className="light-text">
                              <Glyphicon glyph="search" className="nav-icon"/>Buscar
                            </span>}>
                                     <MenuItem eventKey={3.1}>
@@ -168,9 +169,9 @@ class NavbarComp extends Component {
                                 <NavItem eventKey={4} href="#" style={{marginTop: -5, marginBottom: -9}}>
                                     <FormGroup>
                                         <InputGroup className="inputForm">
-                                            <InputGroup.Addon className="search-icon">
-                                                <Glyphicon glyph="search" style={{float: 'left', color: '#74acdf'}}/>&nbsp;
-                                                <ReactRotatingText className="light-text" items={['Trayecto', 'Auto', 'Cochera']}/>
+                                            <InputGroup.Addon className="search-icon light-text">
+                                                <Glyphicon glyph="search" style={{float: 'left'}}/>&nbsp;
+                                                <ReactRotatingText items={['Trayecto', 'Auto', 'Cochera']}/>
                                             </InputGroup.Addon>
                                             <FormControl type="text" placeholder="Mar del Plata"/>
                                             <InputGroup.Addon style={{minWidth: 40}}>

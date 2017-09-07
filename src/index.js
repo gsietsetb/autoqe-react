@@ -2,7 +2,7 @@ import React from 'react';
 import 'babel-polyfill';
 import {render} from 'react-dom';
 import {Provider} from 'react-redux';
-import {BrowserRouter} from 'react-router-dom';
+import {BrowserRouter as Router} from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory'
 
 import routes from './components/Routes';
@@ -27,9 +27,9 @@ store.dispatch(loadUsers());
 render(
     <IntlProvider locale={'es-AR'}>
         <Provider store={store}>
-            <BrowserRouter routes={routes} history={history}>
+            <Router routes={routes} history={history}>
                 <AppComponent/>
-            </BrowserRouter>
+            </Router>
         </Provider>
     </IntlProvider>,
     document.getElementById('app'));

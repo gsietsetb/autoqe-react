@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from "prop-types"
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import {browserHistory} from 'react-router-dom';
 import * as courseActions from '../../actions/TripActions';
 import TripForm from './TripForm';
 

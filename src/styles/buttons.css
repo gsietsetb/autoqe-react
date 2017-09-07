@@ -54,6 +54,22 @@
     color: white;
 }
 
+.btn-white-light {
+    color: var(--light);
+    background: white;
+}
+
+.btn-white-dark {
+    color: var(--dark);
+    background: white;
+}
+
+.btn-dark_gold {
+    background: var(--dark) ;
+    color: var(--elec);
+    border-color: var(--elec);
+}
+
 .btn-mix{
     background: var(--dark);
     color: var(--light)

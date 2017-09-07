@@ -162,7 +162,7 @@ var HowCarpooling = function (_React$Component) {
                                             ),
                                             _react2.default.createElement(
                                                 _reactBootstrap.Button,
-                                                { bsStyle: "primary",
+                                                { className: "btn-mix",
                                                     onClick: function onClick() {
                                                         return _this2.setState({ addTrip: !_this2.state.addTrip });
                                                     } },

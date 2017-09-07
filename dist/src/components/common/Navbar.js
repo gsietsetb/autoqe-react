@@ -64,6 +64,10 @@ var _el = require("../../img/icons/services/el.svg");
 
 var _el2 = _interopRequireDefault(_el);
 
+var _serv = require("../../img/icons/services/serv.gif");
+
+var _serv2 = _interopRequireDefault(_serv);
+
 var _argentina = require("../../img/icons/flag/061-argentina.svg");
 
 var _argentina2 = _interopRequireDefault(_argentina);
@@ -261,13 +265,18 @@ var NavbarComp = function (_Component) {
                                 )
                             ),
                             _react2.default.createElement(
+                                _reactBootstrap.NavItem,
+                                { eventKey: 1, href: "/services", title: "Inicio" },
+                                _react2.default.createElement("img", { style: { marginTop: '-0.3em' }, height: 30, src: _serv2.default })
+                            ),
+                            _react2.default.createElement(
                                 NotHuge,
                                 null,
                                 _react2.default.createElement(
                                     _reactBootstrap.NavDropdown,
                                     { id: "buscar", eventKey: 3, title: _react2.default.createElement(
                                             "span",
-                                            { className: "service-rent" },
+                                            { className: "light-text" },
                                             _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "search", className: "nav-icon" }),
                                             "Buscar"
                                         ) },
@@ -328,10 +337,10 @@ var NavbarComp = function (_Component) {
                                             { className: "inputForm" },
                                             _react2.default.createElement(
                                                 _reactBootstrap.InputGroup.Addon,
-                                                { className: "search-icon" },
-                                                _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "search", style: { float: 'left', color: '#74acdf' } }),
+                                                { className: "search-icon light-text" },
+                                                _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "search", style: { float: 'left' } }),
                                                 "\xA0",
-                                                _react2.default.createElement(_reactRotatingText2.default, { className: "light-text", items: ['Trayecto', 'Auto', 'Cochera'] })
+                                                _react2.default.createElement(_reactRotatingText2.default, { items: ['Trayecto', 'Auto', 'Cochera'] })
                                             ),
                                             _react2.default.createElement(_reactBootstrap.FormControl, { type: "text", placeholder: "Mar del Plata" }),
                                             _react2.default.createElement(

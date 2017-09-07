@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import ContactDetail from './Users/UserDetail';
 import SearchBarComp from "./Trips/SearchBar";
 import HomePage from "./home/Home";
@@ -12,7 +12,7 @@ import Green from "./about/Green";
 
 const Main = () => (
     <main>
-        <BrowserRouter>
+        <Router>
             <Switch>
                 <Route exact path='/' component={HomePage}/>
                 {/*Services*/}
@@ -43,7 +43,7 @@ const Main = () => (
                 {/*<Route path='/trips/:id' component={TripDetailComponent} />*/}
                 {/*<Route path='/trips' component={TripGrid} />*/}
             </Switch>
-        </BrowserRouter>
+        </Router>
     </main>
 );
 
