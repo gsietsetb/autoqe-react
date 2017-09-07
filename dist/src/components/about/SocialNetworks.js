@@ -16,10 +16,6 @@ var _contact = require('../../img/icons/material/contact.svg');
 
 var _contact2 = _interopRequireDefault(_contact);
 
-var _money = require('../../img/icons/material/money.svg');
-
-var _money2 = _interopRequireDefault(_money);
-
 var _facebook = require('../../img/icons/social_network/facebook.svg');
 
 var _facebook2 = _interopRequireDefault(_facebook);
@@ -105,10 +101,15 @@ var SocialNetworkComp = function (_Component) {
                     { className: 'container' },
                     _react2.default.createElement(
                         _reactBootstrap.Panel,
-                        { header: "Promo Lanzamiento!", className: 'btn-dark_gold' },
+                        { header: _react2.default.createElement(
+                                'div',
+                                null,
+                                _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: 'piggy-bank' }),
+                                ' Promo Lanzamiento!'
+                            ), className: 'btn-dark_gold' },
                         _react2.default.createElement(
                             'h4',
-                            { style: { textAlign: 'left', marginLeft: '4em' } },
+                            { style: { textAlign: 'left', marginLeft: '20%' } },
                             _react2.default.createElement(
                                 _reactBootstrap.Row,
                                 null,
