@@ -16,15 +16,17 @@ import time_flex from "../../img/icons/material/time-left.svg";
 import time_hurry from "../../img/icons/material/fast.svg";
 import smoke from "../../img/icons/material/smoke.svg";
 import mate from "../../img/icons/material/mate-infusion.svg";
-import ig from "../../img/icons/social_network/instagram.svg";
+import whats from "../../img/icons/social_network/whatsapp.svg";
 import fb from "../../img/icons/social_network/facebook.svg";
+import seats_w from "../../img/icons/material/users_w.svg";
 import tw from "../../img/icons/material/twitter.svg";
 import driving from "../../img/icons/material/driving-license.svg";
 import car from "../../img/old_logos/autoqe_gray.svg";
 
 // Default (desktop, tablet) and mobile setup
-const Huge = ({children}) => <Responsive minWidth={1218} children={children}/>;
-const NotHuge = ({children}) => <Responsive maxWidth={1218} children={children}/>;
+const Huge = ({children}) => <Responsive minWidth={960} children={children}/>;
+const NotHuge = ({children}) => <Responsive maxWidth={960} children={children}/>;
+const Default = ({children}) => <Responsive minWidth={780} children={children}/>;
 const Mobile = ({children}) => <Responsive maxWidth={780} children={children}/>;
 
 const TripListRow = ({trip}) => {
@@ -36,142 +38,232 @@ const TripListRow = ({trip}) => {
 
     function setSeats() {
         if (trip.seats > 3)
-            return <Label bsStyle="success">{trip.seats} Asientos</Label>;
+            return <Label bsStyle="success">{trip.seats} <img alt="pasajeros" src={seats_w} className="icon-trip"/></Label>;
         else if (trip.seats < 2)
-            return <Label bsStyle="danger">{trip.seats} Asiento!</Label>;
+            return <Label bsStyle="danger">{trip.seats} <Glyphicon glyph="user" className="icon-trip"/></Label>;
         else
-            return <Label>{trip.seats} Asientos</Label>
+            return <Label className="btn-light_w">{trip.seats} <img alt="pasajeros" src={seats_w} className="icon-trip"/></Label>
+    }
+
+    function setPrice() {
+        // if (trip.price < 300)
+        //     return <span style={{color: '#5cb85c', display: 'inline-block'}}><b>$ {trip.price}&nbsp;</b><Glyphicon glyph="piggy-bank"/></span>;
+        // else if (trip.price > 600)
+        //     return  <span style={{color: '#d9534f', display: 'inline-block'}}><b>$ {trip.price}</b></span>;
+        // else
+        return  <span style={{ display: 'inline-block'}}><b>$ {trip.price}</b></span>
     }
 
     return (
         <ListGroupItem>
-            <Link to={`/trips/${trip.id}`} style={{color: '#122b40'}}>
-                <Row>
-                    {/*User*/}
-                    <Col xs={1}>
-                        {/*User image*/}
-                        <img alt="" className="user-icon" src={trip.image} height={80}/>
-                        {/*Social verified*/}
-                        <div className="small-icon-container hide-small">
-                            <Glyphicon glyph="earphone"/>
-                            <img alt="instagram" src={ig} className="small-icon"/>
-                            <img alt="facebook" src={fb} className="small-icon"/>
-                            <img alt="twitter" src={tw} className="small-icon"/>
-                        </div>
-                    </Col>
-                    {/*User details*/}
-                    <Col xs={2}>
-                        <h4>{trip.username}</h4>
-                        {/*Social verified*/}
-                        <div className="small-icon-container show-small">
-                            <Glyphicon glyph="earphone"/>
-                            <img alt="instagram" src={ig} className="small-icon"/>
-                            <img alt="facebook" src={fb} className="small-icon"/>
-                            <img alt="twitter" src={tw} className="small-icon"/>
-                        </div>
-                        {/*Verified*/}
-                        <img alt="" src={driving} height={25}/> &nbsp;
-                            <Label bsStyle="info"><Glyphicon glyph="ok"/></Label>
-                        <div>
-                            <span style={{display: 'block'}}><Glyphicon glyph="star"/>
-                            <Glyphicon glyph="star"/>
-                            <Glyphicon glyph="star"/>
-                            <Glyphicon glyph="star"/>
-                            <Glyphicon glyph="star-empty"/></span>
-                        </div>
-                        {/*{review_stars()}*/}
-                    </Col>
-                    {/*Trip details*/}
-                    <Col xs={4}>
-                        <h3 style={{display: 'inline'}}>
-                            {/*<span style={{display: 'inline-block'}}>*/}
-                            <Button className="btn-from"><img alt="from" src={locFrom} className="icon-trip"/>{trip.from}
-                            </Button>
-                            {/*</span>*/}
-                            {trip.stops && <span style={{display: 'inline-block'}}>&nbsp;→&nbsp;
-                                <Button className="btn-stop"><img alt="" src={locThrough} className="icon-trip"/> {trip.stops}
-                            </Button></span>}
-                            <span style={{display: 'inline-block', color: '#74acdf'}}>&nbsp;→&nbsp;
-                                <Button className="btn-to">
-                                <img alt="to" src={locTo} className="icon-trip"/> {trip.to}</Button></span>
-                        </h3>
-                        {/*Driver's Car*/}
-                        <div> <Button className="btn-label"><img alt="" src={car} className="icon-trip"/> {trip.car}</Button> &nbsp;
-                            {/*Toggleable Options*/}
-                            <span className="show-small">
+            <Link to={`/trips/${trip.id}`} className="dark-text" >
+                <Default>
+                    <Row>
+                        {/*User*/}
+                        <Col xs={1}>
+                            {/*User image*/}
+                            <Row>
+                                <img alt="" className="user-icon" src={trip.image} height={80}/>
+                            </Row>
+                            {/*Social*/}
+                            <Row className="small-icon-container">
+                                <Glyphicon glyph="earphone" className="hide-small"/>
+                                <img alt="twitter" src={tw} className="small-icon"/>
+                                <img alt="facebook" src={fb} className="small-icon"/>
+                                <img alt="whatsapp" src={whats} className="small-icon"/>
+                            </Row>
+                        </Col>
+                        {/*User details*/}
+                        <Col xs={2}>
+                            <Row style={{fontSize: 'large', fontWeight: '500'}}>{trip.username}</Row>
+                            {/*Verified*/}
+                            <Row>
+                                <Label bsStyle="info"><Glyphicon glyph="ok"/></Label>&nbsp;
+                                <img alt="licencia" title="licencia" src={driving} className="icon-dest"/>
+                                &nbsp; 24 años
+                            </Row>
+                            {/*{review_stars()}*/}
+                            <Row style={{color: 'gold'}}>
+                                <Huge >
+                                    <Glyphicon glyph="star"/>
+                                    <Glyphicon glyph="star"/>
+                                    <Glyphicon glyph="star"/>
+                                    <Glyphicon glyph="star"/>
+                                    <Glyphicon glyph="star-empty"/>
+                                    <span className="dark-text"> - 2 viajes</span>
+                                </Huge>
+                                <NotHuge>
+                                    <Glyphicon glyph="star"/> 4.7
+                                    <span className="dark-text"> - 2 viajes</span>
+                                </NotHuge>
+                            </Row>
+                        </Col>
+                        {/*Trip details*/}
+                        <Col xs={5}>
+                            <Row>
+                                <Button className="btn-trip">
+                                    {/*<h4 style={{display: 'inline'}}>*/}
+                                    <img alt="from" src={locFrom} className="icon-dest"/>{trip.from}
+                                    {trip.stops && <span className="hide-small" style={{color: '#999'}}>&nbsp;→&nbsp;
+                                        <img alt="" src={locThrough} className="icon-dest"/> {trip.stops}
+                            </span>}
+                                    <span style={{display: 'inline-block', color: '#74acdf'}}>&nbsp;→&nbsp;
+                                        <img alt="to" src={locTo} className="icon-dest"/> {trip.to}
+                              </span>
+                                </Button>
+                            </Row>
+                            {/*Driver's Car*/}
+                            <Row> <Button className="btn-label"><img alt="" src={car} className="icon-trip"/> {trip.car}</Button> &nbsp;
+                                {/*Toggleable Options*/}
+                                <span style={{display: 'inline-block'}} className="">
                             {trip.highway ? (
-                                <Button className="trip-icon-container">
+                                <Button className="btn-trip-cont">
                                     <img alt="" title="Por Autopista!" src={highw} className="icon-trip"/></Button>
                             ) : (
-                                <Button className="trip-icon-container">
+                                <Button className="btn-trip-cont">
                                     <img alt="" title="Sin Autopista o peajes!" src={highw_n} className="icon-trip"/></Button>
                             )}
-                                {trip.pets &&
-                                <Button className="trip-icon-container">
-                                    <img alt="" title="Pueden subir mascotas!" src={pet} className="icon-trip"/></Button>}
-                                {!trip.smoke &&
-                                <Button className="trip-icon-container">
-                                    <img alt="" title="Se puede fumar!" src={smoke} className="icon-trip"/></Button>}
-                                {trip.withMate &&
-                                <Button className="trip-icon-container">
-                                    <img alt="" title="Lleva Mate!" src={mate} className="icon-trip"/></Button>}
-                                {trip.onlyGirls &&
-                                <Button className="trip-icon-container">
-                                    <img alt="" title="Sólo mujeres!" src={girl} className="icon-trip"/></Button>}
+                                    {trip.pets &&
+                                    <Button className="btn-trip-cont">
+                                        <img alt="" title="Pueden subir mascotas!" src={pet} className="icon-trip"/></Button>}
+                                    {!trip.smoke &&
+                                    <Button className="btn-trip-cont">
+                                        <img alt="" title="Se puede fumar!" src={smoke} className="icon-trip"/></Button>}
+                                    {trip.withMate &&
+                                    <Button className="btn-trip-cont">
+                                        <img alt="" title="Lleva Mate!" src={mate} className="icon-trip"/></Button>}
+                                    {trip.onlyGirls &&
+                                    <Button className="btn-trip-cont">
+                                        <img alt="" title="Sólo mujeres!" src={girl} className="icon-trip"/></Button>}
                         </span>
-                        </div>
-                    </Col>
-                    {/*Date*/}
-                    <Col xs={3}>
-                        <h4><FormattedRelative value={trip.date}/>,</h4>
-                        <Button style={{display: 'inline-block'}}><h4 style={{margin: '0 0'}}><FormattedDate value={trip.date} month="short" day="numeric"/>
-                            {/*</h4></Button>*/}
-                            {/*<Button><h4 style={{margin: '0 0'}}>*/}
-                            {!trip.hurry ? (
-                                <img alt="" src={time_hurry} className="icon-trip"/>
-                            ) : (
-                                <img alt="" src={time_flex} className="icon-trip"/>)}&nbsp;
-                            <FormattedTime value={trip.date}/></h4>
-                        </Button>
-                        {/*return (*/}
-                        {/*<tr>*/}
-                        {/*<td><Link to={'/trips/' + trip.id}>{trip.from}</Link></td>*/}
-                        {/*</tr>*/}
-                        {/*);*/}
-                    </Col>
-                    {/*Price and seats*/}
-                    <Col xs={2} style={{display: 'flex'}}>
-                        <h4>
-                            <b>{trip.price}</b> $ ARS &nbsp;
-                            <Glyphicon glyph="piggy-bank"/> &nbsp;
-                            {setSeats()}
+                            </Row>
+                        </Col>
+                        {/*Date*/}
+                        <Col xs={3}>
+                            {/*<Button className="show-small blank-line"/>*/}
+                            <h4 style={{display: 'block', textAlign: 'right'}}><FormattedRelative value={trip.date}/></h4>
+                            <Button style={{display: 'block', float: 'right'}}><h4 style={{margin: '0 0'}}><FormattedDate value={trip.date} month="short" day="numeric"/>
+                                {/*</h4></Button>*/}
+                                {/*<Button><h4 style={{margin: '0 0'}}>*/}</h4></Button>
+                            <Button style={{display: 'inline-block', float: 'right'}}>
+                                {!trip.hurry ? (
+                                    <img alt="" src={time_hurry} className="icon-trip"/>
+                                ) : (
+                                    <img alt="" src={time_flex} className="icon-trip"/>)}&nbsp;
+                                <FormattedTime value={trip.date}/>
+                            </Button>
+                        </Col>
+                        {/*Price and seats*/}
+                        <Col xs={1}>
+                            <Row>
+                                <Button className="btn-price">{setPrice()}</Button>
+                            </Row>
+                            <h4><Row style={{textAlign: 'center'}}>{setSeats()}</Row></h4>
+                        </Col>
+                    </Row>
+                </Default>
 
+                {/*------------------------------------------------------------------------------------------------*/}
+                {/*THIS WOULD RENDER IF SMALL! :D*/}
+                <Mobile>
+                    <Row className="road-below">
+                        {/*Trip*/}
+                        <Col xs={5} style={{ fontFamily:  '"Lemon/Milk", serif'}}>
+                            <Row>
+                                <img alt="from" src={locFrom} className="icon-dest"/> {trip.from}</Row>
+                            {trip.stops &&
+                            <Row style={{color: '#999'}}>
+                                <img alt="" src={locThrough} className="icon-dest"/> {trip.stops}
+                            </Row>}
+                            <Row style={{color: '#74acdf'}}>
+                                <img alt="to" src={locTo} className="icon-dest"/> {trip.to}
+                            </Row>
+                        </Col>
+                        <Col xs={4}>
+                            {/*Rel. Date*/}
+                            <Row>
+                                <FormattedRelative value={trip.date}/>
+                            </Row>
+                            {/*Exact Date*/}
+                            <Row style={{fontWeight: 'bolder'}}>
+                                <FormattedDate value={trip.date} month="short" day="numeric"/>
+                                {!trip.hurry ? (
+                                    <img alt="" src={time_hurry} className="icon-trip"/>
+                                ) : (
+                                    <img alt="" src={time_flex} className="icon-trip"/>)}
+                                <FormattedTime value={trip.date}/>
+                            </Row>
                             {/*Toggleable Options*/}
-                            <div className="hide-small">
+                            <Row>
                                 {trip.highway ? (
-                                    <Button className="trip-icon-container">
+                                    <Button className="btn-trip-cont">
                                         <img alt="" title="Por Autopista!" src={highw} className="icon-trip"/></Button>
                                 ) : (
-                                    <Button className="trip-icon-container">
+                                    <Button className="btn-trip-cont">
                                         <img alt="" title="Sin Autopista o peajes!" src={highw_n} className="icon-trip"/></Button>
                                 )}
                                 {trip.pets &&
-                                <Button className="trip-icon-container">
+                                <Button className="btn-trip-cont">
                                     <img alt="" title="Pueden subir mascotas!" src={pet} className="icon-trip"/></Button>}
                                 {!trip.smoke &&
-                                <Button className="trip-icon-container">
+                                <Button className="btn-trip-cont">
                                     <img alt="" title="Se puede fumar!" src={smoke} className="icon-trip"/></Button>}
                                 {trip.withMate &&
-                                <Button className="trip-icon-container">
+                                <Button className="btn-trip-cont">
                                     <img alt="" title="Lleva Mate!" src={mate} className="icon-trip"/></Button>}
                                 {trip.onlyGirls &&
-                                <Button className="trip-icon-container">
+                                <Button className="btn-trip-cont">
                                     <img alt="" title="Sólo mujeres!" src={girl} className="icon-trip"/></Button>}
-                            </div>
-                        </h4>
-                    </Col>
-                </Row>
+                            </Row>
+                        </Col>
+                        <Col xs={3} style={{textAlign: 'right'}}>
+                            <Row style={{fontSize: 'large'}}>{setPrice()}</Row>
+                            <Row>{setSeats()}</Row>
+
+                        </Col>
+                    </Row>
+
+                    {/*User*/}
+                    <Row className="road-over">
+                        {/*<Col xs={1}> </Col>*/}
+                        <Col xs={2}>
+                            {/*User image*/}
+                            <img alt="" className="user-icon" src={trip.image} height={80}/>
+                        </Col>
+                        <Col xs={4}>
+                            <Row style={{fontSize: 'large'}}> {trip.username}</Row>
+                            {/*Social*/}
+                            <Row>
+                                <Glyphicon glyph="earphone" className="small-icon"/>
+                                <img alt="twitter" src={tw} className="small-icon"/>
+                                <img alt="facebook" src={fb} className="small-icon"/>
+                                <img alt="whatsapp" src={whats} className="small-icon"/>
+                            </Row>
+                        </Col>
+                        <Col xs={3} style={{textAlign: 'right'}}>
+                            {/*Driver's Car*/}
+                            <Row>Exp: <b>2 trayectos</b></Row>
+                            <Row>
+                                <img alt="" src={car} className="icon-trip"/> {trip.car}
+                            </Row>
+                        </Col>
+                        <Col xs={3} style={{textAlign: 'right'}}>
+                            <Row style={{color: 'gold'}}>
+                                    <Glyphicon glyph="star"/>
+                                    <Glyphicon glyph="star"/>
+                                    <Glyphicon glyph="star"/>
+                                    <Glyphicon glyph="star"/>
+                                    <Glyphicon glyph="star-empty"/>
+                            </Row>
+                            <Row>
+                                24 años <img alt="licencia" title="licencia" src={driving} className="icon-dest"/>
+                                <Label bsStyle="info"><Glyphicon glyph="ok"/></Label>
+                            </Row>
+                        </Col>
+                    </Row>
+                </Mobile>
             </Link>
+
         </ListGroupItem>
     );
 };

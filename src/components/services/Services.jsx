@@ -46,7 +46,7 @@ export default class ServiceComp extends React.Component {
                             <p/>
                             <Button className="btn-light_w"><Glyphicon glyph="search" className="icon-glyph"/>
                                 Encontrá</Button>&nbsp;
-                            <Button bsStyle="primary"><Glyphicon glyph="plus-sign" className="icon-glyph"/> Publicá
+                            <Button className="btn-mix"><Glyphicon glyph="plus-sign" className="icon-glyph"/> Publicá
                                 trayecto:</Button>
                         </div>
                     </div>
@@ -119,7 +119,7 @@ export default class ServiceComp extends React.Component {
                             <p/>
                             <Button className="btn-light_w"><Glyphicon glyph="search" className="icon-glyph"/>
                                 Encontrá</Button>&nbsp;
-                            <Button bsStyle="primary"><Glyphicon glyph="plus-sign" className="icon-glyph"/> Alquilá
+                            <Button bsStyle="primary" style={{color: 'var(--parking)'}}><Glyphicon glyph="plus-sign" className="icon-glyph"/> Alquilá
                                 cochera</Button>
                         </div>
                     </div>

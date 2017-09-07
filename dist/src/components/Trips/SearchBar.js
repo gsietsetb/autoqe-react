@@ -24,10 +24,6 @@ var _from = require("../../img/icons/custom/from.svg");
 
 var _from2 = _interopRequireDefault(_from);
 
-var _search = require("../../img/icons/custom/search.svg");
-
-var _search2 = _interopRequireDefault(_search);
-
 var _dest = require("../../img/icons/custom/dest.svg");
 
 var _dest2 = _interopRequireDefault(_dest);
@@ -162,8 +158,8 @@ var SearchBarComp = function (_React$Component) {
                         _react2.default.createElement(
                             _reactBootstrap.Button,
                             { type: "submit", className: "btn-light_w", style: { display: 'inline' } },
-                            _react2.default.createElement("img", { src: _search2.default }),
-                            "Encontr\xE1 tu viaje"
+                            _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "search" }),
+                            " \xA0 Encontr\xE1 tu viaje"
                         )
                     ),
                     "\xA0 \xA0"

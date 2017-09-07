@@ -1,13 +1,13 @@
 
 :root {
-    --primary: #122b40;
-    --secondary: #74acdf;
+    --dark: #122b40;
+    --light: #74acdf;
     --carpooling: #122b40;
     --rental: #74acdf;
     --parking: #498d19;
     --elec: #e8a135;
-    --carp-transp: rgba(18, 43, 64, 0.5);
     --rent-transp: rgba(116, 172, 223, 0.5);
+    --carp-transp: rgba(18, 43, 64, 0.5); ;
     --park-transp: rgba(73, 141, 25, 0.5);
     --elec-transp: rgba(232, 161, 53, 0.5);
 }
@@ -38,9 +38,12 @@
     display: inline-flex !important;
 }
 
+.dark-text {
+    color: var(--dark);
+}
 
-.dark-color {
-    color: var(--carpooling);
+.light-text{
+    color: var(--light);
 }
 
 /*Text*/
@@ -63,23 +66,23 @@
 
 /*Weird overrides...*/
 .panel-primary {
-    border-color: var(--carpooling);
+    border-color: var(--dark);
 }
 
 .panel-primary > .panel-heading {
     color: white;
-    background-color: var(--rental);
-    border-color: var(--carpooling);
+    background-color: var(--light);
+    border-color: var(--dark);
 }
 
 .nav-pills > li {
     float: unset;
     display: inline-block;
-    /*background-color:  var(--carpooling);*/
+    /*background-color:  var(--primary);*/
 }
 
 .nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
-    background-color: var(--carpooling);
+    background-color: var(--dark);
 }
 
 .to-hide-sm {
@@ -168,13 +171,13 @@
 /*Sections*/
 
 .section-light {
-    background: var(--rental);
-    color: var(--carpooling);
+    background: var(--light);
+    color: var(--dark);
 }
 
 .section-light h1 {
-    /*background:  var(--rental);*/
-    color: var(--carpooling);
+    /*background:  var(--secondary);*/
+    color: var(--dark);
 }
 
 @media screen and (min-width: 640px) {
@@ -216,7 +219,7 @@
     font-style: normal;
     font-size: 1.5rem;
     line-height: 1.25;
-    color: var(--rental);
+    color: var(--light);
     letter-spacing: -0.6px
 }
 

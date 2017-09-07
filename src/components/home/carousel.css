@@ -19,12 +19,12 @@
     z-index: 1000;
     /*margin-bottom: 20px;*/
     position: relative;
-    left: 3%;
+    left: 1em !important;
 }
 
 @media screen and (max-width: 740px) {
     .header-tabs {
-        left: 4% !important;
+        left: 1% !important;
     }
 }
 
@@ -74,7 +74,7 @@
 }
 
 .cover-carp {
-    background-position: center;
+    background-position: top;
     background-image: url(../../img/banner/carp.jpg);
 }
 
@@ -110,8 +110,7 @@
 .nav-tabs > li.active > a h4.service-carp{
 /*.nav-tabs > li.active > a:hover h4,*/
 /*.nav-tabs > li.active > a:focus h4*/
-    color: #122b40!important;
-
+    color: var(--carpooling)!important;
 }
 
 .nav-tabs > li.active > a h4.service-rent {
@@ -124,28 +123,22 @@
     color: var(--elec)!important;
 }
 
-.carousel-caption h1{
-    max-width: 30vw;
-}
-
-.carousel-caption h3{
-    max-width: 40vw;
-}
-
 .carp-transp {
     background: var(--carp-transp);
 }
 
 .rent-transp {
-    /*background-color: #74acdf !important;*/
+    /*background: linear-gradient(to right, white, var(--rent-transp)); !* Standard syntax *!*/
     background: var(--rent-transp);
 }
 
 .park-transp {
+    /*background: linear-gradient(to right, white, var(--park-transp)); !* Standard syntax *!*/
     background: var(--park-transp);
 }
 
 .elec-transp {
+    /*background: linear-gradient(to right, white, var(--elec-transp)); !* Standard syntax *!*/
     background: var(--elec-transp);
 }
 
@@ -154,10 +147,10 @@
     height: 83vh;
     width: 50vw;
     /*background: -webkit-gradient(linear-gradient(right,#122b40, rgba(18, 43, 64, 0.59))) ;*/
-    background: -webkit-linear-gradient(left, var(--carpooling), rgba(18, 43, 64, 0)); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(right, var(--carpooling), rgba(18, 43, 64, 0)); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(right, var(--carpooling), rgba(18, 43, 64, 0.0)); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to right, var(--carpooling), rgba(18, 43, 64, 0.0)); /* Standard syntax */
+    background: -webkit-linear-gradient(left, var(--carp-transp), rgba(18, 43, 64, 0)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, var(--carp-transp), rgba(18, 43, 64, 0)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, var(--carp-transp), rgba(18, 43, 64, 0.0)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, var(--carp-transp), transparent); /* Standard syntax */
     text-align: left;
 }
 
@@ -197,11 +190,14 @@
 .carousel-caption h1 {
     font-size: 34px;
     font-family: 'Lemon/Milk', serif;
+    max-width: 30vw;
+
 }
 
 .carousel-caption h3 {
     font-family: 'Lemon/Milk light', serif;
-    font-size: 22px
+    font-size: 22px;
+    max-width: 40vw;
 }
 
 /*.carousel-caption img {*/
@@ -232,7 +228,6 @@
         left: 10%;
     }
 
-
     .carousel-container {
         height: 70vh;
     }
@@ -242,11 +237,13 @@
     }
 
     .carousel-caption h1 {
-        font-size: 34px
+        font-size: 24px;
+        max-width: 100%;
     }
 
     .carousel-caption h3 {
-        font-size: 22px
+        font-size: 16px;
+        max-width: 100%;
     }
 
     /*.carousel-caption img {*/

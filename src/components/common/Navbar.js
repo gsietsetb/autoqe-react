@@ -170,8 +170,7 @@ class NavbarComp extends Component {
                                         <InputGroup className="inputForm">
                                             <InputGroup.Addon className="search-icon">
                                                 <Glyphicon glyph="search" style={{float: 'left', color: '#74acdf'}}/>&nbsp;
-                                                <ReactRotatingText style={{color: '#74acdf'}}
-                                                                   items={['Trayecto', 'Auto', 'Cochera']}/>
+                                                <ReactRotatingText className="light-text" items={['Trayecto', 'Auto', 'Cochera']}/>
                                             </InputGroup.Addon>
                                             <FormControl type="text" placeholder="Mar del Plata"/>
                                             <InputGroup.Addon style={{minWidth: 40}}>

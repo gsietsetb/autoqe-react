@@ -3,7 +3,6 @@ import {Carousel, Glyphicon, Label, Nav, NavItem, Row, Tab} from "react-bootstra
 import TripsPage from "../Trips/TripsPage";
 import {Link} from "react-router-dom";
 
-
 import "./carousel.css"
 //Icons
 import carp from "../../img/icons/services/carp.svg";
@@ -11,6 +10,7 @@ import rent from "../../img/icons/services/rent.svg";
 import park from "../../img/icons/services/park.svg";
 import el from "../../img/icons/services/el.svg";
 import SearchTrip from "../Trips/SearchTrip";
+import SearchCar from "../../Car/SearchCar";
 
 // let cx = classNames.bind(styles);
 
@@ -86,7 +86,6 @@ export default class CarouselComp extends React.Component {
                                 <h1>Carpooling: trayectos compartidos</h1>
                                 <SearchTrip/>
                                 <h3>Ahorrá plata compartiendo los gastos del viaje</h3>
-
                             </Carousel.Caption>
                         </div>
                     </Carousel.Item>
@@ -96,6 +95,7 @@ export default class CarouselComp extends React.Component {
                         <div className="deg-rent">
                             <Carousel.Caption>
                                 <h1>Alquiler de Auto entre particulares</h1>
+                                <SearchCar/>
                                 <h3>Rentabilizá tu auto mientras no lo usás</h3>
                             </Carousel.Caption>
                         </div>
@@ -106,6 +106,7 @@ export default class CarouselComp extends React.Component {
                         <div className="deg-park">
                             <Carousel.Caption>
                                 <h1>Alquiler de Cocheras entre particulares</h1>
+                                <SearchTrip/>
                                 <h3>Perdé el miedo a estacionar en el centro!</h3>
                             </Carousel.Caption>
                         </div>
@@ -148,7 +149,7 @@ export default class CarouselComp extends React.Component {
                                 <img alt="Private Parking spot rental" src={park} className="header-icon"/>
                                 <h4 className="white-text avoid-if-small service-park">&nbsp;Cocheras</h4>
                             </NavItem>
-                            <NavItem className=" elec-transp" eventKey={3}>
+                            <NavItem className="elec-transp" eventKey={3}>
                                 <img alt="Electric car" src={el} className="header-icon"/>
                                 <h4 className="white-text avoid-if-small service-elec">&nbsp;Autos
                                     eléctricos</h4>

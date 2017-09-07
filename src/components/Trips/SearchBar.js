@@ -4,7 +4,6 @@ import moment from "moment";
 // import Autocomplete from 'react-google-autocomplete';
 import carp from "../../img/icons/services/carp.svg";
 import locFrom from "../../img/icons/custom/from.svg";
-import search from "../../img/icons/custom/search.svg";
 import locTo from "../../img/icons/custom/dest.svg";
 import MediaQuery from "react-responsive";
 
@@ -81,8 +80,8 @@ export default class SearchBarComp extends React.Component {
                         </InputGroup>
                         &nbsp;
                         <Button type="submit" className="btn-light_w" style={{display: 'inline'}}>
-                            <img src={search}/>
-                            {/*<Glyphicon glyph="search"/> &nbsp;*/}
+                            {/*<img src={search}/>*/}
+                            <Glyphicon glyph="search"/> &nbsp;
                             Encontrá tu viaje
                         </Button>
                     </FormGroup>

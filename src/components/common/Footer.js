@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {Link} from "react-router-dom";
-import {Col, Image, Label, Row} from "react-bootstrap";
+import {Col, Glyphicon, Image, Label, Row} from "react-bootstrap";
 import Responsive from "react-responsive";
 
 import logo_side from "../../img/logo/autoqe_txt_w.svg"
@@ -11,7 +11,7 @@ import world from "../../img/icons/material/world.svg"
 import code from "../../img/icons/material/code.svg"
 import hWorks from "../../img/icons/material/howWorks.svg"
 import social from "../../img/icons/material/share.svg"
-import quest from "../../img/icons/custom/quest.svg"
+import quest from "../../img/icons/material/interrog.svg"
 import leaf from "../../img/icons/material/leaf.svg"
 import team from "../../img/icons/material/team.svg"
 import disc from "../../img/icons/material/disc.svg"
@@ -75,20 +75,20 @@ class Footer extends Component {
                         <Col xs={5} md={3}>
                             <ul><h4> Autoqe</h4>
                                 <li><img alt="" className="footer-icon" src={world}/><Link to="/next"> Próximos paises</Link></li>
-                                <li><img alt="" className="footer-icon" src={design}/><Link to="/design"> Rincón de diseño</Link>
+                                <li><img alt="" className="footer-icon" src={design}/><Link to="/design">Diseño</Link>
                                 </li>
-                                <li><img alt="" className="footer-icon" src={code}/><Link to="/dev"> Rincón de Desarrollo</Link>
+                                <li><img alt="" className="footer-icon" src={code}/><Link to="/dev"> Developpers</Link>
                                 </li>
-                                <li><img alt="" className="footer-icon" src={press}/><Link to="/press"> Rincón de Prensa</Link></li>
+                                <li><img alt="" className="footer-icon" src={press}/><Link to="/press"> Espacio de Prensa</Link></li>
                             </ul>
                         </Col>
                         <Col xs={5} md={3}>
                             <ul><h4>Contacto</h4>
-                                <li><img alt="" className="footer-icon" src={disc}/><Link to="/promotion"> Promociones</Link></li>
+                                <li><img alt="" className="footer-icon" src={disc}/><Link to="/promotion"> Promos</Link></li>
                                 <li><img alt="" className="footer-icon" src={job}/><Link to="/work"> Trabajos </Link><Label
                                     bsStyle="success">Contratando!</Label></li>
                                 <li><img alt="" className="footer-icon" src={team}/><Link to="/team"> Equipo</Link></li>
-                                <li><img alt="" className="footer-icon" src={world}/><Link to="/contact"> Contacto</Link></li>
+                                <li><Glyphicon glyph="envelope" className="light-text footer-icon"/><Link to="/contact"> Contacto</Link></li>
                             </ul>
                         </Col>
                     </Row>

@@ -7,6 +7,7 @@ import carp from "../../img/icons/services/carp.svg";
 import rent from "../../img/icons/services/rent.svg";
 import park from "../../img/icons/services/park.svg";
 import el from "../../img/icons/services/el.svg";
+import quest from "../../img/icons/material/interrog.svg";
 
 // import MediaQuery from "react-responsive";
 
@@ -22,7 +23,7 @@ export default class HowWorksComp extends React.Component {
                 <header className="section-header">
                     <div className="container">
                         <h1 className="section-header-title">
-                            {/*<img src={quest} className="icon-row" alt="Secure payment"/> &nbsp;*/}
+                            <img src={quest} className="icon-row" alt="Secure payment"/> &nbsp;
                             ¿Cómo funciona?
                             {/*&nbsp; <Label className="btn-light_w">Sólo tres pasos!</Label>*/}
                         </h1>

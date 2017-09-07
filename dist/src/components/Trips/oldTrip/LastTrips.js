@@ -49,7 +49,7 @@ var TripGrid = function (_Component) {
                             ' \xA0',
                             _react2.default.createElement(
                                 'h4',
-                                { style: { display: 'inline' } },
+                                { style: { display: 'inline', verticalAlign: 'bottom' } },
                                 ' \xDAltimos viajes publicados: \xA0 \xA0 ',
                                 _react2.default.createElement(_reactBootstrap.Glyphicon, {
                                     glyph: 'triangle-bottom' })

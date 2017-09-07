@@ -24,13 +24,12 @@ class TripsPage extends React.Component {
                 <section className=" Container">
                     <Panel style={{textAlign: 'left'}} collapsible defaultExpanded header={<div>
                         <img alt="" src={carp} height={40}/> &nbsp;
-                               <h3 style={{display: 'inline'}}> Últimos viajes publicados: &nbsp;
+                        <h4 style={{display: 'inline'}}> Últimos viajes <span className="hide-small">publicados:</span> &nbsp;
                                    <Glyphicon glyph="triangle-bottom"/>
-                               </h3>
-                               <Link to={'/trips/new'}><Button style={{float: 'right'}} type="submit" bsStyle="primary">
-                                   {/*<img src={add} className="main-icon"/>*/}
+                               </h4>
+                               <Link to={'/trips/new'}><Button style={{float: 'right'}} type="submit" className="btn-mix">
                                    <Glyphicon glyph="plus-sign"/> &nbsp;
-                                   Publicar viaje
+                                   Publicá <span className="hide-small">viaje</span>
                                </Button>
                                </Link>
                            </div>}>

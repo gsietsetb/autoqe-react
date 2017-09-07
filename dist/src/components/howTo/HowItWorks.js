@@ -36,6 +36,10 @@ var _el = require("../../img/icons/services/el.svg");
 
 var _el2 = _interopRequireDefault(_el);
 
+var _interrog = require("../../img/icons/material/interrog.svg");
+
+var _interrog2 = _interopRequireDefault(_interrog);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -80,7 +84,8 @@ var HowWorksComp = function (_React$Component) {
                         _react2.default.createElement(
                             "h1",
                             { className: "section-header-title" },
-                            "\xBFC\xF3mo funciona?"
+                            _react2.default.createElement("img", { src: _interrog2.default, className: "icon-row", alt: "Secure payment" }),
+                            " \xA0 \xBFC\xF3mo funciona?"
                         ),
                         _react2.default.createElement(
                             "div",

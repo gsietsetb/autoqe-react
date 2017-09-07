@@ -40,6 +40,10 @@ var _SearchTrip = require("../Trips/SearchTrip");
 
 var _SearchTrip2 = _interopRequireDefault(_SearchTrip);
 
+var _SearchCar = require("../../Car/SearchCar");
+
+var _SearchCar2 = _interopRequireDefault(_SearchCar);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -169,6 +173,7 @@ var CarouselComp = function (_React$Component) {
                                     null,
                                     "Alquiler de Auto entre particulares"
                                 ),
+                                _react2.default.createElement(_SearchCar2.default, null),
                                 _react2.default.createElement(
                                     "h3",
                                     null,
@@ -191,6 +196,7 @@ var CarouselComp = function (_React$Component) {
                                     null,
                                     "Alquiler de Cocheras entre particulares"
                                 ),
+                                _react2.default.createElement(_SearchTrip2.default, null),
                                 _react2.default.createElement(
                                     "h3",
                                     null,
@@ -281,7 +287,7 @@ var CarouselComp = function (_React$Component) {
                             ),
                             _react2.default.createElement(
                                 _reactBootstrap.NavItem,
-                                { className: " elec-transp", eventKey: 3 },
+                                { className: "elec-transp", eventKey: 3 },
                                 _react2.default.createElement("img", { alt: "Electric car", src: _el2.default, className: "header-icon" }),
                                 _react2.default.createElement(
                                     "h4",

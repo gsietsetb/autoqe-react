@@ -21,8 +21,11 @@ export default class Intro extends React.Component {
                                         Ayudando al medioambiente</Button>
                                 </Link></p>
                             <p>Todas las soluciones de transporte alrededor tuyo en una única aplicación:</p>
-                            <Image src={android} className="brand-logo"/>
+
+                            {/*<Image responsive src={macbook} height="600" className=""/>*/}
+                            {/*<Image responsive src={s8} height="600"  className=""/>*/}
                             <Image src={ios} className="brand-logo"/>
+                            <Image src={android} className="brand-logo"/>
                         </div>
                     </div>
                 </header>

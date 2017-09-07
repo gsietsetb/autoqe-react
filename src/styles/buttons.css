@@ -1,69 +1,116 @@
+.blank-line{
+    border: 0;
+    background-color: transparent;
+    display: block!important;
+    margin-bottom: 30px
+}
 
 .social-btns {
     margin: 25px 0
 }
 
-/*Main buttons:*/
-.btn-light_w {
-    background: var(--rental);
-    color: #ffffff;
+.btn-trip{
+    border: 1px dashed var(--light);
+    padding: 0.4em;
+    border-radius: 50px;
+    /*width: 80%;*/
+    font-size: larger;
+    margin-bottom: 0.8em;
+    font-family: "Lemon/Milk", serif;
+    /*background-color: white;*/
 }
 
-.btn-service {
-    background: #afafaf;
-    color: var(--carpooling);
+.btn-trip-cont{
+    border: 1px dashed var(--light);
+    display: inline;
+    margin-top: 0.4em;
+    padding: 2px;
+    border-radius: 50%;
+}
+
+.btn-price{
+    /*font-family: "Lemon/Milk", serif;*/
+    font-size: 140%;
+    /*right: 0.5em;*/
+    border: 0
+}
+
+.btn-search{
+    display: inline-block;
+    padding: 0.5em!important;
+    margin-left: 0.8em;
+    /*margin-top: 0.2em*/
+}
+
+.btn-input{
+    display: inline-block;
+    margin-right: 1em;
+    max-width: 8px!important;
+}
+
+/*Main buttons:*/
+.btn-light_w {
+    background: var(--light);
+    color: white;
+}
+
+.btn-mix{
+    background: var(--dark);
+    color: var(--light)
+}
+
+.btn-mix-inverse{
+    background: var(--light);
+    color: var(--dark)
 }
 
 .btn-to{
-    /*border: 0px double var(--rental);*/
+    /*border: 0px double var(--secondary);*/
     background: white;
-    color: var(--rental);
+    color: var(--light);
     padding: 0.4em 0.2em;
     font-family: "Lemon/Milk", serif;
 
     border: 0;
-    border-right: 2px solid var(--rental);
-    background: linear-gradient(to left, var(--rental) -50%, transparent)
+    border-right: 1px solid var(--light);
+    background: linear-gradient(to left, var(--light) -50%, transparent)
     left
     bottom
     no-repeat;
-    background-size:100% 3px ;
+    background-size:100% 1px ;
 }
 
 .btn-stop {
-    border: 0px double var(--rental);
+    border: 0 double var(--light);
     background: white;
-    color: linear-gradient(to right, var(--carpooling), var(--rental)); /* Standard syntax */
+    color: linear-gradient(to right, var(--dark), var(--light)); /* Standard syntax */
     padding: 0.4em 0.2em;
 }
 
 .btn-from {
     border: 0;
-    border-left: 2px solid var(--carpooling);
-    background: linear-gradient(to right, var(--carpooling) -50%, transparent)
-        /*left*/
-        /*top*/
+    border-left: 1px solid var(--dark);
+    background: linear-gradient(to right, var(--dark) -50%, transparent)
     left
     top
-        /*#777*/
     no-repeat;
-    background-size:100% 3px ;
+    background-size:100% 1px ;
 
-    color: var(--carpooling);
+    color: var(--dark);
     font-family: "Lemon/Milk", serif;
     padding: 0.4em 0.2em;
 }
 
 .btn-label{
-    border: 0px dotted #595f62;
+    border: 0 dotted #595f62;
     background: white;
-    color: var(--carpooling);
+    color: var(--dark);
     padding: 0.2em 0.2em;
 }
 
 .btn-dark {
-    background: var(--carpooling);
-    color: var(--rental);
+    background: var(--dark);
+    color: var(--light);
     padding-top: 0.7em;
 }
 
@@ -74,52 +121,52 @@
 
 .btn-nope {
     background: #afafafaf;
-    color: var(--carpooling);
+    color: var(--dark);
 }
 
 .btn-white {
     padding: 1em 1em;
     background: #ffffff;
-    color: var(--rental);
+    color: var(--light);
     text-shadow: 0 1px 2px rgba(0, 0, 0, .2);
 }
 
 .btn-primary {
-    background: var(--carpooling);
+    background: var(--dark);
     /*color: white;*/
 }
 
 .btn-green {
     background: transparent;
-    color: var(--carpooling);
-    border: 1px dotted var(--carpooling);
+    color: var(--dark);
+    border: 1px dotted var(--dark);
 }
 
 .btn-driver {
-    background: -webkit-linear-gradient(left, var(--carpooling), var(--rental));
+    background: -webkit-linear-gradient(left, var(--dark), var(--light));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
     /*background: transparent;*/
     /*padding: 0.2em 0.4em;*/
     /*border: 2px solid transparent;*/
-    /*-moz-border-image: -moz-linear-gradient(top left,  var(--carpooling) 0%,  var(--rental) 100%);*/
-    /*-webkit-border-image: -webkit-linear-gradient(top left,  var(--carpooling) 0%,  var(--rental) 100%);*/
-    /*border-image: linear-gradient(to bottom right,  var(--carpooling) 0%,  var(--rental) 100%);*/
+    /*-moz-border-image: -moz-linear-gradient(top left,  var(--primary) 0%,  var(--secondary) 100%);*/
+    /*-webkit-border-image: -webkit-linear-gradient(top left,  var(--primary) 0%,  var(--secondary) 100%);*/
+    /*border-image: linear-gradient(to bottom right,  var(--primary) 0%,  var(--secondary) 100%);*/
     /*border-image-slice: 1;*/
 }
 
 .btn-user {
-    background: -webkit-linear-gradient(left, var(--rental), var(--carpooling));
+    background: -webkit-linear-gradient(left, var(--light), var(--dark));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
     /*background: transparent;*/
     /*padding: 0.2em 0.4em;*/
     /*border: 2px solid transparent;*/
-    /*-moz-border-image: -moz-linear-gradient(top left,  var(--carpooling) 0%,  var(--rental) 100%);*/
-    /*-webkit-border-image: -webkit-linear-gradient(top left,  var(--carpooling) 0%,  var(--rental) 100%);*/
-    /*border-image: linear-gradient(to bottom right,  var(--carpooling) 0%,  var(--rental) 100%);*/
+    /*-moz-border-image: -moz-linear-gradient(top left,  var(--primary) 0%,  var(--secondary) 100%);*/
+    /*-webkit-border-image: -webkit-linear-gradient(top left,  var(--primary) 0%,  var(--secondary) 100%);*/
+    /*border-image: linear-gradient(to bottom right,  var(--primary) 0%,  var(--secondary) 100%);*/
     /*border-image-slice: 1;*/
 }
 
@@ -127,8 +174,27 @@
     background: transparent;
     padding: 0.2em 0.4em;
     border: 2px solid transparent;
-    -moz-border-image: -moz-linear-gradient(bottom right, var(--carpooling) 0%, var(--rental) 100%);
-    -webkit-border-image: -webkit-linear-gradient(bottom right, var(--carpooling) 0%, var(--rental) 100%);
-    border-image: linear-gradient(to bottom right, var(--carpooling) 0%, var(--rental) 100%);
+    -moz-border-image: -moz-linear-gradient(bottom right, var(--dark) 0%, var(--light) 100%);
+    -webkit-border-image: -webkit-linear-gradient(bottom right, var(--dark) 0%, var(--light) 100%);
+    border-image: linear-gradient(to bottom right, var(--dark) 0%, var(--light) 100%);
     border-image-slice: 1;
+}
+
+
+@media screen and (min-width: 960px) {
+    /*SuperHuge*/
+    .blank-line {
+        display: none!important;
+    }
+
+    .btn-trip {
+        font-size: large!important;
+    }
+
+    .btn-price{
+        /*font-family: "Lemon/Milk", serif;*/
+        font-size: 180%;
+        /*right: 1.5em;*/
+    }
+
 }

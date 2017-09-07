@@ -32,16 +32,16 @@
 }
 
 .small-icon-container{
-    margin-left: -0.8em!important;
-    /*display: inline-block;*/
-}
-
-.show-small{
+    /*margin-left: -2em!important;*/
     display: inline-block;
 }
 
-.hide-small{
+.show-small{
     display: none;
+}
+
+.hide-small{
+    display: inline-block;
 }
 
 .small-icon {
@@ -52,7 +52,7 @@
 
 .user-icon{
     text-align: center!important;
-    margin-left: -1.8em!important;
+    margin-left: -0.8em!important;
     height: 60px;
     border-radius: 50%;
     vertical-align: text-bottom;
@@ -74,40 +74,43 @@
 }
 
 .brand-logo {
-    height: 60px;
+    height: 70px;
     margin-right: 1em;
 }
-.trip-icon-container{
-    display: inline;
-    margin-top: 0.4em;
-    padding: 2px;
+
+.icon-dest{
+    margin-right: 2px;
+    /*margin-left: 2px;*/
+    height: 25px;
 }
 
 .icon-trip{
-    /*margin-right: 2px;*/
+    margin-right: 2px;
+    margin-left: 2px;
     height: 15px;
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 960px) {/*SuperHuge*/
     .user-icon{
-        height: 100px;
+        height: 80px;
     }
 
     .icon-trip{
         height: 20px;
     }
-    .small-icon-container{
-        margin-left: 0em!important;
-        /*display: inline-block;*/
-    }
 }
 @media screen and (max-width: 960px) {
     .show-small{
-        display: none;
+        display: inline-block!important;
     }
 
     .hide-small{
-        display: inline-block;
+        display: none!important;
+    }
+
+    .small-icon-container{
+        margin-left: -2em!important;
+        /*display: inline-block;*/
     }
 
 }
@@ -120,10 +123,14 @@
         height: 45px;
     }
 
-
 }
 
 @media screen and (max-width: 640px) {
+
+    .user-icon{
+        height: 50px;
+    }
+
     .main-icon {
         height: 30px;
     }

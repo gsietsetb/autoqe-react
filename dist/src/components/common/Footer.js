@@ -50,9 +50,9 @@ var _share = require("../../img/icons/material/share.svg");
 
 var _share2 = _interopRequireDefault(_share);
 
-var _quest = require("../../img/icons/custom/quest.svg");
+var _interrog = require("../../img/icons/material/interrog.svg");
 
-var _quest2 = _interopRequireDefault(_quest);
+var _interrog2 = _interopRequireDefault(_interrog);
 
 var _leaf = require("../../img/icons/material/leaf.svg");
 
@@ -240,7 +240,7 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _quest2.default }),
+                                    _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _interrog2.default }),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         { to: "/faq" },
@@ -297,7 +297,7 @@ var Footer = function (_Component) {
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         { to: "/design" },
-                                        " Rinc\xF3n de dise\xF1o"
+                                        "Dise\xF1o"
                                     )
                                 ),
                                 _react2.default.createElement(
@@ -307,7 +307,7 @@ var Footer = function (_Component) {
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         { to: "/dev" },
-                                        " Rinc\xF3n de Desarrollo"
+                                        " Developpers"
                                     )
                                 ),
                                 _react2.default.createElement(
@@ -317,7 +317,7 @@ var Footer = function (_Component) {
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         { to: "/press" },
-                                        " Rinc\xF3n de Prensa"
+                                        " Espacio de Prensa"
                                     )
                                 )
                             )
@@ -340,7 +340,7 @@ var Footer = function (_Component) {
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         { to: "/promotion" },
-                                        " Promociones"
+                                        " Promos"
                                     )
                                 ),
                                 _react2.default.createElement(
@@ -372,7 +372,7 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _world2.default }),
+                                    _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "envelope", className: "light-text footer-icon" }),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         { to: "/contact" },

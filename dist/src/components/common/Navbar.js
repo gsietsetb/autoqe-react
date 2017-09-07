@@ -331,8 +331,7 @@ var NavbarComp = function (_Component) {
                                                 { className: "search-icon" },
                                                 _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "search", style: { float: 'left', color: '#74acdf' } }),
                                                 "\xA0",
-                                                _react2.default.createElement(_reactRotatingText2.default, { style: { color: '#74acdf' },
-                                                    items: ['Trayecto', 'Auto', 'Cochera'] })
+                                                _react2.default.createElement(_reactRotatingText2.default, { className: "light-text", items: ['Trayecto', 'Auto', 'Cochera'] })
                                             ),
                                             _react2.default.createElement(_reactBootstrap.FormControl, { type: "text", placeholder: "Mar del Plata" }),
                                             _react2.default.createElement(

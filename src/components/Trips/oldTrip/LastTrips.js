@@ -10,7 +10,7 @@ export default class TripGrid extends Component {
                <Panel bsStyle="primary" collapsible defaultExpanded
                       header={<div>
                           <img alt="" src={carp} height={40}/> &nbsp;
-                          <h4 style={{display: 'inline'}}> Últimos viajes publicados: &nbsp; &nbsp; <Glyphicon
+                          <h4 style={{display: 'inline', verticalAlign: 'bottom'}}> Últimos viajes publicados: &nbsp; &nbsp; <Glyphicon
                               glyph="triangle-bottom"/>
                           </h4>
                       </div>}>

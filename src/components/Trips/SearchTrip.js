@@ -1,9 +1,17 @@
 import React from "react";
 import {Button, Form, FormControl, FormGroup, Glyphicon, InputGroup} from "react-bootstrap";
 import moment from "moment";
+import Responsive from "react-responsive";
 // import Autocomplete from 'react-google-autocomplete';
 import locFrom from "../../img/icons/custom/from.svg";
 import locTo from "../../img/icons/custom/dest.svg";
+
+// Default (desktop, tablet) and mobile setup
+const Huge = ({children}) => <Responsive minWidth={960} children={children}/>;
+const NotHuge = ({children}) => <Responsive maxWidth={960} children={children}/>;
+const Default = ({children}) => <Responsive minWidth={780} children={children}/>;
+const Mobile = ({children}) => <Responsive maxWidth={780} children={children}/>;
+
 
 export default class SearchTrip extends React.Component {
     constructor(props) {
@@ -28,7 +36,10 @@ export default class SearchTrip extends React.Component {
         };
 
         return (
-                <Form inline style={{display: 'inline-block', marginRight: '1em'}}>
+            <Form inline style={{display: 'inline-block', marginRight: '1em'}}>
+
+                {/*From*/}
+                <Default>
                     <FormGroup controlId="formInlineFrom" style={{display: 'inline-block',  marginRight: '1em'}}>
                         {/*<ControlLabel> &nbsp;  &nbsp; De: &nbsp; </ControlLabel>*/}
                         <InputGroup>
@@ -39,19 +50,25 @@ export default class SearchTrip extends React.Component {
                             {/*<PlacesAutocomplete id="from" inputProps={inputProps} />*/}
                         </InputGroup>
                     </FormGroup>
-                    <FormGroup controlId="formInlineFrom" style={{display: 'inline-block',  marginRight: '1em'}}>
-                        {/*<ControlLabel> &nbsp; &nbsp; A: &nbsp; </ControlLabel>*/}
-                        <InputGroup>
-                            <InputGroup.Addon style={{minWidth: 36}}>
-                                <img alt="" src={locTo} height={24}/>
-                            </InputGroup.Addon>
-                            <FormControl style={{height: 'unset'}} height={30} className="inputForm" type="text"
-                                         placeholder="Córdoba"/>
-                            {/*<PlacesAutocomplete id="to" inputProps={inputProps} />*/}
-                            {/*<PlacesAutocomplete id="from" inputProps={inputProps} placeholder="Mar del Plata"/>*/}
-                            {/*<FormControl className="inputForm" id="to" type="text" placeholder="Mar del Plata"/>*/}
-                        </InputGroup>
-                    </FormGroup>
+                </Default>
+
+                {/*To*/}
+                <FormGroup controlId="formInlineFrom" style={{display: 'inline-block',  marginRight: '1em'}}>
+                    {/*<ControlLabel> &nbsp; &nbsp; A: &nbsp; </ControlLabel>*/}
+                    <InputGroup>
+                        <InputGroup.Addon style={{minWidth: 36}}>
+                            <img alt="" src={locTo} height={24}/>
+                        </InputGroup.Addon>
+                        <FormControl style={{height: 'unset'}} height={30} className="inputForm" type="text"
+                                     placeholder="Córdoba"/>
+                        {/*<PlacesAutocomplete id="to" inputProps={inputProps} />*/}
+                        {/*<PlacesAutocomplete id="from" inputProps={inputProps} placeholder="Mar del Plata"/>*/}
+                        {/*<FormControl className="inputForm" id="to" type="text" placeholder="Mar del Plata"/>*/}
+                    </InputGroup>
+                </FormGroup>
+
+                {/*Date*/}
+                <Default>
                     <FormGroup controlId="formInlineFrom" style={{display: 'inline-block',  marginRight: '1em'}}>
                         {/*<ControlLabel> &nbsp; &nbsp; Cuándo: &nbsp; </ControlLabel>*/}
                         <InputGroup>
@@ -67,13 +84,25 @@ export default class SearchTrip extends React.Component {
                             {/*/>*/}
                             {/*<FormControl className="inputForm" type="date" placeholder="Hoy"  />*/}
                         </InputGroup>
-                        <Button type="submit" className="btn-light_w" style={{display: 'inline-block',  marginLeft: '1.2em'}}>
-                            <Glyphicon glyph="search"/> &nbsp;
-                            {/*<img src={search} className="main-icon"/>*/}
-                            Encontrá tu viaje
-                        </Button>
                     </FormGroup>
-                </Form>
+                </Default>
+
+                {/*Search button*/}
+               <Default>
+                   <Button type="submit" className="btn-light_w btn-search">
+                    <Glyphicon glyph="search"/> &nbsp;
+                    {/*<img src={search} className="main-icon"/>*/}
+                    Encontrá tu viaje
+                </Button>
+               </Default>
+                <Mobile>
+                    <Button type="submit" className="btn-light_w btn-search">
+                        <Glyphicon glyph="search"/> &nbsp;
+                        {/*<img src={search} className="main-icon"/>*/}
+                        Buscá
+                    </Button>
+                </Mobile>
+            </Form>
         );
     }
 }

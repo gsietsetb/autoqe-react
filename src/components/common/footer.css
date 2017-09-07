@@ -5,7 +5,7 @@
 }
 
 .footer h4 {
-    color: var(--rental);
+    color: var(--light);
     text-transform: uppercase;
 
 }
@@ -21,7 +21,7 @@
 .section-dark {
     padding: 1vh 0;
     color: #f8f8f8;
-    background: var(--carpooling);
+    background: var(--dark);
 }
 
 .transparent {
@@ -31,7 +31,7 @@
 .section-footer {
     padding: 2vh 0;
     color: #f8f8f8;
-    background: var(--carpooling);
+    background: var(--dark);
     background-size: cover;
     /*background-color: rgba(224, 253, 255, 0.4);*/
     opacity: 0.8;
