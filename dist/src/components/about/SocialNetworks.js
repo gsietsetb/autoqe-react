@@ -16,6 +16,22 @@ var _contact = require('../../img/icons/material/contact.svg');
 
 var _contact2 = _interopRequireDefault(_contact);
 
+var _money = require('../../img/icons/material/money.svg');
+
+var _money2 = _interopRequireDefault(_money);
+
+var _facebook = require('../../img/icons/social_network/facebook.svg');
+
+var _facebook2 = _interopRequireDefault(_facebook);
+
+var _twitter = require('../../img/icons/material/twitter.svg');
+
+var _twitter2 = _interopRequireDefault(_twitter);
+
+var _instagram = require('../../img/icons/social_network/instagram.svg');
+
+var _instagram2 = _interopRequireDefault(_instagram);
+
 var _reactRouterDom = require('react-router-dom');
 
 var _reactInstagramEmbed = require('react-instagram-embed');
@@ -47,7 +63,7 @@ var SocialNetworkComp = function (_Component) {
                 { className: 'section', id: 'section-what-it-does' },
                 _react2.default.createElement(
                     'header',
-                    { className: 'section-header' },
+                    { className: 'section-header section-dark' },
                     _react2.default.createElement(
                         'div',
                         { className: 'container' },
@@ -61,8 +77,14 @@ var SocialNetworkComp = function (_Component) {
                             _reactBootstrap.Row,
                             { className: 'social-container' },
                             _react2.default.createElement(
+                                'h4',
+                                null,
+                                'S\xEDguenos y suscribete a nuestros canales no perderte ninguna promoci\xF3n!'
+                            ),
+                            _react2.default.createElement(
                                 'h2',
                                 null,
+                                '   ',
                                 _react2.default.createElement('script', { type: 'IN/FollowCompany', 'data-id': '16232988', 'data-counter': 'right' }),
                                 _react2.default.createElement('div', { className: 'g-ytsubscribe', 'data-channelid': 'UC7RUb3Ieez8Pl9uLIhZclyQ',
                                     'data-layout': 'default', 'data-theme': 'dark', 'data-count': 'default' }),
@@ -81,6 +103,58 @@ var SocialNetworkComp = function (_Component) {
                 _react2.default.createElement(
                     'div',
                     { className: 'container' },
+                    _react2.default.createElement(
+                        _reactBootstrap.Panel,
+                        { header: "Promo Lanzamiento!", className: 'btn-dark_gold' },
+                        _react2.default.createElement(
+                            'h4',
+                            { style: { textAlign: 'left', marginLeft: '4em' } },
+                            _react2.default.createElement(
+                                _reactBootstrap.Row,
+                                null,
+                                '1. Tom\xE1 una ',
+                                _react2.default.createElement(
+                                    _reactBootstrap.Label,
+                                    { className: 'btn-dark_gold' },
+                                    _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: 'camera' }),
+                                    ' selfie'
+                                ),
+                                '\xA0en tu primer trayecto en Autoqe'
+                            ),
+                            _react2.default.createElement(
+                                _reactBootstrap.Row,
+                                null,
+                                '2. Compart\xED ',
+                                _react2.default.createElement(
+                                    _reactBootstrap.Label,
+                                    { className: 'btn-dark_gold' },
+                                    _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: 'share' }),
+                                    '  ',
+                                    _react2.default.createElement(
+                                        'b',
+                                        null,
+                                        '#Autoqe'
+                                    )
+                                ),
+                                ' en',
+                                _react2.default.createElement('img', { className: 'icon-trip', src: _instagram2.default }),
+                                _react2.default.createElement('img', { className: 'icon-trip', src: _facebook2.default }),
+                                _react2.default.createElement('img', { className: 'icon-trip', src: _twitter2.default })
+                            ),
+                            _react2.default.createElement(
+                                _reactBootstrap.Row,
+                                null,
+                                '3. Ten\xE9s ',
+                                _react2.default.createElement(
+                                    _reactBootstrap.Label,
+                                    { className: 'btn-dark_gold' },
+                                    _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: 'piggy-bank' }),
+                                    ' Viaje gratis!'
+                                ),
+                                ' para los 100 primeros!'
+                            )
+                        )
+                    ),
                     _react2.default.createElement(
                         'div',
                         { className: 'grid-row-two-up-skinny' },
@@ -118,7 +192,7 @@ var SocialNetworkComp = function (_Component) {
                                 'div',
                                 { className: 'sub-section-text' },
                                 _react2.default.createElement(_reactInstagramEmbed2.default, {
-                                    url: 'https://www.instagram.com/p/BWcbc2gFoTX/?taken-by=autoqe',
+                                    url: 'https://www.instagram.com/p/BW-SfInFBRp/?taken-by=autoqe',
                                     maxWidth: 320,
                                     hideCaption: true,
                                     containerTagName: 'div',

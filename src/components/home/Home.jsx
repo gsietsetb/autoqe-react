@@ -8,6 +8,7 @@ import Green from "../about/Green";
 import CarouselComp from "./Header";
 import Devices from "../about/Devices";
 import SocialNetworkComp from "../about/SocialNetworks";
+import Mockup from "../about/Mockup";
 
 export default class HomePage extends React.Component {
     render() {
@@ -20,6 +21,7 @@ export default class HomePage extends React.Component {
                 <Green/>
                 <HowWorksComp/>
                 <Devices/>
+                <Mockup/>
                 <SocialNetworkComp/>
                 <SecurePayment/>
                 <TalkAboutComp/>

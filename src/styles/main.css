@@ -69,6 +69,15 @@
     border-color: var(--dark);
 }
 
+.panel-default>.panel-heading{
+    background: var(--dark);
+    color: #e8a135;
+}
+
+.panel-default>.panel-body{
+    background: white;
+}
+
 .panel-primary > .panel-heading {
     color: white;
     background-color: var(--light);
@@ -91,6 +100,15 @@
 
 .to-hide-big {
     display: block;
+}
+
+.mockup-bg{
+    height: 40vh;
+    background-image: url('../img/mockup/autoqe_mockup.png');
+    background-attachment: fixed;
+    background-position: bottom;
+    /*background-size: cover;*/
+    background-repeat: no-repeat;
 }
 
 .sub-section {
@@ -202,10 +220,21 @@
     text-align: center
 }
 
+@media screen and (max-width: 800px) {
+    .mockup-bg{
+        height: 40vh;
+        /*background-image: url('../img/mockup/autoqe_mockup.png');*/
+        /*background-attachment: fixed;*/
+        background-position: bottom;
+        background-size: contain;
+        /*background-repeat: no-repeat;*/
+    }
+}
 @media screen and (min-width: 800px) {
     .section-header {
         margin-bottom: 4em
     }
+
 }
 
 .section-header-less-margin {

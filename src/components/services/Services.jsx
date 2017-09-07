@@ -35,7 +35,7 @@ export default class ServiceComp extends React.Component {
                 </Row>
                 <div className="grid-row-two-up-skinny">
                     {/*Carpooling*/}
-                    <div className="grid-item sub-section spaciate" style={{marginTop: '8vh'}}>
+                    <div className="grid-item sub-section spaciate" style={{marginTop: '12vh'}}>
                         <Row className="sub-section-title">
                             <h3>
                                 <img alt="" src={carp} className="main-icon"/>

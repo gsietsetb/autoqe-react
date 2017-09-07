@@ -18,8 +18,6 @@ var _reactRedux = require('react-redux');
 
 var _redux = require('redux');
 
-var _reactRouterDom = require('react-router-dom');
-
 var _TripActions = require('../../actions/TripActions');
 
 var courseActions = _interopRequireWildcard(_TripActions);
