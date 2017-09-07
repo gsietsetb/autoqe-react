@@ -57,7 +57,7 @@ export default class SocialNetworkComp extends Component {
                     </div>
                 </header>
                 <div className="container">
-                    <Panel header={<div><Glyphicon glyph="piggy-bank"/> Promo Lanzamiento!</div>} className="btn-dark_gold">
+                    <Panel id={"social-promo"} header={<div><Glyphicon glyph="piggy-bank"/> Promo Lanzamiento!</div>} className="btn-dark_gold">
                         <h4 style={{textAlign: 'left', marginLeft: '20%'}}>
                             <Row>1. Tomá una <Label className="btn-dark_gold"><Glyphicon glyph="camera"/> selfie</Label>
                                &nbsp;en tu primer trayecto en Autoqe</Row>

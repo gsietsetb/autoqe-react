@@ -83,7 +83,7 @@ const TripListRow = ({trip}) => {
                                 &nbsp; 24 años
                             </Row>
                             {/*{review_stars()}*/}
-                            <Row style={{color: 'gold'}}>
+                            <Row className="gold-text">
                                 <Huge >
                                     <Glyphicon glyph="star"/>
                                     <Glyphicon glyph="star"/>
@@ -248,7 +248,7 @@ const TripListRow = ({trip}) => {
                             </Row>
                         </Col>
                         <Col xs={3} style={{textAlign: 'right'}}>
-                            <Row style={{color: 'gold'}}>
+                            <Row className="gold-text">
                                     <Glyphicon glyph="star"/>
                                     <Glyphicon glyph="star"/>
                                     <Glyphicon glyph="star"/>

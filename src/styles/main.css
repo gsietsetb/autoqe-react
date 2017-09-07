@@ -46,6 +46,10 @@
     color: var(--light);
 }
 
+.gold-text{
+    color: var(--elec);
+}
+
 /*Text*/
 .service-carp {
     color: var(--carpooling);
@@ -69,10 +73,17 @@
     border-color: var(--dark);
 }
 
+/*#social-promo.panel-default>.panel-heading{*/
 .panel-default>.panel-heading{
     background: var(--dark);
-    color: #e8a135;
+    color: var(--light);
 }
+
+/*#carp-panel.panel-default>.panel-heading{*/
+    /*background: var(--dark) !important;*/
+    /*color: #e8a135!important;*/
+/*}*/
+
 
 .panel-default>.panel-body{
     background: white;

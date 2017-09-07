@@ -22,7 +22,7 @@ class TripsPage extends React.Component {
         return (
             <div>
                 <section className=" Container">
-                    <Panel style={{textAlign: 'left'}} collapsible defaultExpanded header={<div>
+                    <Panel id={"carp-panel"} style={{textAlign: 'left'}} collapsible defaultExpanded header={<div>
                         <img alt="" src={carp} height={40}/> &nbsp;
                         <h4 style={{display: 'inline'}}> Últimos viajes <span className="hide-small">publicados:</span> &nbsp;
                                    <Glyphicon glyph="triangle-bottom"/>

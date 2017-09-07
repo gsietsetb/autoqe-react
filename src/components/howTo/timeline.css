@@ -5,16 +5,6 @@
     /*border-radius: 4px;*/
 }
 
-.road-over{
-    background-color: rgba(120, 226, 65, 0.19);
-    /*background: rgba(226,226,226,0.19); !* For browsers that do not support gradients *!*/
-    background: -webkit-linear-gradient(red, yellow); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(red, yellow); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(red, yellow); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to top, rgba(116, 172, 223, 0.1), transparent);
-    border-radius: 80px;
-}
-
 .timeline {
     list-style: none;
     padding: 0;

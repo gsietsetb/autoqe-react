@@ -101,7 +101,7 @@ var SocialNetworkComp = function (_Component) {
                     { className: 'container' },
                     _react2.default.createElement(
                         _reactBootstrap.Panel,
-                        { header: _react2.default.createElement(
+                        { id: "social-promo", header: _react2.default.createElement(
                                 'div',
                                 null,
                                 _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: 'piggy-bank' }),
