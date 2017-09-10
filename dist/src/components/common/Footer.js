@@ -22,9 +22,9 @@ var _autoqe_txt_w = require("../../img/logo/autoqe_txt_w.svg");
 
 var _autoqe_txt_w2 = _interopRequireDefault(_autoqe_txt_w);
 
-var _handShake = require("../../img/icons/material/hand-shake.svg");
+var _job = require("../../img/icons/material/job.svg");
 
-var _handShake2 = _interopRequireDefault(_handShake);
+var _job2 = _interopRequireDefault(_job);
 
 var _design = require("../../img/icons/material/design.svg");
 
@@ -50,9 +50,9 @@ var _share = require("../../img/icons/material/share.svg");
 
 var _share2 = _interopRequireDefault(_share);
 
-var _interrog = require("../../img/icons/material/interrog.svg");
+var _quest = require("../../img/icons/material/quest.svg");
 
-var _interrog2 = _interopRequireDefault(_interrog);
+var _quest2 = _interopRequireDefault(_quest);
 
 var _leaf = require("../../img/icons/material/leaf.svg");
 
@@ -62,9 +62,13 @@ var _team = require("../../img/icons/material/team.svg");
 
 var _team2 = _interopRequireDefault(_team);
 
-var _disc = require("../../img/icons/material/disc.svg");
+var _disc = require("../../img/icons/material/disc2.svg");
 
 var _disc2 = _interopRequireDefault(_disc);
+
+var _contact = require("../../img/icons/material/contact2.svg");
+
+var _contact2 = _interopRequireDefault(_contact);
 
 require("./footer.css");
 
@@ -240,7 +244,7 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _interrog2.default }),
+                                    _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _quest2.default }),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         { to: "/faq" },
@@ -297,7 +301,7 @@ var Footer = function (_Component) {
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         { to: "/design" },
-                                        "Dise\xF1o"
+                                        "Rinc\xF3n de Dise\xF1o"
                                     )
                                 ),
                                 _react2.default.createElement(
@@ -307,7 +311,7 @@ var Footer = function (_Component) {
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         { to: "/dev" },
-                                        " Developpers"
+                                        "Rinc\xF3n de Desarrollo"
                                     )
                                 ),
                                 _react2.default.createElement(
@@ -346,7 +350,17 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _handShake2.default }),
+                                    _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _team2.default }),
+                                    _react2.default.createElement(
+                                        _reactRouterDom.Link,
+                                        { to: "/team" },
+                                        " Equipo"
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _job2.default }),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         { to: "/work" },
@@ -362,17 +376,7 @@ var Footer = function (_Component) {
                                 _react2.default.createElement(
                                     "li",
                                     null,
-                                    _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _team2.default }),
-                                    _react2.default.createElement(
-                                        _reactRouterDom.Link,
-                                        { to: "/team" },
-                                        " Equipo"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "envelope", className: "light-text footer-icon" }),
+                                    _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _contact2.default }),
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         { to: "/contact" },
@@ -391,32 +395,27 @@ var Footer = function (_Component) {
                             _react2.default.createElement(
                                 _reactRouterDom.Link,
                                 { to: "https://www.facebook.com/autoqe" },
-                                _react2.default.createElement("i", {
-                                    className: "social-icon fa fa-facebook" })
+                                _react2.default.createElement("i", { className: "social-icon fa fa-facebook" })
                             ),
                             _react2.default.createElement(
                                 _reactRouterDom.Link,
                                 { to: "https://www.twitter.com/autoqe" },
-                                _react2.default.createElement("i", {
-                                    className: "social-icon fa fa-twitter" })
+                                _react2.default.createElement("i", { className: "social-icon fa fa-twitter" })
                             ),
                             _react2.default.createElement(
                                 _reactRouterDom.Link,
                                 { to: "https://www.instagram.com/autoqe" },
-                                _react2.default.createElement("i", {
-                                    className: "social-icon fa fa-instagram" })
+                                _react2.default.createElement("i", { className: "social-icon fa fa-instagram" })
                             ),
                             _react2.default.createElement(
                                 _reactRouterDom.Link,
                                 { to: "https://www.youtube.com/channel/UC7RUb3Ieez8Pl9uLIhZclyQ" },
-                                _react2.default.createElement("i", {
-                                    className: "social-icon fa fa-youtube" })
+                                _react2.default.createElement("i", { className: "social-icon fa fa-youtube" })
                             ),
                             _react2.default.createElement(
                                 _reactRouterDom.Link,
                                 { to: "https://www.linkedin.com/company/16232988/" },
-                                _react2.default.createElement("i", {
-                                    className: "social-icon fa fa-linkedin" })
+                                _react2.default.createElement("i", { className: "social-icon fa fa-linkedin" })
                             ),
                             _react2.default.createElement(
                                 _reactRouterDom.Link,

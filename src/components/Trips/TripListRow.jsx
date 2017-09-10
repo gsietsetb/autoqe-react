@@ -8,7 +8,7 @@ import {FormattedDate, FormattedRelative, FormattedTime} from 'react-intl';
 import locFrom from "../../img/icons/custom/from.svg";
 import locThrough from "../../img/icons/custom/through.svg";
 import locTo from "../../img/icons/custom/dest.svg";
-import girl from "../../img/icons/material/girl.svg";
+import girl from "../../img/icons/material/female.svg";
 import highw from "../../img/icons/material/highway.svg";
 import highw_n from "../../img/icons/material/highway_n.svg";
 import pet from "../../img/icons/material/pet.svg";
@@ -103,7 +103,7 @@ const TripListRow = ({trip}) => {
                             <Row>
                                 <Button className="btn-trip">
                                     {/*<h4 style={{display: 'inline'}}>*/}
-                                    <img alt="from" src={locFrom} className="icon-dest"/>{trip.from}
+                                    <img alt="from" src={locFrom} className="icon-dest"/> {trip.from}
                                     {trip.stops && <span className="hide-small" style={{color: '#999'}}>&nbsp;→&nbsp;
                                         <img alt="" src={locThrough} className="icon-dest"/> {trip.stops}
                             </span>}

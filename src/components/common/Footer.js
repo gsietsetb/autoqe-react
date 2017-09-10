@@ -1,20 +1,21 @@
 import React, {Component} from "react";
 import {Link} from "react-router-dom";
-import {Col, Glyphicon, Image, Label, Row} from "react-bootstrap";
+import {Col, Image, Label, Row} from "react-bootstrap";
 import Responsive from "react-responsive";
 
 import logo_side from "../../img/logo/autoqe_txt_w.svg"
-import job from "../../img/icons/material/hand-shake.svg"
+import job from "../../img/icons/material/job.svg"
 import design from "../../img/icons/material/design.svg"
 import press from "../../img/icons/material/press.svg"
 import world from "../../img/icons/material/world.svg"
 import code from "../../img/icons/material/code.svg"
 import hWorks from "../../img/icons/material/howWorks.svg"
 import social from "../../img/icons/material/share.svg"
-import quest from "../../img/icons/material/interrog.svg"
+import quest from "../../img/icons/material/quest.svg"
 import leaf from "../../img/icons/material/leaf.svg"
 import team from "../../img/icons/material/team.svg"
-import disc from "../../img/icons/material/disc.svg"
+import disc from "../../img/icons/material/disc2.svg"
+import contact from "../../img/icons/material/contact2.svg"
 import "./footer.css"
 //Icons
 import carp from "../../img/icons/services/carp.svg";
@@ -75,36 +76,35 @@ class Footer extends Component {
                         <Col xs={5} md={3}>
                             <ul><h4> Autoqe</h4>
                                 <li><img alt="" className="footer-icon" src={world}/><Link to="/next"> Próximos paises</Link></li>
-                                <li><img alt="" className="footer-icon" src={design}/><Link to="/design">Diseño</Link>
-                                </li>
-                                <li><img alt="" className="footer-icon" src={code}/><Link to="/dev"> Developpers</Link>
-                                </li>
+                                <li><img alt="" className="footer-icon" src={design}/><Link to="/design">Rincón de Diseño</Link></li>
+                                <li><img alt="" className="footer-icon" src={code}/><Link to="/dev">Rincón de Desarrollo</Link></li>
                                 <li><img alt="" className="footer-icon" src={press}/><Link to="/press"> Espacio de Prensa</Link></li>
                             </ul>
                         </Col>
                         <Col xs={5} md={3}>
                             <ul><h4>Contacto</h4>
                                 <li><img alt="" className="footer-icon" src={disc}/><Link to="/promotion"> Promos</Link></li>
+                                <li><img alt="" className="footer-icon" src={team}/><Link to="/team"> Equipo</Link></li>
                                 <li><img alt="" className="footer-icon" src={job}/><Link to="/work"> Trabajos </Link><Label
                                     bsStyle="success">Contratando!</Label></li>
-                                <li><img alt="" className="footer-icon" src={team}/><Link to="/team"> Equipo</Link></li>
-                                <li><Glyphicon glyph="envelope" className="light-text footer-icon"/><Link to="/contact"> Contacto</Link></li>
+                                <li><img alt="" className="footer-icon" src={contact}/><Link to="/contact"> Contacto</Link></li>
                             </ul>
                         </Col>
                     </Row>
                     <Row className="social-container">
                         <h2>
-                            <Link to="https://www.facebook.com/autoqe"><i
-                                className="social-icon fa fa-facebook"/></Link>
-                            <Link to="https://www.twitter.com/autoqe"><i
-                                className="social-icon fa fa-twitter"/></Link>
-                            <Link to="https://www.instagram.com/autoqe"><i
-                                className="social-icon fa fa-instagram"/></Link>
-                            <Link to="https://www.youtube.com/channel/UC7RUb3Ieez8Pl9uLIhZclyQ"><i
-                                className="social-icon fa fa-youtube"/></Link>
-                            <Link to="https://www.linkedin.com/company/16232988/"><i
-                                className="social-icon fa fa-linkedin"/></Link>
-                            <Link to="https://google.com/+autoqe"><i className="fa fa-google-plus"/></Link>
+                            <Link to="https://www.facebook.com/autoqe">
+                                <i className="social-icon fa fa-facebook"/></Link>
+                            <Link to="https://www.twitter.com/autoqe">
+                                <i className="social-icon fa fa-twitter"/></Link>
+                            <Link to="https://www.instagram.com/autoqe">
+                                <i className="social-icon fa fa-instagram"/></Link>
+                            <Link to="https://www.youtube.com/channel/UC7RUb3Ieez8Pl9uLIhZclyQ">
+                                <i className="social-icon fa fa-youtube"/></Link>
+                            <Link to="https://www.linkedin.com/company/16232988/">
+                                <i className="social-icon fa fa-linkedin"/></Link>
+                            <Link to="https://google.com/+autoqe">
+                                <i className="fa fa-google-plus"/></Link>
                         </h2>
                     </Row>
                     <Row>

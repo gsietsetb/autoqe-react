@@ -28,7 +28,7 @@ export default class ServiceComp extends React.Component {
             <section className="container">
                 <Row className="sub-section-title" style={{textAlign: 'center'}}>
                     <h1 className="dark-text">
-                        <img alt="" src={srv} className="main-icon"/>
+                        <img alt="" src={srv} className="main-icon-big"/>
                         <span className="service-carp">Ser</span><span className="service-rent">Vi</span>
                         <span className="service-park">Ci</span><span className="service-elec">Os</span>
                     </h1>

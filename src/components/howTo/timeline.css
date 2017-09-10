@@ -47,6 +47,15 @@
     min-height: 50px
 }
 
+.timeline-image-fix{
+    top: 20vh;
+    position: fixed;
+    width: 90px;
+    height: 80px;
+    left: 51%;
+    margin-left: -40px
+}
+
 /**:active {*/
     /*color: #595f62;*/
 /*}*/

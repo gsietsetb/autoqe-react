@@ -22,9 +22,9 @@ var _users = require("../../img/icons/material/users.svg");
 
 var _users2 = _interopRequireDefault(_users);
 
-var _secure_pay = require("../../img/icons/material/secure_pay.svg");
+var _lock = require("../../img/icons/material/lock.svg");
 
-var _secure_pay2 = _interopRequireDefault(_secure_pay);
+var _lock2 = _interopRequireDefault(_lock);
 
 var _from_shift = require("../../img/icons/custom/from_shift.svg");
 
@@ -204,7 +204,7 @@ var HowCarpooling = function (_React$Component) {
                                                 _react2.default.createElement(
                                                     _reactBootstrap.Button,
                                                     { className: "btn-green", bsStyle: "success" },
-                                                    _react2.default.createElement("img", { alt: "", src: _secure_pay2.default, height: 25 }),
+                                                    _react2.default.createElement("img", { alt: "", src: _lock2.default, height: 25 }),
                                                     "\xA0 Pago seguro"
                                                 )
                                             ),

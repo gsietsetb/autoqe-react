@@ -1,11 +1,12 @@
 import React from "react";
 import {Button, Col, Glyphicon, Row} from "react-bootstrap";
 import {Link} from "react-router-dom";
+
 import lock from "../../img/icons/material/lock.svg";
-import quest from "../../img/icons/material/interrog.svg";
+import quest from "../../img/icons/material/quest_gold.svg";
 import secure from "../../img/icons/material/secure_pay.svg";
-import leaf from "../../img/icons/material/leaf.svg";
-import money from "../../img/icons/material/money.svg";
+import leaf from "../../img/icons/material/leaf_g.svg";
+import money from "../../img/icons/material/money_gold.svg";
 
 export default class Intro extends React.Component {
     render() {
@@ -20,41 +21,42 @@ export default class Intro extends React.Component {
                             <Row style={{marginBottom: 20}}> <p>Descubrí como la economía colaborativa te permite compartir lo que no usás &nbsp;</p></Row>
                             <Row className="highlight-icon">
                                 <Col xs="4">
-                                    <img src={money}/>
-                                    <h3>Ahorrá</h3>
-                                    <p>Hasta un 30% más barato
-                                    <Row style={{textAlign: 'left'}}> <Glyphicon glyph="ok"/> &nbsp; Sin intermediarios</Row>
-                                    <Row style={{textAlign: 'left'}}> <Glyphicon glyph="ok"/> &nbsp; Sin Papeleos</Row>
-                                    <Row style={{textAlign: 'left'}}> <Glyphicon glyph="ok"/> &nbsp; Sin gastos extra</Row>
-                                </p><Link to="/green">
-                                        <Button className="btn-white-light">
-                                            <img style={{height: 20}} src={quest}/>&nbsp;
-                                            ¿Cómo funciona? </Button>
-                                    </Link>
-                                </Col>
-                                <Col xs="4">
-                                    <img src={leaf}/>
-                                    <h3>Ayudá al Medioambiente</h3>
-                                    <p>Evita hasta el 60% de las emisiones nocivas a la atmósfera</p>
-                                    <Link to="/green">
-                                        <Button bsStyle="success">
-                                            <Glyphicon glyph="leaf"/> &nbsp;
-                                            Cálculo de Co2 </Button>
-                                    </Link>
-                                </Col>
-                                <Col xs="4">
                                     <img src={lock}/>
-                                    <h3>Fácil y Seguro</h3>
+                                    <h3 className="service-carp">Fácil y Seguro</h3>
                                     <p>
-                                        Comprobá fácilmente el perfil de los usuarios
+                                        <Row style={{textAlign: 'left'}}> <Glyphicon glyph="ok"/> &nbsp; Sin Papeleos</Row>
                                         <Row style={{textAlign: 'left'}}> <Glyphicon glyph="ok"/> &nbsp; Perfiles verificados</Row>
                                         <Row style={{textAlign: 'left'}}> <Glyphicon glyph="star"/> &nbsp; Puntuación por trayectos</Row>
                                     </p><Link to="/green">
-                                        <Button className="btn-white-light">
-                                            <img style={{height: 20}} src={secure}/>&nbsp;
-                                            Pago seguro</Button>
+                                    <Button className="btn-white-light">
+                                        <img style={{height: 20}} src={secure}/>&nbsp;
+                                        Pago seguro</Button>
+                                </Link>
+                                </Col>
+                                <Col xs="4">
+                                    <img src={leaf}/>
+                                    {/*<h1><Glyphicon style={{color: 'green'}} glyph="leaf"/></h1>*/}
+                                    <h3 className="service-park">Sostenible</h3>
+                                    <p>Ayudás al Medioambiente evitando hasta el 60% de las emisiones nocivas de CO<sub>2</sub></p>
+                                    <Link to="/green">
+                                        <Button className="service-park">
+                                            <img style={{height: 20}} src={leaf}/>&nbsp;
+                                            Cálculo de CO<sub>2</sub> </Button>
                                     </Link>
                                 </Col>
+                                <Col xs="4">
+                                <img src={money}/>
+                                {/*<h1><Glyphicon style={{color: 'var(--elec)'}} glyph="piggy-bank"/></h1>*/}
+                                <h3 className="service-elec">Ahorrá</h3>
+                                <p>Hasta un 30% más barato
+                                    <Row style={{textAlign: 'left'}}> <Glyphicon glyph="ok"/> &nbsp; Sin intermediarios</Row>
+                                    <Row style={{textAlign: 'left'}}> <Glyphicon glyph="ok"/> &nbsp; Sin gastos extra</Row>
+                                </p><Link to="/green">
+                                <Button className="btn-gold-light">
+                                    <img style={{height: 20}} src={quest}/>&nbsp;
+                                    ¿Cómo funciona? </Button>
+                            </Link>
+                            </Col>
                             </Row>
                             {/*<Image style={{marginBottom: '2em'}} responsive src={mockup}  className=""/>*/}
                             {/*<Image responsive src={s8} height="600"  className=""/>*/}

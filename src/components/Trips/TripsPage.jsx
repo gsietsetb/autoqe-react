@@ -21,10 +21,10 @@ class TripsPage extends React.Component {
         // console.log('this is here: ' + JSON.stringify(trips));
         return (
             <div>
-                <section className=" Container">
+                <section className="Container">
                     <Panel id={"carp-panel"} style={{textAlign: 'left'}} collapsible defaultExpanded header={<div>
                         <img alt="" src={carp} height={40}/> &nbsp;
-                        <h4 style={{display: 'inline'}}> Últimos viajes <span className="hide-small">publicados:</span> &nbsp;
+                        <h4 className="service-carp" style={{display: 'inline', fontFamily: '"Lemon/Milk light", serif'}}> Últimos viajes <span className="hide-small">publicados:</span> &nbsp;
                                    <Glyphicon glyph="triangle-bottom"/>
                                </h4>
                                <Link to={'/trips/new'}><Button style={{float: 'right'}} type="submit" className="btn-mix">

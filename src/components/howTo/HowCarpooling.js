@@ -3,8 +3,7 @@ import {Button, Collapse, Glyphicon, Grid, Row, ToggleButton, ToggleButtonGroup}
 import "./timeline.css";
 import volante from "../../img/icons/material/steering-wheel.svg";
 import users from "../../img/icons/material/users.svg";
-import pay from "../../img/icons/material/secure_pay.svg";
-
+import pay from "../../img/icons/material/lock.svg";
 import locDriver from "../../img/icons/custom/from_shift.svg";
 import locUser from "../../img/icons/custom/dest_shift.svg";
 import SearchBarComp from "../Trips/SearchBar";
@@ -40,9 +39,11 @@ export default class HowCarpooling extends React.Component {
                             Pasajeros</h4></ToggleButton>
                     </ToggleButtonGroup>
                     <div className=" timeline-background col-lg-12">
+                        {/*<img className="timeline-image-fix" src={carp}/>*/}
                         <ul className=" timeline">
                             <Collapse in={this.state.driver}>
                                 <li>
+
                                     <img className="timeline-image img-circle img-responsive isDriver" src={locDriver}
                                          alt="autoqe" onClick={() => this.setState({addTrip: !this.state.addTrip})}/>
                                     <h1 className="timeline-image timeline-number-driver">1</h1>

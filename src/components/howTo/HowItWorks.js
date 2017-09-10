@@ -7,7 +7,7 @@ import carp from "../../img/icons/services/carp.svg";
 import rent from "../../img/icons/services/rent.svg";
 import park from "../../img/icons/services/park.svg";
 import el from "../../img/icons/services/el.svg";
-import quest from "../../img/icons/material/interrog.svg";
+import quest from "../../img/icons/material/quest.svg";
 
 // import MediaQuery from "react-responsive";
 

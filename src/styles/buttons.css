@@ -10,14 +10,22 @@
 }
 
 .btn-trip{
-    border: 1px dashed var(--light);
+    border: 0px dashed var(--light) violet;
     padding: 0.4em;
-    border-radius: 50px;
+    /*border-radius: 50px;*/
     /*width: 80%;*/
     font-size: larger;
     margin-bottom: 0.8em;
-    font-family: "Lemon/Milk", serif;
+    font-family: "Lemon/Milk light", serif;
+    font-weight: 500;
     /*background-color: white;*/
+    /*border-right: 1px solid var(--light);*/
+    /*border-left: 1px solid var(--dark);*/
+    /*background: linear-gradient(to right, var(--dark), #999, var(--light))*/
+    /*left*/
+    /*top*/
+    /*no-repeat;*/
+    /*background-size:100% 1px ;*/
 }
 
 .btn-trip-cont{
@@ -59,12 +67,23 @@
     background: white;
 }
 
+.btn-gold-light {
+    color: var(--elec);
+    background: white;
+}
+
 .btn-white-dark {
     color: var(--dark);
     background: white;
 }
 
 .btn-dark_gold {
+    background: var(--dark) ;
+    color: var(--elec);
+    border-color: var(--elec);
+}
+
+.btn-green {
     background: var(--dark) ;
     color: var(--elec);
     border-color: var(--elec);

@@ -36,9 +36,9 @@ var _el = require("../../img/icons/services/el.svg");
 
 var _el2 = _interopRequireDefault(_el);
 
-var _interrog = require("../../img/icons/material/interrog.svg");
+var _quest = require("../../img/icons/material/quest.svg");
 
-var _interrog2 = _interopRequireDefault(_interrog);
+var _quest2 = _interopRequireDefault(_quest);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -84,7 +84,7 @@ var HowWorksComp = function (_React$Component) {
                         _react2.default.createElement(
                             "h1",
                             { className: "section-header-title" },
-                            _react2.default.createElement("img", { src: _interrog2.default, className: "icon-row", alt: "Secure payment" }),
+                            _react2.default.createElement("img", { src: _quest2.default, className: "icon-row", alt: "Secure payment" }),
                             " \xA0 \xBFC\xF3mo funciona?"
                         ),
                         _react2.default.createElement(
