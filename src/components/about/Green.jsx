@@ -13,7 +13,7 @@ export default class Green extends Component {
             <section className="section section-dark">
                 <header className="section-header">
                     <div className="container">
-                        <h3 className="section-header-title service-park">
+                        <h3 className="section-header-title text-green">
                             <img src={leaf} className="icon-row" alt="Secure payment"/>&nbsp;
                             Colaborá con el medioambiente
                             {/*<Label bsStyle="success">*/}
