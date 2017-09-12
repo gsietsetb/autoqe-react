@@ -3,9 +3,9 @@ import PropTypes from "prop-types"
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as tripActions from '../../actions/TripActions';
-// import {withRouter} from "react-router-dom";
 import UserList from '../Users/UserList';
 import TripForm from './TripForm';
+import {withRouter} from "react-router-dom";
 
 class TripPage extends React.Component {
     constructor(props, context) {
@@ -161,4 +161,5 @@ function mapDispatchToProps(dispatch) {
 }
 
 // export default withRouter(connect(mapStateToProps, mapDispatchToProps))(TripPage);
-export default connect(mapStateToProps, mapDispatchToProps)(TripPage);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(TripPage));
+// export default connect(mapStateToProps, mapDispatchToProps)(TripPage);

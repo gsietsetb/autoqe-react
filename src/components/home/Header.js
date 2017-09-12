@@ -1,8 +1,8 @@
 import React from "react";
 import {Carousel, Glyphicon, Label, Nav, NavItem, Row, Tab} from "react-bootstrap";
 import TripsPage from "../Trips/TripsPage";
-import {Link} from "react-router-dom";
-
+import {HashLink as Link} from 'react-router-hash-link';
+import {TimerMixin} from "react-timer-mixin";
 import "./carousel.css"
 //Icons
 import carp from "../../img/icons/services/carp.svg";
@@ -12,24 +12,8 @@ import el from "../../img/icons/services/el.svg";
 import SearchTrip from "../Trips/SearchTrip";
 import SearchCar from "../../Car/SearchCar";
 
-// let cx = classNames.bind(styles);
-
-// const styles = {
-//     whiteText: {
-//         index:
-//     },
-//     item: {
-//         complete: {
-//             textDecoration: "line-through"
-//         },
-//
-//         due: {
-//             color: "red"
-//         }
-//     },
-// }
-
 export default class CarouselComp extends React.Component {
+
     // onLoadStart={(e) => this.setState({loading: true})}
     constructor(props) {
         super(props);
@@ -38,9 +22,14 @@ export default class CarouselComp extends React.Component {
             index: 0,
             direction: 'next'
         };
+        setInterval(() => {
+            const aux =  this.state.index;
+            this.setState({index: aux<3?aux+1:0});
+        },5000);
         this._setArrowContent = this._setArrowContent.bind(this);
         this._setTabContent = this._setTabContent.bind(this)
     }
+
 
     _setTabContent(eventKey) {
         this.setState({

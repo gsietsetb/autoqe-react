@@ -12,9 +12,7 @@ var _reactRedux = require('react-redux');
 
 var _reactRouterDom = require('react-router-dom');
 
-var _createBrowserHistory = require('history/createBrowserHistory');
-
-var _createBrowserHistory2 = _interopRequireDefault(_createBrowserHistory);
+var _history = require('history');
 
 var _Routes = require('./components/Routes');
 
@@ -45,15 +43,20 @@ var _App2 = _interopRequireDefault(_App);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+// import {BrowserRouter as Router} from 'react-router-dom';
+
 
 (0, _reactIntl.addLocaleData)([].concat(_toConsumableArray(_es2.default)));
 
 require('dotenv').config();
 
-var history = (0, _createBrowserHistory2.default)();
+// const history = createBrowserHistory();
+// function onUpdate () {
+//     anchorate()
+// }
 
 var store = (0, _StoreConfig2.default)();
-store.dispatch(_TripActions.loadTrips);
+store.dispatch((0, _TripActions.loadTrips)());
 store.dispatch((0, _UserActions.loadUsers)());
 
 (0, _reactDom.render)(_react2.default.createElement(
@@ -64,7 +67,7 @@ store.dispatch((0, _UserActions.loadUsers)());
         { store: store },
         _react2.default.createElement(
             _reactRouterDom.BrowserRouter,
-            { routes: _Routes2.default, history: history },
+            null,
             _react2.default.createElement(_App2.default, null)
         )
     )

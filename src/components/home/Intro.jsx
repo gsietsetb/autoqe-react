@@ -20,7 +20,7 @@ export default class Intro extends React.Component {
                         <div className="section-header-text">
                             <Row style={{marginBottom: 20}}> <p>Descubrí como la economía colaborativa te permite compartir lo que no usás &nbsp;</p></Row>
                             <Row className="highlight-icon">
-                                <Col xs="4">
+                                <Col xs={4}>
                                     <img src={lock}/>
                                     <h3 className="service-carp">Fácil y Seguro</h3>
                                     <p>
@@ -33,7 +33,7 @@ export default class Intro extends React.Component {
                                         Pago seguro</Button>
                                 </Link>
                                 </Col>
-                                <Col xs="4">
+                                <Col xs={4}>
                                     <img src={leaf}/>
                                     {/*<h1><Glyphicon style={{color: 'green'}} glyph="leaf"/></h1>*/}
                                     <h3 className="service-park">Sostenible</h3>
@@ -44,7 +44,7 @@ export default class Intro extends React.Component {
                                             Cálculo de CO<sub>2</sub> </Button>
                                     </Link>
                                 </Col>
-                                <Col xs="4">
+                                <Col xs={4}>
                                 <img src={money}/>
                                 {/*<h1><Glyphicon style={{color: 'var(--elec)'}} glyph="piggy-bank"/></h1>*/}
                                 <h3 className="service-elec">Ahorrá</h3>

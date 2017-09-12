@@ -6,7 +6,7 @@ import contact from '../../img/icons/material/contact.svg'
 import fb from '../../img/icons/social_network/facebook.svg'
 import tw from '../../img/icons/material/twitter.svg'
 import inst from '../../img/icons/social_network/instagram.svg'
-import {Link} from "react-router-dom";
+import {HashLink as Link} from 'react-router-hash-link';
 import InstagramEmbed from "react-instagram-embed";
 
 export default class SocialNetworkComp extends Component {

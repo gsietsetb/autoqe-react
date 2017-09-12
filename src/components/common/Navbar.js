@@ -14,7 +14,8 @@ import {
     NavDropdown,
     NavItem
 } from "react-bootstrap";
-import {Link} from "react-router-dom";
+import {Link} from 'react-router-dom';
+// import { HashLink as Link } from 'react-router-hash-link';
 import {connect} from 'react-redux';
 import Responsive from "react-responsive";
 import ReactRotatingText from "react-rotating-text";
@@ -39,7 +40,6 @@ import bolFlag from "../../img/icons/flag/bolivia.svg";
 import brFlag from "../../img/icons/flag/brazil.svg";
 
 import locTo from "../../img/icons/custom/dest.svg";
-
 
 const styles = {
     flagDropdown: {
@@ -103,10 +103,10 @@ class NavbarComp extends Component {
     render() {
         return (
             <div>
-                <Navbar collapseOnSelect fixedTop fluid>
+                <Navbar actions collapseOnSelect fixedTop fluid>
                     <Navbar.Header>
                         <Navbar.Brand pullLeft className="logo brand-text">
-                            <Link to="/">
+                            <Link to="/home">
                                 <img src={logo_txt} alt="autoqe"/>
                             </Link>
                         </Navbar.Brand>
@@ -121,8 +121,10 @@ class NavbarComp extends Component {
                              <Glyphicon glyph="plus-sign" className="nav-icon"/>Publicar
                            </span>}>
                                 <MenuItem eventKey={2.1}>
-                                    <img src={carp} className="nav-icon" alt="logo"/>
-                                    <span className="service-carp">Trayecto </span>
+                                    <Link to="/trips/new">
+                                        <img src={carp} className="nav-icon" alt="logo"/>
+                                        <span className="service-carp">Trayecto </span>
+                                    </Link>
                                 </MenuItem>
                                 <MenuItem eventKey={2.2}>
                                     <img src={rent} className="nav-icon" alt="logo"/>
@@ -134,9 +136,14 @@ class NavbarComp extends Component {
                                 </MenuItem>
                             </NavDropdown>
 
-                            {/*Services home*/}
-                            <NavItem eventKey={1} href="/services" title="Inicio">
+                            {/*Services*/}
+                            <NavItem eventKey={1} title="services">
+                                <Link to={{
+                                    pathname: '/services',
+                                    // hash: '#services'
+                                }}>
                                     <img style={{marginTop: '-0.3em'}} height={30} src={srv}/>
+                                </Link>
                             </NavItem>
 
                             {/*Buscar*/}
@@ -166,7 +173,7 @@ class NavbarComp extends Component {
 
                             {/*Hideable Search & List form*/}
                             <Huge>
-                                <NavItem eventKey={4} href="#" style={{marginTop: -5, marginBottom: -9}}>
+                                <NavItem eventKey={4} style={{marginTop: -5, marginBottom: -9}}>
                                     <FormGroup>
                                         <InputGroup className="inputForm">
                                             <InputGroup.Addon className="search-icon light-text">
@@ -184,19 +191,19 @@ class NavbarComp extends Component {
 
                             {/*Login Logic*/}
                             {!this.state.authenticated ? (
-                                <NavItem onClick={this.login} style={{marginTop: -8}} eventKey={5} href="#">
+                                <NavItem onClick={this.login} style={{marginTop: -8}} eventKey={5} >
                                     <Button className="btn-light_w" type="submit">
                                         <Glyphicon glyph="user" className="nav-icon"/>
                                         Registro</Button>
                                 </NavItem>
                             ) : (
-                                <NavItem onClick={this.logout} eventKey={5} href="#">
+                                <NavItem onClick={this.logout} eventKey={5} >
                                     <Button bsStyle={'danger'} type="submit">LogOut</Button>
                                 </NavItem>
                             )}
 
                             {/*Contact*/}
-                            <NavItem eventKey={6} href="#" style={{marginTop: 0}}>
+                            <NavItem eventKey={6} style={{marginTop: 0}}>
                                 <Glyphicon glyph="envelope" className="nav-icon"/>Contacto</NavItem>
                             {/*Language selector*/}
                             <NavItem>
@@ -207,7 +214,7 @@ class NavbarComp extends Component {
                                         <img alt="sp" src={spFlag} className="nav-icon"/>España</MenuItem>
                                     <MenuItem eventKey="3">
                                         <img alt="br" src={brFlag} className="nav-icon"/>Brasil</MenuItem>
-                                    <MenuItem eventKey="4">
+                                    <MenuItem eventKey={4}>
                                         <img alt="Ch" src={chFlag} className="nav-icon"/>Chile</MenuItem>
                                     <MenuItem eventKey="5">
                                         <img alt="Bol" src={bolFlag} className="nav-icon"/>Bolivia</MenuItem><MenuItem divider/>

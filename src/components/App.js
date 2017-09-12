@@ -32,7 +32,42 @@ class AppComponent extends Component {
         return (
             <div>
                 <NavbarComponent lock={this.lock}/>
-                <Main history={this.props.history}/>
+                <section style={{marginTop: 69}}>
+                    {/*<Main history={this.props.history}/>*/}
+                    <Main/>
+                    {/*<Switch>*/}
+                        {/*<Route path='/' component={HomePage}/>*/}
+                        {/*<Route path='/home' component={HomePage}/>*/}
+                        {/*/!*<Route path='/' component={HomePage}/>*!/*/}
+                        {/*/!*Services*!/*/}
+                        {/*<Route path="/trips" component={TripsPage}/>*/}
+                        {/*/!*<Route path="/car" component={ContactComp}/>*!/*/}
+
+                        {/*/!*Trips*!/*/}
+                        {/*<Route path="/trips" component={TripsPage}>*/}
+                            {/*<Route path="/trips/new" component={NewTripPage}/>*/}
+                            {/*<Route path="/trips/:id" component={TripPage}/>*/}
+                        {/*</Route>*/}
+
+                        {/*<Route path="/contact" component={ContactComp}/>*/}
+
+                        {/*/!*About*!/*/}
+                        {/*<Route path="/green" component={Green}/>*/}
+                        {/*<Route path="/dev" component={Dev}/>*/}
+                        {/*<Route path="/contact" component={ContactComp}/>*/}
+                        {/*<Route path="/contact" component={ContactComp}/>*/}
+                        {/*<Route path="/contact" component={ContactComp}/>*/}
+                        {/*<Route path="/contact" component={ContactComp} />*/}
+                        {/*/!*<Route path="/about" component={AboutPage} />*!/*/}
+                        {/*<Route path='/find' component={SearchBarComp} />*/}
+                        {/*/!*Users*!/*/}
+                        {/*<Route path='/contact/:id' component={ContactDetail} />*/}
+                        {/*/!*Trips*!/*/}
+
+                        {/*/!*<Route path='/trips/:id' component={TripDetailComponent} />*!/*/}
+                        {/*/!*<Route path='/trips' component={TripGrid} />*!/*/}
+                    {/*</Switch>*/}
+                </section>
                 <Footer/>
             </div>
         );

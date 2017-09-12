@@ -105,6 +105,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+// import { HashLink as Link } from 'react-router-hash-link';
+
 //Icons
 
 
@@ -204,7 +206,7 @@ var NavbarComp = function (_Component) {
                 null,
                 _react2.default.createElement(
                     _reactBootstrap.Navbar,
-                    { collapseOnSelect: true, fixedTop: true, fluid: true },
+                    { actions: true, collapseOnSelect: true, fixedTop: true, fluid: true },
                     _react2.default.createElement(
                         _reactBootstrap.Navbar.Header,
                         null,
@@ -213,7 +215,7 @@ var NavbarComp = function (_Component) {
                             { pullLeft: true, className: "logo brand-text" },
                             _react2.default.createElement(
                                 _reactRouterDom.Link,
-                                { to: "/" },
+                                { to: "/home" },
                                 _react2.default.createElement("img", { src: _autoqe_txt2.default, alt: "autoqe" })
                             )
                         ),
@@ -236,11 +238,15 @@ var NavbarComp = function (_Component) {
                                 _react2.default.createElement(
                                     _reactBootstrap.MenuItem,
                                     { eventKey: 2.1 },
-                                    _react2.default.createElement("img", { src: _carp2.default, className: "nav-icon", alt: "logo" }),
                                     _react2.default.createElement(
-                                        "span",
-                                        { className: "service-carp" },
-                                        "Trayecto "
+                                        _reactRouterDom.Link,
+                                        { to: "/trips/new" },
+                                        _react2.default.createElement("img", { src: _carp2.default, className: "nav-icon", alt: "logo" }),
+                                        _react2.default.createElement(
+                                            "span",
+                                            { className: "service-carp" },
+                                            "Trayecto "
+                                        )
                                     )
                                 ),
                                 _react2.default.createElement(
@@ -266,8 +272,15 @@ var NavbarComp = function (_Component) {
                             ),
                             _react2.default.createElement(
                                 _reactBootstrap.NavItem,
-                                { eventKey: 1, href: "/services", title: "Inicio" },
-                                _react2.default.createElement("img", { style: { marginTop: '-0.3em' }, height: 30, src: _serv2.default })
+                                { eventKey: 1, title: "services" },
+                                _react2.default.createElement(
+                                    _reactRouterDom.Link,
+                                    { to: {
+                                            pathname: '/services'
+                                            // hash: '#services'
+                                        } },
+                                    _react2.default.createElement("img", { style: { marginTop: '-0.3em' }, height: 30, src: _serv2.default })
+                                )
                             ),
                             _react2.default.createElement(
                                 NotHuge,
@@ -328,7 +341,7 @@ var NavbarComp = function (_Component) {
                                 null,
                                 _react2.default.createElement(
                                     _reactBootstrap.NavItem,
-                                    { eventKey: 4, href: "#", style: { marginTop: -5, marginBottom: -9 } },
+                                    { eventKey: 4, style: { marginTop: -5, marginBottom: -9 } },
                                     _react2.default.createElement(
                                         _reactBootstrap.FormGroup,
                                         null,
@@ -354,7 +367,7 @@ var NavbarComp = function (_Component) {
                             ),
                             !this.state.authenticated ? _react2.default.createElement(
                                 _reactBootstrap.NavItem,
-                                { onClick: this.login, style: { marginTop: -8 }, eventKey: 5, href: "#" },
+                                { onClick: this.login, style: { marginTop: -8 }, eventKey: 5 },
                                 _react2.default.createElement(
                                     _reactBootstrap.Button,
                                     { className: "btn-light_w", type: "submit" },
@@ -363,7 +376,7 @@ var NavbarComp = function (_Component) {
                                 )
                             ) : _react2.default.createElement(
                                 _reactBootstrap.NavItem,
-                                { onClick: this.logout, eventKey: 5, href: "#" },
+                                { onClick: this.logout, eventKey: 5 },
                                 _react2.default.createElement(
                                     _reactBootstrap.Button,
                                     { bsStyle: 'danger', type: "submit" },
@@ -372,7 +385,7 @@ var NavbarComp = function (_Component) {
                             ),
                             _react2.default.createElement(
                                 _reactBootstrap.NavItem,
-                                { eventKey: 6, href: "#", style: { marginTop: 0 } },
+                                { eventKey: 6, style: { marginTop: 0 } },
                                 _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "envelope", className: "nav-icon" }),
                                 "Contacto"
                             ),
@@ -402,7 +415,7 @@ var NavbarComp = function (_Component) {
                                     ),
                                     _react2.default.createElement(
                                         _reactBootstrap.MenuItem,
-                                        { eventKey: "4" },
+                                        { eventKey: 4 },
                                         _react2.default.createElement("img", { alt: "Ch", src: _chile2.default, className: "nav-icon" }),
                                         "Chile"
                                     ),

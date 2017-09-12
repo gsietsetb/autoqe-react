@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 
 import Responsive from "react-responsive";
 import {Button, Col, Glyphicon, Label, ListGroupItem, Row} from 'react-bootstrap';
-import {Link} from 'react-router-dom';
+import {HashLink as Link} from 'react-router-hash-link';
 import {FormattedDate, FormattedRelative, FormattedTime} from 'react-intl';
 import locFrom from "../../img/icons/custom/from.svg";
 import locThrough from "../../img/icons/custom/through.svg";

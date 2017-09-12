@@ -43,7 +43,6 @@ export default class HowCarpooling extends React.Component {
                         <ul className=" timeline">
                             <Collapse in={this.state.driver}>
                                 <li>
-
                                     <img className="timeline-image img-circle img-responsive isDriver" src={locDriver}
                                          alt="autoqe" onClick={() => this.setState({addTrip: !this.state.addTrip})}/>
                                     <h1 className="timeline-image timeline-number-driver">1</h1>

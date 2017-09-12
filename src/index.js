@@ -2,10 +2,8 @@ import React from 'react';
 import 'babel-polyfill';
 import {render} from 'react-dom';
 import {Provider} from 'react-redux';
+// import {BrowserRouter as Router} from 'react-router-dom';
 import {BrowserRouter as Router} from 'react-router-dom';
-import createHistory from 'history/createBrowserHistory'
-
-import routes from './components/Routes';
 import storeCfg from './store/StoreConfig';
 import registerServiceWorker from './registerServiceWorker';
 import {addLocaleData, IntlProvider} from 'react-intl';
@@ -18,16 +16,19 @@ addLocaleData([...es]);
 
 require('dotenv').config();
 
-const history = createHistory();
+// const history = createBrowserHistory();
+// function onUpdate () {
+//     anchorate()
+// }
 
 const store=storeCfg();
-store.dispatch(loadTrips);
+store.dispatch(loadTrips());
 store.dispatch(loadUsers());
 
 render(
     <IntlProvider locale={'es-AR'}>
         <Provider store={store}>
-            <Router routes={routes} history={history}>
+            <Router>
                 <AppComponent/>
             </Router>
         </Provider>

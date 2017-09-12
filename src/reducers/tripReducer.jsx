@@ -1,7 +1,6 @@
 import * as types from '../actions/actionTypes';
 import initialState from './initialState';
 
-
 export default function tripReducer(state = initialState.trips, action) {
     // state variable here reps just an array of courses
     switch (action.type) {
@@ -33,3 +32,5 @@ export default function tripReducer(state = initialState.trips, action) {
             return state;
     }
 }
+
+// export default withRouter(tripReducer);

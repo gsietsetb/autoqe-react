@@ -16,7 +16,9 @@ var _TripsPage = require("../Trips/TripsPage");
 
 var _TripsPage2 = _interopRequireDefault(_TripsPage);
 
-var _reactRouterDom = require("react-router-dom");
+var _reactRouterHashLink = require("react-router-hash-link");
+
+var _reactTimerMixin = require("react-timer-mixin");
 
 require("./carousel.css");
 
@@ -54,23 +56,6 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 //Icons
 
 
-// let cx = classNames.bind(styles);
-
-// const styles = {
-//     whiteText: {
-//         index:
-//     },
-//     item: {
-//         complete: {
-//             textDecoration: "line-through"
-//         },
-//
-//         due: {
-//             color: "red"
-//         }
-//     },
-// }
-
 var CarouselComp = function (_React$Component) {
     _inherits(CarouselComp, _React$Component);
 
@@ -85,6 +70,10 @@ var CarouselComp = function (_React$Component) {
             index: 0,
             direction: 'next'
         };
+        setInterval(function () {
+            var aux = _this.state.index;
+            _this.setState({ index: aux < 3 ? aux + 1 : 0 });
+        }, 5000);
         _this._setArrowContent = _this._setArrowContent.bind(_this);
         _this._setTabContent = _this._setTabContent.bind(_this);
         return _this;
@@ -231,7 +220,7 @@ var CarouselComp = function (_React$Component) {
                                     "D\xF3nde y cu\xE1ndo lo necesit\xE9s",
                                     _react2.default.createElement("p", null),
                                     _react2.default.createElement(
-                                        _reactRouterDom.Link,
+                                        _reactRouterHashLink.HashLink,
                                         { to: "/green" },
                                         _react2.default.createElement(
                                             _reactBootstrap.Label,

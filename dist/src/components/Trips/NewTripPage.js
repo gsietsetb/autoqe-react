@@ -26,6 +26,10 @@ var _TripForm = require('./TripForm');
 
 var _TripForm2 = _interopRequireDefault(_TripForm);
 
+var _autoqe_mockup = require('../../img/mockup/autoqe_mockup.png');
+
+var _autoqe_mockup2 = _interopRequireDefault(_autoqe_mockup);
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -48,6 +52,7 @@ var NewTripPage = function (_React$Component) {
             trip: { from: '', to: '', price: '', seats: '', passenger_ids: [] },
             saving: false
         };
+        console.log("im trying to build something new, damn!");
         // this.redirect = this.redirect.bind(this);
         _this.saveTrip = _this.saveTrip.bind(_this);
         _this.updateTripPassengers = _this.updateTripPassengers.bind(_this);
@@ -98,9 +103,10 @@ var NewTripPage = function (_React$Component) {
                     null,
                     'A\xF1adir viaje'
                 ),
-                _react2.default.createElement(_TripForm2.default, {
-                    trip: this.state.trip,
-                    passengers: this.props.checkBoxPassengers,
+                _react2.default.createElement('img', { height: '100%', src: _autoqe_mockup2.default }),
+                _react2.default.createElement(_TripForm2.default
+                // trip={this.state.trip}
+                , { passengers: this.props.checkBoxPassengers,
                     onSave: this.saveTrip,
                     onChange: this.updateTripState
                     // onPassengerChange={this.updateTripPassengers}

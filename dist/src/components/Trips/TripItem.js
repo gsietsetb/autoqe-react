@@ -12,7 +12,7 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = require('react-router-dom');
+var _reactRouterHashLink = require('react-router-hash-link');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23,7 +23,7 @@ var TripListItem = function TripListItem(_ref) {
         'li',
         { className: 'list-group-item' },
         _react2.default.createElement(
-            _reactRouterDom.Link,
+            _reactRouterHashLink.HashLink,
             { to: '/trips/' + trip.id },
             trip.name
         )

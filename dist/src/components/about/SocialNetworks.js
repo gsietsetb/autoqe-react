@@ -28,7 +28,7 @@ var _instagram = require('../../img/icons/social_network/instagram.svg');
 
 var _instagram2 = _interopRequireDefault(_instagram);
 
-var _reactRouterDom = require('react-router-dom');
+var _reactRouterHashLink = require('react-router-hash-link');
 
 var _reactInstagramEmbed = require('react-instagram-embed');
 
@@ -178,7 +178,7 @@ var SocialNetworkComp = function (_Component) {
                                         { cite: 'https://www.facebook.com/autoqe',
                                             className: 'fb-xfbml-parse-ignore' },
                                         _react2.default.createElement(
-                                            _reactRouterDom.Link,
+                                            _reactRouterHashLink.HashLink,
                                             { to: 'https://www.facebook.com/autoqe' },
                                             'Autoqe'
                                         )

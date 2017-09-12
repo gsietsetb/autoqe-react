@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Button, Col, Glyphicon, Label, ListGroupItem, Row} from 'react-bootstrap';
-import {Link} from 'react-router-dom';
+import {HashLink as Link} from 'react-router-hash-link';
 import {FormattedDate, FormattedRelative, FormattedTime} from 'react-intl';
 
 import locFrom from "../../../img/icons/material/location2.svg";

@@ -12,7 +12,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactBootstrap = require('react-bootstrap');
 
-var _reactRouterDom = require('react-router-dom');
+var _reactRouterHashLink = require('react-router-hash-link');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -40,7 +40,7 @@ var ContactListItem = function (_Component) {
         _reactBootstrap.ListGroupItem,
         null,
         _react2.default.createElement(
-          _reactRouterDom.Link,
+          _reactRouterHashLink.HashLink,
           { to: '/contact/' + contact.id },
           _react2.default.createElement(
             'h4',

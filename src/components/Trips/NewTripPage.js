@@ -5,6 +5,7 @@ import {bindActionCreators} from 'redux';
 import * as courseActions from '../../actions/TripActions';
 import TripForm from './TripForm';
 
+import giant from "../../img/mockup/autoqe_mockup.png"
 
 class NewTripPage extends React.Component {
 
@@ -14,6 +15,7 @@ class NewTripPage extends React.Component {
             trip: {from: '', to: '', price: '', seats: '', passenger_ids: []},
             saving: false
         };
+        console.log("im trying to build something new, damn!");
         // this.redirect = this.redirect.bind(this);
         this.saveTrip = this.saveTrip.bind(this);
         this.updateTripPassengers = this.updateTripPassengers.bind(this);
@@ -51,8 +53,9 @@ class NewTripPage extends React.Component {
         return (
             <div>
                 <h1>Añadir viaje</h1>
+                <img height='100%' src={giant}/>
                 <TripForm
-                    trip={this.state.trip}
+                    // trip={this.state.trip}
                     passengers={this.props.checkBoxPassengers}
                     onSave={this.saveTrip}
                     onChange={this.updateTripState}

@@ -26,6 +26,44 @@ var _Routes = require('./Routes');
 
 var _Routes2 = _interopRequireDefault(_Routes);
 
+var _reactRouterDom = require('react-router-dom');
+
+var _UserDetail = require('./Users/UserDetail');
+
+var _UserDetail2 = _interopRequireDefault(_UserDetail);
+
+var _SearchBar = require('./Trips/SearchBar');
+
+var _SearchBar2 = _interopRequireDefault(_SearchBar);
+
+var _Home = require('./home/Home');
+
+var _Home2 = _interopRequireDefault(_Home);
+
+var _SocialNetworks = require('./about/SocialNetworks');
+
+var _SocialNetworks2 = _interopRequireDefault(_SocialNetworks);
+
+var _TripsPage = require('./Trips/TripsPage');
+
+var _TripsPage2 = _interopRequireDefault(_TripsPage);
+
+var _NewTripPage = require('./Trips/NewTripPage');
+
+var _NewTripPage2 = _interopRequireDefault(_NewTripPage);
+
+var _TripPage = require('./Trips/TripPage');
+
+var _TripPage2 = _interopRequireDefault(_TripPage);
+
+var _Dev = require('./about/Dev');
+
+var _Dev2 = _interopRequireDefault(_Dev);
+
+var _Green = require('./about/Green');
+
+var _Green2 = _interopRequireDefault(_Green);
+
 require('bootstrap/dist/css/bootstrap.min.css');
 
 require('../styles/main.css');
@@ -79,7 +117,11 @@ var AppComponent = function (_Component) {
                 'div',
                 null,
                 _react2.default.createElement(_Navbar2.default, { lock: this.lock }),
-                _react2.default.createElement(_Routes2.default, { history: this.props.history }),
+                _react2.default.createElement(
+                    'section',
+                    { style: { marginTop: 69 } },
+                    _react2.default.createElement(_Routes2.default, null)
+                ),
                 _react2.default.createElement(_Footer2.default, null)
             );
         }

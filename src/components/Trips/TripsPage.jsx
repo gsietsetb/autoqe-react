@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from "prop-types"
 
-import {Link} from 'react-router-dom';
+import {HashLink as Link} from 'react-router-hash-link';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import TripList from './TripList';
@@ -11,6 +11,7 @@ import carp from "../../img/icons/services/carp.svg";
 
 class TripsPage extends React.Component {
     componentWillMount() {
+        this.props.trips[0].date = Date.now();
         if (this.props.trips[0].id === '') {
             this.props.actions.loadTrips();
         }

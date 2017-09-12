@@ -16,9 +16,9 @@ export default class HomePage extends React.Component {
             <div>
                 <CarouselComp/>
                 {/*<MainMap location={this.props.history.location}/>*/}
-                <Intro/>
-                <ServiceComp/>
-                <Green/>
+                <Intro id={'intro'}/>
+                <ServiceComp id={'services'}/>
+                <Green id={'green'}/>
                 <HowWorksComp/>
                 <Devices/>
                 <Mockup/>

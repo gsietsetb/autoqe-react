@@ -10,7 +10,7 @@ var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = require("react-router-dom");
+var _reactRouterHashLink = require("react-router-hash-link");
 
 var _reactBootstrap = require("react-bootstrap");
 
@@ -178,7 +178,7 @@ var Footer = function (_Component) {
                                     null,
                                     _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _carp2.default }),
                                     _react2.default.createElement(
-                                        _reactRouterDom.Link,
+                                        _reactRouterHashLink.HashLink,
                                         { to: "/trips" },
                                         " Carpooling"
                                     )
@@ -188,7 +188,7 @@ var Footer = function (_Component) {
                                     null,
                                     _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _rent2.default }),
                                     _react2.default.createElement(
-                                        _reactRouterDom.Link,
+                                        _reactRouterHashLink.HashLink,
                                         { to: "/carrent" },
                                         " Alquiler de Autos"
                                     )
@@ -198,7 +198,7 @@ var Footer = function (_Component) {
                                     null,
                                     _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _park2.default }),
                                     _react2.default.createElement(
-                                        _reactRouterDom.Link,
+                                        _reactRouterHashLink.HashLink,
                                         { to: "/parkrent" },
                                         " Alquiler de Cocheras"
                                     )
@@ -208,7 +208,7 @@ var Footer = function (_Component) {
                                     null,
                                     _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _el2.default }),
                                     _react2.default.createElement(
-                                        _reactRouterDom.Link,
+                                        _reactRouterHashLink.HashLink,
                                         { to: "/electric" },
                                         " Autos El\xE9ctricos "
                                     ),
@@ -236,7 +236,7 @@ var Footer = function (_Component) {
                                     null,
                                     _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _howWorks2.default }),
                                     _react2.default.createElement(
-                                        _reactRouterDom.Link,
+                                        _reactRouterHashLink.HashLink,
                                         { to: "/howWorks" },
                                         " \xBFC\xF3mo funciona?"
                                     )
@@ -246,7 +246,7 @@ var Footer = function (_Component) {
                                     null,
                                     _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _quest2.default }),
                                     _react2.default.createElement(
-                                        _reactRouterDom.Link,
+                                        _reactRouterHashLink.HashLink,
                                         { to: "/faq" },
                                         " Preguntas frecuentes"
                                     )
@@ -256,7 +256,7 @@ var Footer = function (_Component) {
                                     null,
                                     _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _share2.default }),
                                     _react2.default.createElement(
-                                        _reactRouterDom.Link,
+                                        _reactRouterHashLink.HashLink,
                                         { to: "/collaborative" },
                                         " Econom\xEDa Colaborativa"
                                     )
@@ -266,7 +266,7 @@ var Footer = function (_Component) {
                                     null,
                                     _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _leaf2.default }),
                                     _react2.default.createElement(
-                                        _reactRouterDom.Link,
+                                        _reactRouterHashLink.HashLink,
                                         { to: "/green" },
                                         " Huella ecol\xF3gica"
                                     )
@@ -289,7 +289,7 @@ var Footer = function (_Component) {
                                     null,
                                     _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _world2.default }),
                                     _react2.default.createElement(
-                                        _reactRouterDom.Link,
+                                        _reactRouterHashLink.HashLink,
                                         { to: "/next" },
                                         " Pr\xF3ximos paises"
                                     )
@@ -299,7 +299,7 @@ var Footer = function (_Component) {
                                     null,
                                     _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _design2.default }),
                                     _react2.default.createElement(
-                                        _reactRouterDom.Link,
+                                        _reactRouterHashLink.HashLink,
                                         { to: "/design" },
                                         "Rinc\xF3n de Dise\xF1o"
                                     )
@@ -309,7 +309,7 @@ var Footer = function (_Component) {
                                     null,
                                     _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _code2.default }),
                                     _react2.default.createElement(
-                                        _reactRouterDom.Link,
+                                        _reactRouterHashLink.HashLink,
                                         { to: "/dev" },
                                         "Rinc\xF3n de Desarrollo"
                                     )
@@ -319,7 +319,7 @@ var Footer = function (_Component) {
                                     null,
                                     _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _press2.default }),
                                     _react2.default.createElement(
-                                        _reactRouterDom.Link,
+                                        _reactRouterHashLink.HashLink,
                                         { to: "/press" },
                                         " Espacio de Prensa"
                                     )
@@ -342,7 +342,7 @@ var Footer = function (_Component) {
                                     null,
                                     _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _disc2.default }),
                                     _react2.default.createElement(
-                                        _reactRouterDom.Link,
+                                        _reactRouterHashLink.HashLink,
                                         { to: "/promotion" },
                                         " Promos"
                                     )
@@ -352,7 +352,7 @@ var Footer = function (_Component) {
                                     null,
                                     _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _team2.default }),
                                     _react2.default.createElement(
-                                        _reactRouterDom.Link,
+                                        _reactRouterHashLink.HashLink,
                                         { to: "/team" },
                                         " Equipo"
                                     )
@@ -362,7 +362,7 @@ var Footer = function (_Component) {
                                     null,
                                     _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _job2.default }),
                                     _react2.default.createElement(
-                                        _reactRouterDom.Link,
+                                        _reactRouterHashLink.HashLink,
                                         { to: "/work" },
                                         " Trabajos "
                                     ),
@@ -378,7 +378,7 @@ var Footer = function (_Component) {
                                     null,
                                     _react2.default.createElement("img", { alt: "", className: "footer-icon", src: _contact2.default }),
                                     _react2.default.createElement(
-                                        _reactRouterDom.Link,
+                                        _reactRouterHashLink.HashLink,
                                         { to: "/contact" },
                                         " Contacto"
                                     )
@@ -393,32 +393,32 @@ var Footer = function (_Component) {
                             "h2",
                             null,
                             _react2.default.createElement(
-                                _reactRouterDom.Link,
+                                _reactRouterHashLink.HashLink,
                                 { to: "https://www.facebook.com/autoqe" },
                                 _react2.default.createElement("i", { className: "social-icon fa fa-facebook" })
                             ),
                             _react2.default.createElement(
-                                _reactRouterDom.Link,
+                                _reactRouterHashLink.HashLink,
                                 { to: "https://www.twitter.com/autoqe" },
                                 _react2.default.createElement("i", { className: "social-icon fa fa-twitter" })
                             ),
                             _react2.default.createElement(
-                                _reactRouterDom.Link,
+                                _reactRouterHashLink.HashLink,
                                 { to: "https://www.instagram.com/autoqe" },
                                 _react2.default.createElement("i", { className: "social-icon fa fa-instagram" })
                             ),
                             _react2.default.createElement(
-                                _reactRouterDom.Link,
+                                _reactRouterHashLink.HashLink,
                                 { to: "https://www.youtube.com/channel/UC7RUb3Ieez8Pl9uLIhZclyQ" },
                                 _react2.default.createElement("i", { className: "social-icon fa fa-youtube" })
                             ),
                             _react2.default.createElement(
-                                _reactRouterDom.Link,
+                                _reactRouterHashLink.HashLink,
                                 { to: "https://www.linkedin.com/company/16232988/" },
                                 _react2.default.createElement("i", { className: "social-icon fa fa-linkedin" })
                             ),
                             _react2.default.createElement(
-                                _reactRouterDom.Link,
+                                _reactRouterHashLink.HashLink,
                                 { to: "https://google.com/+autoqe" },
                                 _react2.default.createElement("i", { className: "fa fa-google-plus" })
                             )

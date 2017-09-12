@@ -25,23 +25,23 @@ export default class Green extends Component {
                         </div>
                         <div className="section-header-text">
                             <Row className="highlight-icon">
-                                <Col xs="3">
+                                <Col xs={3}>
                                     <img src={smoke}/>
                                     <h3 className="service-park">4.2 millones de toneladas de CO<sub>2</sub></h3>
                                     <p>
                                         ...se podrían evitar usando todos los asientos de los autos o estacionando de una manera eficiente... </p>
                                 </Col>
-                                <Col xs="3">
+                                <Col xs={3}>
                                     <img src={garage}/>
                                     <h3 className="service-park">41 horas al año</h3>
                                     <p>perdidas al dar vueltas con el auto intentando estacionar</p>
                                 </Col>
-                                <Col xs="3">
+                                <Col xs={3}>
                                     <img src={recycle}/>
                                     <h3 className="service-park">Sostenible</h3>
                                     <p>El auto eléctrico evita todos los problemas del medioambiente</p>
                                 </Col>
-                                <Col xs="3">
+                                <Col xs={3}>
                                     <img src={gas}/>
                                     {/*<h1><Glyphicon style={{color: 'var(--elec)'}} glyph="piggy-bank"/></h1>*/}
                                     <h3 className="service-park">Ahorrá</h3>

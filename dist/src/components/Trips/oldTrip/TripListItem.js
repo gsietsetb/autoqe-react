@@ -12,7 +12,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactBootstrap = require('react-bootstrap');
 
-var _reactRouterDom = require('react-router-dom');
+var _reactRouterHashLink = require('react-router-hash-link');
 
 var _reactIntl = require('react-intl');
 
@@ -137,7 +137,7 @@ var TripListItem = function (_Component) {
                 _reactBootstrap.ListGroupItem,
                 null,
                 _react2.default.createElement(
-                    _reactRouterDom.Link,
+                    _reactRouterHashLink.HashLink,
                     { to: '/trips/' + trip.id, style: { color: '#122b40' } },
                     _react2.default.createElement(
                         _reactBootstrap.Row,

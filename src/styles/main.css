@@ -7,8 +7,9 @@
     --parking: #498d19;
     /*--parking: #5cb85c;*/
     --elec: #e8a135;
-    --rent-transp: rgba(116, 172, 223, 0.5);
-    --carp-transp: rgba(18, 43, 64, 0.5); ;
+    --carp-transp-dark: rgba(116, 172, 223, 0.7);
+    --carp-transp: rgba(116, 172, 223, 0.5);
+    --rent-transp: rgba(18, 43, 64, 0.5); ;
     --park-transp: rgba(73, 141, 25, 0.5);
     --elec-transp: rgba(232, 161, 53, 0.5);
 }
