@@ -27,14 +27,13 @@ export default class Green extends Component {
                             <Row className="highlight-icon">
                                 <Col xs={3}>
                                     <img src={smoke}/>
-                                    <h3 className="service-park">4.2 millones de toneladas de CO<sub>2</sub></h3>
-                                    <p>
-                                        ...se podrían evitar usando todos los asientos de los autos o estacionando de una manera eficiente... </p>
+                                    <h3 className="service-park">4.2 millones</h3>
+                                    <p>de toneladas de CO<sub>2</sub> se podrían evitar usando todos los asientos de los autos o estacionando de una manera eficiente... </p>
                                 </Col>
                                 <Col xs={3}>
                                     <img src={garage}/>
-                                    <h3 className="service-park">41 horas al año</h3>
-                                    <p>perdidas al dar vueltas con el auto intentando estacionar</p>
+                                    <h3 className="service-park">41 horas</h3>
+                                    <p>perdidas al año dando vueltas intentando estacionar el auto</p>
                                 </Col>
                                 <Col xs={3}>
                                     <img src={recycle}/>

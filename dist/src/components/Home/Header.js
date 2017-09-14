@@ -73,7 +73,7 @@ var CarouselComp = function (_React$Component) {
         setInterval(function () {
             var aux = _this.state.index;
             _this.setState({ index: aux < 3 ? aux + 1 : 0 });
-        }, 5000);
+        }, 12000);
         _this._setArrowContent = _this._setArrowContent.bind(_this);
         _this._setTabContent = _this._setTabContent.bind(_this);
         return _this;

@@ -12,12 +12,6 @@ var _reactRedux = require('react-redux');
 
 var _reactRouterDom = require('react-router-dom');
 
-var _history = require('history');
-
-var _Routes = require('./components/Routes');
-
-var _Routes2 = _interopRequireDefault(_Routes);
-
 var _StoreConfig = require('./store/StoreConfig');
 
 var _StoreConfig2 = _interopRequireDefault(_StoreConfig);

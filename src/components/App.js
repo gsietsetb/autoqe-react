@@ -6,9 +6,9 @@ import Footer from "./common/Footer";
 import Main from "./Routes";
 //Global Styles
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../styles/main.css'
-import '../styles/buttons.css'
-import '../styles/icons.css'
+import '../../../shotgot_web/shotgot/src/styles/main.css'
+import '../../../shotgot_web/shotgot/src/styles/buttons.css'
+import '../../../shotgot_web/shotgot/src/styles/icons.css'
 
 const optionsAuth0 = {
     language: 'es',

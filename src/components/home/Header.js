@@ -25,7 +25,7 @@ export default class CarouselComp extends React.Component {
         setInterval(() => {
             const aux =  this.state.index;
             this.setState({index: aux<3?aux+1:0});
-        },5000);
+        },12000);
         this._setArrowContent = this._setArrowContent.bind(this);
         this._setTabContent = this._setTabContent.bind(this)
     }
