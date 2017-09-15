@@ -28,11 +28,11 @@ var _Routes2 = _interopRequireDefault(_Routes);
 
 require('bootstrap/dist/css/bootstrap.min.css');
 
-require('../../../shotgot_web/shotgot/src/styles/main.css');
+require('../styles/main.css');
 
-require('../../../shotgot_web/shotgot/src/styles/buttons.css');
+require('../styles/buttons.css');
 
-require('../../../shotgot_web/shotgot/src/styles/icons.css');
+require('../styles/icons.css');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

@@ -121,7 +121,7 @@
 
 .mockup-bg{
     height: 50vh;
-    background-image: url('../../../../autoqe-react/src/img/mockup/autoqe_mockup.png');
+    background-image: url('../img/mockup/autoqe_mockup.png');
     background-attachment: fixed;
     background-position: bottom;
     /*background-size: cover;*/
