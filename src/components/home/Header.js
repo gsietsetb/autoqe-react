@@ -124,7 +124,6 @@ export default class CarouselComp extends React.Component {
                 <Tab.Container id="header-tabs" activeKey={this.state.index} defaultActiveKey={0}
                                onSelect={this._setTabContent}>
                     <Row className="clearfix header-tabs">
-                        {/*<Col sm={12}>*/}
                         <Nav bsStyle="tabs" id="header-tab">
                             <NavItem className="carp-transp " eventKey={0}>
                                 <img alt="carpool" src={carp} className="header-icon"/>
@@ -145,18 +144,12 @@ export default class CarouselComp extends React.Component {
                                 {/*&nbsp;</b><Label className="avoid-if-small" bsStyle="warning">Próx.</Label>*/}
                             </NavItem>
                         </Nav>
-                        {/*</Col>*/}
-                        {/*<Col sm={12} >*/}
                         <Tab.Content style={{left: 0}} animation>
                             <Tab.Pane eventKey={0}>
-                                {/*<Row>*/}
                                     <TripsPage/>
-                                {/*</Row>*/}
                             </Tab.Pane>
                             <Tab.Pane eventKey={1}>
-                                <Row>
-                                    {/*<NewTripPage/>*/}
-                                </Row>
+                                    <TripsPage/>
                             </Tab.Pane>
                             <Tab.Pane eventKey={2}>
                                 <Row>
@@ -169,7 +162,6 @@ export default class CarouselComp extends React.Component {
                                 </Row>
                             </Tab.Pane>
                         </Tab.Content>
-                        {/*</Col>*/}
                     </Row>
                 </Tab.Container>
             </div>

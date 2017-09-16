@@ -296,7 +296,7 @@ var CarouselComp = function (_React$Component) {
                             _react2.default.createElement(
                                 _reactBootstrap.Tab.Pane,
                                 { eventKey: 1 },
-                                _react2.default.createElement(_reactBootstrap.Row, null)
+                                _react2.default.createElement(_TripsPage2.default, null)
                             ),
                             _react2.default.createElement(
                                 _reactBootstrap.Tab.Pane,

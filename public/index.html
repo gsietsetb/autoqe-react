@@ -39,6 +39,61 @@
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!--Structured data-->
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": "https://www.autoqe.com/",
+      "name": "Autoqe, Auto al Toque",
+      "logo": "https://www.autoqe.com/autoqe.png",
+      "founder": [{
+        "@type": "Person",
+        "telephone": "+34-617-566-888",
+        "alumniOf": [{
+            "name": "EPFL"
+           },
+           {
+            "name": "UPC"
+           }
+           ],
+        "sameAs": [
+          "https://www.facebook.com/g.sierra.aiello",
+          "http://www.twitter.com/guillelekos",
+          "http://www.instagram.com/gsierra_",
+          "http://www.github.com/gsietsetb",
+          "https://www.linkedin.com/in/sierraguillermo/"
+      	]
+        }],
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": "+54-11-4717-6525",
+        "contactType": "customer support"
+      },{
+        "@type": "ContactPoint",
+        "telephone": "+54-11-4717-6528",
+        "contactType": "technical support",
+        "contactOption": [
+          "HearingImpairedSupported",
+          "TollFree"
+        ],
+        "areaServed": "AR",
+        "availableLanguage": [
+          "English",
+          "Spanish",
+          "French"
+        ]
+      }],
+      "sameAs": [
+        "http://www.facebook.com/autoqe",
+        "http://www.twitter.com/autoqe",
+        "http://www.instagram.com/autoqe",
+        "https://www.linkedin.com/company/16232988/",
+        "https://www.youtube.com/channel/UC7RUb3Ieez8Pl9uLIhZclyQ"
+      ]
+    }
+    </script>
     <!--Stripe-->
     <!--<script src="https://js.stripe.com/v3/"></script>-->
 
@@ -48,11 +103,11 @@
 
     <!--Facebook SDK-->
     <script async>(function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=1857064684552937";
-    fjs.parentNode.insertBefore(js, fjs);
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=1857064684552937";
+        fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
     <!--Twitter SDK-->
     <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
