@@ -3,7 +3,7 @@ import {Button, ControlLabel, Form, FormControl, FormGroup, Glyphicon, InputGrou
 import moment from "moment";
 // import Autocomplete from 'react-google-autocomplete';
 import carp from "../../img/icons/services/carp.svg";
-import locFrom from "../../img/icons/custom/from.svg";
+import locFrom from "../../img/icons/custom/origin.svg";
 import locTo from "../../img/icons/custom/dest.svg";
 import MediaQuery from "react-responsive";
 

@@ -2,19 +2,17 @@ import React from 'react';
 import PropTypes from "prop-types"
 
 import {HashLink as Link} from 'react-router-hash-link';
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
 import TripList from './TripList';
-import * as actions from '../../actions/TripActions'
+/*import * as actions from '../../actions/TripActions'*/
 import {Button, Glyphicon, ListGroup, ListGroupItem, Panel} from 'react-bootstrap';
 import carp from "../../img/icons/services/carp.svg";
 
 class TripsPage extends React.Component {
     componentWillMount() {
-        this.props.trips[0].date = Date.now();
+        /*this.props.trips[0].date = Date.now();
         if (this.props.trips[0].id === '') {
             this.props.actions.loadTrips();
-        }
+        }*/
     }
 
     render() {
@@ -63,7 +61,7 @@ TripsPage.propTypes = {
 //     return {trip: state.trips};
 // }
 
-function mapStateToProps(state, ownProps) {
+/*function mapStateToProps(state, ownProps) {
     if (state.trips.length > 0) {
         return {
             trips: state.trips
@@ -77,6 +75,6 @@ function mapStateToProps(state, ownProps) {
 
 function mapDispatchToProps(dispatch) {
     return {actions: bindActionCreators(actions, dispatch)}
-}
+}*/
 
-export default connect(mapStateToProps, mapDispatchToProps)(TripsPage);
+export default /*connect(mapStateToProps, mapDispatchToProps)*/(TripsPage);

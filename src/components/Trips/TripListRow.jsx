@@ -5,7 +5,7 @@ import Responsive from "react-responsive";
 import {Button, Col, Glyphicon, Label, ListGroupItem, Row} from 'react-bootstrap';
 import {HashLink as Link} from 'react-router-hash-link';
 import {FormattedDate, FormattedRelative, FormattedTime} from 'react-intl';
-import locFrom from "../../img/icons/custom/from.svg";
+import locFrom from "../../img/icons/custom/origin.svg";
 import locThrough from "../../img/icons/custom/through.svg";
 import locTo from "../../img/icons/custom/dest.svg";
 import girl from "../../img/icons/material/female.svg";

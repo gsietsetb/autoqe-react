@@ -39,8 +39,16 @@
 }
 
 .brand-text{
-    margin: 0.3em 0 ;
+    margin: 1.2em;
+    margin-left: 2em;
+    padding: 1em;
+    left: 3em;
 }
+
+.brand-text img{
+    left: 3em;
+}
+
 
 .search-icon{
     min-width: 7em;

@@ -22,7 +22,9 @@ export default class TripsAPI {
                 .get(API_URL)
                 .end((err, resp) => {
                     if (err) reject(err);
+/*
                     resolve(JSON.parse(resp.text));
+*/
                 })
         });
 

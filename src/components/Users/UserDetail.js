@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import ContactActions from '../../actions/UserActions';
-import ContactStore from '../../store/ContactStore';
+
+/*import ContactActions from '../../actions/UserActions';
+import ContactStore from '../../stores/ContactStore';*/
 
 class ContactDetailComponent extends Component {
 
@@ -12,7 +13,7 @@ class ContactDetailComponent extends Component {
     this.onChange = this.onChange.bind(this);
   }
 
-  componentWillMount() {
+  /*componentWillMount() {
     ContactStore.addChangeListener(this.onChange);
   }
 
@@ -32,7 +33,7 @@ class ContactDetailComponent extends Component {
     this.setState({
       contact: ContactStore.getContact(this.props.params.id)
     });
-  }
+  }*/
   render() {
     let contact;
       if (Object.keys(this.state.contact).length !== 0) {

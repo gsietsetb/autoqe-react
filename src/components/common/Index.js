@@ -1,5 +1,6 @@
+/*
 import React, {Component} from 'react';
-import AuthStore from '../../store/AuthStore';
+import AuthStore from '../../stores/AuthStore';
 
 class IndexComponent extends Component {
 
@@ -23,3 +24,4 @@ class IndexComponent extends Component {
 }
 
 export default IndexComponent;
+*/

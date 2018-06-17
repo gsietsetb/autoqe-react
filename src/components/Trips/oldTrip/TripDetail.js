@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import TripActions from '../../../actions/TripActions';
-import TripStore from '../../../store/TripStore';
+import TripStore from '../../../stores/TripStore';
 
 export default class TripDetailComponent extends Component {
 

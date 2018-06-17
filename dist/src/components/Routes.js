@@ -85,4 +85,4 @@ var Main = function Main() {
 };
 
 exports.default = Main;
-//# sourceMappingURL=Routes.js.map
+//# sourceMappingURL=Navigator.js.map

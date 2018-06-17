@@ -3,7 +3,7 @@ import {HashLink as Link} from 'react-router-hash-link';
 import {Col, Image, Label, Row} from "react-bootstrap";
 import Responsive from "react-responsive";
 
-import logo_side from "../../img/logo/autoqe_txt_w.svg"
+import logo_side from "../../img/logo/autoqe_side_w.svg"
 import job from "../../img/icons/material/job.svg"
 import design from "../../img/icons/material/design.svg"
 import press from "../../img/icons/material/press.svg"

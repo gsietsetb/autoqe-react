@@ -56,10 +56,12 @@
     max-width: 8px!important;
 }
 
-/*Main buttons:*/
+/*Navigator buttons:*/
 .btn-light_w {
-    background: var(--light);
+    background: var(--dark);
+    border-radius: 5%;
     color: white;
+    padding-top: 0.8em;
 }
 
 .btn-white-light {

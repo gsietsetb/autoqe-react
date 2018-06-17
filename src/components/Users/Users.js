@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {ListGroup} from 'react-bootstrap';
 import ContactActions from '../../actions/UserActions';
-import ContactStore from '../../store/ContactStore';
+import ContactStore from '../../stores/ContactStore';
 import ContactListItem from './UserListItem';
 
 // We'll use this function to get a contact

@@ -10,7 +10,9 @@ export default class UserApi {
                 .get(API_URL)
                 .end((err, resp) => {
                     if (err) reject(err);
+/*
                     resolve(JSON.parse(resp.text));
+*/
                 })
         });
         // return fetch(API_URL).then(response => {

@@ -3,7 +3,7 @@ import {Button, Form, FormControl, FormGroup, Glyphicon, InputGroup} from "react
 import moment from "moment";
 import Responsive from "react-responsive";
 // import Autocomplete from 'react-google-autocomplete';
-import locFrom from "../img/icons/custom/from.svg";
+import locFrom from "../img/icons/custom/origin.svg";
 
 // Default (desktop, tablet) and mobile setup
 const Huge = ({children}) => <Responsive minWidth={960} children={children}/>;

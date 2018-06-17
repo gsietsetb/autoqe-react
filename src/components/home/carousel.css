@@ -99,10 +99,10 @@
 
 .carousel-caption {
     /*float: left!important;*/
-    text-align: left !important;
-    left: 3em !important;
-    margin-left: 1em !important;
-    bottom: 10vh !important;
+    text-align: center !important;
+    /*left: 3em !important;*/
+    /*margin-left: 1em !important;*/
+    bottom: 42vh !important;
     /*width: 40vw;*/
     /*max-width: 30vw;*/
 }
@@ -190,14 +190,14 @@
 .carousel-caption h1 {
     font-size: 34px;
     font-family: 'Lemon/Milk', serif;
-    max-width: 30vw;
+    /*max-width: 30vw;*/
 
 }
 
 .carousel-caption h3 {
     font-family: 'Lemon/Milk light', serif;
     font-size: 22px;
-    max-width: 40vw;
+    /*max-width: 40vw;*/
 }
 
 /*.carousel-caption img {*/
@@ -224,6 +224,7 @@
     }
 
     .carousel-container {
+        position: center;
         height: 70vh;
     }
 
@@ -232,8 +233,9 @@
     }
 
     .carousel-caption h1 {
+        text-align: center;
         font-size: 24px;
-        max-width: 100%;
+        /*max-width: 100%;*/
     }
 
     .carousel-caption h3 {

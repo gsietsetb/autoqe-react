@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 import {Table} from 'react-bootstrap';
 // import { Link } from 'react-router';
+/*
 import TripActions from '../../../actions/TripActions';
-import TripStore from '../../../store/TripStore';
+*/
+import TripStore from '../../../stores/TripStore';
 import TripListItem from './TripListItem';
 
 // We'll use this function to get a trip

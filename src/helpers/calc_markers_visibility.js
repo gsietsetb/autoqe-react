@@ -42,7 +42,7 @@ export function getScale(rowIndex, rowFrom, rowTo, K_SCALE_NORMAL) {
     return K_SCALE_NORMAL;
 }
 
-// this calculations is not precise (dirty)
+// this calculations are not precise (dirty)
 function _getRealFromTo(rowFrom, rowTo, maxVisibleRows, totalSize) {
     let addFrom = ((rowFrom + maxVisibleRows + K_SCALES_SUM) > (totalSize - 1)) ? ((rowFrom + maxVisibleRows + K_SCALES_SUM) - (totalSize - 1)) : 0;
 

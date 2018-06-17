@@ -3,7 +3,7 @@ import {Button, Form, FormControl, FormGroup, Glyphicon, InputGroup} from "react
 import moment from "moment";
 import Responsive from "react-responsive";
 // import Autocomplete from 'react-google-autocomplete';
-import locFrom from "../../img/icons/custom/from.svg";
+import locFrom from "../../img/icons/custom/origin.svg";
 import locTo from "../../img/icons/custom/dest.svg";
 
 // Default (desktop, tablet) and mobile setup
@@ -43,7 +43,7 @@ export default class SearchTrip extends React.Component {
                     <FormGroup controlId="formInlineFrom" style={{display: 'inline-block',  marginRight: '1em'}}>
                         {/*<ControlLabel> &nbsp;  &nbsp; De: &nbsp; </ControlLabel>*/}
                         <InputGroup>
-                            <InputGroup.Addon style={{minWidth: 36}}>
+                            <InputGroup.Addon style={{minWidth: 36, color: '#ffffff'}}>
                                 <img alt="" src={locFrom} height={24}/>
                             </InputGroup.Addon>
                             <FormControl style={{height: 'unset'}} type="text" placeholder="Buenos Aires"/>

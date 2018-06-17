@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from "prop-types"
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
+/*
 import * as tripActions from '../../actions/TripActions';
+*/
 import UserList from '../Users/UserList';
 import TripForm from './TripForm';
 import {withRouter} from "react-router-dom";
@@ -154,12 +154,12 @@ function mapStateToProps(state, ownProps) {
     return {trip: trip, checkBoxPassengers: checkBoxPassengers, tripPassengers: tripPassengers};
 }
 
-function mapDispatchToProps(dispatch) {
+/*function mapDispatchToProps(dispatch) {
     return {
         actions: bindActionCreators(tripActions, dispatch)
     };
-}
+}*/
 
 // export default withRouter(connect(mapStateToProps, mapDispatchToProps))(TripPage);
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(TripPage));
+export default withRouter(/*connect(mapStateToProps, mapDispatchToProps)(*/TripPage);
 // export default connect(mapStateToProps, mapDispatchToProps)(TripPage);

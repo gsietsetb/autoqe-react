@@ -4,8 +4,8 @@ import "./timeline.css";
 import volante from "../../img/icons/material/steering-wheel.svg";
 import users from "../../img/icons/material/users.svg";
 import pay from "../../img/icons/material/lock.svg";
-import locDriver from "../../img/icons/custom/from_shift.svg";
-import locUser from "../../img/icons/custom/dest_shift.svg";
+import locDriver from "../../img/icons/custom/driver.svg";
+import locUser from "../../img/icons/custom/passenger.svg";
 import SearchBarComp from "../Trips/SearchBar";
 
 export default class HowCarpooling extends React.Component {

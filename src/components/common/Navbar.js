@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import PropTypes from "prop-types"
-import {bindActionCreators} from 'redux';
 import {
     Button,
     DropdownButton,
@@ -16,21 +15,25 @@ import {
 } from "react-bootstrap";
 import {Link} from 'react-router-dom';
 // import { HashLink as Link } from 'react-router-hash-link';
-import {connect} from 'react-redux';
 import Responsive from "react-responsive";
 import ReactRotatingText from "react-rotating-text";
+/*
 import * as sessionActions from '../../actions/SessionActions';
+*/
+/*
 import AuthActions from "../../actions/AuthActions";
-import AuthStore from "../../store/AuthStore";
+*/
+/*
+import AuthStore from "../../stores/AuthStore";
+*/
 import "./navbar.css"
 
-import logo_txt from "../../img/logo/autoqe_txt.svg";
+import logo_txt from "../../img/logo/autoqe_txt_slogan.svg";
 //Icons
 import carp from "../../img/icons/services/carp.svg";
 import rent from "../../img/icons/services/rent.svg";
 import park from "../../img/icons/services/park.svg";
 import el from "../../img/icons/services/el.svg";
-import srv from "../../img/icons/services/serv.gif";
 
 import argFlag from "../../img/icons/flag/061-argentina.svg";
 import spFlag from "../../img/icons/flag/012-spain.svg";
@@ -61,7 +64,9 @@ class NavbarComp extends Component {
         super(props);
         //Auth side
         this.state = {
+/*
             authenticated: AuthStore.isAuthenticated()
+*/
         };
         this.login = this.login.bind(this);
         this.logout = this.logout.bind(this);
@@ -84,7 +89,7 @@ class NavbarComp extends Component {
             // If login is successful, we want to dispatch
             // the logUserIn action so we can have the profile
             // and token set in local storage
-            AuthActions.logUserIn(profile, token);
+            /**AuthActions.logUserIn(profile, token);*/
             // We also want to set the authentication state
             // for the component to true
             this.setState({authenticated: true});
@@ -92,7 +97,7 @@ class NavbarComp extends Component {
     }
 
     logout() {
-        AuthActions.logUserOut();
+        /**AuthActions.logUserOut();*/
         this.setState({authenticated: false});
     }
     toggle() {
@@ -136,7 +141,7 @@ class NavbarComp extends Component {
                                 </MenuItem>
                             </NavDropdown>
 
-                            {/*Services*/}
+                            {/*Services
                             <NavItem eventKey={1} title="services">
                                 <Link to={{
                                     pathname: '/services',
@@ -144,7 +149,7 @@ class NavbarComp extends Component {
                                 }}>
                                     <img style={{marginTop: '-0.3em'}} height={30} src={srv}/>
                                 </Link>
-                            </NavItem>
+                            </NavItem>*/}
 
                             {/*Buscar*/}
                             <NotHuge>
@@ -194,7 +199,7 @@ class NavbarComp extends Component {
                                 <NavItem onClick={this.login} style={{marginTop: -8}} eventKey={5} >
                                     <Button className="btn-light_w" type="submit">
                                         <Glyphicon glyph="user" className="nav-icon"/>
-                                        Registro</Button>
+                                        Entra</Button>
                                 </NavItem>
                             ) : (
                                 <NavItem onClick={this.logout} eventKey={5} >
@@ -202,9 +207,9 @@ class NavbarComp extends Component {
                                 </NavItem>
                             )}
 
-                            {/*Contact*/}
+                            {/*Contact
                             <NavItem eventKey={6} style={{marginTop: 0}}>
-                                <Glyphicon glyph="envelope" className="nav-icon"/>Contacto</NavItem>
+                                <Glyphicon glyph="envelope" className="nav-icon"/>Contacto</NavItem>*/}
                             {/*Language selector*/}
                             <NavItem>
                                 <DropdownButton id="lang" style={styles.flagDropdown} bsStyle={'info'} title={''}>
@@ -233,6 +238,7 @@ Navbar.propTypes = {
     actions: PropTypes.object.isRequired
 };
 
+/*
 function mapStateToProps(state, ownProps) {
     return {logged_in: state.session};
 }
@@ -242,5 +248,6 @@ function mapDispatchToProps(dispatch) {
         actions: bindActionCreators(sessionActions, dispatch)
     };
 }
+*/
 
-export default connect(mapStateToProps, mapDispatchToProps)(NavbarComp);
+export default /*connect(mapStateToProps, mapDispatchToProps)*/(NavbarComp);

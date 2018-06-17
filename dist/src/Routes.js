@@ -132,4 +132,4 @@ var Root = function (_Component) {
 }(_react.Component);
 
 exports.default = Root;
-//# sourceMappingURL=Routes.js.map
+//# sourceMappingURL=Navigator.js.map

@@ -1,14 +1,16 @@
 import React, {Component} from 'react';
-
-import Auth0Lock from 'auth0-lock';
 import NavbarComponent from "./common/Navbar";
 import Footer from "./common/Footer";
-import Main from "./Routes";
+import Navigator from "./Navigator";
 //Global Styles
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/main.css'
 import '../styles/buttons.css'
 import '../styles/icons.css'
+
+/**todo deprecate auth0
+ *
+ * @type {{language: string, theme: {logo: string, primaryColor: string}}}
 
 const optionsAuth0 = {
     language: 'es',
@@ -16,12 +18,14 @@ const optionsAuth0 = {
         logo: 'https://www.autoqe.com/autoqe.png',
         primaryColor: '#122b40'
     }
-};
+};*/
 
 class AppComponent extends Component {
 
     componentWillMount() {
+/*
         this.lock = new Auth0Lock('06DohMivFjjWe43rAOM0Pi1sdr62TAs9', 'autoqe.auth0.com', optionsAuth0);
+*/
         // this.lock = new Auth0Lock(process.env.AUTH0_ID, process.env.DOMAIN);
     }
     componentDidMount() {
@@ -34,7 +38,7 @@ class AppComponent extends Component {
                 <NavbarComponent lock={this.lock}/>
                 <section style={{marginTop: 69}}>
                     {/*<Main history={this.props.history}/>*/}
-                    <Main/>
+                    <Navigator/>
                     {/*<Switch>*/}
                         {/*<Route path='/' component={HomePage}/>*/}
                         {/*<Route path='/home' component={HomePage}/>*/}
@@ -44,7 +48,7 @@ class AppComponent extends Component {
                         {/*/!*<Route path="/car" component={ContactComp}/>*!/*/}
 
                         {/*/!*Trips*!/*/}
-                        {/*<Route path="/trips" component={TripsPage}>*/}
+                        {/*<Route path="/trips" component={TripsPage}>*/}e
                             {/*<Route path="/trips/new" component={NewTripPage}/>*/}
                             {/*<Route path="/trips/:id" component={TripPage}/>*/}
                         {/*</Route>*/}
